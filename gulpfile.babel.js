@@ -59,14 +59,18 @@ gulp.task('archives', () => {
     .pipe(tapPermalink())
     .pipe(tapDate())
     .pipe(getBlog(posts))
-    .pipe(getTags(posts, tags))
+    .pipe(getTags(tags))
     // .pipe(gulp.dest('testing'));
 });
 
 
 
 gulp.task('createBlog', ['archives'], () => {
-  return createBlog('blog', '5', posts)
+  return createBlog({
+      articles: posts
+      articlesPerPage: '5',
+      basename: 'blog',
+    })
     // swig template here (Might have to tweak file or swig template.js)
     .pipe(testing())
     .pipe(gulp.dest('testing'));
@@ -130,6 +134,7 @@ function tapGlobals(filepath) {
   });
 }
 
+// Gathers all blogs post articles
 function getBlog(posts, tags) {
   return through.obj((file, enc, cb) => {
     posts.push(file.frontmatter);
@@ -137,9 +142,8 @@ function getBlog(posts, tags) {
   });
 }
 
-// Gathers all tags into tags. 
-// Already in chronological order since running foreach from posts 
-function getTags(posts, tags) {
+// Gathers all tags
+function getTags(tags) {
   return through.obj((file, enc, cb) => {
     let frontmatter = file.frontmatter,
       filetags = frontmatter.tags.split(',');
@@ -168,17 +172,13 @@ function getTags(posts, tags) {
   });
 }
 
-function createBlog(basename, postsPerPage, posts) {
+function createBlog(options) {
 
   let stream = through.obj((file, enc, cb) => {
     cb(null, file);
   });
 
-  generateArchives(stream, {
-    basename: basename,
-    articlesPerPage: postsPerPage,
-    articles: posts
-  });
+  generateArchives(stream, options);
 
   stream.end();
   stream.emit('end');

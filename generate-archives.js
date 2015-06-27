@@ -6,9 +6,9 @@ import fs from 'fs';
 import _ from 'lodash';
 
 function generateArchives(stream, options = {
-  basename: blog,
-  articlesPerPage: 10,
   articles: []
+  articlesPerPage: 10,
+  basename: blog,
 }) {
 
   let pageCount = 1,
