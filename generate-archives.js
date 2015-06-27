@@ -5,45 +5,46 @@ import path from 'path';
 import fs from 'fs';
 import _ from 'lodash';
 
-function generateArchives(
-  basename, postsPerPage, posts, stream
-) {
+function generateArchives(stream, options = {
+  basename: blog,
+  articlesPerPage: 10,
+  articles: []
+}) {
 
-  let pages = [],
-    pageCount = 1,
-    totalPosts = posts.length + 1;
+  let pageCount = 1,
+    totalArticles = options.articles.length + 1,
+    articlesPerPage = parseInt(options.articlesPerPage),
+    articles = _.sortByOrder(options.articles, 'date', false); // latest articles first
 
-  postsPerPage = parseInt(postsPerPage);
+  // Separates articles into pages
+  for (let i = 0; i < articles.length + articlesPerPage; i++) {
 
-  // Sort posts, latest first
-  posts = _.sortByOrder(posts, 'date', false);
+    let page = _.slice(articles, 0, articlesPerPage);
 
-  // Separates posts into pages
-  for (let i = 0; i < posts.length + postsPerPage; i++) {
-
-    let page = _.slice(posts, 0, postsPerPage);
-
-    recursiveShift(posts, postsPerPage + 1);
+    // Pops out the same number of articles as articles per page
+    recursiveShift(articles, articlesPerPage + 1);
 
     if (!_.isEmpty(page)) {
       let pageMod = pageCount !== 1 ? '/page-' + pageCount : '';
-      pages.push(page);
+
       let file = new gutil.File({
         base: path.join(__dirname, './testing/'),
         cwd: __dirname,
-        path: path.join(__dirname, `./testing/${basename}${pageMod}.html`)
+        path: path.join(__dirname, `./testing/${options.basename}${pageMod}.html`)
       });
 
-      file.posts = page;
+      file.articles = page;
       file.prevPage = pageCount <= 1 ? null : pageCount - 1;
-      file.nextPage = (pageCount) * postsPerPage > totalPosts ? null : pageCount + 1;
+      file.nextPage = (pageCount) * articlesPerPage > totalArticles ? null : pageCount + 1;
 
       stream.write(file);
+
     }
     pageCount += 1;
   }
 }
 
+// Recursively pops an array
 function recursiveShift(arr, n) {
   if (n <= 1) {
     return;

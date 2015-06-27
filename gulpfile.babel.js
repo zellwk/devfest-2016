@@ -174,7 +174,11 @@ function createBlog(basename, postsPerPage, posts) {
     cb(null, file);
   });
 
-  generateArchives(basename, postsPerPage, posts, stream);
+  generateArchives(stream, {
+    basename: basename,
+    articlesPerPage: postsPerPage,
+    articles: posts
+  });
 
   stream.end();
   stream.emit('end');
@@ -189,8 +193,12 @@ function createTags(postsPerPage) {
   });
 
   _.forEach(tags, (tagObject) => {
-    generateArchives(tagObject.tag, postsPerPage, tagObject.posts, stream);;
-  })
+    generateArchives(stream, {
+      basename: tagObject.tag,
+      articlesPerPage: postsPerPage,
+      articles: tagObject.posts
+    });
+  });
 
   stream.end();
   stream.emit('end');
@@ -200,8 +208,7 @@ function createTags(postsPerPage) {
 
 function testing() {
   return through.obj((file, enc, cb) => {
-    cb(null, file);
-
     console.log(file.path);
+    cb(null, file);
   })
 }
