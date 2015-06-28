@@ -9,14 +9,18 @@ import path from 'path';
 import fs from 'fs';
 import moment from 'moment';
 import _ from 'lodash';
-import generateArchives from './generate-archives';
+import createBlog from './create-blog';
+import createTags from './create-tags';
+import debug from 'gulp-debug';
 
 let posts = [];
 let tags = [];
 
 // Handling Templates 
 gulp.task('posts', () => {
-  return gulp.src('./src/posts/*.md')
+  return gulp.src('./src/posts/*.{md,html}')
+    .pipe(testing())
+    .pipe(tapGlobals('./src/data/data.json'))
     .pipe(frontmatter({
       property: 'frontmatter',
       remove: true
@@ -24,15 +28,52 @@ gulp.task('posts', () => {
     .pipe(gulpMarked({
       smartypants: true
     }))
+    .pipe(tapSummary('<!--more-->'))
+    .pipe(tapPermalink('blog'))
+    .pipe(tapDate())
+    .pipe(tapTags('blog'))
+    .pipe(getBlog(posts))
+    .pipe(getTags(tags, 'blog'))
     .pipe(swigTemplate({
-      useTemplate: true,
       swigOptions: {
         locals: require('./src/data/data.json')
       }
     }))
+    // .pipe(permalinks())
     .pipe(gulpPrettyUrl())
     .pipe(gulp.dest('dev/blog'));
 });
+
+gulp.task('createBlog', ['posts'], () => {
+  return createBlog({
+      articles: posts,
+      articlesPerPage: '5',
+      basename: 'blog'
+    })
+    // swig template here (Might have to tweak file or swig template.js)
+    .pipe(swigTemplate({
+      template: 'blog',
+      swigOptions: {
+        locals: JSON.parse(fs.readFileSync('./src/data/data.json'))
+      }
+    }))
+    .pipe(gulpPrettyUrl())
+    .pipe(gulp.dest('dev'));
+});
+
+gulp.task('createTags', ['posts'], () => {
+  return createTags(tags, {
+      postsPerPage: 5
+    })
+    .pipe(swigTemplate({
+      template: 'tag',
+      swigOptions: {
+        locals: JSON.parse(fs.readFileSync('./src/data/data.json'))
+      }
+    }))
+    .pipe(gulpPrettyUrl())
+    .pipe(gulp.dest('dev'));
+})
 
 gulp.task('pages', () => {
   return gulp.src('./src/pages/*.html')
@@ -44,43 +85,6 @@ gulp.task('pages', () => {
     .pipe(gulpPrettyUrl())
     .pipe(gulp.dest('dev'));
 });
-
-gulp.task('archives', () => {
-  return gulp.src('./src/posts/*.{md,html}')
-    .pipe(tapGlobals('./src/data/data.json'))
-    .pipe(frontmatter({
-      property: 'frontmatter',
-      remove: true
-    }))
-    .pipe(gulpMarked({
-      smartypants: true
-    }))
-    .pipe(tapSummary('<!--more-->'))
-    .pipe(tapPermalink())
-    .pipe(tapDate())
-    .pipe(getBlog(posts))
-    .pipe(getTags(tags))
-    // .pipe(gulp.dest('testing'));
-});
-
-
-
-gulp.task('createBlog', ['archives'], () => {
-  return createBlog({
-      articles: posts
-      articlesPerPage: '5',
-      basename: 'blog',
-    })
-    // swig template here (Might have to tweak file or swig template.js)
-    .pipe(testing())
-    .pipe(gulp.dest('testing'));
-});
-
-gulp.task('createTags', ['archives'], () => {
-  return createTags(5)
-    .pipe(testing())
-    .pipe(gulp.dest('testing'));
-})
 
 function tapSummary(marker) {
   return through.obj(function(file, enc, cb) {
@@ -97,14 +101,19 @@ function tapSummary(marker) {
   });
 }
 
-// Creates Permalinks if permalink frontmatter not found. 
-function tapPermalink() {
+// Creates Permalinks from file title if permalink frontmatter not found. 
+function tapPermalink(basename) {
   return through.obj((file, enc, cb) => {
-    if (!file.frontmatter.permalink) {
-      // Creates permalink by trimming ends, replacing spaces and setting lowercase
+    let permalink = file.frontmatter.permalink ? file.frontmatter.permalink : file.frontmatter.title;
 
-      file.frontmatter.permalink = file.frontmatter.title.trim().replace(/\s+/g, '-').toLowerCase();
-    }
+    // ensures permalink is in correct format, replacing spaces with '-'
+    permalink = permalink.trim().replace(/\s+/g, '-').toLowerCase();
+
+    // Prep permalink with basename 
+
+    permalink = path.join(`/`, basename, permalink);
+
+    file.frontmatter.permalink = permalink;
 
     cb(null, file);
   })
@@ -143,72 +152,70 @@ function getBlog(posts, tags) {
 }
 
 // Gathers all tags
-function getTags(tags) {
+function getTags(tags, basename) {
   return through.obj((file, enc, cb) => {
-    let frontmatter = file.frontmatter,
-      filetags = frontmatter.tags.split(',');
 
-    _.forEach(filetags, (tag) => {
-      tag = tag.trim();
+    let articleTags = file.frontmatter.tags;
 
-      let index = _.findIndex(tags, {
-        tag: tag
+    _.forEach(articleTags, (tagObj) => {
+      let index;
+
+      // Searches for tag in tags
+      index = _.findIndex(tags, {
+        tag: tagObj.tag
       });
 
-      // Creates tag if tag not found 
+      // Creates tag if not found 
       if (index < 0) {
         index = tags.length;
         tags.push({
-          tag: tag,
+          tag: tagObj.tag,
+          permalink: tagObj.permalink,
           posts: []
-        });
+        })
       }
 
-      tags[index].posts.push(frontmatter);
+      tags[index].posts.push(file.frontmatter);
     });
 
     cb(null, file);
 
   });
-}
-
-function createBlog(options) {
-
-  let stream = through.obj((file, enc, cb) => {
-    cb(null, file);
-  });
-
-  generateArchives(stream, options);
-
-  stream.end();
-  stream.emit('end');
-
-  return stream;
-}
-
-function createTags(postsPerPage) {
-
-  let stream = through.obj((file, enc, cb) => {
-    cb(null, file);
-  });
-
-  _.forEach(tags, (tagObject) => {
-    generateArchives(stream, {
-      basename: tagObject.tag,
-      articlesPerPage: postsPerPage,
-      articles: tagObject.posts
-    });
-  });
-
-  stream.end();
-  stream.emit('end');
-
-  return stream;
 }
 
 function testing() {
   return through.obj((file, enc, cb) => {
-    console.log(file.path);
+    cb(null, file);
+  })
+}
+
+
+// Formats Tags
+function tapTags(basename) {
+  return through.obj((file, enc, cb) => {
+    let frontmatter = file.frontmatter,
+      // Splits tags with spaces or commas
+      articleTags = frontmatter.tags.split(/[ ,]+/);
+
+    // Reset frontmatter tags
+    frontmatter.tags = [];
+
+    // Augments tag string into tag collection
+    _.forEach(articleTags, (tag) => {
+      let permalink;
+
+      // Creates permalink for tag 
+      permalink = path.join(path.join('/', basename, tag));
+
+      // Pushes permalink back to tag collection
+      frontmatter.tags.push({
+        tag: tag,
+        permalink: permalink
+      });
+    });
+
+    file.frontmatter = frontmatter;
+
     cb(null, file);
   })
 }

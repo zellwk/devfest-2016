@@ -8,61 +8,65 @@ import through from 'through2';
 
 function swigTemplate(options) {
 
+  let defaults = {
+    template: 'layout',
+    dirname: 'src/templates',
+    extname: '.html',
+    swigOptions: {},
+    useTemplate: false
+  };
+
+  options = _.assign(defaults, options);
+
   return through.obj((file, enc, cb) => {
 
     if (file.isStream()) {
       cb(new gutil.PluginError('gulp-swig-template', 'Streaming not supported'));
       return;
     }
-    // Practical defaults for options
-    options = _.assign({
-      template: file.frontmatter ? file.frontmatter.layout : 'post',
-      templateFolder: 'src/templates',
-      templateExt: '.html',
-      swigOptions: {},
-      useTemplate: false
-    }, options);
 
-    let dataPath = gutil.replaceExtension(file.path, '.json'),
-      template = options.useTemplate ? path.join(file.cwd, options.templateFolder, options.template + options.templateExt) : file.path,
+    let localData = {},
+      localDataPath = gutil.replaceExtension(file.path, '.json'),
+      template,
+      templatePath,
+      frontmatterData,
+      markdownData,
       data,
       tpl;
 
-    if (options.useTemplate) {
-      // throws error if no template found 
-      if (!fs.existsSync(template)) {
-        let err = {};
-        err.templateFolder = path.join(file.cwd, options.templateFolder)
-        cb(new gutil.PluginError('gulp-swig-template', `${options.template}${options.templateExt} is not found in ${err.templateFolder}`))
+    // Set fallback for data
+    frontmatterData = file.frontmatter ? file.frontmatter : {};
+    markdownData = file.contents ? {
+      body: file.contents.toString()
+    } : {};
+
+
+    // Gets Local data (if any)
+    if (fs.existsSync(localDataPath)) {
+      localData = JSON.parse(fs.readFileSync(localDataPath));
+    }
+
+    // Gets Template (if any)
+    if (!_.isEmpty(options.template)) {
+      templatePath = path.join(file.cwd, options.dirname, options.template + options.extname);
+
+      // Throws error if no template found 
+      if (!fs.existsSync(templatePath)) {
+        cb(new gutil.PluginError('gulp-swig-templates', `${options.template}${options.extname} not found in ${options.dirname}`));
       }
     }
 
-    // Reads data from json file with the same name
-
-    if (fs.existsSync(dataPath)) {
-      data = JSON.parse(fs.readFileSync(dataPath));
-    }
-
-    // Set Swig options
+    // // Compiles Template 
     swig.setDefaults(options.swigOptions);
 
-    // Compile Swig template
-    tpl = swig.compileFile(template, {
+    template = swig.compileFile(templatePath, {
       'autoescape': false
     });
 
-    // Render Swig template
-    if (options.useTemplate) {
-      data = _.assign(file.frontmatter, {
-        body: file.contents.toString()
-      }, data);
-    } else {
-      data = _.assign({
-        body: file.contents.toString()
-      }, data);
-    }
+    // Renders template with data
+    data = _.assign(frontmatterData, markdownData, localData);
 
-    file.contents = new Buffer(tpl(data));
+    file.contents = new Buffer(template(data));
 
     cb(null, file);
   });

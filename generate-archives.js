@@ -5,11 +5,16 @@ import path from 'path';
 import fs from 'fs';
 import _ from 'lodash';
 
-function generateArchives(stream, options = {
-  articles: []
-  articlesPerPage: 10,
-  basename: blog,
-}) {
+function generateArchives(stream, options) {
+
+  let defaults = {
+    articles: [],
+    articlesPerPage: 10,
+    basename: 'blog',
+    dest: './dev'
+  }
+
+  options = _.assign(defaults, options);
 
   let pageCount = 1,
     totalArticles = options.articles.length + 1,
@@ -28,14 +33,17 @@ function generateArchives(stream, options = {
       let pageMod = pageCount !== 1 ? '/page-' + pageCount : '';
 
       let file = new gutil.File({
-        base: path.join(__dirname, './testing/'),
+        base: path.join(__dirname, options.dest),
         cwd: __dirname,
-        path: path.join(__dirname, `./testing/${options.basename}${pageMod}.html`)
+        path: path.join(__dirname, options.dest, `${options.basename}${pageMod}.html`)
       });
 
-      file.articles = page;
-      file.prevPage = pageCount <= 1 ? null : pageCount - 1;
-      file.nextPage = (pageCount) * articlesPerPage > totalArticles ? null : pageCount + 1;
+      file.frontmatter = {
+        title: toTitleCase(options.basename),
+        articles: page,
+        prevPage: pageCount <= 1 ? null : pageCount - 1,
+        nextPage: (pageCount) * articlesPerPage > totalArticles ? null : pageCount + 1
+      }
 
       stream.write(file);
 
@@ -53,6 +61,12 @@ function recursiveShift(arr, n) {
   }
 
   return recursiveShift(arr, n - 1);
+}
+
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
 }
 
 module.exports = generateArchives;
