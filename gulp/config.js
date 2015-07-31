@@ -29,10 +29,10 @@ var config = {
       smartypants: true,
       // TODO: add highlightjs
     },
-    postSrc: src + '/posts/*.{md,swig}',
+    postSrc: src + '/posts/*.{md,nj,nunjucks}',
     postDest: dist + '/blog',
     summaryMarker: '<!--more-->',
-    pageSrc: src + '/pages/**/*.swig',
+    pageSrc: src + '/pages/**/*.{nj,nunjucks}',
     pageDest: dist,
     watch: [
       src + '/templates/**/*', 

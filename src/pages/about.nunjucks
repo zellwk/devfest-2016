@@ -1,0 +1,17 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+
+{% markdown %} 
+## This is a markdown header
+
+While the next few paragraphs are included from a markdown fragment. 
+{% endmarkdown %}
+
+{% markdown 'fragments/about-1.md' %}
+
+{% markdown %} 
+See the source code (src/pages/about.nunjucks) to find out how to write markdown easily.
+{% endmarkdown %}
+
+{% endblock %}

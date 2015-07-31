@@ -31,10 +31,9 @@ function generateArchives(stream, options) {
     if (!_.isEmpty(page)) {
       let pageMod = pageCount !== 1 ? '/page-' + pageCount : '';
       let file = new gutil.File({
-        cwd: __dirname,
-        path: path.join(__dirname, `${options.dirname}${pageMod}.html`)
+        cwd: process.cwd(),
+        path: path.join(process.cwd(), `${options.dirname}${pageMod}.html`)
       });
-
       // Adds to localData for file
       file.localData = {
         title: toTitleCase(options.dirname),

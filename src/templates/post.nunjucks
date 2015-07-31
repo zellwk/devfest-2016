@@ -1,4 +1,4 @@
-{% extends 'layout.swig' %}
+{% extends 'layout.nunjucks' %}
 
 {% block desc %} <meta name="description" content="{{metaDesc}}" />{% endblock %}
 {% block canonical %} <link rel="canonical" href="{{permalink}}"> {% endblock %}
@@ -14,9 +14,7 @@
   {% endfor %}
 </ul>
 <div class="content">
-  {# {% autoescape false %}  #}
   {{body}} 
-  {# {% endautoescape %} #}
 </div>
 
 {% endblock %}

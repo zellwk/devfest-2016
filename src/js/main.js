@@ -1,8 +1,9 @@
-function name(arg) {
-  console.log('testing');
-  if (1 != 2) {
-    console.log('too');
-  }
-};
+import _ from 'lodash'; 
+import $ from 'jquery';
 
-name('yay');
+let arr = [6, 6, 6]; 
+
+_.forEach(arr, (num, index) => {console.log(num, index);})
+console.log($);
+console.log($);
+console.log($);

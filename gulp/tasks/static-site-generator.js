@@ -12,7 +12,7 @@ import stripJSONComments from 'strip-json-comments';
 // Custom modules 
 import createBlog from '../custom_modules/create-blog';
 import createTags from '../custom_modules/create-tags';
-import swigTemplate from '../custom_modules/swig-template';
+import nunjuckTemplate from '../custom_modules/nunjucks-template';
 
 // Import Config 
 import config from '../config';
@@ -23,7 +23,7 @@ let $ = plugins();
 let posts = [];
 let tags = [];
 
-// TODO: Prevent Swig error from breaking Gulp pipe
+// TODO: Prevent Nunjucks error from breaking Gulp pipe
 
 // Handling Templates
 gulp.task('posts', () => {
@@ -41,7 +41,7 @@ gulp.task('posts', () => {
     .pipe(tapTags())
     .pipe(getBlog(posts))
     .pipe(getTags(tags))
-    .pipe(swigTemplate())
+    .pipe(nunjuckTemplate())
     .pipe($.prettyUrl())
     .pipe(gulp.dest(config.blog.postDest));
 });
@@ -53,7 +53,7 @@ gulp.task('createBlog', () => {
       dirname: config.blog.blogDir,
     })
     .pipe(tapGlobals(config.blog.globalData))
-    .pipe(swigTemplate({
+    .pipe(nunjuckTemplate({
       template: 'blog'
     }))
     .pipe($.prettyUrl())
@@ -65,7 +65,7 @@ gulp.task('createTags', () => {
       postsPerPage: config.blog.articlesPerPage,
     })
     .pipe(tapGlobals(config.blog.globalData))
-    .pipe(swigTemplate({
+    .pipe(nunjuckTemplate({
       template: 'tag'
     }))
     .pipe($.prettyUrl())
@@ -75,7 +75,7 @@ gulp.task('createTags', () => {
 gulp.task('pages', () => {
   return gulp.src(config.blog.pageSrc)
     .pipe(tapGlobals(config.blog.globalData))
-    .pipe(swigTemplate())
+    .pipe(nunjuckTemplate())
     .pipe($.prettyUrl())
     .pipe(gulp.dest(config.dest));
 });
@@ -144,7 +144,7 @@ function tapFilename() {
       filename;
 
     // ensures permalink is in correct format, replacing spaces with '-'
-    permalink = permalink.trim().replace(/\s+/g, '-').toLowerCase();
+    permalink = permalink.toString().trim().replace(/\s+/g, '-').toLowerCase();
 
     // Replace filename with permalink
     filename = permalink;
