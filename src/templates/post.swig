@@ -14,9 +14,9 @@
   {% endfor %}
 </ul>
 <div class="content">
-  {% autoescape false %} 
+  {# {% autoescape false %}  #}
   {{body}} 
-  {% endautoescape %}
+  {# {% endautoescape %} #}
 </div>
 
 {% endblock %}
