@@ -1,0 +1,22 @@
+{
+  // Basic Site info
+  "SITE_TITLE": "Zell Liew",
+  "SITE_EMAIL": "zellwk@gmail.com",
+  "SITE_DESC": "This is my site description",
+  "SITE_URL": "http://zellwk.com",
+
+  // Social Media 
+  "TWITTER_HANDLE": "@zellwk",
+  "GPLUS_URL": "some-url",
+
+  // SEO (Not placed in templates yet)
+  "OG_IMG": "some-url", // Should be 1200x630
+  "TWITTER_IMG": "some-url", // should be 120x120
+
+  // Webmaster tools
+  "WEBMASTER_TOOLS": "",
+  "BING": "",
+  
+  // Analytics 
+  "GA": ""
+}

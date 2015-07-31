@@ -10,9 +10,10 @@ function createTags(tags, options) {
 
   _.forEach(tags, (tagObject) => {
     generateArchives(stream, {
-      basename: tagObject.tag,
+      dirname: tagObject.tag,
       articlesPerPage: options.postsPerPage,
-      articles: tagObject.posts
+      articles: tagObject.posts,
+      dest: options.dest
     });
   });
 

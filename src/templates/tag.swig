@@ -1,0 +1,34 @@
+{% extends 'layout.swig' %}
+
+{# TODO: Add Permalink to Tag page for Canonical tag #}
+{% block canonical %} <link rel="canonical" href="{{permalink}}"> {% endblock %}
+
+{% block content %}
+
+This is a Tag archive page. Shows 5 latests posts in tag (configurable). 
+
+<h2>You can also get global data in this page as well</h2>
+
+<p>Site Title is: {{SITE_TITLE}}</p>
+<p>Site Email is: {{SITE_EMAIL}}</p>
+<p>Site Description is {{SITE_DESC}}</p>
+<p>SITE_URL is {{SITE_URL}}</p>
+
+<h2>The tag title is: {{title}} </h2>
+
+<h2>And here are some articles</h2>
+
+{% for article in articles %}
+  <h4>article title: {{article.title}}</h4>
+  <p>Permalink is {{article.permalink}}</p>
+  <div>tags are:
+    <ul>
+      {% for tag in article.tags %}
+      <li> <a href="{{tag.permalink}}">{{tag.tag}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <p>Summary content is: {{article.summary}}</p>
+  {% endfor %}
+
+{% endblock %}

@@ -12,9 +12,9 @@ profile
 #ignore packages 
 node_modules
 bower_components
+jspm_packages
 
 #ignore generated files 
-src
 dev
 dist
 testing

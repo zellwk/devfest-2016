@@ -1,0 +1,23 @@
+{% extends '../templates/layout.swig' %}
+
+{% block title %} <title>{{SITE_TITLE}} | {{SITE_DESC}}</title> {% endblock %}
+{% block desc %} <meta name="description" content="{{SITE_DESC}}" />{% endblock %}
+{% block canonical %} <link rel="canonical" href="{{SITE_URL}}"> {% endblock %}
+
+
+{% block content %}
+
+This is the main page. 
+
+<h2>Here are some global data: </h2>
+
+<p>Site Title is: {{SITE_TITLE}}</p>
+<p>Site Email is: {{SITE_EMAIL}}</p>
+<p>Site Description is {{SITE_DESC}}</p>
+<p>SITE_URL is {{SITE_URL}}</p>
+
+<h2>Here are some local data found in index.json</h2>
+
+This is the data: {{random}}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{
+  "name": "static-starter",
+  "version": "0.0.0",
+  "authors": [
+    "Zell Liew <zellwk@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}

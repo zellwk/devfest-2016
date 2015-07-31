@@ -1,0 +1,22 @@
+.testing {
+  display: flex;
+  animation: all 0.3s ease-in;
+}
+
+.testing__name--is {
+  color: red;
+}
+
+.testing--true {
+  color: #fff;
+}
+
+@import "sprites";
+
+.sprite-1 {
+  @include sprite ($sprite-1)
+}
+
+.retina-sprite-1 {
+  @include retina-sprite($sprite-1-group);
+}
