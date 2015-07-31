@@ -47,7 +47,6 @@ var config = {
     },
     // proxy: "yourlocal.dev"
     browser: 'google chrome',
-    open: false 
   },
 
   fonts: {

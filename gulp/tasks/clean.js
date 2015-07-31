@@ -16,8 +16,6 @@ gulp.task('clean', (cb) => {
 })
 
 gulp.task('clean:cc', (cb) => {
-  // console.log($.cached.caches);
-  // $.cached.caches = {};
   del([config.dest], cb)
   // return cache.clearAll(callback);
 })
