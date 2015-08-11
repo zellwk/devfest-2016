@@ -6,12 +6,14 @@ import merge from 'merge-stream';
 
 // Import configs
 import config from '../config';
+import plumber from '../custom_modules/plumber';
 
 let $ = plugins();
 
 // CSS Sprites 
 gulp.task('sprites', () => {
   let spriteData = gulp.src(config.sprites.src)
+    .pipe(plumber())
     .pipe($.spritesmith(config.sprites.opts))
 
   // Runs images through imagemin for production 
@@ -27,7 +29,7 @@ gulp.task('sprites', () => {
   return merge(imgStream, cssStream);
 })
 
-gulp.task('sass', ['sprites'], () => {
+gulp.task('sass', () => {
   return gulp.src(config.sass.src)
     .pipe($.sourcemaps.init())
     .pipe($.sass(config.sass.opts).on('error', $.sass.logError))

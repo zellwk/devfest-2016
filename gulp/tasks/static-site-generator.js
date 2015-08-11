@@ -10,6 +10,7 @@ import runSequence from 'run-sequence'
 import stripJSONComments from 'strip-json-comments';
 
 // Custom modules 
+import plumber from '../custom_modules/plumber';
 import createBlog from '../custom_modules/create-blog';
 import createTags from '../custom_modules/create-tags';
 import nunjuckTemplate from '../custom_modules/nunjucks-template';
@@ -23,17 +24,17 @@ let $ = plugins();
 let posts = [];
 let tags = [];
 
-// TODO: Prevent Nunjucks error from breaking Gulp pipe
-
 // Handling Templates
 gulp.task('posts', () => {
   return gulp.src(config.blog.postSrc)
+    .pipe(plumber())
     .pipe(tapGlobals(config.blog.globalData))
     .pipe($.frontMatter({
       property: 'frontmatter',
       remove: true
     }))
-    .pipe($.markdown(config.blog.markdownOptions))
+    // Possible to use Nunjucks Tags instead of coverting to markdown here 
+    // .pipe($.markdown(config.blog.markdownOptions)) 
     .pipe(tapSummary(config.blog.summaryMarker))
     .pipe(tapDate())
     .pipe(tapFilename())
@@ -52,6 +53,7 @@ gulp.task('createBlog', () => {
       articlesPerPage: config.blog.articlesPerPage,
       dirname: config.blog.blogDir,
     })
+    .pipe(plumber())
     .pipe(tapGlobals(config.blog.globalData))
     .pipe(nunjuckTemplate({
       template: 'blog'
@@ -64,6 +66,7 @@ gulp.task('createTags', () => {
   return createTags(tags, {
       postsPerPage: config.blog.articlesPerPage,
     })
+    .pipe(plumber())
     .pipe(tapGlobals(config.blog.globalData))
     .pipe(nunjuckTemplate({
       template: 'tag'
@@ -74,6 +77,11 @@ gulp.task('createTags', () => {
 
 gulp.task('pages', () => {
   return gulp.src(config.blog.pageSrc)
+    .pipe(plumber())
+    .pipe($.frontMatter({
+      property: 'frontmatter',
+      remove: true
+    }))
     .pipe(tapGlobals(config.blog.globalData))
     .pipe(nunjuckTemplate())
     .pipe($.prettyUrl())

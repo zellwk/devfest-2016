@@ -1,0 +1,18 @@
+@import "highlight.js/styles/tomorrow-night";
+
+// TODO: Modify HighlightJS output for Scss
+
+pre {
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: 0.5em;
+  text-size-adjust: none;
+}
+
+// Custom fixed to HLJS tomorrow night
+
+// HTML syntax 
+// correct html tag color
+.hljs-tag .hljs-title {
+  color: #c66;
+}

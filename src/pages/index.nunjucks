@@ -6,22 +6,17 @@
 
 {% block content %}
 
-This is the main page. 
+<p>This is the main page. </p>
 
-<h2>Here are some global data: </h2>
+<h2>Here are some data that persists throughout the site: </h2>
 
 <p>Site Title is: {{SITE_TITLE}}</p>
 <p>Site Email is: {{SITE_EMAIL}}</p>
 <p>Site Description is {{SITE_DESC}}</p>
 <p>SITE_URL is {{SITE_URL}}</p>
 
-<h2>Here are some local data found in index.json</h2>
+These data can be found in <code>data/_data.json</code>.
 
-This is the data: {{random}}
-
-{% markdown %}
-You can also use Markdown text and / or include Markdown files automatically with the. See 
-[here](/about/)
-{% endmarkdown %}
+<a href="/data">Adding More sources of data</a>
 
 {% endblock %}

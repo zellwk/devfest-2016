@@ -11,6 +11,7 @@ let builder = new Builder();
 global.System = Builder.loader;
 
 gulp.task('jspm', () => {
+  // TODO: Update JSPM Tasks for config
   // Not entirely happy with JSPM task now, but works
   if (config.env === 'dev') {
     let jsStream = gulp.src('./src/js/**/*.js')
@@ -27,7 +28,7 @@ gulp.task('jspm', () => {
     return merge(jsStream, packagesStream);
 
   } else {
-    return jspmBuild();
+    return jspmBuild()
   }
 });
 
@@ -46,7 +47,7 @@ function jspmBuild() {
     // builder.config({
     //   baseURL: './',
     // });
-    return builder.build(config.jspm.src, config.jspm.dest, {
+    return builder.buildSFX(config.jspm.src, config.jspm.dest, {
       minify: true,
       sourceMaps: true,
       lowResSourceMaps: true,

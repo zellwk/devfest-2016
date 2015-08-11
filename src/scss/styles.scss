@@ -1,22 +1,73 @@
-.testing {
-  display: flex;
-  animation: all 0.3s ease-in;
+@import "susy/sass/susy";
+
+div {
+  color: blue;
+  text-align: center;
 }
 
-.testing__name--is {
+$susy: (columns: 8, container: 900px);
+
+.wrap {
+  @include container(show);
+}
+
+.content {
+  @include span(6);
+  background: rgba(red, 0.25);
+}
+
+.sidebar {
+  @include span(2 last);
+  background: rgba(green, 0.25);
+  
+  p {
+    font-size: 20px;
+  }
+}
+
+.gallery__item {
+  @include gallery(1);
+  margin-bottom: gutter();
+  height: 0;
+  padding-bottom: span(1);
+  background: rgba(orange, 0.25);
+}
+
+h2 {
   color: red;
 }
 
-.testing--true {
-  color: #fff;
+h3 {
+  color: blue;
 }
 
+h4 {
+  color: red;
+}
+
+h5 {
+  color: red;
+}
+
+p {
+  color: blue;
+}
+
+@import "highlight";
 @import "sprites";
 
-.sprite-1 {
-  @include sprite ($sprite-1)
-}
+// .sprite-1 {
+//   @include sprite ($sprite-1)
+// }
 
-.retina-sprite-1 {
-  @include retina-sprite($sprite-1-group);
-}
+// .retina-sprite-1 {
+//   @include retina-sprite($sprite-1-group);
+// }
+
+/**********/
+
+@include sprites($spritesheet-sprites);
+
+/*********/
+
+@include retina-sprites($retina-groups);

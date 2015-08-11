@@ -22,7 +22,7 @@ $sprite-1-total-width: 714px;
 $sprite-1-total-height: 304px;
 $sprite-1-image: 'sprites.png';
 $sprite-1: (0px, 0px, 0px, 0px, 356px, 304px, 714px, 304px, 'sprites.png', 'sprite-1', );
-$sprite-rectangle-1-name: 'sprite-Rectangle 1';
+$sprite-rectangle-1-name: 'sprite-Rectangle-1';
 $sprite-rectangle-1-x: 358px;
 $sprite-rectangle-1-y: 0px;
 $sprite-rectangle-1-offset-x: -358px;
@@ -32,7 +32,7 @@ $sprite-rectangle-1-height: 304px;
 $sprite-rectangle-1-total-width: 714px;
 $sprite-rectangle-1-total-height: 304px;
 $sprite-rectangle-1-image: 'sprites.png';
-$sprite-rectangle-1: (358px, 0px, -358px, 0px, 356px, 304px, 714px, 304px, 'sprites.png', 'sprite-Rectangle 1', );
+$sprite-rectangle-1: (358px, 0px, -358px, 0px, 356px, 304px, 714px, 304px, 'sprites.png', 'sprite-Rectangle-1', );
 $sprite-1-2x-name: 'sprite-1@2x';
 $sprite-1-2x-x: 0px;
 $sprite-1-2x-y: 0px;
@@ -44,7 +44,7 @@ $sprite-1-2x-total-width: 1428px;
 $sprite-1-2x-total-height: 608px;
 $sprite-1-2x-image: 'sprites@2x.png';
 $sprite-1-2x: (0px, 0px, 0px, 0px, 712px, 608px, 1428px, 608px, 'sprites@2x.png', 'sprite-1@2x', );
-$sprite-rectangle-1-2x-name: 'sprite-Rectangle 1@2x';
+$sprite-rectangle-1-2x-name: 'sprite-Rectangle-1@2x';
 $sprite-rectangle-1-2x-x: 716px;
 $sprite-rectangle-1-2x-y: 0px;
 $sprite-rectangle-1-2x-offset-x: -716px;
@@ -54,17 +54,17 @@ $sprite-rectangle-1-2x-height: 608px;
 $sprite-rectangle-1-2x-total-width: 1428px;
 $sprite-rectangle-1-2x-total-height: 608px;
 $sprite-rectangle-1-2x-image: 'sprites@2x.png';
-$sprite-rectangle-1-2x: (716px, 0px, -716px, 0px, 712px, 608px, 1428px, 608px, 'sprites@2x.png', 'sprite-Rectangle 1@2x', );
+$sprite-rectangle-1-2x: (716px, 0px, -716px, 0px, 712px, 608px, 1428px, 608px, 'sprites@2x.png', 'sprite-Rectangle-1@2x', );
 $spritesheet-width: 714px;
 $spritesheet-height: 304px;
 $spritesheet-image: 'sprites.png';
 $spritesheet-sprites: ($sprite-1, $sprite-rectangle-1, );
 $spritesheet: (714px, 304px, 'sprites.png', $spritesheet-sprites, );
-$-sprites-2x-scss-width: 1428px;
-$-sprites-2x-scss-height: 608px;
-$-sprites-2x-scss-image: 'sprites@2x.png';
-$-sprites-2x-scss-sprites: ($sprite-1-2x, $sprite-rectangle-1-2x, );
-$-sprites-2x-scss: (1428px, 608px, 'sprites@2x.png', $-sprites-2x-scss-sprites, );
+$retina-spritesheet-width: 1428px;
+$retina-spritesheet-height: 608px;
+$retina-spritesheet-image: 'sprites@2x.png';
+$retina-spritesheet-sprites: ($sprite-1-2x, $sprite-rectangle-1-2x, );
+$retina-spritesheet: (1428px, 608px, 'sprites@2x.png', $retina-spritesheet-sprites, );
 
 /*
 These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
@@ -73,8 +73,8 @@ The list formatted variables are intended for mixins like `retina-sprite` and `r
 */
 $sprite-1-group-name: 'sprite-1';
 $sprite-1-group: ('sprite-1', $sprite-1, $sprite-1-2x, );
-$sprite-rectangle-1-group-name: 'sprite-Rectangle 1';
-$sprite-rectangle-1-group: ('sprite-Rectangle 1', $sprite-rectangle-1, $sprite-rectangle-1-2x, );
+$sprite-rectangle-1-group-name: 'sprite-Rectangle-1';
+$sprite-rectangle-1-group: ('sprite-Rectangle-1', $sprite-rectangle-1, $sprite-rectangle-1-2x, );
 $retina-groups: ($sprite-1-group, $sprite-rectangle-1-group, );
 
 /*

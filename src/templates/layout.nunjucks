@@ -6,6 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  {% block css %} 
+  <!--build:css /css/styles.min.css-->
+  <link rel="stylesheet" href="/css/styles.css">
+  <!--endbuild-->
+  {% endblock %}
+
+  {% block headScripts %} 
+  <!--build:js js/head.min.js -->
+  <!--endbuild -->
+  {% endblock %}  
+
   {% block SEO %}
   {% block title %}<title> {{title}} | {{SITE_TITLE}} </title>{% endblock %}
   {# TODO: Meta description should describe the current page since they appear on the search results #}
@@ -46,23 +57,14 @@
   <meta name="msvalidate01" content="{{BING}}">
 
   <link rel="author" href="{{GPLUS_URL}}">
-
-  {% block css %} 
-  <!--build:css /css/styles.min.css-->
-  <link rel="stylesheet" href="/css/styles.css">
-  <!--endbuild-->
-  {% endblock %}
-
-  {% block headScripts %} 
-  <!--build:js js/head.min.js -->
-  <!--endbuild -->
-  {% endblock %}  
 </head>
 <body>
 
   {% block content %} {% endblock %}
 
   {% block footerScripts %}
+
+  {# Removes JSPM importer on production site #}
   <!--build:remove-->
   <script src="/jspm_packages/system.js"></script>
   <script src="/jspm.config.js"></script>
@@ -71,8 +73,11 @@
   </script>
   <!--endbuild-->
 
-  <!--build:js /js/main.min.js-->
-  <!--<script src="/js/main.js"></script>-->
+  {# TODO: Find a way to uncomment script / add build comment in production for JSPM related builds #}
+  {# Adds main.min.js that JSPM creates (a hack) #}
+
+  <!--build:uncomment -->
+  <!--<script src="/js/main.min.js"></script>-->
   <!--endbuild-->
 
   {# Google Analytics #}

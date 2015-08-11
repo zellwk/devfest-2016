@@ -14,7 +14,9 @@
   {% endfor %}
 </ul>
 <div class="content">
-  {{body}} 
+{% markdown %}
+{{body}} 
+{% endmarkdown %}
 </div>
 
 {% endblock %}

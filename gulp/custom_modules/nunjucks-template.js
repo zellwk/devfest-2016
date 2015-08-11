@@ -30,22 +30,30 @@ function nunjuckTemplate(options) {
 
     let globalData = file.globalData || {},
     localData = file.localData || {},
-    localDataPath = gutil.replaceExtension(file.path, '.json'),
     frontmatterData = file.frontmatter || {},
     markdownData,
+    sources,
+    sourceData = {},
     templatePath,
     data;
 
-    // Set markdown data
+    // Set markdown data to (if any)
     markdownData = file.contents ? {
       body: file.contents.toString()
     } : {};
 
-    // Gets Local data (if any)
-    try {
-      data = JSON.parse(fs.readFileSync(localDataPath));
-      localData = _.assign(localData, data);
-    } catch (e) {}
+    // Gets data from additional sources (if any)
+    if (file.frontmatter) {
+      sources = file.frontmatter.data || file.frontmatter.sources;
+    }
+
+    if (_.isString(sources)) {
+      localData = getDataFromSource(sources, localData);
+    } else if (_.isArray(sources)) {
+      _.forEach(sources, (source) => {
+        localData = getDataFromSource(source, localData);
+      });
+    }
 
     // consolidates data
     data = _.assign(globalData, frontmatterData, markdownData, localData);
@@ -91,20 +99,29 @@ function nunjuckTemplate(options) {
 
     // Renders Template
     consolidate.nunjucks(templatePath, data)
-      .then((html)=> {
-        file.contents = new Buffer(html);        
-        cb(null, file);
-      })
-      .catch((err) => {
-        // problems with using gulp.Util Plugin error, hence just logging.
-        console.log(err);
-      });
+    .then((html)=> {
+      file.contents = new Buffer(html);        
+      cb(null, file);
+    })
+    .catch((err) => {
+      cb(pluginError(err));
+    });
 
   });
 }
 
 function pluginError(message) {
-  return new gutil.PluginError('gulp-swig-templates', message);
+  return new gutil.PluginError('templator', message);
+}
+
+// Gets JSON data from file path and assign to given data object
+function getDataFromSource(filepath, returnedData = {}) {
+  try {
+    let data = JSON.parse(fs.readFileSync(filepath));
+    returnedData = _.assign(returnedData, data);
+  } catch (e) {};
+
+  return returnedData;
 }
 
 module.exports = nunjuckTemplate;
