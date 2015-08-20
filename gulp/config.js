@@ -28,6 +28,7 @@ var config = {
     globalData: './data/_data.json',
     markdownOptions: {
       smartypants: true,
+      gfm: true,
       // Highlights code with highlight.js
       highlight: function(code) {
         return require('highlight.js').highlightAuto(code).value;
@@ -50,8 +51,8 @@ var config = {
       baseDir: dist
     },
     // proxy: "yourlocal.dev"
-    browser: 'google chrome',
-    open: false,
+    // browser: 'google chrome',
+    open: false
   },
 
   fonts: {
@@ -73,7 +74,7 @@ var config = {
   },
 
   jspm: {
-    src: src + '/js/main.js',
+    src: src + '/js/main',
     dest: dist + '/js/main.min.js',
     watch: src + '/js/**/*.js',
     jspmConfigPath: './jspm.config.js'

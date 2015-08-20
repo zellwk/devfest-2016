@@ -36,7 +36,7 @@ function generateArchives(stream, options) {
       });
       // Adds to localData for file
       file.localData = {
-        title: toTitleCase(options.dirname),
+        title: options.tagTitle || toTitleCase(options.dirname),
         articles: page,
         prevPage: pageCount <= 1 ? null : pageCount - 1,
         nextPage: (pageCount) * articlesPerPage > totalArticles ? null : pageCount + 1

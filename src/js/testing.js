@@ -1,5 +1,5 @@
 function testlog() {
-  console.log(testlog);
+  console.log('testinggg');
 }
 
 module.exports = testlog;

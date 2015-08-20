@@ -1,0 +1,68 @@
+
+// Nicer Ampersands
+// TODO: Nicer ampersands not working properly. Debug
+
+// @font-face {
+//   font-family: Ampersand;
+//   src: local('Baskerville-Italic'), local('GoudyOldStyleT-Italic'), local('Garamond-Italic'), local('Palatino-Italic');
+//   unicode-range: U+26;
+// }
+
+// Typography
+// ----------
+// For all Typography related values. 
+// Uses Compass Vertical Rhythms. 
+// ==========
+
+// Compass Vertical Rhythms Settings
+// ---------------------------------
+$base-font-size: 16px;
+$base-line-height: 22.4px;
+$round-to-nearest-half-line: true;
+
+// Uses the `rem` unit for all vertical rhythm output
+$rhythm-unit: "rem";
+
+// Font Families
+// ------------
+$font-families: (
+  header: (Ampersand, Helvetica, Arial, sans-serif),
+  text: ("Source Sans Pro", Georgia, Times, serif),
+  code: ("Menlo", "Monaco", "Consolas", monospace)
+  );
+
+
+$h1-font-size: (
+
+  );
+
+$h2-font-size: (
+
+  );
+
+$h3-font-size: (
+
+  );
+
+$h4-font-size: (
+
+  );
+
+$h5-font-size: (
+
+  );
+
+$h6-font-size: (
+
+  );
+
+$p-font-size: (
+  null  : (16px, 1.4),
+  small : 16px,
+  medium: 17px,
+  large : 19px,
+  wide : 19px,
+  mega : 22px,
+  );
+
+$code-font-size: ();

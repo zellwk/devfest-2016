@@ -1,73 +1,52 @@
-@import "susy/sass/susy";
+// Libraries 
+// ---------
+@import "lib/lib";
 
-div {
-  color: blue;
-  text-align: center;
-}
+// Helpers 
+// -------
+@import "helpers/helpers";
+// @import "sprite"; // Import sprite if gulp-spriting is used
 
-$susy: (columns: 8, container: 900px);
+// Variables
+// ---------
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/themes";
+@import "variables/breakpoints";
 
-.wrap {
-  @include container(show);
-}
+// Reset and base files
+// --------------------
+@import "base/reset";
+@import "base/base";
 
-.content {
-  @include span(6);
-  background: rgba(red, 0.25);
-}
+// Layouts 
+// -------
+@import "layouts/susy";
+@import "layouts/layouts";
 
-.sidebar {
-  @include span(2 last);
-  background: rgba(green, 0.25);
-  
-  p {
-    font-size: 20px;
-  }
-}
+// Objects
+// -------
+// Repeatable objects across the site
+@import "objects/typography";
+// @import "objects/buttons";
 
-.gallery__item {
-  @include gallery(1);
-  margin-bottom: gutter();
-  height: 0;
-  padding-bottom: span(1);
-  background: rgba(orange, 0.25);
-}
 
-h2 {
-  color: red;
-}
+// Components
+// ----------
+// For individual, isolated components
+@import "components/highlightjs";
+// @import "components/nav"; 
 
-h3 {
-  color: blue;
-}
 
-h4 {
-  color: red;
-}
+// Utilities
+// ---------
+// @import "utilities";
 
-h5 {
-  color: red;
-}
+// Page Specific Overrides
+// -----------------------
+// Rarely ever used. Exceptions may be homepage, for example
 
-p {
-  color: blue;
-}
-
-@import "highlight";
-@import "sprites";
-
-// .sprite-1 {
-//   @include sprite ($sprite-1)
-// }
-
-// .retina-sprite-1 {
-//   @include retina-sprite($sprite-1-group);
-// }
-
-/**********/
-
-@include sprites($spritesheet-sprites);
-
-/*********/
-
-@include retina-sprites($retina-groups);
+// Shame
+// -----
+// For new style snippets that haven't been sorted and commented yet
+// @import "shame";

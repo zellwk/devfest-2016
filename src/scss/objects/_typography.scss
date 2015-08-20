@@ -1,0 +1,33 @@
+// Typography
+// ---------------
+// Sets typography for all of document 
+// ===============
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include ff(header);
+}
+
+h1 {@include font-size($h1-font-size); }
+h2 {@include font-size($h2-font-size); }
+h3 {@include font-size($h3-font-size); }
+h4 {@include font-size($h4-font-size); }
+h5 {@include font-size($h5-font-size); }
+h6 {@include font-size($h6-font-size); }
+p {@include font-size($p-font-size); }
+code {@include font-size($code-font-size); }
+
+// Custom Underlines 
+// a[href] {
+//   text-decoration: none;
+//   background: linear-gradient(gray, gray) no-repeat;
+//   background-size: 100% 1px;
+//   background-position: 0 1.15em;
+//   // If want to set text-shadow, must be same color as background color
+//   // text-shadow: 0.15em 0 white, -0.15em 0 white;
+// }
+

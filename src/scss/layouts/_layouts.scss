@@ -1,0 +1,20 @@
+// Layouts
+// =======
+
+// Sticky Footer
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+section {
+  // This would give a fixed max-width of 960px
+  @include bp(960px) {
+    padding: 0 calc(50% - 480px);
+  }
+}

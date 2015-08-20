@@ -6,17 +6,24 @@
 
 {% block content %}
 
-<p>This is the main page. </p>
+<section>
+  <p>This is the main page. </p>
 
-<h2>Here are some data that persists throughout the site: </h2>
+  <h2>Here are some data that persists throughout the site: </h2>
 
-<p>Site Title is: {{SITE_TITLE}}</p>
-<p>Site Email is: {{SITE_EMAIL}}</p>
-<p>Site Description is {{SITE_DESC}}</p>
-<p>SITE_URL is {{SITE_URL}}</p>
+  <p>Site Title is: {{SITE_TITLE}}</p>
+  <p>Site Email is: {{SITE_EMAIL}}</p>
+  <p>Site Description is {{SITE_DESC}}</p>
+  <p>SITE_URL is {{SITE_URL}}</p>
 
-These data can be found in <code>data/_data.json</code>.
+  These data can be found in <code>data/_data.json</code>.
 
-<a href="/data">Adding More sources of data</a>
+  <p>Here are some other links you may find interesting:</p>
+    <ul>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/markdown">Writing in Markdown</a></li>
+      <li><a href="/additional-data">Additional Data sources</a></li>
+    </ul>
+  </section>
 
 {% endblock %}

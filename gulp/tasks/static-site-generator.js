@@ -25,6 +25,24 @@ let posts = [];
 let tags = [];
 
 // Handling Templates
+
+// TODO: Switch tapGlobals and Nunjuck Templates such that
+// 1) collectData Sources => 1 plugin 
+// 2) Output Data => 1 plugin
+
+gulp.task('pages', () => {
+  return gulp.src(config.blog.pageSrc)
+    .pipe(plumber())
+    .pipe($.frontMatter({
+      property: 'frontmatter',
+      remove: true
+    }))
+    .pipe(tapGlobals(config.blog.globalData))
+    .pipe(nunjuckTemplate())
+    .pipe($.prettyUrl())
+    .pipe(gulp.dest(config.dest));
+});
+ 
 gulp.task('posts', () => {
   return gulp.src(config.blog.postSrc)
     .pipe(plumber())
@@ -33,8 +51,8 @@ gulp.task('posts', () => {
       property: 'frontmatter',
       remove: true
     }))
-    // Possible to use Nunjucks Tags instead of coverting to markdown here 
-    // .pipe($.markdown(config.blog.markdownOptions)) 
+    // Must use this. Nunjuck Markdown tag screws up summary marker
+    .pipe($.markdown(config.blog.markdownOptions)) 
     .pipe(tapSummary(config.blog.summaryMarker))
     .pipe(tapDate())
     .pipe(tapFilename())
@@ -65,25 +83,13 @@ gulp.task('createBlog', () => {
 gulp.task('createTags', () => {
   return createTags(tags, {
       postsPerPage: config.blog.articlesPerPage,
+
     })
     .pipe(plumber())
     .pipe(tapGlobals(config.blog.globalData))
     .pipe(nunjuckTemplate({
       template: 'tag'
     }))
-    .pipe($.prettyUrl())
-    .pipe(gulp.dest(config.dest));
-});
-
-gulp.task('pages', () => {
-  return gulp.src(config.blog.pageSrc)
-    .pipe(plumber())
-    .pipe($.frontMatter({
-      property: 'frontmatter',
-      remove: true
-    }))
-    .pipe(tapGlobals(config.blog.globalData))
-    .pipe(nunjuckTemplate())
     .pipe($.prettyUrl())
     .pipe(gulp.dest(config.dest));
 });
@@ -200,6 +206,7 @@ function tapTags() {
       // Pushes permalink back to tag collection
       frontmatter.tags.push({
         tag: tag,
+        dirname: dirname,
         permalink: permalink
       });
     });

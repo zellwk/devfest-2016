@@ -12,5 +12,14 @@
     "app/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "susy": "~2.2.5",
+    "normalize.css": "~3.0.3",
+    "adaptive-placeholders": "~1.1.5",
+    "mappy-breakpoints": "~0.2.1",
+    "sass-hidpi": "~2.0.0",
+    "themify": "~0.1.0",
+    "vertical-rhythms-without-compass": "~1.0.1"
+  }
 }

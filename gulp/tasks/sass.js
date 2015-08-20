@@ -31,8 +31,9 @@ gulp.task('sprites', () => {
 
 gulp.task('sass', () => {
   return gulp.src(config.sass.src)
+    .pipe(plumber('sass'))
     .pipe($.sourcemaps.init())
-    .pipe($.sass(config.sass.opts).on('error', $.sass.logError))
+    .pipe($.sass(config.sass.opts))
     .pipe($.autoprefixer(config.autoprefixer))
     .pipe($.sourcemaps.write())
     .pipe($.size({'title': 'styles'}))

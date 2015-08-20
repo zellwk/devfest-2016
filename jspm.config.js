@@ -18,11 +18,15 @@ System.config({
     "babel": "npm:babel-core@5.8.14",
     "babel-runtime": "npm:babel-runtime@5.8.12",
     "core-js": "npm:core-js@0.9.18",
+    "highlight": "npm:highlight.js@8.7.0",
     "jquery": "github:components/jquery@2.1.4",
     "lodash": "npm:lodash@3.10.0",
     "process": "npm:process@0.11.1",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
+    },
+    "github:jspm/nodelibs-buffer@0.1.0": {
+      "buffer": "npm:buffer@3.4.2"
     },
     "github:jspm/nodelibs-process@0.1.1": {
       "process": "npm:process@0.10.1"
@@ -36,10 +40,19 @@ System.config({
     "npm:babel-runtime@5.8.12": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
+    "npm:buffer@3.4.2": {
+      "base64-js": "npm:base64-js@0.0.8",
+      "ieee754": "npm:ieee754@1.1.6",
+      "is-array": "npm:is-array@1.0.1"
+    },
     "npm:core-js@0.9.18": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:highlight.js@8.7.0": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"

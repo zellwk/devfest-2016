@@ -1,0 +1,24 @@
+$susy:(
+  columns: 2,
+  gutters: 0.25,
+  global-box-sizing: border-box,
+  debug: (image: hide, color: rgba(red, 0.5))
+  );
+
+$contexts: (
+  content: (
+    small: 3,
+    med: 4,
+    large: 5, 
+    xlarge: 6, 
+    xxlarge: 7, 
+    xxxlarge: 8
+    )
+  );
+
+$bp-small: 450px;
+$bp-med: 630px;
+$bp-large: 810px;
+$bp-xlarge: 990px;
+$bp-xxlarge: 1180px;
+$bp-xxxlarge: 1372px;

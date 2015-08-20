@@ -1,0 +1,144 @@
+// MIXINS
+// ------
+// General mixins for projects
+// ======
+
+// Clearfix
+// --------
+@mixin cf {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+// Font Smoothing
+// --------------
+// Mixin to turn on font smoothing, especially for light text on dark background for OSX
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+// Image-replacement 
+// -----------------
+// Hides text for image replacement
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+@mixin hide-text {
+  font: #{0 / 0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+// Is-invisible
+// ------------
+// Makes element invisible, but still accessible
+// - http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin is-invisible {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+}
+
+// Is-visible
+// ----------
+// Turns off the element-invisible effect.
+@mixin is-visible {
+  position: static;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Placeholder
+// -----------
+// Changes Placeholder styles
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    //  Firefox 18-
+    @content;
+  }
+
+  &::-moz-placeholder {
+    // Firefox 19+
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// SELECTION
+// ---------
+// Changes selected color and background color
+@mixin selection($bg-color, $text-color) {
+  &::-moz-selection {
+    background: $bg-color;
+    color: $text-color;
+  }
+
+  &::selection {
+    background: $bg-color;
+    color: $text-color;
+  }
+}
+
+// Text input
+// ------------
+// Calls addresses all text inputs in one selector
+$text-input-types: text, password, date, datetime, datetime-local, month, week, email, number, search, tel, time, url, color !default;
+
+@mixin text-input($types: $text-input-types) {
+  $selectors: ();
+
+  @each $type in $types {
+    $selector: unquote("input[type='#{$type}']");
+    $selectors: append($selectors, $selector, comma);
+  }
+
+  & #{$selectors} {
+    @content;
+  }
+}
+
+// Z-index
+// -------
+@mixin zi($location) {
+  z-index: map-get($zindex, $location);
+}
+
+// Mappy Breakpoint shortcuts
+
+// BP [Mixin]
+// ----------
+// Convenience mixin for Mappy Breakpoints
+@mixin bp($queries, $type: all, $query-fallback: null, $breakpoints: $breakpoints) {
+  @include mappy-bp($queries, $type, $query-fallback, $breakpoints) {
+    @content;
+  }
+}
+
+@mixin query($query, $mappy-queries: $queries) {
+  @include mappy-query($query, $mappy-queries)
+}

@@ -1,0 +1,19 @@
+---
+data: ['data/about.json', 'data/testing.json']
+---
+
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+<section> 
+  <h2>This is an example page where you can use data sources located anywhere in your project</h2>
+
+  <p>This is data from <code>data/about.json</code>: {{random_text_from_source_one}}</p>
+
+  <p>This is data from <code>data/testing.json</code>: {{random_text_from_source_two}}</p>
+
+  <h2>You can even get write stuff in Markdown and include into the generator from any page, like this paragraph here: </h2>
+
+  {% markdown "fragments/data.md" %}
+</section>
+{% endblock %}

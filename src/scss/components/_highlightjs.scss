@@ -1,0 +1,116 @@
+// Tomorrow Night Theme 
+// http://jmblog.github.com/color-themes-for-google-code-highlightjs 
+// Original theme - https://github.com/chriskempson/tomorrow-theme 
+// http://jmblog.github.com/color-themes-for-google-code-highlightjs
+
+// scss-lint:disable HexLength, SelectorFormat
+
+// Tomorrow Comment
+.hljs-comment {
+  color: #969896;
+}
+
+// Tomorrow Red
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.lang-html .hljs-doctype,
+.lang-html .hljs-title,
+.lang-css .hljs-id,
+.lang-css .hljs-class,
+.lang-css .hljs-pseudo,
+.lang-scss .hljs-id,
+.lang-scss .hljs-class,
+.lang-scss .hljs-pseudo {
+  color: #cc6666;
+}
+
+// Tomorrow Orange
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant,
+.lang-css .hljs-value,
+.lang-scss .hljs-value,
+.lang-scss .hljs-at_rule + .hljs-string {
+  color: #de935f;
+}
+
+// Tomorrow Yellow
+.ruby .hljs-class .hljs-title,
+.lang-css .hljs-attribute,
+.lang-scss .hljs-attribute {
+  color: #f0c674;
+}
+
+// Tomorrow Green
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.hljs-name,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #b5bd68;
+}
+
+// Tomorrow Aqua
+.hljs-title,
+.lang-css .hljs-hexcolor,
+.lang-scss .hljs-hexcolor {
+  color: #8abeb7;
+}
+
+// Tomorrow Blue
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.lang-javascript .hljs-title,
+.lang-js .hljs-title,
+.coffeescript .hljs-title {
+  color: #81a2be;
+}
+
+// Tomorrow Purple
+.hljs-keyword,
+.lang-scss .hljs-at_rule,
+.lang-javascript .hljs-function ,
+.lang-js .hljs-function {
+  color: #b294bb;
+}
+
+// Default color
+.lang-bash .hljs-built_in {
+  color: #c5c8c6;
+}
+
+pre code {
+  display: block;
+  overflow-x: auto;
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: 0.5em;
+  -webkit-text-size-adjust: none;
+}
+
+.lang-javascript .xml,
+.lang-js .xml,
+.tex .hljs-formula,
+.xml .lang-javascript,
+.xml .vbscript,
+.xml .lang-css,
+.xml .lang-scss,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}

@@ -4,16 +4,25 @@ import merge from 'merge-stream';
 import Builder from 'systemjs-builder';
 import through from 'through2';
 import config from '../config';
+import jspm from 'jspm';
 
 let $ = plugins();
 
-let builder = new Builder();
+let builder = new jspm.Builder();
+
 global.System = Builder.loader;
+
+// Configures correct package path for JSPM
+if (config.env !== 'prod') {
+  jspm.setPackagePath('/'); 
+} else {
+  jspm.setPackagePath('./');
+}
 
 gulp.task('jspm', () => {
   // TODO: Update JSPM Tasks for config
   // Not entirely happy with JSPM task now, but works
-  if (config.env === 'dev') {
+  if (config.env !== 'prod') {
     let jsStream = gulp.src('./src/js/**/*.js')
     .pipe($.newer('./dev/js'))
     .pipe(gulp.dest('./dev/js'));
@@ -28,7 +37,7 @@ gulp.task('jspm', () => {
     return merge(jsStream, packagesStream);
 
   } else {
-    return jspmBuild()
+    return jspmBuild();
   }
 });
 
@@ -39,18 +48,16 @@ function jspmBuild() {
     cb(null, file);
   });
 
-  // builder.reset();
   builder.loadConfig('./jspm.config.js')
   .then(()=> {
-    // Check with Guy bedford if we can change baseURL.
-    // Otherwise, have to manually change jspm pkg baseURL from "/" to "./"
-    // builder.config({
-    //   baseURL: './',
-    // });
+    builder.config({
+      baseURL: "./"
+    });
+
     return builder.buildSFX(config.jspm.src, config.jspm.dest, {
+      runtime: false,
       minify: true,
       sourceMaps: true,
-      lowResSourceMaps: true,
     });
   })
   .catch((err) => {
@@ -58,12 +65,13 @@ function jspmBuild() {
     console.log(err);
   });
 
-  // builder.trace('./dev').then(function(trace) {
-  //   console.log(trace);
-  //   builder.getDepCache(trace.tree);
-  // }).catch((err)=> {
-  //   console.log(err);
-  // });
+  builder.trace('./src/js/main').then(function(trace) {
+    console.log(trace.tree);
+    builder.getDepCache(trace.tree);
+  }).catch((err)=> {
+    console.log('==');
+    console.log(err);
+  });
 
   stream.end();
   stream.emit('end');

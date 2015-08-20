@@ -9,12 +9,13 @@ let $ = plugins();
 // Format Tests
 
 // Note: Task requires Ruby & scss-lint installed onto your system
-// Untested
+// Note: Linters slow down the watch task. Hence, recommend to lint separately
+
 gulp.task('scsslint', () => {
   return gulp.src(config.scsslint.src)
   .pipe($.scssLint({
     customReports: $.scssLintStylish,
-    endless: true,
+    endless: false,
   }))
 });
 

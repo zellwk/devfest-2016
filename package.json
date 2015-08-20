@@ -30,6 +30,7 @@
     "gulp-markdown": "^1.0.0",
     "gulp-minify-css": "^1.2.0",
     "gulp-newer": "^0.5.1",
+    "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
     "gulp-pretty-url": "^0.1.1",
     "gulp-rename": "^1.2.2",
@@ -68,6 +69,7 @@
     "directories": {},
     "configFile": "jspm.config.js",
     "dependencies": {
+      "highlight": "npm:highlight.js@^8.7.0",
       "jquery": "github:components/jquery@^2.1.4",
       "lodash": "npm:lodash@^3.10.0",
       "process": "npm:process@^0.11.1"
@@ -77,8 +79,5 @@
       "babel-runtime": "npm:babel-runtime@^5.1.13",
       "core-js": "npm:core-js@^0.9.4"
     }
-  },
-  "dependencies": {
-    "susy": "^2.2.5"
   }
 }
