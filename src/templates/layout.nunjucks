@@ -8,6 +8,7 @@
 
   {% block css %} 
   <!--build:css /css/styles.min.css-->
+  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/styles.css">
   <!--endbuild-->
   {% endblock %}

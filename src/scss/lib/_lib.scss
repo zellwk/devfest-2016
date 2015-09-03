@@ -21,10 +21,6 @@
 // Then, import those libraries in the file here.
 // ==========
 
-// Reset
-// -----
-@import "normalize.css/normalize";
-
 // Susy and Susy Helpers
 // ---------------------
 @import "susy/sass/susy";
@@ -36,8 +32,6 @@
 
 // Typography
 // ----------
-// Planning not to use vertical rhythms anymore. 
-// Use self-made rhythm function instead. 
 @import "vertical-rhythms-without-compass/vertical-rhythms";
 
 // Forms
@@ -46,6 +40,5 @@
 
 // Misc
 // ----
-
 @import "sass-hidpi/hidpi"; // for responsive images
 @import "themify/themify"; // for theming
