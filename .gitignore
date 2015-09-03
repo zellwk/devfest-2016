@@ -13,6 +13,7 @@ profile
 node_modules
 bower_components
 jspm_packages
+*.log
 
 #ignore generated files 
 dev

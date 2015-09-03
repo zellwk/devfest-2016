@@ -7,9 +7,13 @@ linters:
     space_before_bang: true
     space_after_bang: false
 
+  BemDepth:
+    enabled: true
+    max_elements: 1
+
   BorderZero:
     enabled: true
-    convention: zero # or `none`
+    convention: none # or `none`
 
   ColorKeyword:
     enabled: false
@@ -18,13 +22,13 @@ linters:
     enabled: false
 
   Comment:
-    enabled: true
+    enabled: false
 
   DebugStatement:
     enabled: true
 
   DeclarationOrder:
-    enabled: false
+    enabled: true
 
   DuplicateProperty:
     enabled: false
@@ -41,7 +45,7 @@ linters:
     enabled: true
 
   FinalNewline:
-    enabled: false
+    enabled: true
     present: true
 
   HexLength:
@@ -78,7 +82,7 @@ linters:
 
   MergeableSelector:
     enabled: true
-    force_nesting: true
+    force_nesting: false
 
   NameFormat:
     enabled: true
@@ -106,6 +110,19 @@ linters:
     enabled: true
     extra_properties: []
 
+  PropertyUnits:
+    enabled: true
+    global: [
+      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
+      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
+      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
+      'deg', 'grad', 'rad', 'turn',            # Angle
+      'ms', 's',                               # Duration
+      'Hz', 'kHz',                             # Frequency
+      'dpi', 'dpcm', 'dppx',                   # Resolution
+      '%']                                     # Other
+    properties: {}
+
   QualifyingElement:
     enabled: true
     allow_element_with_attribute: false
@@ -119,6 +136,8 @@ linters:
   SelectorFormat:
     enabled: true
     convention: hyphenated_BEM # or 'BEM' 'hyphenated_lowercase', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    class_convention: '^(?:u|is|has)\-[a-z][a-zA-Z0-9]*$|^(?!u|is|has)[a-zA-Z][a-zA-Z0-9]*(?:\-[a-z][a-zA-Z0-9]*)?(?:\-\-[a-z][a-zA-Z0-9]*)?$'
+
 
   Shorthand:
     enabled: true
@@ -143,7 +162,7 @@ linters:
   SpaceBeforeBrace:
     enabled: true
     style: space # or 'new_line'
-    allow_single_line_padding: false
+    allow_single_line_padding: true
 
   SpaceBetweenParens:
     enabled: true
@@ -151,13 +170,13 @@ linters:
 
   StringQuotes:
     enabled: true
-    style: double_quotes # or single_quotes
+    style: single_quotes # or single_quotes
 
   TrailingSemicolon:
     enabled: true
 
   TrailingZero:
-    enabled: false
+    enabled: true
 
   UnnecessaryMantissa:
     enabled: true
@@ -166,7 +185,7 @@ linters:
     enabled: true
 
   UrlFormat:
-    enabled: true
+    enabled: false
 
   UrlQuotes:
     enabled: true
@@ -176,7 +195,7 @@ linters:
     properties: []
 
   VendorPrefix:
-    enabled: false
+    enabled: true
     identifier_list: base
     additional_identifiers: []
     excluded_identifiers: []
