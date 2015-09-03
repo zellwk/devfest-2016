@@ -3,25 +3,26 @@
   // Use Camel Case or All Caps instead.
 
   // Basic Site info
-  "SITE_TITLE": "Zell Liew",
-  "SITE_EMAIL": "zellwk@gmail.com",
-  "SITE_DESC": "This is my site description",
-  "SITE_URL": "http://zellwk.com",
+  "siteTitle": "Zell Liew",
+  "siteEmail": "zellwk@gmail.com",
+  "siteDescription": "",
+  "siteUrl": "http://zellwk.com",
+  "siteDescription": "This is my site description",
 
   // Social Media 
-  "TWITTER_HANDLE": "@zellwk",
-  "GPLUS_URL": "some-url",
+  "twitterHandle": "@zellwk",
+  "googlePlusUrl": "some-url",
 
   // SEO (Not placed in templates yet)
-  "OG_IMG": "some-url", // Should be 1200x630
-  "TWITTER_IMG": "some-url", // should be 120x120
+  "ogImage": "some-url", // Should be 1200x630
+  "twitterImage": "some-url", // should be 120x120
 
   // Webmaster tools
-  "WEBMASTER_TOOLS": "",
-  "BING": "",
+  "webmasterToolsUrl": "",
+  "bingUrl": "",
   
   // Analytics 
-  "GA": "", 
+  "googleAnalytics": "", 
 
-  "randomString": "rloerad lsadkjfh aklsdjf"
+  // Additional data as needed
 }
