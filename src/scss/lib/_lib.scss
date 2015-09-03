@@ -23,22 +23,22 @@
 
 // Susy and Susy Helpers
 // ---------------------
-@import "susy/sass/susy";
-// @import "susy-helpers/susy-helpers";
+@import 'susy/sass/susy';
+// @import 'susy-helpers/susy-helpers';
 
 // Breakpoints
 // ------------
-@import "mappy-breakpoints/mappy-breakpoints";
+@import 'mappy-breakpoints/mappy-breakpoints';
 
 // Typography
 // ----------
-@import "vertical-rhythms-without-compass/vertical-rhythms";
-
+@import 'vertical-rhythms-without-compass/vertical-rhythms';
+@import 'modular-scale/stylesheets/modular-scale';
 // Forms
 // -----
-@import "adaptive-placeholders/adaptive-placeholders";
+@import 'adaptive-placeholders/adaptive-placeholders';
 
 // Misc
 // ----
-@import "sass-hidpi/hidpi"; // for responsive images
-@import "themify/themify"; // for theming
+@import 'sass-hidpi/hidpi'; // for responsive images
+@import 'themify/themify'; // for theming

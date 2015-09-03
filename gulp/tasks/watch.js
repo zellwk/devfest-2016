@@ -8,7 +8,7 @@ let reload = browserSync.reload;
 // Watch for file changes 
 gulp.task('watch', function() {
   // Watch assets
-  gulp.watch(config.sass.src , ['sass', 'scsslint']);
+  gulp.watch(config.sass.src , ['sass', 'lint:scss']);
   gulp.watch(config.jspm.watch, ['watch-jspm']);
 
   // Watch site generators

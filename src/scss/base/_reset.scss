@@ -56,14 +56,14 @@ button {
   -moz-appearance: none;
   appearance: none;
   border-radius: 0;
-  outline: 0;
-  border: 0;
+  outline: none;
+  border: none;
 
   &:hover,
   &:active,
   &:focus {
-    outline: 0;
-    border: 0;
+    outline: none;
+    border: none;
   }
 }
 

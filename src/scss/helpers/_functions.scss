@@ -38,13 +38,17 @@
   }
 }
 
+// Converts px and em to rem (assuming base = 16px)
+@function rem($font-size) {
+  @if unit($font-size) == 'px' {
+    @return strip-unit($font-size) / 16 * 1rem;    
+  } 
+  @else if unit($font-size) == 'em' {
+    @return strip-unit($font-size) * 1rem;
+  }
+}
 
-// // Converts multiple to rem 
-// @function rhythm($rhythm) {
-//   @return $rhythm * strip-unit($base-font-size);
-// }
-
-// // Strips unit
-// @function strip-unit($num) {
-//   @return $num / ($num * 0 + 1);
-// }
+// Strips unit
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}

@@ -3,6 +3,21 @@
 // Sets typography for all of document 
 // ===============
 
+html {
+  @include ff(text);
+  @include font-smoothing;
+  @include html-font-size-and-line-height($p-font-map);
+  // Remove discretionary-ligatures as necessary
+  font-variant-ligatures: common-ligatures 
+    discretionary-ligatures 
+    historical-ligatures;
+
+  // Optmizes font rendering for legibility.
+  // May break with some browsers, comment out as necessary.
+  text-rendering: optimizeLegibility;
+}
+
+
 h1,
 h2,
 h3,
@@ -12,17 +27,23 @@ h6 {
   @include ff(header);
 }
 
-h1 {@include font-size($h1-font-size); }
-h2 {@include font-size($h2-font-size); }
-h3 {@include font-size($h3-font-size); }
-h4 {@include font-size($h4-font-size); }
-h5 {@include font-size($h5-font-size); }
-h6 {@include font-size($h6-font-size); }
-p {@include font-size($p-font-size); }
-code {@include font-size($code-font-size); }
+h1 {@include font-size($h1-font-map); }
+h2 {@include font-size($h2-font-map); }
+h3 {@include font-size($h3-font-map); }
+h4 {@include font-size($h4-font-map); }
+h5 {@include font-size($h5-font-map); }
+h6 {@include font-size($h6-font-map); }
+code {@include font-size($code-font-map); }
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+pre {
+  white-space: pre;
+  tab-size: 2;
+}
 
 // Custom Underlines 
-// a[href] {
+// a {
 //   text-decoration: none;
 //   background: linear-gradient(gray, gray) no-repeat;
 //   background-size: 100% 1px;

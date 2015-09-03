@@ -9,13 +9,13 @@
 // ================
 
 $breakpoints: (
-  "small" : 400px,
-  "med"   : 640px,
-  "large" : 900px,
-  "wide"  : 1100px,
-  "mega"  : 1400px,
+  'small' : 400px,
+  'med'   : 640px,
+  'large' : 900px,
+  'wide'  : 1100px,
+  'mega'  : 1400px,
   );
 
 $queries: (
-  "tablet" : bp(med wide),
+  'tablet' : bp(med wide),
   );

@@ -7,7 +7,7 @@
 // --------
 @mixin cf {
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
     clear: both;
   }
@@ -28,16 +28,19 @@
   }
 }
 
-// Image-replacement 
-// -----------------
-// Hides text for image replacement
-// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
-@mixin hide-text {
-  font: #{0 / 0} a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
+// Mappy Breakpoint shortcuts
+// 
+// BP [Mixin]
+// ----------
+// Convenience mixin for Mappy Breakpoints
+@mixin bp($queries, $type: all, $query-fallback: null, $breakpoints: $breakpoints) {
+  @include mappy-bp($queries, $type, $query-fallback, $breakpoints) {
+    @content;
+  }
+}
+
+@mixin query($query, $mappy-queries: $queries) {
+  @include mappy-query($query, $mappy-queries);
 }
 
 // Is-invisible
@@ -52,7 +55,7 @@
   padding: 0;
   width: 1px;
   height: 1px;
-  border: 0;
+  border: none;
 }
 
 // Is-visible
@@ -70,21 +73,7 @@
 // -----------
 // Changes Placeholder styles
 @mixin placeholder {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-
-  &:-moz-placeholder {
-    //  Firefox 18-
-    @content;
-  }
-
-  &::-moz-placeholder {
-    // Firefox 19+
-    @content;
-  }
-
-  &:-ms-input-placeholder {
+  &::placholder {
     @content;
   }
 }
@@ -93,34 +82,21 @@
 // ---------
 // Changes selected color and background color
 @mixin selection($bg-color, $text-color) {
-  &::-moz-selection {
-    background: $bg-color;
-    color: $text-color;
-  }
-
   &::selection {
     background: $bg-color;
     color: $text-color;
   }
 }
 
-// Text input
-// ------------
-// Calls addresses all text inputs in one selector
-$text-input-types: text, password, date, datetime, datetime-local, month, week, email, number, search, tel, time, url, color !default;
-
-@mixin text-input($types: $text-input-types) {
-  $selectors: ();
-
-  @each $type in $types {
-    $selector: unquote("input[type='#{$type}']");
-    $selectors: append($selectors, $selector, comma);
-  }
-
-  & #{$selectors} {
-    @content;
-  }
+// Text overflow
+// -------------
+// Requires inline-block or block for proper styling
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
 
 // Z-index
 // -------
@@ -128,17 +104,56 @@ $text-input-types: text, password, date, datetime, datetime-local, month, week, 
   z-index: map-get($zindex, $location);
 }
 
-// Mappy Breakpoint shortcuts
+// Shape mixins
+// -----
+// Shapes availble within this mixin files are:
+// ==========
 
-// BP [Mixin]
-// ----------
-// Convenience mixin for Mappy Breakpoints
-@mixin bp($queries, $type: all, $query-fallback: null, $breakpoints: $breakpoints) {
-  @include mappy-bp($queries, $type, $query-fallback, $breakpoints) {
-    @content;
-  }
+// Square
+// ------
+@mixin square($size) {
+  @include size($size, $size);
 }
 
-@mixin query($query, $mappy-queries: $queries) {
-  @include mappy-query($query, $mappy-queries)
+// Circle
+// ------
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  border-radius: 100%;
+}
+
+// Triangle
+// --------
+// We use this to create isosceles triangles
+// - $triangle-size       - Used to set border-size. No default, set a px or em size.
+// - $triangle-color      - Used to set border-color which makes up triangle. No default
+// - $triangle-direction  - Used to determine which direction triangle points. 
+//                          Options: top, bottom, left, right
+@mixin triangle($triangle-size, $triangle-color, $triangle-direction) {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset $triangle-size;
+
+  @if $triangle-direction == top {
+    border-color: $triangle-color transparent transparent;
+    border-top-style: solid;
+  }
+
+  @if $triangle-direction == bottom {
+    border-color: transparent transparent $triangle-color;
+    border-bottom-style: solid;
+  }
+
+  @if $triangle-direction == left {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+  }
+
+  @if $triangle-direction == right {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+  }
 }
