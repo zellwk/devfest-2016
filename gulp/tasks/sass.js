@@ -31,7 +31,7 @@ gulp.task('sprites', () => {
 
 gulp.task('sass', () => {
   return gulp.src(config.sass.src)
-    .pipe(plumber('sass'))
+    .pipe(plumber('Error Running Sass'))
     .pipe($.sourcemaps.init())
     .pipe($.sass(config.sass.opts))
     .pipe($.autoprefixer(config.autoprefixer))

@@ -8,6 +8,7 @@ import nunjucks from 'nunjucks';
 import nunjucksMarkdown from 'nunjucks-markdown';
 import consolidate from 'consolidate';
 import marked from 'marked';
+import stripJSONComments from 'strip-json-comments';
 
 // Get config from config.js
 import config from '../config';
@@ -28,35 +29,39 @@ function nunjuckTemplate(options) {
       return;
     }
 
-    let globalData = file.globalData || {},
+    let 
+    // globalData = file.globalData || {},
+    data = {},
     localData = file.localData || {},
     frontmatterData = file.frontmatter || {},
     markdownData,
-    sources,
-    sourceData = {},
-    templatePath,
-    data;
+    templatePath;
 
     // Set markdown data to (if any)
     markdownData = file.contents ? {
       body: file.contents.toString()
     } : {};
 
-    // Gets data from additional sources (if any)
-    if (file.frontmatter) {
-      sources = file.frontmatter.data || file.frontmatter.sources;
+    // Gets data from data (if any)
+    
+    if (options.data) {
+      data = getDataFromSource(options.data, data);
     }
 
-    if (_.isString(sources)) {
-      localData = getDataFromSource(sources, localData);
-    } else if (_.isArray(sources)) {
-      _.forEach(sources, (source) => {
-        localData = getDataFromSource(source, localData);
-      });
+    // Gets data from additional sources (if any)
+    if (file.frontmatter) {
+      let sources = file.frontmatter.data || file.frontmatter.sources;
+      if (_.isString(sources)) {
+        localData = getDataFromSource(sources, localData);
+      } else if (_.isArray(sources)) {
+        _.forEach(sources, (source) => {
+          localData = getDataFromSource(source, localData);
+        });
+      }
     }
 
     // consolidates data
-    data = _.assign(globalData, frontmatterData, markdownData, localData);
+    data = _.assign(data, frontmatterData, markdownData, localData);
 
     /**
      * Figures out Template Path
@@ -117,9 +122,11 @@ function pluginError(message) {
 // Gets JSON data from file path and assign to given data object
 function getDataFromSource(filepath, returnedData = {}) {
   try {
-    let data = JSON.parse(fs.readFileSync(filepath));
+    let data = JSON.parse(stripJSONComments(fs.readFileSync(filepath).toString()));
     returnedData = _.assign(returnedData, data);
-  } catch (e) {};
+  } catch (e) {
+    gutil.log(gutil.colors.red(`Data in ${filepath} is not valid JSON`));
+  };
 
   return returnedData;
 }

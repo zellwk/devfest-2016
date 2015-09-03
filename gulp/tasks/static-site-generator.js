@@ -37,8 +37,8 @@ gulp.task('pages', () => {
       property: 'frontmatter',
       remove: true
     }))
-    .pipe(tapGlobals(config.blog.globalData))
-    .pipe(nunjuckTemplate())
+    // .pipe(tapGlobals(config.blog.globalData))
+    .pipe(nunjuckTemplate({ data: config.blog.globalData }))
     .pipe($.prettyUrl())
     .pipe(gulp.dest(config.dest));
 });
@@ -46,7 +46,6 @@ gulp.task('pages', () => {
 gulp.task('posts', () => {
   return gulp.src(config.blog.postSrc)
     .pipe(plumber())
-    .pipe(tapGlobals(config.blog.globalData))
     .pipe($.frontMatter({
       property: 'frontmatter',
       remove: true
@@ -60,7 +59,7 @@ gulp.task('posts', () => {
     .pipe(tapTags())
     .pipe(getBlog(posts))
     .pipe(getTags(tags))
-    .pipe(nunjuckTemplate())
+    .pipe(nunjuckTemplate({ data: config.blog.globalData }))
     .pipe($.prettyUrl())
     .pipe(gulp.dest(config.blog.postDest));
 });
@@ -69,11 +68,11 @@ gulp.task('createBlog', () => {
   return createBlog({
       articles: posts,
       articlesPerPage: config.blog.articlesPerPage,
-      dirname: config.blog.blogDir,
+      basename: config.blog.blogDir,
     })
     .pipe(plumber())
-    .pipe(tapGlobals(config.blog.globalData))
     .pipe(nunjuckTemplate({
+      data: config.blog.globalData,
       template: 'blog'
     }))
     .pipe($.prettyUrl())
@@ -86,8 +85,8 @@ gulp.task('createTags', () => {
 
     })
     .pipe(plumber())
-    .pipe(tapGlobals(config.blog.globalData))
     .pipe(nunjuckTemplate({
+      data: config.blog.globalData,
       template: 'tag'
     }))
     .pipe($.prettyUrl())

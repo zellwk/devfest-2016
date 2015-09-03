@@ -2,23 +2,15 @@ import gutil from 'gulp-util';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
 
-// function customPlumber() {
-//   return plumber({
-//     errorHandler: function(err) {
-//       gutil.log(gutil.colors.red(err.stack));
-//       this.emit('end');  
-//     }
-//   });
-// };
-
-function customPlumber(errTitle) {
+function customPlumber(errTitle, message) {
   return plumber({
     errorHandler: notify.onError({
       title: errTitle || "Error running Gulp",
-      message: "Error: <%= error.message %>",
-      sound: false
+      message: message || "Error: <%= error.message %>",
     })
   });
+
+  // if !ci, return this. Else, return plumber
 }
 
 module.exports = customPlumber;

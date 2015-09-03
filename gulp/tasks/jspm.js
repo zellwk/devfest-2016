@@ -44,6 +44,8 @@ gulp.task('jspm', () => {
 // Builds files with JSPM. Not entirely happy with this yet. 
 // TODO: Depcache 
 function jspmBuild() {
+
+
   let stream = through.obj((file, enc, cb) => {
     cb(null, file);
   });
@@ -66,11 +68,10 @@ function jspmBuild() {
   });
 
   builder.trace('./src/js/main').then(function(trace) {
-    console.log(trace.tree);
-    builder.getDepCache(trace.tree);
+    // builder.getDepCache(trace.tree);
+    console.log(Object.keys.toString());
   }).catch((err)=> {
-    console.log('==');
-    console.log(err);
+    console.log(err.stack);
   });
 
   stream.end();

@@ -10,8 +10,8 @@ function createTags(tags, options) {
 
   _.forEach(tags, (tagObject) => {
     generateArchives(stream, {
-      tagTitle: tagObject.tag,
-      dirname: tagObject.permalink,
+      basename: tagObject.tag,
+      permalink: tagObject.permalink,
       articlesPerPage: options.postsPerPage,
       articles: tagObject.posts,
       dest: options.dest

@@ -10,7 +10,8 @@ function generateArchives(stream, options) {
   let defaults = {
     articles: [],
     articlesPerPage: 10,
-    dirname: 'blog',
+    basename: 'blog',
+    permalink: '/blog',
   }
 
   options = _.assign(defaults, options);
@@ -32,14 +33,21 @@ function generateArchives(stream, options) {
       let pageMod = pageCount !== 1 ? '/page-' + pageCount : '';
       let file = new gutil.File({
         cwd: process.cwd(),
-        path: path.join(process.cwd(), `${options.dirname}${pageMod}.html`)
+        path: path.join(process.cwd(), `${options.basename}${pageMod}.html`)
       });
-      // Adds to localData for file
+
+      let permalink = path.join('/', options.basename);
+      let prevPage = pageCount <= 1 ? null : pageCount - 1;
+      let nextPage = (pageCount) * articlesPerPage > totalArticles ? null : pageCount + 1;
+
       file.localData = {
-        title: options.tagTitle || toTitleCase(options.dirname),
+        title: toTitleCase(options.basename),
+        permalink: path.join(permalink, '/'),
         articles: page,
-        prevPage: pageCount <= 1 ? null : pageCount - 1,
-        nextPage: (pageCount) * articlesPerPage > totalArticles ? null : pageCount + 1
+        prevPage: prevPage,
+        nextPage: nextPage,
+        prevPagePermalink: path.join(permalink + prevPage, '/'),
+        nextPagePermalink: path.join(permalink + nextPage, '/'),
       }
 
       stream.write(file);

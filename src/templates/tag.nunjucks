@@ -1,7 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
-{# TODO: Add Permalink to Tag page for Canonical tag #}
 {% block canonical %} <link rel="canonical" href="{{permalink}}"> {% endblock %}
+{% block OGType %}<meta property="og:type" content="article"/>{% endblock %}
 
 {% block content %}
 
@@ -10,10 +10,10 @@
 
   <h2>You can also get global data in this page as well</h2>
 
-  <p>Site Title is: {{SITE_TITLE}}</p>
-  <p>Site Email is: {{SITE_EMAIL}}</p>
-  <p>Site Description is {{SITE_DESC}}</p>
-  <p>SITE_URL is {{SITE_URL}}</p>
+  <p>Site Title is: {{siteTitle}}</p>
+  <p>Site Email is: {{siteEmail}}</p>
+  <p>Site Description is {{siteDescription}}</p>
+  <p>siteUrl is {{siteUrl}}</p>
 
   <h2>The tag title is: {{title}} </h2>
 
