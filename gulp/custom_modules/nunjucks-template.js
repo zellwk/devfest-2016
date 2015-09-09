@@ -96,7 +96,10 @@ function nunjuckTemplate(options) {
     // Note: Replace Nunjucks with another generator if you want to
     
     // nowatch, nocache
-    let env = consolidate.requires.nunjucks = new nunjucks.Environment(new nunjucks.FileSystemLoader(options.templateDir, true, true));
+    let env = consolidate.requires.nunjucks = new nunjucks.Environment(new nunjucks.FileSystemLoader(options.templateDir, {
+        watch: false,
+        nocache: true
+      }));
 
     // Registers markdown tag
     marked.setOptions(config.blog.markdownOptions);

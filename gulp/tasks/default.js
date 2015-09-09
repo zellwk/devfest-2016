@@ -18,7 +18,7 @@ gulp.task('default', (cb) => {
       cb);
   } else if (config.env === 'prod' || config.env === 'production') {
     runSequence(
-      ['clean', 'scsslint'],
+      ['clean', 'lint:scss'],
       ['jspm', 'sass', 'images', 'fonts'],
       ['generateSite'],
       'useref',

@@ -1,3 +1,5 @@
+import testlog from './testing';
+
 function testing(args) {
   if (args == 'testing') {
     console.log(args);
@@ -5,4 +7,4 @@ function testing(args) {
 }
 
 testing('testing');
- 
+testlog();

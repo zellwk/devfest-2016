@@ -40,8 +40,8 @@ var config = {
     pageSrc: src + '/pages/**/*.{nj,nunjucks}',
     pageDest: dist,
     watch: [
-    src + '/templates/**/*', 
-    src + '/_data.json'
+      src + '/templates/**/*',
+      'data/_data.json'
     ]
   },
 
@@ -62,7 +62,7 @@ var config = {
 
   images: {
     src: [
-    src + '/images/**/*.{png, jpeg, jpg, gif}',
+    src + '/images/**/*.{png,jpeg,jpg,gif}',
     '!' + src + '/images/sprites/*'
     ],
     dest: dist + '/images',
@@ -85,7 +85,7 @@ var config = {
     dest: dist + '/css',
     opts: {
       includePaths: [
-        src + '/bower_components', 
+        src + '/bower_components',
         './node_modules'
       ],
     }

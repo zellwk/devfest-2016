@@ -16,7 +16,6 @@ let cssPipe = lazypipe()
     ignore: [/.is-/, /.has-/, /.hljs-/],
   })
   .pipe($.minifyCss)
-  .pipe($.csso)
 
 let jsPipe = lazypipe()
   .pipe($.uglify);

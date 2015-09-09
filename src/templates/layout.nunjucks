@@ -66,20 +66,16 @@
   {% block footerScripts %}
 
   {# Removes JSPM importer on production site #}
-  <!--build:remove-->
   <script src="/jspm_packages/system.js"></script>
   <script src="/jspm.config.js"></script>
   <script>
     System.import('js/main');
   </script>
-  <!--endbuild-->
 
   {# TODO: Find a way to uncomment script / add build comment in production for JSPM related builds #}
   {# Adds main.min.js that JSPM creates (a hack) #}
 
-  <!--build:uncomment -->
-  <!--<script src="/js/main.min.js"></script>-->
-  <!--endbuild-->
+
 
   {# Google Analytics #}
 
