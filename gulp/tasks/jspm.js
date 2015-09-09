@@ -5,44 +5,35 @@ import Builder from 'systemjs-builder';
 import through from 'through2';
 import config from '../config';
 import jspm from 'jspm';
+import del from 'del';
 
 let $ = plugins();
 
-let builder = new jspm.Builder();
-
-global.System = Builder.loader;
+let jsDest = config.env === 'prod' ? './js' : './dev/js';
+let jspmPackageDest = config.env === 'prod' ? './dist/jspm_packages' : './dev/jspm_packages';
+let jspmConfigDest = config.env === 'prod' ? './dist' : './dev';
 
 gulp.task('jspm', () => {
-  if (config.env !== 'prod') {
-    let jsStream = gulp.src('./src/js/**/*.js')
-      .pipe($.newer('./dev/js'))
-      .pipe(gulp.dest('./dev/js'));
 
-    let packagesStream = gulp.src(['./jspm_packages/**/*', './jspm.config.js'])
-      .pipe($.newer('./dev/jspm_packages'))
-      .pipe(gulp.dest('./dev/jspm_packages'));
+  let jsStream = gulp.src('./src/js/**/*.js')
+    .pipe($.newer(jsDest))
+    .pipe(gulp.dest(jsDest));
 
-    let configStreama = gulp.src('./jspm.config.js')
-      .pipe(gulp.dest('./dev'))
+  let packagesStream = gulp.src('./jspm_packages/**/*')
+    .pipe($.newer(jspmPackageDest))
+    .pipe(gulp.dest(jspmPackageDest));
 
-    return merge(jsStream, packagesStream);
+  let configStream = gulp.src('./jspm.config.js')
+    .pipe(gulp.dest(jspmConfigDest))
 
-  } else {
-    jspmBuild();
-
-    let jsStream = gulp.src('./src/js/**/*.js')
-      .pipe($.newer('./dist/js'))
-      .pipe(gulp.dest('./dist/js'));
-
-    let packagesStream = gulp.src(['./jspm_packages/**/*', './jspm.config.js'])
-      .pipe($.newer('./dist/jspm_packages'))
-      .pipe(gulp.dest('./dist/jspm_packages'));
-
-    let configStreama = gulp.src('./jspm.config.js')
-      .pipe(gulp.dest('./dist'))
-    return merge(jsStream, packagesStream);
-  }
+  return merge(jsStream, packagesStream, configStream);
 });
+
+gulp.task('jspmBuild', ['jspm'], ()=> {
+  jspmBuild();
+});
+
+let builder = new Builder();
 
 function jspmBuild() {
   let stream = through.obj((file, enc, cb) => {
@@ -51,30 +42,33 @@ function jspmBuild() {
 
   builder.loadConfig('./jspm.config.js')
     .then(() => {
-      builder.config({
-        baseURL: "./"
-      });
-
-      return builder.build(config.jspm.src, config.jspm.dest, {
-        // runtime: false,
-        // minify: true,
+      return builder.build('js/main.js', 'dist/js/main.js', {
+        runtime: false,
+        minify: true,
         sourceMaps: true,
       });
+    })
+    .then(()=> {
+      jspmClean(jsDest);
     })
     .catch((err) => {
       console.log('build error');
       console.log(err);
     });
 
-  builder.trace('./src/js/main').then(function(trace) {
+  builder.trace('./src/js/main.js').then(function(trace) {
     // builder.getDepCache(trace.tree);
-    console.log(Object.keys.toString());
-  }).catch((err)=> {
-    console.log(err.stack);
+    // console.log(Object.keys.toString());
+  }).catch((err) => {
+    // console.log(err.stack);
   });
 
   stream.end();
   stream.emit('end');
 
   return stream;
+}
+
+function jspmClean(path) {
+  del([path]);
 }

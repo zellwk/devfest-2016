@@ -19,7 +19,7 @@ gulp.task('default', (cb) => {
   } else if (config.env === 'prod' || config.env === 'production') {
     runSequence(
       ['clean', 'lint:scss'],
-      ['jspm', 'sass', 'images', 'fonts'],
+      ['jspmBuild', 'sass', 'images', 'fonts'],
       ['generateSite'],
       'useref',
       'critical',

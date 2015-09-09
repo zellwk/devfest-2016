@@ -72,11 +72,6 @@
     System.import('js/main');
   </script>
 
-  {# TODO: Find a way to uncomment script / add build comment in production for JSPM related builds #}
-  {# Adds main.min.js that JSPM creates (a hack) #}
-
-
-
   {# Google Analytics #}
 
   {% endblock %}
