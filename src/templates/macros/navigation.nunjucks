@@ -1,6 +1,7 @@
 {% macro active(active='home') %}
 <nav>
-  <a href="#" class="{{'is-active' if active == 'home' else ''}}">Home</a>
+  <a href="#" class="{%if active == 'home' %} active {% endif %}">Home</a>
+  {# <a href="#" class="{{'is-active' if active == 'home' else ''}}">Home</a> #}
   <a href="#" class="{{'is-active' if active == 'blog' else ''}}">Blog</a>
   <a href="#" class="{{'is-active' if active == 'books' else ''}}">Books</a>
   <a href="#" class="{{'is-active' if active == 'projects' else ''}}">Projects</a>

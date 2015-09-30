@@ -6,17 +6,18 @@ let env = 'dev';
 let src = './src';
 let dev = './dev';
 let dist = './dev';
+let dest = dev;
 
-// Sets env and dist for production environments
+// Sets env and dest for production environments
 if (processArgs.prod || processArgs.production) {
   env = 'prod';
-  dist = './dist';
+  dest = dist;
 }
 
 var config = {
   env: env,
   src: src,
-  dest: dist,
+  dest: dest,
 
   autoprefixer: {
     browsers: ['last 2 versions'],
@@ -35,10 +36,10 @@ var config = {
       }
     },
     postSrc: src + '/posts/*.{md,nj,nunjucks}',
-    postDest: dist + '/blog',
+    postDest: dest + '/blog',
     summaryMarker: '<!--more-->',
     pageSrc: src + '/pages/**/*.{nj,nunjucks}',
-    pageDest: dist,
+    pageDest: dest,
     watch: [
       src + '/templates/**/*',
       'data/_data.json'
@@ -48,24 +49,26 @@ var config = {
   browserSync: {
     server: {
       // Serve up our build folder
-      baseDir: dist
+      baseDir: dest
     },
+    host: 'localhost',
+    port: 3000,
+    open: false
     // proxy: "yourlocal.dev"
     // browser: 'google chrome',
-    open: false
   },
 
   fonts: {
     src: src + '/fonts/**/*',
-    dest: dist + '/fonts'
+    dest: dest + '/fonts'
   },
 
   images: {
     src: [
-    src + '/images/**/*.{png,jpeg,jpg,gif}',
-    '!' + src + '/images/sprites/*'
+      src + '/images/**/*.{png,jpeg,jpg,gif}',
+      '!' + src + '/images/sprites/*'
     ],
-    dest: dist + '/images',
+    dest: dest + '/images',
     opts: {
       interlaced: true,
       optimizationLevel: 5,
@@ -75,14 +78,14 @@ var config = {
 
   jspm: {
     src: src + '/js/main',
-    dest: dist + '/js/main.min.js',
+    dest: dest + '/js/main.min.js',
     watch: src + '/js/**/*.js',
     jspmConfigPath: './jspm.config.js'
   },
 
   sass: {
     src: src + '/scss/**/*.{scss,sass}',
-    dest: dist + '/css',
+    dest: dest + '/css',
     opts: {
       includePaths: [
         src + '/bower_components',
@@ -93,7 +96,7 @@ var config = {
 
   scsslint: {
     src: [src + '/scss/**/*.scss',
-    '!' + src + '/scss/_sprites.scss'
+      '!' + src + '/scss/_sprites.scss'
     ]
   },
 
@@ -110,6 +113,33 @@ var config = {
         sprite.name = 'sprite-' + sprite.name;
       },
     }
+  },
+
+  webpack: {
+    src: src + '/js/main.js',
+    dest: dest + '/js',
+    options: {
+      watch: env === 'prod' ? false : true,
+      output: {
+        filename: '[name].js'
+      },
+      devtool: 'eval',
+      module: {
+        loaders: [{
+            test: /\.jsx?$/,
+            exclude: /(node_modules)/,
+            loader: 'babel-loader',
+            // Remove babel-runtime for production sites
+            query: env !== 'prod' ? {
+              optional: ['runtime'],
+              stage: 0
+            } : {},
+          }],
+        // TODO: Explore Common Chunks plugin for optimization
+        // TODO: explore Bower plugin
+      }
+    }
+
   }
 }
 

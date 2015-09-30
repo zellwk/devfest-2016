@@ -11,18 +11,17 @@ gulp.task('default', (cb) => {
   if (config.env === 'dev') {
     runSequence(
       ['clean', 'lint:scss', 'lint:js'],
-      ['sprites', 'jspm', 'images', 'fonts'],
+      ['sprites', 'images', 'fonts'],
       ['sass', 'generateSite'],
-      'browserSync',
-      'watch',
+      ['browserSync', 'webpack', 'watch'],
       cb);
   } else if (config.env === 'prod' || config.env === 'production') {
     runSequence(
-      ['clean', 'lint:scss'],
-      ['jspmBuild', 'sass', 'images', 'fonts'],
-      ['generateSite'],
+      ['clean', 'lint:scss', 'lint:js'],
+      ['sprites', 'images', 'fonts', 'webpack'],
+      ['sass', 'generateSite'],
       'useref',
-      'critical',
+      // 'critical',
       'browserSync',
       cb
       );

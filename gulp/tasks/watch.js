@@ -9,7 +9,7 @@ let reload = browserSync.reload;
 gulp.task('watch', function() {
   // Watch assets
   gulp.watch(config.sass.src , ['sass', 'lint:scss']);
-  gulp.watch(config.jspm.watch, ['watch-jspm']);
+  gulp.watch(config.webpack.src, ['webpack']);
 
   // Watch site generators
   gulp.watch(config.blog.postSrc, ['site-watch']);
@@ -19,5 +19,4 @@ gulp.task('watch', function() {
 
 // Slow watch tasks 
 gulp.task('site-watch', ['generateSite'], reload);
-gulp.task('watch-jspm', ['jspm'], reload);
 

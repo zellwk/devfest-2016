@@ -9,8 +9,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel": "^5.6.7",
-    "babel-core": "^5.8.22",
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.25",
+    "bower-webpack-plugin": "^0.1.9",
     "browser-sync": "^2.7.13",
     "consolidate": "^0.13.1",
     "critical": "^0.6.0",
@@ -51,7 +54,6 @@
     "gulp.spritesmith": "^4.0.0",
     "highlight.js": "^8.7.0",
     "jshint-stylish": "^2.0.1",
-    "jspm": "^0.16.2",
     "lazypipe": "^1.0.1",
     "lodash": "^3.9.3",
     "marked": "^0.3.3",
@@ -60,28 +62,14 @@
     "moment": "^2.10.3",
     "nunjucks": "^2.0.0",
     "nunjucks-markdown": "^1.1.0",
+    "react": "^0.13.3",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.1",
     "strip-json-comments": "^1.0.2",
     "systemjs-builder": "^0.13.5",
-    "through2": "^2.0.0"
+    "through2": "^2.0.0",
+    "webpack": "^1.12.2",
+    "webpack-stream": "^2.1.1"
   },
-  "jspm": {
-    "directories": {},
-    "configFile": "jspm.config.js",
-    "dependencies": {
-      "highlight": "npm:highlight.js@^8.7.0",
-      "jquery": "github:components/jquery@^2.1.4",
-      "lodash": "npm:lodash@^3.10.0",
-      "process": "npm:process@^0.11.1"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
-      "core-js": "npm:core-js@^1.1.4"
-    }
-  },
-  "dependencies": {
-    "karma-systemjs": "^0.8.0"
-  }
+  "dependencies": {}
 }

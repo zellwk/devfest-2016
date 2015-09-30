@@ -30,4 +30,6 @@
   </ul>
 </section>
 
+<div id="app"></div>
+
 {% endblock %}

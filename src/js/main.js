@@ -1,10 +1,16 @@
-import testlog from './testing';
+import React from 'react';
 
-function testing(args) {
-  if (args == 'testing') {
-    console.log(args);
+console.log('testing');
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Hahahaha</h1>
+        {/* {this.props.children} */}
+      </div>
+    );
   }
 }
 
-testing('testing');
-testlog();
+React.render(<App />, document.getElementById('app'));

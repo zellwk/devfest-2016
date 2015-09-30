@@ -66,11 +66,15 @@
   {% block footerScripts %}
 
   {# Removes JSPM importer on production site #}
-  <script src="/jspm_packages/system.js"></script>
+  {# <script src="/jspm_packages/system.js"></script>
   <script src="/jspm.config.js"></script>
   <script>
     System.import('js/main');
-  </script>
+  </script> #}
+  
+  <!--build:js /js/main.min.js -->
+  <script src="/js/main.js"></script>
+  <!--endbuild -->
 
   {# Google Analytics #}
 

@@ -11,19 +11,16 @@ import _ from 'lodash';
 let $ = plugins();
 
 let cssPipe = lazypipe()
-  .pipe($.uncss, {
-    html: ['./dist/**/*.html'],
-    ignore: [/.is-/, /.has-/, /.hljs-/],
-  })
-  .pipe($.minifyCss)
+.pipe($.uncss, {
+  html: ['./dist/**/*.html'],
+  ignore: [/.is-/, /.has-/, /.hljs-/],
+})
+.pipe($.minifyCss)
 
 let jsPipe = lazypipe()
   .pipe($.uglify);
 
-// Optimizes with the help of useref. 
-// Note: Unable to rev inserted JSPM script (yet)
 gulp.task('useref', () => {
-
   var assets = $.useref.assets();
 
   return gulp.src('./dist/**/*.html')
@@ -33,26 +30,37 @@ gulp.task('useref', () => {
   .pipe($.if('*.js', jsPipe()))
   .pipe($.rev())
   .pipe(assets.restore())
-  .pipe($.useref({
-    // Check if there's way to bring uncomment build type to 
-    // be reved https://github.com/jonkemp/gulp-useref/issues/121
-    uncomment: (content, target, options, alternateSearchPath) => {
-      content = content.replace('<!--', '').replace('-->', '');
-      return content;
-    }
-  }))
+  .pipe($.useref())
   .pipe($.revReplace())
-  .pipe(gulp.dest('./dist'));
+  .pipe(gulp.dest('./dist'))
 });
 
-gulp.task('critical', function() {
-  critical.generate({
-    inline: true,
-    base: './dist',
-    src: 'index.html',
-    dest: './dist/index.html',
-    width: 320,
-    height: 480,
-    minify: true
-  });        
-});
+// gulp.task('critical', function() {
+//   return gulp.src('./dist/**/*.html')
+//   .pipe(crit())
+// });
+
+// function crit (options) {
+//   return through.obj((file, enc, cb) => {
+
+//     let filename = path.basename(file.path);
+//     let dir = path.dirname(file.path);
+
+//     let css = JSON.parse(fs.readFileSync('./dist/rev-manifest.json').toString())['css/styles.min.css'];
+
+//     console.log(css);
+
+//     critical.generate({
+//       inline: true,
+//       base: dir,
+//       src: filename,
+//       css: path.resolve(dir, css),
+//       dest: path.resolve(dir, filename),
+//       width: 320,
+//       height: 480,
+//       minify: true
+//     });
+
+//     cb(null, file);
+//   });
+// }

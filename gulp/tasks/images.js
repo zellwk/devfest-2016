@@ -7,6 +7,7 @@ import config from '../config';
 
 let $ = plugins();
 
+// TODO: Redo images task
 gulp.task('images', () => {
   return gulp.src(config.images.src)
   .pipe(gulp.dest(config.images.dest))
