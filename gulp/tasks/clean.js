@@ -6,16 +6,21 @@ import plugins from 'gulp-load-plugins';
 let $ = plugins();
 
 gulp.task('clean', (cb) => {
-  del([
-      config.dest + '/**/*',
-      '!' + config.dest + '/images',
-      '!' + config.dest + '/images/**/*'
-    ],
-    cb
-  )
+  del([config.dest + '/**/*'], cb);
+});
+
+// Clear cache
+gulp.task('clean:cc', (cb) => {
+  return cache.clearAll(callback);
 })
 
-gulp.task('clean:cc', (cb) => {
-  del([config.dest], cb)
-  // return cache.clearAll(callback);
-})
+// Partial clean (doesn't remove images)
+// gulp.task('clean', (cb) => {
+//   del([
+//       config.dest + '/**/*',
+//       '!' + config.dest + '/images',
+//       '!' + config.dest + '/images/**/*'
+//     ],
+//     cb
+//   )
+// })

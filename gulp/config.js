@@ -5,7 +5,7 @@ let processArgs = minimist(process.argv);
 let env = 'dev';
 let src = './src';
 let dev = './dev';
-let dist = './dev';
+let dist = './dist';
 let dest = dev;
 
 // Sets env and dest for production environments
@@ -41,8 +41,8 @@ var config = {
     pageSrc: src + '/pages/**/*.{nj,nunjucks}',
     pageDest: dest,
     watch: [
-      src + '/templates/**/*',
-      'data/_data.json'
+    src + '/templates/**/*',
+    'data/_data.json'
     ]
   },
 
@@ -58,6 +58,10 @@ var config = {
     // browser: 'google chrome',
   },
 
+  deploy: {
+    method: 'ghpages', // rsync, aws or ghpages
+  } ,
+
   fonts: {
     src: src + '/fonts/**/*',
     dest: dest + '/fonts'
@@ -65,8 +69,8 @@ var config = {
 
   images: {
     src: [
-      src + '/images/**/*.{png,jpeg,jpg,gif}',
-      '!' + src + '/images/sprites/*'
+    src + '/images/**/*.{png,jpeg,jpg,gif}',
+    '!' + src + '/images/sprites/*'
     ],
     dest: dest + '/images',
     opts: {
@@ -88,15 +92,15 @@ var config = {
     dest: dest + '/css',
     opts: {
       includePaths: [
-        src + '/bower_components',
-        './node_modules'
+      src + '/bower_components',
+      './node_modules'
       ],
     }
   },
 
   scsslint: {
     src: [src + '/scss/**/*.scss',
-      '!' + src + '/scss/_sprites.scss'
+    '!' + src + '/scss/_sprites.scss'
     ]
   },
 
@@ -105,13 +109,12 @@ var config = {
     dest: src + '/scss',
     opts: {
       padding: 2,
+      cssName: '_sprites.scss',
       imgName: 'sprites.png',
+      imgPath: '../images/sprites.png',
       retinaSrcFilter: src + '/images/sprites/*@2x.{png,jpg,jpeg}',
       retinaImgName: 'sprites@2x.png',
-      cssName: '_sprites.scss',
-      cssVarMap: function(sprite) {
-        sprite.name = 'sprite-' + sprite.name;
-      },
+      retinaImgPath: '../images/sprites@2x.png'
     }
   },
 
@@ -121,26 +124,40 @@ var config = {
     options: {
       watch: env === 'prod' ? false : true,
       output: {
-        filename: '[name].js'
+        filename: '[name].js',
+        pathinfo: true
       },
       devtool: 'eval',
       module: {
         loaders: [{
-            test: /\.jsx?$/,
-            exclude: /(node_modules)/,
-            loader: 'babel-loader',
-            // Remove babel-runtime for production sites
-            query: env !== 'prod' ? {
+          test: /\.jsx?$/,
+          exclude: /(node_modules)/,
+          loader: 'babel-loader',
+          // Remove babel-runtime for production sites
+          query: env !== 'prod' ? {
               optional: ['runtime'],
               stage: 0
             } : {},
-          }],
+        }],
         // TODO: Explore Common Chunks plugin for optimization
         // TODO: explore Bower plugin
       }
     }
+  },
 
+  useref: {
+    src: dist + '/**/*.html',
+    dest: dist,
+    manifest: dist,
+  },
+
+  uncss: {
+    ignore: [
+      /.is-/,
+      /.has-/,
+      /.hljs-/
+    ]
   }
-}
+};
 
 module.exports = config;

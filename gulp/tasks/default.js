@@ -1,9 +1,10 @@
 import gulp from 'gulp';
-import plugins from 'gulp-load-plugins';
 import runSequence from 'run-sequence';
+
 // Import configs
 import config from '../config';
 
+import plugins from 'gulp-load-plugins';
 let $ = plugins();
 
 // Not done yet
@@ -21,35 +22,10 @@ gulp.task('default', (cb) => {
       ['sprites', 'images', 'fonts', 'webpack'],
       ['sass', 'generateSite'],
       'useref',
-      // 'critical',
+      'critical',
       'browserSync',
       cb
       );
   }
 });
 
-// TODO: Add CSS regression test (later)
-// TODO: Add Js unit tests (later)
-
-// Prod:
-// TODO: gzip? (Check if Amazon requires g-zipping)
-// TODO: Deploy with rsync (later, when done with productino tasks)
-
-// Deploy to S3
-
-let aws = {
-  'key': 'AKIAJ4YAB4SHRYAQGRMQ',
-  'secret': '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',
-  'bucket': 'zellwk',
-  'region': 'us-east-1'
-};
-
-gulp.task('deploy', () => {
-  gulp.src('./dist/**/*')
-    .pipe($.s3(aws));
-});
-
-gulp.task('deploy-gh', () => {
-  gulp.src('./dist/**/*')
-  .pipe($.ghPages());
-});

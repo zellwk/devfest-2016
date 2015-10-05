@@ -10,8 +10,7 @@ let $ = plugins();
 // TODO: Redo images task
 gulp.task('images', () => {
   return gulp.src(config.images.src)
-  .pipe(gulp.dest(config.images.dest))
   .pipe($.if(config.env === 'prod', $.imagemin(config.images.opts)))
-  .pipe($.size({'title': 'images'}))
-  .pipe(gulp.dest(config.images.dest));  
+  .pipe(gulp.dest(config.images.dest))
+  .pipe($.size({'title': 'images'}));
 });

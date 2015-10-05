@@ -11,7 +11,7 @@ import plumber from '../custom_modules/plumber';
 import plugins from 'gulp-load-plugins';
 let $ = plugins();
 
-// TODO: Webpack Sourcemaps 
+// TODO: Webpack Sourcemaps
 // TODO: Setup React Hot Loader with Browsersync + webpack
 gulp.task('webpack', function() {
   return gulp.src(config.webpack.src)
@@ -20,4 +20,4 @@ gulp.task('webpack', function() {
     .pipe(browserSync.reload({
       stream: true
     }));
-})
+});
