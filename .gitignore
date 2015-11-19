@@ -19,6 +19,7 @@ jspm_packages
 dev
 dist
 testing
+.publish
 
 # Ignore passwords 
 .secrets.json
