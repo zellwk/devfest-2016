@@ -16,16 +16,14 @@ gulp.task('default', (cb) => {
       ['sass', 'generateSite'],
       ['browserSync', 'webpack', 'watch'],
       cb);
-  } else if (config.env === 'prod' || config.env === 'production') {
+  } else if (config.env === 'prod') {
     runSequence(
       ['clean', 'lint:scss', 'lint:js'],
       ['sprites', 'images', 'fonts', 'webpack'],
       ['sass', 'generateSite'],
       'useref',
       'critical',
-      'browserSync',
       cb
       );
   }
 });
-

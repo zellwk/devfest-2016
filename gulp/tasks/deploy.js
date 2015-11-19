@@ -13,9 +13,8 @@ if (!process.env.CI) {
 
   gulp.task('deploy', () => {
     let deployMethod = config.deploy.method;
-    console.log(deployMethod);
-    gulp.start('deploy-' + deployMethod);
-  })
+    gulp.start('deploy' + deployMethod);
+  });
 }
 
 gulp.task('deploy-rsync', function() {

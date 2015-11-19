@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import critical from 'critical';
+import fs from 'fs';
 
 import config from '../config';
 
@@ -13,7 +14,7 @@ gulp.task('critical', function() {
       base: config.useref.dest,
       inline: true,
       minify: true,
-      css: 'dist/' + JSON.parse(fs.readFileSync('./dist/rev-manifest.json').toString())['css/styles.min.css'],
+      css: 'dist/' + JSON.parse(fs.readFileSync(config.useref.manifest + '/rev-manifest.json').toString())['css/styles.min.css'],
       dimensions: [{
         height: 480,
         width: 320
