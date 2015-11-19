@@ -9,7 +9,7 @@ let reload = browserSync.reload;
 gulp.task('watch', function() {
   // Watch assets
   gulp.watch(config.sass.src , ['sass', 'lint:scss']);
-  gulp.watch(config.webpack.src, ['webpack']);
+  // gulp.watch(config.webpack.src, ['webpack']);
 
   // Watch site generators
   gulp.watch(config.blog.postSrc, ['site-watch']);

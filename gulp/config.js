@@ -1,4 +1,7 @@
 import minimist from 'minimist';
+var path = require('path');
+var webpack = require('webpack');
+var BowerWebpackPlugin = require('bower-webpack-plugin');
 
 let processArgs = minimist(process.argv);
 
@@ -123,8 +126,15 @@ var config = {
         filename: '[name].js',
         pathinfo: true
       },
+      resolve: {
+        root: './src/bower_components/',
+        // alias: {
+        //   'TweenLite': 'gsap/src/uncompressed/TweenLite'
+        // }
+      },
+
       // TODO: Webpack sourcemaps
-      devtool: 'eval',
+      devtool: 'source-map',
       module: {
         loaders: [{
           test: /\.jsx?$/,
@@ -136,8 +146,8 @@ var config = {
               stage: 0
             } : {},
         }],
-        // TODO: Explore Common Chunks plugin for optimization
-        // TODO: explore Bower plugin
+        plugins: [new BowerWebpackPlugin()]
+        // TODO: Explore Common Chunks plugin for optimization        
       }
     }
   },
