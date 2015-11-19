@@ -3,7 +3,7 @@ import gutil from 'gulp-util';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import browserSync from 'browser-sync';
-import notifier from 'node-notifier'; 
+import notifier from 'node-notifier';
 
 // Import configs
 import config from '../config';
@@ -20,6 +20,7 @@ gulp.task('webpack', function() {
     .pipe(plumber('Error Running Webpack'))
     .pipe(webpackStream(config.webpack.options, webpack, (err, stats) => {
       if (stats.compilation.errors.length) {
+        
         // Notifiers if errors
         notifier.notify({
           title: 'Webpack error',
@@ -27,10 +28,7 @@ gulp.task('webpack', function() {
           sound: 'Frog',
         });
 
-        // Logs Errors
         var errMsg = stats.compilation.errors[0];
-        // delete errMsg['message'];
-        
         // Removes extra logs (because I was unable to get error message only)
         delete errMsg['name'];
         delete errMsg['dependencies'];
@@ -44,7 +42,7 @@ gulp.task('webpack', function() {
       }
     }))
 
-  .pipe(gulp.dest(config.webpack.dest))
+    .pipe(gulp.dest(config.webpack.dest))
     .pipe(browserSync.reload({
       stream: true
     }));
