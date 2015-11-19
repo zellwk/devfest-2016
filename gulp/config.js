@@ -42,25 +42,27 @@ var config = {
     pageDest: dest,
     watch: [
     src + '/templates/**/*',
-    'data/_data.json'
+    'data/**/*.json'
     ]
   },
 
   browserSync: {
     server: {
-      // Serve up our build folder
       baseDir: dest
     },
     host: 'localhost',
     port: 3000,
     open: false
-    // proxy: "yourlocal.dev"
     // browser: 'google chrome',
   },
 
   deploy: {
     method: 'ghpages', // rsync, aws or ghpages
-  } ,
+    // Deploys to anothe rgit repo
+    // opts: {
+    //   remoteUrl: 'git@github.com:zellwk/test-project.git',
+    // }
+  },
 
   fonts: {
     src: src + '/fonts/**/*',
@@ -80,13 +82,6 @@ var config = {
     }
   },
 
-  jspm: {
-    src: src + '/js/main',
-    dest: dest + '/js/main.min.js',
-    watch: src + '/js/**/*.js',
-    jspmConfigPath: './jspm.config.js'
-  },
-
   sass: {
     src: src + '/scss/**/*.{scss,sass}',
     dest: dest + '/css',
@@ -100,6 +95,7 @@ var config = {
 
   scsslint: {
     src: [src + '/scss/**/*.scss',
+    // Don't lint SCSS files because it's generated
     '!' + src + '/scss/_sprites.scss'
     ]
   },
@@ -127,6 +123,7 @@ var config = {
         filename: '[name].js',
         pathinfo: true
       },
+      // TODO: Webpack sourcemaps
       devtool: 'eval',
       module: {
         loaders: [{
