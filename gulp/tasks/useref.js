@@ -12,7 +12,7 @@ let cssPipe = lazypipe()
   html: [config.useref.src],
   ignore: config.uncss.ignore,
 })
-.pipe($.minifyCss);
+.pipe($.cssnano);
 
 let jsPipe = lazypipe()
   .pipe($.uglify);
