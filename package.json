@@ -1,6 +1,6 @@
 {
   "name": "protoflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Protoflow is a static-site generator that Zell has created to help you (and him) create a static website easily without the need to mess around with things like Jeykll, Middleman, Assemble or any other static site generators.",
   "main": "index.js",
   "author": "Zell Liew",
