@@ -13,15 +13,13 @@ import plumber from '../custom_modules/plumber';
 import plugins from 'gulp-load-plugins';
 let $ = plugins();
 
-// TODO: Webpack Sourcemaps
-// TODO: Setup React Hot Loader with Browsersync + webpack
 gulp.task('webpack', function() {
   return gulp.src(config.webpack.src)
     .pipe(plumber('Error Running Webpack'))
     .pipe(webpackStream(config.webpack.options, webpack, (err, stats) => {
       if (stats.compilation.errors.length) {
         
-        // Notifiers if errors
+        // Notifies if there are any errors
         notifier.notify({
           title: 'Webpack error',
           message: stats.compilation.errors[0].error,
