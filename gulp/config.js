@@ -156,6 +156,9 @@ var config = {
     src: dist + '/**/*.html',
     dest: dist,
     manifest: dist,
+    opts: {
+      searchPath: env === 'prod' ? dist : src,
+    }
   },
 
   uncss: {

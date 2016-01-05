@@ -18,16 +18,13 @@ let jsPipe = lazypipe()
   .pipe($.uglify);
 
 gulp.task('useref', () => {
-  var assets = $.useref.assets();
-
   return gulp.src(config.useref.src)
-  .pipe(assets)
+  .pipe($.useref(config.useref.opts))
   .pipe($.cached('useref'))
   .pipe($.if('*.css', cssPipe()))
   .pipe($.if('*.js', jsPipe()))
-  .pipe($.rev())
-  .pipe(assets.restore())
-  .pipe($.useref())
+  .pipe($.if('*.css', $.rev()))
+  .pipe($.if('*.js', $.rev()))
   .pipe($.revReplace())
   .pipe(gulp.dest(config.useref.dest))
   .pipe($.rev.manifest())
