@@ -6,7 +6,6 @@ import path from 'path';
 import through from 'through2';
 import nunjucks from 'nunjucks';
 import nunjucksMarkdown from 'nunjucks-markdown';
-import consolidate from 'consolidate';
 import marked from 'marked';
 import stripJSONComments from 'strip-json-comments';
 
@@ -29,9 +28,8 @@ function nunjuckTemplate(options) {
       return;
     }
 
-    let 
     // globalData = file.globalData || {},
-    data = {},
+    let data = {},
     localData = file.localData || {},
     frontmatterData = file.frontmatter || {},
     markdownData,
@@ -43,7 +41,7 @@ function nunjuckTemplate(options) {
     } : {};
 
     // Gets data from data (if any)
-    
+
     if (options.data) {
       data = getDataFromSource(options.data, data);
     }
@@ -65,9 +63,9 @@ function nunjuckTemplate(options) {
 
     /**
      * Figures out Template Path
-     * Priority 1 : options given by user 
+     * Priority 1 : options given by user
      * Priority 2 : template in frontmatter
-     * Fallback   : Use self 
+     * Fallback   : Use self
      */
 
     if (options.template) {
@@ -91,28 +89,24 @@ function nunjuckTemplate(options) {
     } else {
       templatePath = file.path;
     }
-    
-    // Setting configuration defaults 
-    // Note: Replace Nunjucks with another generator if you want to
-    
-    // nowatch, nocache
-    let env = consolidate.requires.nunjucks = new nunjucks.Environment(new nunjucks.FileSystemLoader(options.templateDir, {
+
+    let env = new nunjucks.Environment(new nunjucks.FileSystemLoader(
+      [options.templateDir, path.join(process.cwd(), 'src/pages')],
+      {
+        autoescape: true,
         watch: false,
         nocache: true
-      }));
+      }
+     ));
 
-    // Registers markdown tag
     marked.setOptions(config.blog.markdownOptions);
     nunjucksMarkdown.register(env, marked);
 
-    // Renders Template
-    consolidate.nunjucks(templatePath, data)
-    .then((html)=> {
-      file.contents = new Buffer(html);        
+    env.render(templatePath, data, (err, res) => {
+      if (err) cb(pluginError(err));
+
+      file.contents = new Buffer(res);
       cb(null, file);
-    })
-    .catch((err) => {
-      cb(pluginError(err));
     });
 
   });

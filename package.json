@@ -12,7 +12,6 @@
     "babel-runtime": "^5.8.25",
     "bower-webpack-plugin": "^0.1.9",
     "browser-sync": "^2.11.0",
-    "consolidate": "^0.13.1",
     "critical": "^0.7.0",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
