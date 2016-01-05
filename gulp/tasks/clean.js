@@ -10,8 +10,8 @@ gulp.task('clean', () => {
 });
 
 // Clear cache
-gulp.task('clean:cc', () => {
-  return cache.clearAll(callback);
+gulp.task('clean:cc', cb => {
+  return $.cache.clearAll(cb);
 })
 
 // Partial clean (doesn't remove images)
