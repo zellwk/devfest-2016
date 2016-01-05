@@ -15,7 +15,7 @@
     {% endfor %}
   </ul>
   <div class="content">
-    {{body}} 
+    {{body | safe}} 
   </div>
 </section>
 {% endblock %}
