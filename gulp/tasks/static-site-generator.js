@@ -200,7 +200,7 @@ function tapTags() {
       let permalink;
 
       // Creates permalink for tag 
-      permalink = path.join(path.join('/', dirname, tag));
+      permalink = path.join(path.join('/', tag));
 
       // Pushes permalink back to tag collection
       frontmatter.tags.push({
