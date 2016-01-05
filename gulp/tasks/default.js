@@ -19,8 +19,8 @@ gulp.task('default', (cb) => {
   } else if (config.env === 'prod') {
     runSequence(
       ['clean', 'lint:scss', 'lint:js'],
-      // TODO: Look into Sprites and Images task. Not functioning on --prod
-      ['fonts', 'webpack'],
+      // TODO: Fix sprites for production
+      ['images', 'fonts', 'webpack'],
       ['sass', 'generateSite'],
       'useref',
       'critical',
