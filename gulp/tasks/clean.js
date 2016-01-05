@@ -5,12 +5,12 @@ import plugins from 'gulp-load-plugins';
 
 let $ = plugins();
 
-gulp.task('clean', (cb) => {
-  del([config.dest + '/**/*'], cb);
+gulp.task('clean', () => {
+  return del.sync([config.dest + '/**/*']);
 });
 
 // Clear cache
-gulp.task('clean:cc', (cb) => {
+gulp.task('clean:cc', () => {
   return cache.clearAll(callback);
 })
 
