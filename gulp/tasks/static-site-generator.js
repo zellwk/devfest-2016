@@ -104,13 +104,13 @@ gulp.task('generateSite', (cb) => {
 });
 
 // Get Global to pass on to swig templates (which I will edit later)
-function tapGlobals(filepath) {
-  return through.obj((file, enc, cb) => {
-    let json = stripJSONComments(fs.readFileSync(filepath).toString());
-    file.globalData = JSON.parse(json);
-    cb(null, file);
-  });
-}
+// function tapGlobals(filepath) {
+//   return through.obj((file, enc, cb) => {
+//     let json = stripJSONComments(fs.readFileSync(filepath).toString());
+//     file.globalData = JSON.parse(json);
+//     cb(null, file);
+//   });
+// }
 
 // Extracts Summary 
 function tapSummary(marker) {
@@ -131,7 +131,6 @@ function tapSummary(marker) {
 // Creates Date frontmatter
 function tapDate(options = {}) {
   return through.obj((file, enc, cb) => {
-
     options.fileDateFormat = 'YYYY-MM-DD';
     options.outputDateFormat = 'Do MMM, YYYY';
     let filename = path.basename(file.path, path.extname(file.path));
