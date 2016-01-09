@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import svg4everybody from 'svg4everybody';
 
 // Polyfill for external SVG spritesheets

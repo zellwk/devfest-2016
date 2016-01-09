@@ -1,19 +1,10 @@
 import minimist from 'minimist';
-import webpackConfig from '../webpack.conf.js';
+import webpackConfig from '../webpack.conf';
+import environment from '../env';
 
-let processArgs = minimist(process.argv);
-
-let env = 'dev';
-let src = './src';
-let dev = './dev';
-let dist = './dist';
-let dest = dev;
-
-// Sets env and dest for production environments
-if (processArgs.prod || processArgs.production) {
-  env = 'prod';
-  dest = dist;
-}
+let env = environment.env;
+let src = environment.src;
+let dest = environment.dest;
 
 var config = {
   env: env,
@@ -42,8 +33,8 @@ var config = {
     pageSrc: src + '/pages/**/*.{nj,nunjucks}',
     pageDest: dest,
     watch: [
-    src + '/templates/**/*',
-    'data/**/*.json'
+      src + '/templates/**/*',
+      'data/**/*.json'
     ]
   },
 
@@ -117,15 +108,14 @@ var config = {
   webpack: Object.assign(webpackConfig, {
     src: src + '/js/main.js',
     dest: dest + '/js',
-    watch: env === 'prod' ? false : true,
   }),
 
   useref: {
-    src: dist + '/**/*.html',
-    dest: dist,
-    manifest: dist,
+    src: dest + '/**/*.html',
+    dest: dest,
+    manifest: dest,
     opts: {
-      searchPath: env === 'prod' ? dist : src,
+      searchPath: env === 'prod' ? dest : src,
     }
   },
 

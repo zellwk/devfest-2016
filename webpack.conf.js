@@ -1,8 +1,11 @@
-var BowerWebpackPlugin = require('bower-webpack-plugin');
+import environment from './env';
+import BowerWebpackPlugin from 'bower-webpack-plugin';
+
+let env = environment.env;
 
 module.exports = {
   options: {
-    watch: true,
+    watch: env === 'prod' ? false : true,
     output: {
       filename: '[name].js',
       pathinfo: true

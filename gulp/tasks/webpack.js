@@ -1,9 +1,7 @@
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import browserSync from 'browser-sync';
-import notifier from 'node-notifier';
 
 // Import configs
 import config from '../config';

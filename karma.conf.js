@@ -9,6 +9,7 @@ module.exports = function(config) {
     frameworks: ['mocha', 'sinon-chai'],
 
     files: ['test/index.js'],
+    
     exclude: [],
 
     preprocessors: {
