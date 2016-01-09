@@ -1,5 +1,3 @@
-function blah() {
-  console.log('testing');
+export default function blah() {
+  return 1;
 }
-
-exports.default = blah;
