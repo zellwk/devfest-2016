@@ -1,7 +1,5 @@
 import minimist from 'minimist';
-var path = require('path');
-var webpack = require('webpack');
-var BowerWebpackPlugin = require('bower-webpack-plugin');
+import webpackConfig from '../webpack.conf.js';
 
 let processArgs = minimist(process.argv);
 
@@ -56,7 +54,6 @@ var config = {
     host: 'localhost',
     port: 3000,
     open: false
-    // browser: 'google chrome',
   },
 
   deploy: {
@@ -117,40 +114,11 @@ var config = {
     }
   },
 
-  webpack: {
+  webpack: Object.assign(webpackConfig, {
     src: src + '/js/main.js',
     dest: dest + '/js',
-    options: {
-      watch: env === 'prod' ? false : true,
-      output: {
-        filename: '[name].js',
-        pathinfo: true
-      },
-      resolve: {
-        root: './src/bower_components/',
-        // alias: {
-        //   'TweenLite': 'gsap/src/uncompressed/TweenLite'
-        // }
-      },
-
-      // TODO: Webpack sourcemaps
-      devtool: 'source-map',
-      module: {
-        loaders: [{
-          test: /\.jsx?$/,
-          exclude: /(node_modules)/,
-          loader: 'babel-loader',
-          // Remove babel-runtime for production sites
-          query: env !== 'prod' ? {
-              optional: ['runtime'],
-              stage: 0
-            } : {},
-        }],
-        plugins: [new BowerWebpackPlugin()]
-        // TODO: Explore Common Chunks plugin for optimization        
-      }
-    }
-  },
+    watch: env === 'prod' ? false : true,
+  }),
 
   useref: {
     src: dist + '/**/*.html',
