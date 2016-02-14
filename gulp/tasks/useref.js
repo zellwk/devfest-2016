@@ -1,21 +1,18 @@
-import gulp from 'gulp';
-import lazypipe from 'lazypipe';
-import through from 'through2';
-
-import config from '../config';
-
-import plugins from 'gulp-load-plugins';
-let $ = plugins();
+const gulp = require('gulp')
+const lazypipe = require('lazypipe')
+const config = require('../config')
+const plugins = require('gulp-load-plugins')
+const $ = plugins()
 
 let cssPipe = lazypipe()
-.pipe($.uncss, {
-  html: [config.useref.src],
-  ignore: config.uncss.ignore,
-})
-.pipe($.cssnano);
+// .pipe($.uncss, {
+//   html: config.useref.src,
+//   ignore: config.uncss.ignore
+// })
+.pipe($.cssnano)
 
 let jsPipe = lazypipe()
-  .pipe($.uglify);
+  .pipe($.uglify)
 
 gulp.task('useref', () => {
   return gulp.src(config.useref.src)
@@ -28,6 +25,6 @@ gulp.task('useref', () => {
   .pipe($.revReplace())
   .pipe(gulp.dest(config.useref.dest))
   .pipe($.rev.manifest())
-  .pipe(gulp.dest(config.useref.manifest));
-});
+  .pipe(gulp.dest(config.useref.manifest))
+})
 

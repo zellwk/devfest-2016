@@ -1,14 +1,12 @@
-import gulp from 'gulp';
-import critical from 'critical';
-import fs from 'fs';
-
-import config from '../config';
-
-import plugins from 'gulp-load-plugins';
-let $ = plugins();
+const gulp = require('gulp')
+const critical = require('critical')
+const fs = require('fs')
+const config = require('../config')
+const plugins = require('gulp-load-plugins')
+const $ = plugins()
 
 // TODO: no need to critical if CSS hasn't changed.
-gulp.task('critical', function() {
+gulp.task('critical', function () {
   return gulp.src(config.useref.src)
     .pipe(critical.stream({
       base: config.useref.dest,
@@ -20,11 +18,11 @@ gulp.task('critical', function() {
         width: 320
       }, {
         height: 760,
-        width: 1024,
+        width: 1024
       }]
     }))
     .pipe($.debug({
-      "title": "Critical"
+      'title': 'Critical'
     }))
-    .pipe(gulp.dest(config.useref.dest));
-});
+    .pipe(gulp.dest(config.useref.dest))
+})

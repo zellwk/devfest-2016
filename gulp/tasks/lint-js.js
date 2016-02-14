@@ -1,11 +1,8 @@
-import gulp from 'gulp';
-import plugins from 'gulp-load-plugins';
-
-// Import configs
-import config from '../config';
-import plumber from '../custom_modules/plumber';
-
-let $ = plugins();
+const gulp = require('gulp')
+const plugins = require('gulp-load-plugins')
+const config = require('../config')
+const plumber = require('../custom_modules/plumber')
+const $ = plugins()
 
 gulp.task('lint:js', () => {
   return gulp.src('src/js/**/*.js')
@@ -21,5 +18,5 @@ gulp.task('lint:js', () => {
       configPath: '.jscsrc'
     }))
     .pipe(gulp.dest('src/js'))
-});
+})
 

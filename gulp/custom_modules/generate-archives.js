@@ -1,77 +1,104 @@
-import gulp from 'gulp';
-import gutil from 'gulp-util';
-import through from 'through2';
-import path from 'path';
-import fs from 'fs';
-import _ from 'lodash';
+const gutil = require('gulp-util')
+const path = require('path')
+const _ = require('lodash')
 
-function generateArchives(stream, options) {
-
-  let defaults = {
+function generateArchives (stream, options) {
+  var defaults = {
     articles: [],
     articlesPerPage: 10,
     basename: 'blog',
     permalink: '/blog',
+    title: 'blog'
   }
 
-  options = _.assign(defaults, options);
+  options = Object.assign(defaults, options)
 
-  let pageCount = 1,
-    totalArticles = options.articles.length + 1,
-    articlesPerPage = parseInt(options.articlesPerPage),
-    articles = _.sortByOrder(options.articles, 'date', false); // latest articles first
+  var articles = _.sortByOrder(options.articles, 'date', false)
+  var articlesPerPage = parseInt(options.articlesPerPage, 10)
+  var pages = splitPages(articles, articlesPerPage)
 
-  // Separates articles into pages
-  for (let i = 0; i < articles.length + articlesPerPage; i++) {
+  // Creates a new file for every page
+  pages.forEach((page, index) => {
+    var file = new gutil.File({
+      cwd: process.cwd(),
+      path: absPathToPage(index, options.basename)
+    })
 
-    let page = _.slice(articles, 0, articlesPerPage);
-
-    // Pops out the same number of articles as articles per page
-    recursiveShift(articles, articlesPerPage + 1);
-
-    if (!_.isEmpty(page)) {
-      let pageMod = pageCount !== 1 ? '/page-' + pageCount : '';
-      let file = new gutil.File({
-        cwd: process.cwd(),
-        path: path.join(process.cwd(), `${options.basename}${pageMod}.html`)
-      });
-
-      let permalink = path.join('/', options.basename);
-      let prevPage = pageCount <= 1 ? null : pageCount - 1;
-      let nextPage = (pageCount) * articlesPerPage > totalArticles ? null : pageCount + 1;
-
-      file.localData = {
-        title: toTitleCase(options.basename),
-        permalink: path.join(permalink, '/'),
-        articles: page,
-        prevPage: prevPage,
-        nextPage: nextPage,
-        prevPagePermalink: path.join(permalink + prevPage, '/'),
-        nextPagePermalink: path.join(permalink + nextPage, '/'),
-      }
-
-      stream.write(file);
-
+    file.localData = {
+      title: toTitleCase(options.title),
+      permalink: absPathToPage(index, options.basename),
+      articles: page,
+      prevPage: index - 1 >= 0 ? true : null,
+      nextPage: index + 1 < pages.length ? true : null,
+      prevPageUrl: pathToPage(index - 1, options.basename),
+      nextPageUrl: pathToPage(index + 1, options.basename),
+      pagination: pagination(index, pages.length, options.basename)
     }
-    pageCount += 1;
+
+    stream.write(file)
+  })
+}
+
+function pagination (index, totalPages, basename) {
+  index += 1
+  var lowerLimit = Math.max(index - 4, 1)
+  var upperLimit = Math.min(index + 5, totalPages)
+
+  if (index + 5 > totalPages) {
+    lowerLimit = Math.max(totalPages - 9, 1)
+  }
+
+  if (index < 5) {
+    upperLimit = Math.min(10, totalPages)
+  }
+
+  return createPageArray(index, lowerLimit, upperLimit, basename, [])
+}
+
+function createPageArray (index, lowerLimit, upperLimit, basename, out) {
+  if (lowerLimit > upperLimit) return out
+  else {
+    var p = {}
+    p.index = lowerLimit
+    p.url = pathToPage(lowerLimit - 1, basename)
+    p.active = lowerLimit === index
+    out.push(p)
+    return createPageArray(index, lowerLimit + 1, upperLimit, basename, out)
   }
 }
 
-// Recursively pops an array
-function recursiveShift(arr, n) {
-  if (n <= 1) {
-    return;
+function splitPages (a, n) {
+  var out = []
+  var len = a.length
+  var i = 0
+
+  while (i < len) {
+    var arr = a.slice(i, i + n)
+    out.push(arr)
+    i += n
+  }
+
+  return out
+}
+
+function pathToPage (index, basename) {
+  if (index < 0) {
+    return false
+  } else if (index === 0) {
+    return path.join('/', basename)
   } else {
-    arr.shift();
+    return path.join('/', basename, `page-${index + 1}`)
   }
-
-  return recursiveShift(arr, n - 1);
 }
 
-function toTitleCase(str) {
-  return str.replace(/\w\S*/g, function(txt) {
-    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-  });
+function absPathToPage (index, basename) {
+  return path.join(process.cwd(), pathToPage(index, basename), 'index.html')
 }
 
-module.exports = generateArchives;
+function toTitleCase (str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+  })
+}
+
+module.exports = generateArchives

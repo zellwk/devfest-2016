@@ -1,5 +1,15 @@
 {
   "preset": "google",
+  "esnext": true,
   "disallowTrailingWhitespace": true,
-  "esnext": true
+  "requireSemicolons": null,
+  "disallowSemicolons": true,
+  "disallowSpacesInFunctionDeclaration": null,
+  "disallowSpacesInAnonymousFunctionExpression": null,
+  "disallowSpacesInFunctionExpression": null,
+  "requireSpacesInFunction": {
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireCurlyBraces": null
 }

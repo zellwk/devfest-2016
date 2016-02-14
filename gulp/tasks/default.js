@@ -1,30 +1,23 @@
-import gulp from 'gulp';
-import runSequence from 'run-sequence';
-
-// Import configs
-import config from '../config';
-
-import plugins from 'gulp-load-plugins';
-let $ = plugins();
+const gulp = require('gulp')
+const runSequence = require('run-sequence')
+const config = require('../config')
 
 // Not done yet
 gulp.task('default', (cb) => {
   if (config.env === 'dev') {
     runSequence(
-      ['clean', 'lint:scss', 'lint:js'],
-      ['sprites', 'images', 'fonts'],
+      ['clean', 'lint:js'],
+      ['images', 'fonts'],
       ['sass', 'generateSite'],
       ['browserSync', 'webpack', 'watch'],
-      cb);
+      cb)
   } else if (config.env === 'prod') {
     runSequence(
-      ['clean', 'lint:scss', 'lint:js'],
-      // TODO: Fix sprites for production
+      ['clean', 'lint:js'],
       ['images', 'fonts', 'webpack'],
       ['sass', 'generateSite'],
       'useref',
-      'critical',
       cb
-      );
+      )
   }
-});
+})

@@ -8,25 +8,25 @@ html {
   box-sizing: border-box;
 }
 
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
 
 // Resets margins and paddings for headers, ul, ol and p
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-ul, 
-li, 
-p, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
 blockquote {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 
@@ -46,24 +46,23 @@ li {
 
 // Completely resets form items
 // ----------------------------
-// Super hard reset that removes all borders 
-// and radiuses of all form items. 
+// Super hard reset that removes all borders
+// and radiuses of all form items.
 // ============================
 input,
 textarea,
 button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  border: 0;
   border-radius: 0;
   outline: none;
-  border: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 
   &:hover,
   &:active,
   &:focus {
     outline: none;
-    border: none;
   }
 }
 
@@ -76,15 +75,8 @@ video {
   max-width: 100%;
 }
 
-// Set Img height and width to auto for IE8
-img {
-  // IE8
-  height: auto;
-  width: auto;
-}
-
 // Taming Table layouts
 table {
-  table-layout: fixed;
   width: 100%;
+  table-layout: fixed;
 }

@@ -8,8 +8,8 @@ dd {
 }
 
 dd + dt:before {
-  content: '\A';
   white-space: pre;
+  content: '\A';
 }
 
 dd + dd:before {
@@ -19,10 +19,12 @@ dd + dd:before {
 // Intrinsic sizing on figure + Fallback
 figure {
   max-width: 100%;
-  max-width: min-content;
+
+  // max-width: min-content;
   margin: auto;
 
   > img {
+    display: block;
     max-width: inherit;
   }
 }
@@ -37,7 +39,15 @@ figure {
 // img + p,
 p + *,
 * + p {
-  margin-top: 1em;
+  margin-top: vr(1);
+}
+
+h2 + p {
+  margin-top: vr(0.5);
+}
+
+h2 + figure {
+  margin-top: vr(1);
 }
 
 // Adds default UL and LI styles back ONLY for articles
@@ -45,11 +55,11 @@ p + *,
 article {
   ul,
   ol {
-    margin-left: 1em;
+    padding-left: 2rem;
   }
 
   li + li {
-    margin-top: 0.5em;
+    margin-top: vr(0.25);
   }
 
   ul li {

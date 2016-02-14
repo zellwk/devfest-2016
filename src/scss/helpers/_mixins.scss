@@ -7,9 +7,9 @@
 // --------
 @mixin cf {
   &:after {
-    content: ' ';
     display: table;
     clear: both;
+    content: ' ';
   }
 }
 
@@ -20,16 +20,14 @@
   @if $value == on {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  @else {
+  } @else {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
 }
 
 // Mappy Breakpoint shortcuts
-// 
+//
 // BP [Mixin]
 // ----------
 // Convenience mixin for Mappy Breakpoints
@@ -49,13 +47,13 @@
 // - http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin is-invisible {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  padding: 0;
   width: 1px;
   height: 1px;
-  border: none;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
 }
 
 // Is-visible
@@ -63,10 +61,10 @@
 // Turns off the element-invisible effect.
 @mixin is-visible {
   position: static;
-  clip: auto;
-  height: auto;
   width: auto;
+  height: auto;
   overflow: auto;
+  clip: auto;
 }
 
 // Placeholder
@@ -83,8 +81,8 @@
 // Changes selected color and background color
 @mixin selection($bg-color, $text-color) {
   &::selection {
-    background: $bg-color;
     color: $text-color;
+    background: $bg-color;
   }
 }
 
@@ -128,14 +126,14 @@
 // We use this to create isosceles triangles
 // - $triangle-size       - Used to set border-size. No default, set a px or em size.
 // - $triangle-color      - Used to set border-color which makes up triangle. No default
-// - $triangle-direction  - Used to determine which direction triangle points. 
+// - $triangle-direction  - Used to determine which direction triangle points.
 //                          Options: top, bottom, left, right
 @mixin triangle($triangle-size, $triangle-color, $triangle-direction) {
-  content: '';
   display: block;
   width: 0;
   height: 0;
   border: inset $triangle-size;
+  content: '';
 
   @if $triangle-direction == top {
     border-color: $triangle-color transparent transparent;

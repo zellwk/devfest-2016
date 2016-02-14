@@ -15,13 +15,12 @@
   ],
   "dependencies": {
     "adaptive-placeholders": "~1.1.5",
-    "jquery": "~2.1.4",
     "mappy-breakpoints": "~0.2.1",
     "modular-scale": "~2.1.1",
     "normalize.css": "~3.0.3",
     "sass-hidpi": "~2.0.0",
     "susy": "~2.2.5",
     "themify": "~0.1.0",
-    "vertical-rhythms-without-compass": "~1.0.1"
+    "typi": "~1.1.0"
   }
 }

@@ -8,17 +8,16 @@
   {# Favicon #}
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
-  {% block css %} 
+  {% block css %}
   <!--build:css /css/styles.min.css-->
-  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/styles.css">
   <!--endbuild-->
   {% endblock %}
 
-  {% block headScripts %} 
+  {% block headScripts %}
   <!--build:js js/head.min.js -->
   <!--endbuild -->
-  {% endblock %}  
+  {% endblock %}
 
   {% block SEO %}
   {% block title %}<title> {{title}} | {{siteTitle}} </title>{% endblock %}
@@ -48,13 +47,13 @@
   {% block twitter %}
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{twitterHandle}}">
-  <meta name="twitter:creator" content="{{twitterHandle}}">  
+  <meta name="twitter:creator" content="{{twitterHandle}}">
   <meta name="twitter:title" content="{{title}} | {{siteTitle}}">
   {# TODO: Twitter desc should follow meta desc #}
   <meta name="twitter:description" content="{{siteDescription}}">
   <meta name="twitter:image" content="{{twitterImage}}">
   {% endblock %}
-  
+
   {# Webmaster Tools #}
   <meta name="google-site verification" content="{{webmasterToolsUrl}}">
   <meta name="msvalidate01" content="{{bingUrl}}">
@@ -73,7 +72,7 @@
   <script>
     System.import('js/main');
   </script> #}
-  
+
   <!--build:js /js/main.min.js -->
   <script src="/js/main.js"></script>
   <!--endbuild -->

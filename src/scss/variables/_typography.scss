@@ -1,74 +1,61 @@
 // Nicer Ampersands
-// TODO: Nicer ampersands not working properly. Debug
 
-// @font-face {
-//   font-family: Ampersand;
-//   src: local('Baskerville-Italic'), local('GoudyOldStyleT-Italic'), local('Garamond-Italic'), local('Palatino-Italic');
-//   unicode-range: U+26;
-// }
-
-// Typography
-// ----------
-// For all Typography related values. 
-// Uses Compass Vertical Rhythms. 
-// ==========
-
-// Compass Vertical Rhythms Settings
-// ---------------------------------
-$base-font-size: 16px;
-$base-line-height: 22.4px;
-$round-to-nearest-half-line: true;
-
-// Uses the `rem` unit for all vertical rhythm output
-$rhythm-unit: 'rem';
+@font-face {
+  font-family: 'Ampersand';
+  src: local('Baskerville-Italic'), local('GoudyOldStyleT-Italic'), local('Palatino-Italic'), local('Garamond-Italic');
+  unicode-range: U+26;
+}
 
 // Font Families
 // ------------
 $font-families: (
-  header: (Ampersand, Helvetica, Arial, sans-serif),
+  header: ('Ampersand', Helvetica, Arial, sans-serif),
   text: ('Source Sans Pro', Georgia, Times, serif),
   code: ('Menlo', 'Monaco', 'Consolas', monospace),
   quote: ('vollkorn'),
   );
 
-$font-weights: (
-  header: (normal: 400, bold: 600),
-  text: (normal: 400, bold: 600),
-  code: (normal: 400, bold: 600),
-  quote: (normal: 400, bold: 600)
+// Typography
+// ----------
+// For all Typography related values.
+// Uses Compass Vertical Rhythms.
+// ==========
+
+$ms-ratio: 1.3333333;
+
+$typi: (
+  null: (18px, 1.4),
+  med: 19px,
+  wide: 22px,
+  mega: 25px
   );
 
 $h1-font-map: (
-  null: (ms(3), 1.1)
+  null: (ms(3), 1.3)
   );
 
 $h2-font-map: (
-  null: (ms(2), 1.1)
+  null: (ms(2), 1.3)
   );
 
 $h3-font-map: (
-  null: (ms(1), 1.1)
+  null: (ms(1), 1.3)
   );
 
 $h4-font-map: (
-  null: (ms(1), 1.1)
+  null: (ms(1), 1.3)
   );
 
 $h5-font-map: (
-  null: (ms(1), 1.1)
+  null: (ms(1), 1.3)
 
   );
 
 $h6-font-map: (
-  null: (ms(1), 1.1)
+  null: (ms(1), 1.3)
   );
 
-$p-font-map: (
-  null  : (16px, 1.4),
-  med: 17px,
-  wide : 18px,
-  );
 
 $code-font-map: (
+  null: (ms(1), 1.3)
   );
-

@@ -1,22 +1,18 @@
-import gulp from 'gulp';
-import webpack from 'webpack';
-import webpackStream from 'webpack-stream';
-import browserSync from 'browser-sync';
+const gulp = require('gulp')
+const webpack = require('webpack')
+const webpackStream = require('webpack-stream')
+const browserSync = require('browser-sync')
 
-// Import configs
-import config from '../config';
-import plumber from '../custom_modules/plumber';
+// const configs
+const config = require('../config')
+const plumber = require('../custom_modules/plumber')
 
-// Load gulp plugins
-import plugins from 'gulp-load-plugins';
-let $ = plugins();
-
-gulp.task('webpack', function() {
+gulp.task('webpack', function () {
   return gulp.src(config.webpack.src)
     .pipe(plumber('Error Running Webpack'))
     .pipe(webpackStream(config.webpack.options, webpack))
     .pipe(gulp.dest(config.webpack.dest))
     .pipe(browserSync.reload({
       stream: true
-    }));
-});
+    }))
+})

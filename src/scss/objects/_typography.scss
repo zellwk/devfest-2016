@@ -1,21 +1,22 @@
 // Typography
 // ---------------
-// Sets typography for all of document 
+// Sets typography for all of document
 // ===============
 
 html {
+  @include typi-base;
   @include ff(text);
   @include font-smoothing;
-  @include html-font-size-and-line-height($p-font-map);
-  // Remove discretionary-ligatures as necessary
-  font-variant-ligatures: common-ligatures 
-    discretionary-ligatures 
-    historical-ligatures;
+  color: color(mine);
 
   // Optmizes font rendering for legibility.
   // May break with some browsers, comment out as necessary.
   text-rendering: optimizeLegibility;
+
+  // Remove discretionary-ligatures as necessary
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures;
 }
+
 
 
 h1,
@@ -27,22 +28,23 @@ h6 {
   @include ff(header);
 }
 
-h1 {@include font-size($h1-font-map); }
-h2 {@include font-size($h2-font-map); }
-h3 {@include font-size($h3-font-map); }
-h4 {@include font-size($h4-font-map); }
-h5 {@include font-size($h5-font-map); }
-h6 {@include font-size($h6-font-map); }
-code {@include font-size($code-font-map); }
+h1 {@include typi($h1-font-map); }
+h2 {@include typi($h2-font-map); }
+h3 {@include typi($h3-font-map); }
+h4 {@include typi($h4-font-map); }
+h5 {@include typi($h5-font-map); }
+h6 {@include typi($h6-font-map); }
+code {@include typi($code-font-map); }
 
 strong { font-weight: bold; }
 em { font-style: italic; }
+
 pre {
   white-space: pre;
   tab-size: 2;
 }
 
-// Custom Underlines 
+// Custom Underlines
 // a {
 //   text-decoration: none;
 //   background: linear-gradient(gray, gray) no-repeat;

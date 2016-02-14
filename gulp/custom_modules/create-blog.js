@@ -1,18 +1,17 @@
-import through from 'through2';
-import generateArchives from './generate-archives';
+const through = require('through2')
+const generateArchives = require('./generate-archives')
 
-function createBlog(options) {
-
+function createBlog (options) {
   let stream = through.obj((file, enc, cb) => {
-    cb(null, file);
-  });
+    cb(null, file)
+  })
 
-  generateArchives(stream, options);
+  generateArchives(stream, options)
 
-  stream.end();
-  stream.emit('end');
+  stream.end()
+  stream.emit('end')
 
-  return stream;
+  return stream
 }
 
-module.exports = createBlog;
+module.exports = createBlog

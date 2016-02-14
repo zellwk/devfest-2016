@@ -1,16 +1,16 @@
-import gulp from 'gulp';
-import plugins from 'gulp-load-plugins';
-import browserSync from 'browser-sync';
-
-// Import configs
-import config from '../config';
-import plumber from '../custom_modules/plumber';
-
-let $ = plugins();
+const gulp = require('gulp')
+const plugins = require('gulp-load-plugins')
+const browserSync = require('browser-sync')
+const config = require('../config')
+const plumber = require('../custom_modules/plumber')
+const $ = plugins()
 
 gulp.task('sass', () => {
   return gulp.src(config.sass.src)
     .pipe(plumber('Error Running Sass'))
+    .pipe($.sassLint())
+    .pipe($.sassLint.format())
+    .pipe($.sassLint.failOnError())
     .pipe($.sourcemaps.init())
     .pipe($.sass(config.sass.opts))
     .pipe($.autoprefixer(config.autoprefixer))
@@ -19,5 +19,5 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(config.sass.dest))
     .pipe(browserSync.reload({
       stream: true
-    }));
+    }))
 })

@@ -1,13 +1,8 @@
-import gulp from 'gulp';
-import plugins from 'gulp-load-plugins';
+const gulp = require('gulp')
+const config = require('../config')
 
-// Import configs
-import config from '../config';
-
-let $ = plugins();
-
-gulp.task('fonts', ()=> {
+gulp.task('fonts', () => {
   return gulp.src(config.fonts.src)
     .pipe(gulp.dest(config.fonts.dest))
-});
+})
 

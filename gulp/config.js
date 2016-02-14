@@ -1,10 +1,9 @@
-import minimist from 'minimist';
-import webpackConfig from '../webpack.conf';
-import environment from '../env';
+const webpackConfig = require('../webpack.conf')
+const environment = require('../env')
 
-let env = environment.env;
-let src = environment.src;
-let dest = environment.dest;
+var env = environment.env
+var src = environment.src
+var dest = environment.dest
 
 var config = {
   env: env,
@@ -12,19 +11,23 @@ var config = {
   dest: dest,
 
   autoprefixer: {
-    browsers: ['last 2 versions'],
+    browsers: ['last 2 versions']
   },
 
   blog: {
-    articlesPerPage: 5,
+    articlesPerPage: 10,
     blogDir: 'blog',
+    date: {
+      fileDateFormat: 'YYYY-MM-DD',
+      outputDateFormat: 'Do MMMM, YYYY'
+    },
     globalData: './data/_data.json',
     markdownOptions: {
       smartypants: true,
       gfm: true,
       // Highlights code with highlight.js
-      highlight: function(code) {
-        return require('highlight.js').highlightAuto(code).value;
+      highlight: function (code) {
+        return require('highlight.js').highlightAuto(code).value
       }
     },
     postSrc: src + '/posts/*.{md,nj,nunjucks}',
@@ -32,6 +35,9 @@ var config = {
     summaryMarker: '<!--more-->',
     pageSrc: src + '/pages/**/*.{nj,nunjucks}',
     pageDest: dest,
+    tags: {
+      basename: '/tags'
+    },
     watch: [
       src + '/templates/**/*',
       'data/**/*.json'
@@ -48,7 +54,7 @@ var config = {
   },
 
   deploy: {
-    method: 'ghpages', // rsync, aws or ghpages
+    method: 'ghpages' // rsync, aws or ghpages
     // Deploys to anothe rgit repo
     // opts: {
     //   remoteUrl: 'git@github.com:zellwk/test-project.git',
@@ -62,8 +68,8 @@ var config = {
 
   images: {
     src: [
-    src + '/images/**/*.{png,jpeg,jpg,gif}',
-    '!' + src + '/images/sprites/*'
+      src + '/images/**/*.{png,jpeg,jpg,gif}',
+      '!' + src + '/images/sprites/*'
     ],
     dest: dest + '/images',
     opts: {
@@ -78,16 +84,17 @@ var config = {
     dest: dest + '/css',
     opts: {
       includePaths: [
-      src + '/bower_components',
-      './node_modules'
-      ],
+        src + '/bower_components',
+        './node_modules'
+      ]
     }
   },
 
   scsslint: {
-    src: [src + '/scss/**/*.scss',
-    // Don't lint SCSS files because it's generated
-    '!' + src + '/scss/_sprites.scss'
+    src: [
+      src + '/scss/**/*.scss',
+      // Don't lint SCSS files because it's generated
+      '!' + src + '/scss/_sprites.scss'
     ]
   },
 
@@ -107,7 +114,7 @@ var config = {
 
   webpack: Object.assign(webpackConfig, {
     src: src + '/js/main.js',
-    dest: dest + '/js',
+    dest: dest + '/js'
   }),
 
   useref: {
@@ -115,7 +122,7 @@ var config = {
     dest: dest,
     manifest: dest,
     opts: {
-      searchPath: env === 'prod' ? dest : src,
+      searchPath: env === 'prod' ? dest : src
     }
   },
 
@@ -126,6 +133,6 @@ var config = {
       /.hljs-/
     ]
   }
-};
+}
 
-module.exports = config;
+module.exports = config
