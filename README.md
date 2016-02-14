@@ -1,10 +1,8 @@
 # Introduction 
 
-Protoflow is a static-site generator that Zell has created to help you (and him) create a static website easily without the need to mess around with things like Jeykll, Middleman, Assemble or any other static site generators. 
+Protoflow helps you create a static website easily without the need to mess around with things like Jeykll, Middleman, Assemble or any other static site generators. It can also be used to prototype HTML quickly
 
 Everything here is built directly with Gulp, and is very similar to the workflow we have crafted in "Automating Your Workflow". 
-
-It is also used to prototype HTML quickly when you're creating designs so you can spend more time improving your designs instead of mangling with changes. 
 
 ## Installing Protoflow 
 
@@ -16,8 +14,6 @@ Note: See below under "bugs and contributing" if  you want access to the reposit
 $ npm install
 $ bower install 
 ```
-
-Note: You also need to install the scss-lint gem if you want to lint your sass files with the `lint:scss` task. 
 
 ## Project Structure for Protoflow
 
@@ -45,11 +41,10 @@ $ gulp
 When `gulp` is ran, Protoflow will look through all your source folders and execute the following tasks: 
 
 - `clean` - to clean the `dev` directory
-- `lint:scss` and `lint:js` - Check for code formats 
-- `sprites` - Produce image sprites 
+- `lint:js` - Check for code formats 
 - `images` - Copies images to `dev` folder
 - `fonts` - Copies fonts to `dev` folder
-- `sass` - Compiles Sass into CSS
+- `sass` - Compiles Sass into CSS (Also lint sass files)
 - `generateSite` - Generates static site with Nunjucks
 - `webpack` - Compiles JavaScript with Webpack
 - `browserSync` - Launches browser for live-reload
@@ -85,14 +80,6 @@ import _ from 'lodash';
 
 All images are to be placed in the `src/images` directory. Please take a look at the next section to find out how to work with image sprites. 
 
-### Using Sprites with Protoflow 
-
-Images will be combined into an image sprite are kept in the `src/images/sprites` folder. Support for retina sprites are enabled by default, so please make sure you have the same number of `@2x` images. Gulp.spritesmith will throw you an error otherwise. 
-
-Once sprites are compiled, you can use them in the same way as we described in the book. 
-
-Note: You can disable support for retina sprites by heading to the configuration file located in `gulp/config.js`. (More on the configuration file later). 
-
 ### Using Nunjucks in Protoflow
 
 Protoflow uses Nunjucks as the template engine of choice. It is configured to do a whole lot more compared to the `nunjucks` task we described in the book. Here's a summary of how to use it: 
@@ -103,7 +90,7 @@ Protoflow uses Nunjucks as the template engine of choice. It is configured to do
 
 #### Pages Folder
 
-`src/pages` is used to keep `.nunjucks` files that are converted into HTML. These files function in the same way as we discussed in the book. You can use two extra features I've coded in to help you with prototying. They are – [Markdown](#using-markdown) and [Data](#adding-data-to-pages).
+`src/pages` is used to keep `.nunjucks` files that are converted into HTML. These files function in the same way as we discussed in the book. You can use two extra features I've coded in to help you with prototying. They are – [Markdown](#using-markdown) and [multiple data files](#adding-data-to-pages).
 
 #### Posts Folder
 
@@ -115,7 +102,7 @@ Here's an example of the YAML file:
 ---
 title: This is awesome
 template: post
-permalink: First-awesome-post
+permalink: first-awesome-post
 tags: awesome
 ---
 ```
@@ -123,7 +110,7 @@ tags: awesome
 - `title` – Title of the post. This will be available to you as the `{{title}}` variable in Nunjucks
 - `template` – Nunjucks template used for this post. It defaults to `post.nunjucks`. You can switch this up to a separate template anytime you want to. 
 - `permalink` – URL for the post. The default URL is `your-site.com/blog/anything-that-comes-in-permalink`. This will also be available to you as the `{{permalink}}` variable in Nunjucks
-- `tags` – Tags for the post. An archive page (list of all posts with the same tag) will be created for each tag. They default URL for the tag page is `your-site.com/tag-name/`. 
+- `tags` – Tags for the post. An archive page (list of all posts with the same tag) will be created for each tag. They default URL for the tag page is `your-site.com/blog/tag-name/`. 
 
 Blog posts will also be consolidated into an archive page that lives at `your-site.com/blog`. You can view the template used to create Blog and Tag archive pages at `src/templates/blog.nunjucks` and `src/templates/tag.nunjucks` respectively. 
 
@@ -216,15 +203,9 @@ $ gulp --prod
 
 The `--prod` flag is a custom flag introduced to tell Protoflow that you're building a optimized site for production. Protoflow will then run through the following tasks and create an optimized site in the `dist` folder. 
 
-- `clean` - to clean the `dist` directory
-- `lint:scss` and `lint:js` - Check for code formats 
-- `sprites` - Produce image sprites 
-- `images` - Copies images to `dist` folder, and optimize them if they're not optimized previously
-- `fonts` - Copies fonts to `dist` folder
-- `sass` - Compiles Sass into CSS
-- `generateSite` - Generates static site with Nunjucks
-- `webpack` - Compiles JavaScript with Webpack
-- `useref` – Optimizes JavaScript and CSS. Removes unused CSS. Also adds a revisioned hash name to the final output for cachebusting. 
+It does everything the default `gulp` task does, plus the following:
+
+- `useref` – Optimizes JavaScript and CSS. Also adds a revisioned hash name to the final output for cachebusting. 
 - `critical` – Speeds up your website by inlining critical CSS into the `<head>` section of the site. 
 
 Note: `useref` and `critical` may take a while to run if you have a large site. I'm looking for a way to speed things up, and will update as soon as I find a way. 
@@ -278,3 +259,10 @@ Let me know if you run into problems, or if you want some additional functionali
 It'll also be awesome if you think of ways to make this generator even better! :)
 
 Have fun!
+
+## Changlog
+
+#### 1.0.0 
+
+- Removed Sprites functionality (Use [SVG Sprites](https://css-tricks.com/svg-sprites-use-better-icon-fonts/) instead)
+- Removed unCss (Slows down `--prod` too much)
