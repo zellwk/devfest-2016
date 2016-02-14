@@ -4,17 +4,16 @@
 
   // Basic Site info
   "siteTitle": "Protoflow",
-  "siteEmail": "Your email here",
   "siteDescription": "Static Site Generator",
-  "siteUrl": "Your URL here",
+  "siteEmail": "",
+  "siteUrl": "",
 
   // Social Media
-  "twitterHandle": "@zellwk",
-  "googlePlusUrl": "some-url",
+  "twitterHandle": "",
+  "googlePlusUrl": "",
 
-  // SEO (Not placed in templates yet)
-  "ogImage": "some-url", // Should be 1200x630
-  "twitterImage": "some-url", // should be 120x120
+  "ogImage": "", // Should be 1200x630
+  "twitterImage": "", // should be 120x120
 
   // Webmaster tools
   "webmasterToolsUrl": "",
