@@ -1,10 +1,12 @@
 {% extends 'layout.nunjucks' %}
 
+{% set title='Using Markdown' %}
+
 {% block content %}
 
 <section>
-  {% markdown %} 
-  ## This is a markdown header (H2) 
+  {% markdown %}
+  ## This is a markdown header (H2)
 
   This is written directly in markdown
   {% endmarkdown %}

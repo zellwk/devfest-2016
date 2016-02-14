@@ -2,10 +2,12 @@
 data: ['data/about.json', 'data/testing.json']
 ---
 
+{% set title='Additional Data Sources' %}
+
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-<section> 
+<section>
   <h2>This is an example page where you can use data sources located anywhere in your project</h2>
 
   <p>This is data from <code>data/about.json</code>: {{random_text_from_source_one}}</p>

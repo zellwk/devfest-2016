@@ -1,8 +1,7 @@
 {% extends 'layout.nunjucks' %}
 
-{% block desc %} <meta name="description" content="{{summary}}" />{% endblock %}
 {% block canonical %} <link rel="canonical" href="{{permalink}}"> {% endblock %}
-{% block OGType %}<meta property="og:type" content="article"/>{% endblock %}
+{% block ogType %} <meta property="og:type" content="article"/>{% endblock %}
 
 {% block content %}
 
@@ -15,7 +14,7 @@
     {% endfor %}
   </ul>
   <div class="content">
-    {{body | safe}} 
+    {{body | safe}}
   </div>
 </section>
 {% endblock %}

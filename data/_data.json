@@ -1,15 +1,14 @@
 {
-  // Note: Data cannot be hyphenated. Nunjucks don't parse them well. 
+  // Note: Data cannot be hyphenated. Nunjucks don't parse them well.
   // Use Camel Case or All Caps instead.
 
   // Basic Site info
-  "siteTitle": "Zell Liew",
-  "siteEmail": "zellwk@gmail.com",
-  "siteDescription": "",
-  "siteUrl": "http://zellwk.com",
-  "siteDescription": "This is my site description",
+  "siteTitle": "Protoflow",
+  "siteEmail": "Your email here",
+  "siteDescription": "Static Site Generator",
+  "siteUrl": "Your URL here",
 
-  // Social Media 
+  // Social Media
   "twitterHandle": "@zellwk",
   "googlePlusUrl": "some-url",
 
@@ -20,8 +19,8 @@
   // Webmaster tools
   "webmasterToolsUrl": "",
   "bingUrl": "",
-  
-  // Analytics 
+
+  // Analytics
   "googleAnalytics": ""
 
   // Additional data as needed

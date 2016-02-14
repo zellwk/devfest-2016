@@ -1,14 +1,8 @@
 {% extends 'layout.nunjucks' %}
 
-{% block title %} <title>{{siteTitle}} | {{siteDescription}}</title> {% endblock %}
-{% block desc %} <meta name="description" content="{{siteDescription}}" />{% endblock %}
 {% block canonical %} <link rel="canonical" href="{{siteUrl}}"> {% endblock %}
 
 {% block content %}
-
-
-{% import 'macros/navigation.nunjucks' as nav %}
-{{nav.active('home')}}
 
 <section>
   <p>This is the main page. </p>

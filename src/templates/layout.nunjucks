@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,40 +20,38 @@
   <!--endbuild -->
   {% endblock %}
 
-  {% block SEO %}
+  {# For SEO #}
   {% block title %}<title> {{title}} | {{siteTitle}} </title>{% endblock %}
-  {# TODO: Meta description should describe the current page since they appear on the search results #}
-  {% block desc %} <meta name="description" content="{{siteDescription}}" />{% endblock %}
+  {% block desc %} <meta name="description" content="{% if description %} {{description}}
+  {% else %} {{siteDescription}}
+  {% endif %}" />{% endblock %}
 
   {% block canonical %} {# Canonical Tag here #} {% endblock %}
 
   {# Possible to ensure Google doesn't index pages with ROBOTS #}
   {# Example: <meta name="robots" content="noindex, nofollow"> #}
   {% block robots %} {% endblock %}
-  {% endblock %}
 
   {# Open Graph Tags #}
-  {% block OG %}
   <meta property="og:site_name" content="{{siteTitle}}"/>
-  {% block OGTitle %}<meta property="og:title" content="{{title}} | {{siteTitle}}"/> {% endblock %}
-  {# TODO: og:description should follow meta desc #}
-  <meta property="og:description" content="{{siteDescription}}"/>
+  {% block ogTitle %} <meta property="og:title" content="{{title}} | {{siteTitle}}"/> {% endblock %}
+  {% block ogDesc %} <meta name="og:description" content="{% if description %} {{description}}
+  {% else %} {{siteDescription}}
+  {% endif %}" />{% endblock %}
   <meta property="og:email" content="{{siteEmail}}">
-  {% block OGType %}<meta property="og:type" content="website"/>{% endblock %}
+  {% block ogType %}<meta property="og:type" content="website"/>{% endblock %}
   <meta property="og:url" content="{{siteUrl}}"/>
   <meta property="og:image" content="{{ogImage}}"/>
-  {% endblock %}
 
   {# Twitter Tags #}
-  {% block twitter %}
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{twitterHandle}}">
   <meta name="twitter:creator" content="{{twitterHandle}}">
-  <meta name="twitter:title" content="{{title}} | {{siteTitle}}">
-  {# TODO: Twitter desc should follow meta desc #}
-  <meta name="twitter:description" content="{{siteDescription}}">
+  {% block twitterTitle %}<meta name="twitter:title" content="{{title}} | {{siteTitle}}">{% endblock %}
+  {% block twitterDesc %} <meta name="twitter:description" content="{% if description %} {{description}}
+  {% else %} {{siteDescription}}
+  {% endif %}" />{% endblock %}
   <meta name="twitter:image" content="{{twitterImage}}">
-  {% endblock %}
 
   {# Webmaster Tools #}
   <meta name="google-site verification" content="{{webmasterToolsUrl}}">
@@ -66,18 +65,9 @@
 
   {% block footerScripts %}
 
-  {# Removes JSPM importer on production site #}
-  {# <script src="/jspm_packages/system.js"></script>
-  <script src="/jspm.config.js"></script>
-  <script>
-    System.import('js/main');
-  </script> #}
-
   <!--build:js /js/main.min.js -->
   <script src="/js/main.js"></script>
   <!--endbuild -->
-
-  {# Google Analytics #}
 
   {% endblock %}
 </body>

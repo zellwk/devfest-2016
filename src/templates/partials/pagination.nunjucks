@@ -1,0 +1,13 @@
+{% if pagination.length > 1 %}
+  <nav class="Pagination" role="navigation">
+  {% if prevPage %} <a href="{{prevPageUrl}}">Previous Page</a> {% endif %}
+  {% for page in pagination %}
+    {% if page.active %}
+      <span class="is-active">{{page.index}}</span>
+    {% else %}
+      <a href="{{page.url}}">{{page.index}}</a>
+    {% endif %}
+  {% endfor %}
+  {% if nextPage %} <a href="{{nextPageUrl}}">Next Page</a> {% endif %}
+  </nav>
+{% endif %}

@@ -1,12 +1,15 @@
 {% extends 'layout.nunjucks' %}
 
+{% set description='Blog – ' + title + ' | ' + siteTitle %}
+
 {% block canonical %} <link rel="canonical" href="{{permalink}}"> {% endblock %}
-{% block OGType %}<meta property="og:type" content="article"/>{% endblock %}
+{% block robots %} <meta name="robots" content="noindex, nofollow"> {% endblock %}
+{% block ogType %} <meta property="og:type" content="article"/>{% endblock %}
 
 {% block content %}
 
 <section>
-  This is a blog archive page. Shows 5 latests blog posts (configurable). 
+  This is a blog archive page. Shows 5 latests blog posts (configurable).
 
   <h2>You can also get global data in this page as well</h2>
 
@@ -29,9 +32,8 @@
   </div>
   <p>Summary content is: {{article.summary}}</p>
   {% endfor %}
-  
-  {% if prevPage %}<a href="{{prevPagePermalink}}">Previous Page</a>{% endif %}
-  {% if nextPage %}<a href="{{nextPagePermalink}}">Next Page</a>{% endif %}
+
+  {% include "partials/pagination.nunjucks" %}
 
 </section>
 {% endblock %}
