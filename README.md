@@ -267,6 +267,8 @@ Have fun!
 
 - Added Draft Feature
 - Fixed many errors
+- Adds sitemap automatically
+- Added new deploy script (deploy.sh)
 
 #### 1.0.0
 
