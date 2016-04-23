@@ -1,13 +1,12 @@
-import minimist from 'minimist';
+const minimist = require('minimist')
+const processArgs = minimist(process.argv)
 
-let processArgs = minimist(process.argv);
-
-let src = './src';
-let dest = './dev';
-let env = 'dev';
+var src = './src'
+var dest = './dev'
+var env = 'dev'
 
 if (processArgs.prod || processArgs.production) {
-  dest = './dist';
+  dest = './dist'
   env = 'prod'
 }
 

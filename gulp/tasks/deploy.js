@@ -1,45 +1,44 @@
-import gulp from 'gulp';
-import fs from 'fs';
+const gulp = require('gulp')
+const fs = require('fs')
+const plugins = require('gulp-load-plugins')
+var $ = plugins()
 
-// import config
-import config from '../config';
-
-import plugins from 'gulp-load-plugins';
-let $ = plugins();
+// const config
+const config = require('../config')
 
 // Deployment tasks
 if (!process.env.CI) {
-  var secrets = JSON.parse(fs.readFileSync('./secrets.json'));
+  var secrets = JSON.parse(fs.readFileSync('./secrets.json'))
 
   gulp.task('deploy', () => {
-    let deployMethod = config.deploy.method;
-    gulp.start('deploy' + deployMethod);
-  });
+    var deployMethod = config.deploy.method
+    gulp.start('deploy' + deployMethod)
+  })
 }
 
-gulp.task('deploy-rsync', function() {
-    rsync({
-      src: 'dist/',
-      dest: secrets.rsync.dest,
-      ssh: true,
-      recursive: true,
-      deleteAll: true
+gulp.task('deploy-rsync', () => {
+  rsync({
+    src: 'dist/',
+    dest: secrets.rsync.dest,
+    ssh: true,
+    recursive: true,
+    deleteAll: true
 
-    }, function(error, stdout, stderr, cmd) {
-      if (error) {
-        console.log(error.message);
-        console.log(stdout);
-        console.log(stderr);
-      }
-    });
-  });
+  }, function (error, stdout, stderr, cmd) {
+    if (error) {
+      console.log(error.message)
+      console.log(stdout)
+      console.log(stderr)
+    }
+  })
+})
 
-  gulp.task('deploy-aws', () => {
-    gulp.src('./dist/**/*')
-      .pipe($.s3(secrets.aws));
-  });
+gulp.task('deploy-aws', () => {
+  gulp.src('./dist/**/*')
+    .pipe($.s3(secrets.aws))
+})
 
-  gulp.task('deploy-ghpages', () => {
-    gulp.src('./dist/**/*')
-    .pipe($.ghPages());
-  });
+gulp.task('deploy-ghpages', () => {
+  gulp.src('./dist/**/*')
+  .pipe($.ghPages())
+})

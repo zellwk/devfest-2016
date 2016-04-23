@@ -13,7 +13,7 @@ function generateArchives (stream, options) {
 
   options = Object.assign(defaults, options)
 
-  var articles = _.sortByOrder(options.articles, 'date', false)
+  var articles = _.orderBy(options.articles, 'date', 'desc')
   var articlesPerPage = parseInt(options.articlesPerPage, 10)
   var pages = splitPages(articles, articlesPerPage)
 

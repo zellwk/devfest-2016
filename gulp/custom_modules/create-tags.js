@@ -4,7 +4,7 @@ const generateArchives = require('./generate-archives')
 const _ = require('lodash')
 
 function createTags (tags, options) {
-  let stream = through.obj((file, enc, cb) => {
+  var stream = through.obj((file, enc, cb) => {
     cb(null, file)
   })
 

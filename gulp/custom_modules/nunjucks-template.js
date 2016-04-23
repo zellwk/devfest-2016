@@ -108,7 +108,7 @@ function pluginError (message) {
 }
 
 // Gets JSON data from file path and assign to given data object
-function getDataFromSource (filepath, returnedData = {}) {
+function getDataFromSource (filepath, returnedData) {
   try {
     var data = JSON.parse(stripJSONComments(fs.readFileSync(filepath).toString()))
     returnedData = _.assign(returnedData, data)

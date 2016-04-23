@@ -1,72 +1,72 @@
-# Introduction 
+# Introduction
 
 Protoflow helps you create a static website easily without the need to mess around with things like Jeykll, Middleman, Assemble or any other static site generators. It can also be used to prototype HTML quickly
 
-Everything here is built directly with Gulp, and is very similar to the workflow we have crafted in "Automating Your Workflow". 
+Everything here is built directly with Gulp, and is very similar to the workflow we have crafted in "Automating Your Workflow".
 
-## Installing Protoflow 
+## Installing Protoflow
 
-Download the zip folder (or clone the repository), extract it,then run the following commands to install all dependencies required by Protoflow: 
+Download the zip folder (or clone the repository), extract it,then run the following commands to install all dependencies required by Protoflow:
 
 Note: See below under "bugs and contributing" if  you want access to the repository.
 
 ```bash
 $ npm install
-$ bower install 
+$ bower install
 ```
 
 ## Project Structure for Protoflow
 
-Protoflow's project is divided into four main folders: 
+Protoflow's project is divided into four main folders:
 
 - `src`
 - `dev`
 - `dist`
 - `data`
 
-`src` is where you would place all your source files. This includes all your code, images, fonts and everything else. 
+`src` is where you would place all your source files. This includes all your code, images, fonts and everything else.
 
-These files will then be treated and copied over to `dev` or `dist` depending on whether you're developing or creating an optimized build. 
+These files will then be treated and copied over to `dev` or `dist` depending on whether you're developing or creating an optimized build.
 
 `data` is used to contain all `.json` data files. These data files are to be used with the Nunjucks Templating Engine that is used in Protoflow. [More on that here](#using-nunjucks-in-protoflow).
 
-## Developing with Protoflow 
+## Developing with Protoflow
 
-You begin the development phase with the `gulp` command: 
+You begin the development phase with the `gulp` command:
 
 ```bash
 $ gulp
 ```
 
-When `gulp` is ran, Protoflow will look through all your source folders and execute the following tasks: 
+When `gulp` is ran, Protoflow will look through all your source folders and execute the following tasks:
 
 - `clean` - to clean the `dev` directory
-- `lint:js` - Check for code formats 
+- `lint:js` - Check for code formats
 - `images` - Copies images to `dev` folder
 - `fonts` - Copies fonts to `dev` folder
 - `sass` - Compiles Sass into CSS (Also lint sass files)
 - `generateSite` - Generates static site with Nunjucks
 - `webpack` - Compiles JavaScript with Webpack
 - `browserSync` - Launches browser for live-reload
-- `watch` - watch files for changes. 
+- `watch` - watch files for changes.
 
-You can find the configurations for each of these tasks in `gulp/task/task-name.js`. 
+You can find the configurations for each of these tasks in `gulp/task/task-name.js`.
 
 Once the command has finished executing, you can navigate to `localhost:3000` to view your website. Everything here is placed in the `dev` folder.
 
-### Writing Sass in Protoflow 
+### Writing Sass in Protoflow
 
-Sass files are kept in the `src/scss` directory. They are pre-configured to import libraries from both `bower_components` and `node_modules` folders. You can use the `@import` statement to import these modules without having to refer to the `bower_components` or `node_modules` folder. 
+Sass files are kept in the `src/scss` directory. They are pre-configured to import libraries from both `bower_components` and `node_modules` folders. You can use the `@import` statement to import these modules without having to refer to the `bower_components` or `node_modules` folder.
 
 ```scss
-// Importing Susy. 
+// Importing Susy.
 // No need to add `bower_components` or `node_modules` folder
 @import 'susy/sass/susy';
 ```
 
-### Writing JavaScript in Protoflow 
+### Writing JavaScript in Protoflow
 
-JavaScript files are kept in the `src/js` folder. They are compiled from ES6 syntax to ES5 syntax with Webpack. Feel free to write ES6 immediately within any file located in `src/js`. 
+JavaScript files are kept in the `src/js` folder. They are compiled from ES6 syntax to ES5 syntax with Webpack. Feel free to write ES6 immediately within any file located in `src/js`.
 
 ```js
 // ES5 syntax
@@ -76,17 +76,17 @@ var _ = require('lodash');
 import _ from 'lodash';
 ```
 
-### Adding Images to Protoflow 
+### Adding Images to Protoflow
 
-All images are to be placed in the `src/images` directory. Please take a look at the next section to find out how to work with image sprites. 
+All images are to be placed in the `src/images` directory. Support for image sprites has been disabled. Instead, Protoflow support SVG sprites now.
 
 ### Using Nunjucks in Protoflow
 
-Protoflow uses Nunjucks as the template engine of choice. It is configured to do a whole lot more compared to the `nunjucks` task we described in the book. Here's a summary of how to use it: 
+Protoflow uses Nunjucks as the template engine of choice. It is configured to do a whole lot more compared to the `nunjucks` task we described in the book. Here's a summary of how to use it:
 
-#### Templates Folder 
+#### Templates Folder
 
-`src/templates` contain all `.nunjucks` template files. This is also the location where you add files (like partials and macros) that can be imported into other `.nunjucks` files. This works in the same way as we discussed in Automating Your Workflow. 
+`src/templates` contain all `.nunjucks` template files. This is also the location where you add files (like partials and macros) that can be imported into other `.nunjucks` files. This works in the same way as we discussed in Automating Your Workflow.
 
 #### Pages Folder
 
@@ -94,9 +94,9 @@ Protoflow uses Nunjucks as the template engine of choice. It is configured to do
 
 #### Posts Folder
 
-`src/posts` are used to keep blog posts you write. Each markdown file will be converted into a blog post that lives on it's own URL. You need to provide a YAML frontmatter at the top of each post to let Protoflow know what to do with them. 
+`src/posts` are used to keep blog posts you write. Each markdown file will be converted into a blog post that lives on it's own URL. You need to provide a YAML frontmatter at the top of each post to let Protoflow know what to do with them.
 
-Here's an example of the YAML file: 
+Here's an example of the YAML file:
 
 ```yaml
 ---
@@ -104,28 +104,30 @@ title: This is awesome
 template: post
 permalink: first-awesome-post
 tags: awesome
+draft: true
 ---
 ```
 
 - `title` – Title of the post. This will be available to you as the `{{title}}` variable in Nunjucks
-- `template` – Nunjucks template used for this post. It defaults to `post.nunjucks`. You can switch this up to a separate template anytime you want to. 
+- `template` – Nunjucks template used for this post. It defaults to `post.nunjucks`. You can switch this up to a separate template anytime you want to.
 - `permalink` – URL for the post. The default URL is `your-site.com/blog/anything-that-comes-in-permalink`. This will also be available to you as the `{{permalink}}` variable in Nunjucks
-- `tags` – Tags for the post. An archive page (list of all posts with the same tag) will be created for each tag. They default URL for the tag page is `your-site.com/blog/tag-name/`. 
+- `tags` – Tags for the post. An archive page (list of all posts with the same tag) will be created for each tag. They default URL for the tag page is `your-site.com/blog/tag-name/`.
+- `draft` – If draft is set to true, post will not show up both on `dev` or `dist` folders
 
-Blog posts will also be consolidated into an archive page that lives at `your-site.com/blog`. You can view the template used to create Blog and Tag archive pages at `src/templates/blog.nunjucks` and `src/templates/tag.nunjucks` respectively. 
+Blog posts will also be consolidated into an archive page that lives at `your-site.com/blog`. You can view the template used to create Blog and Tag archive pages at `src/templates/blog.nunjucks` and `src/templates/tag.nunjucks` respectively.
 
-Note: The markdown content for the post will be available to you as the `{{body}}` tag in Nunjucks. 
+Note: The markdown content for the post will be available to you as the `{{body}}` tag in Nunjucks.
 
-Note: You can add a summary marker to determine what content to show on the archive pages. This summary marker defaults to `<!--more-->`. 
+Note: You can add a summary marker to determine what content to show on the archive pages. This summary marker defaults to `<!--more-->`.
 
 #### Using Markdown
 
-Posts are not the only place you can use the Markdown syntax. Protoflow is created for folks who love to use Markdown everywhere, even in pages. You can use Markdown in `src/pages` with either one of the following formats: 
+Posts are not the only place you can use the Markdown syntax. Protoflow is created for folks who love to use Markdown everywhere, even in pages. You can use Markdown in `src/pages` with either one of the following formats:
 
-- use the nunjucks markdown tag 
+- use the nunjucks markdown tag
 
 ```html
-{% markdown  %} 
+{% markdown  %}
 ## Markdown H2
 {% endmarkdown %}
 ```
@@ -136,17 +138,17 @@ Posts are not the only place you can use the Markdown syntax. Protoflow is creat
 {% markdown 'path-to-markdown/markdown.md' %}
 ```
 
-Take a look at `src/pages/markdown.nunjucks` for an example of how these two formats can be used. 
+Take a look at `src/pages/markdown.nunjucks` for an example of how these two formats can be used.
 
-Markdown FTW! :) 
+Markdown FTW! :)
 
 #### Adding Data to Pages
 
-When you prototype a large website, you often find yourself having to work with hundreds of lines of data. When this happens, it gets incredibly difficult to browse and change your `data.json` quickly. 
+When you prototype a large website, you often find yourself having to work with hundreds of lines of data. When this happens, it gets incredibly difficult to browse and change your `data.json` quickly.
 
-The workaround, hence, is allow you to import data files as needed so you can split up your data into smaller, modular files. 
+The workaround, hence, is allow you to import data files as needed so you can split up your data into smaller, modular files.
 
-You add data by adding a frontmatter to your `.nunjucks` files that are located in `src/pages`. 
+You add data by adding a frontmatter to your `.nunjucks` files that are located in `src/pages`.
 
 ```yaml
 ---
@@ -156,34 +158,33 @@ data: ['path-to-file', './data/moar-data.json']
 
 You can name your data anything you want. For example, I used `chapters.json` when creating the sales page for Automating Your Workflow.
 
-NOTE: This function is only available for Nunjucks files in `src/pages`. 
+NOTE: This function is only available for Nunjucks files in `src/pages`.
 
-### Summary for Development Phase 
+### Summary for Development Phase
 
-In short, here are the files you'd want to touch: 
+In short, here are the files you'd want to touch:
 
-- `src/sass` – For Sass files 
-- `src/js` – For JavaScript files 
-- `src/images` – For images 
-- `src/images/sprites` – For image sprites
+- `src/sass` – For Sass files
+- `src/js` – For JavaScript files
+- `src/images` – For images
 - `src/posts` – For blog posts
-- `src/pages` – For HTML pages 
-- `src/templates` – For Nunjucks templates, partials, macros and everything else you use in Nunjucks. 
+- `src/pages` – For HTML pages
+- `src/templates` – For Nunjucks templates, partials, macros and everything else you use in Nunjucks.
 - `data/` – For data that is added to Nunjucks pages.
 
 ### A Quick Note on Watching
 
 Protoflow watches every file you need, and automatically regenerates all your files whenever you save a `.nunjucks`, `.scss`, `.js`, `.json` file in the folders mentioned above.
 
-The only thing to note is that Protoflow doesn't know when you have added a new file into the `src` folder. It cannot regenerate your site in this case. 
+The only thing to note is that Protoflow doesn't know when you have added a new file into the `src` folder. It cannot regenerate your site in this case.
 
-Hence, whenever you add a new file into `gulp.src`, you must re-run the `gulp` command. 
+Hence, whenever you add a new file into `gulp.src`, you must re-run the `gulp` command.
 
-### A Quick Note on Asset paths 
+### A Quick Note on Asset paths
 
-Protoflow is built to let you use pretty URLs like `yoursite.com/blog` instead of having to write `yoursite.com/blog.html`. For this to work, all asset paths written in Nunjucks must use absolute URLs. 
+Protoflow is built to let you use pretty URLs like `yoursite.com/blog` instead of having to write `yoursite.com/blog.html`. For this to work, all asset paths written in Nunjucks must use absolute URLs.
 
-Here's an example: 
+Here's an example:
 
 ```
 // Absolute URL. Do this
@@ -193,30 +194,30 @@ Here's an example:
 <img src="images/bear.jpg">
 ```
 
-## Optimization Phase 
+## Optimization Phase
 
-Protoflow is built to optimize your entire website in one single command: `gulp --prod`. 
+Protoflow is built to optimize your entire website in one single command: `gulp --prod`.
 
 ```bash
 $ gulp --prod
 ```
 
-The `--prod` flag is a custom flag introduced to tell Protoflow that you're building a optimized site for production. Protoflow will then run through the following tasks and create an optimized site in the `dist` folder. 
+The `--prod` flag is a custom flag introduced to tell Protoflow that you're building a optimized site for production. Protoflow will then run through the following tasks and create an optimized site in the `dist` folder.
 
 It does everything the default `gulp` task does, plus the following:
 
-- `useref` – Optimizes JavaScript and CSS. Also adds a revisioned hash name to the final output for cachebusting. 
-- `critical` – Speeds up your website by inlining critical CSS into the `<head>` section of the site. 
+- `useref` – Optimizes JavaScript and CSS. Also adds a revisioned hash name to the final output for cachebusting.
+- `critical` – Speeds up your website by inlining critical CSS into the `<head>` section of the site.
 
-Note: `useref` and `critical` may take a while to run if you have a large site. I'm looking for a way to speed things up, and will update as soon as I find a way. 
+Note: `useref` and `critical` may take a while to run if you have a large site. I'm looking for a way to speed things up, and will update as soon as I find a way.
 
-## Deployment Phase 
+## Deployment Phase
 
-Protoflow has three built-in methods to help you deploy your website. They are `rsync`, `s3` and `ghpages`. 
+Protoflow has three built-in methods to help you deploy your website. They are `rsync`, `s3` and `ghpages`.
 
-You can set the deploy method by changing the `deploy` key in `gulp/config.js`. 
+You can set the deploy method by changing the `deploy` key in `gulp/config.js`.
 
-If you use `rsync` or `s3`, please make sure you add a `.secrets.json` file to the root of the project. This file is already ignored to prevent you from accidentally committing it into your remote repository. 
+If you use `rsync` or `s3`, please make sure you add a `.secrets.json` file to the root of the project. This file is already ignored to prevent you from accidentally committing it into your remote repository.
 
 Here's a sample `.secrets.json` file you can use:
 
@@ -234,27 +235,27 @@ Here's a sample `.secrets.json` file you can use:
 }
 ```
 
-If you use `ghpages` to deploy to your website, you can (optionally) add a remoteURL parameter to `deploy` in `gulp/config.js` if you are deploying a `gh-pages`branch on another git repository. 
+If you use `ghpages` to deploy to your website, you can (optionally) add a remoteURL parameter to `deploy` in `gulp/config.js` if you are deploying a `gh-pages`branch on another git repository.
 
 ## Testing and Integration Phases
 
-Protoflow does not have unit-testing functionality set up yet. I have encountered difficultites getting Webpack to play nicely with Karma, the test-runner we're using. 
+Protoflow does not have unit-testing functionality set up yet. I have encountered difficultites getting Webpack to play nicely with Karma, the test-runner we're using.
 
 I'm also keeping a looking for how to get this to work, and I'll update as soon as I have any news. If you know something about Testing with Karma and Webpack, please let me know so I can update this for everyone else! :)
 
 ## Bugs & Contributing
 
-I'm unable to automatically invite everyone yet, so please feel free to request developer rights to this repo by sending me an email. 
+I'm unable to automatically invite everyone yet, so please feel free to request developer rights to this repo by sending me an email.
 
-You can list your bugs & issues under the issue tracker in Gitlab (which I assume to work in a similar fashion as Github). 
+You can list your bugs & issues under the issue tracker in Gitlab (which I assume to work in a similar fashion as Github).
 
-Feel free to pull the repo and contribute as well. I'll be stoked to have your improvements! :) 
+Feel free to pull the repo and contribute as well. I'll be stoked to have your improvements! :)
 
 ## Final notes
 
-Free feel to play around with the Gulp configurations in `gulp/config.js` if you want to change your settings. 
+Free feel to play around with the Gulp configurations in `gulp/config.js` if you want to change your settings.
 
-Let me know if you run into problems, or if you want some additional functionality. I'll see if I'm able to incorporate them. 
+Let me know if you run into problems, or if you want some additional functionality. I'll see if I'm able to incorporate them.
 
 It'll also be awesome if you think of ways to make this generator even better! :)
 
@@ -262,7 +263,12 @@ Have fun!
 
 ## Changlog
 
-#### 1.0.0 
+#### 1.1.0
+
+- Added Draft Feature
+- Fixed many errors
+
+#### 1.0.0
 
 - Removed Sprites functionality (Use [SVG Sprites](https://css-tricks.com/svg-sprites-use-better-icon-fonts/) instead)
 - Removed unCss (Slows down `--prod` too much)

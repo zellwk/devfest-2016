@@ -5,6 +5,8 @@ const path = require('path')
 const through = require('through2')
 const plugins = require('gulp-load-plugins')
 const runSequence = require('run-sequence')
+const gulpIgnore = require('gulp-ignore')
+const frontMatter = require('front-matter')
 
 // Custom modules
 const plumber = require('../custom_modules/plumber')
@@ -13,7 +15,6 @@ const createTags = require('../custom_modules/create-tags')
 const nunjuckTemplate = require('../custom_modules/nunjucks-template')
 const config = require('../config')
 
-// Load plugins = require(gulp load plugin)
 const $ = plugins()
 
 var posts = []
@@ -21,18 +22,18 @@ var tags = []
 
 // Handling Templates
 
-// TODO: Switch tapGlobals and Nunjuck Templates such that
+// TODO: Break up Nunjuck Templates into two plugins
 // 1) collectData Sources => 1 plugin
 // 2) Output Data => 1 plugin
 
 gulp.task('pages', () => {
   return gulp.src(config.blog.pageSrc)
     .pipe(plumber())
+    // Potentially pipe .newer here
     .pipe($.frontMatter({
       property: 'frontmatter',
       remove: true
     }))
-    // .pipe(tapGlobals(config.blog.globalData))
     .pipe(nunjuckTemplate({data: config.blog.globalData}))
     .pipe($.prettyUrl())
     .pipe(gulp.dest(config.dest))
@@ -41,11 +42,17 @@ gulp.task('pages', () => {
 gulp.task('posts', () => {
   return gulp.src(config.blog.postSrc)
     .pipe(plumber())
+    .pipe(gulpIgnore.exclude((file) => {
+      var contents = file.contents.toString()
+      var fm = frontMatter(contents)
+      return fm.attributes.draft
+    }))
     .pipe($.frontMatter({
       property: 'frontmatter',
       remove: true
     }))
     // Must use this. Nunjuck Markdown tag screws up summary marker
+    .pipe(tapSummary(config.blog.summaryMarker, true))
     .pipe($.markdown(config.blog.markdownOptions))
     .pipe(tapSummary(config.blog.summaryMarker))
     .pipe(tapDate(config.blog.date))
@@ -54,6 +61,7 @@ gulp.task('posts', () => {
     .pipe(tapTags(config.blog.tags))
     .pipe(getBlog(posts))
     .pipe(getTags(tags))
+    // Potentially pipe .newer here
     .pipe(nunjuckTemplate({data: config.blog.globalData}))
     .pipe($.prettyUrl())
     .pipe(gulp.dest(config.blog.postDest))
@@ -92,23 +100,30 @@ gulp.task('generateSite', (cb) => {
   // Resets posts and tags
   posts = []
   tags = []
+
   runSequence(
    ['posts', 'pages'],
    ['createBlog', 'createTags'],
    cb)
 })
 
-// Get Global to pass on to swig templates (which I will edit later)
-// function tapGlobals(filepath) {
-//   return through.obj((file, enc, cb) => {
-//     let json = stripJSONComments(fs.readFileSync(filepath).toString());
-//     file.globalData = JSON.parse(json);
-//     cb(null, file);
-//   });
-// }
+gulp.task('regenerateSite', (cb) => {
+  // Resets posts and tags
+  posts = []
+  tags = []
+
+  if (config.env === 'prod' || config.regenerateArchives) {
+    runSequence(
+     ['posts', 'pages'],
+     ['createBlog', 'createTags'],
+     cb)
+  } else {
+    runSequence(['posts', 'pages'], cb)
+  }
+})
 
 // Extracts Summary
-function tapSummary (marker) {
+function tapSummary (marker, isDescription) {
   return through.obj(function (file, enc, cb) {
     var contents = file.contents.toString()
     var summary
@@ -117,7 +132,12 @@ function tapSummary (marker) {
       summary = file.contents.toString().split(marker)[0]
     }
 
-    file.frontmatter.summary = summary
+    if (isDescription) {
+      // Trims to 70 chars
+      file.frontmatter.description = summary.substring(0, 70)
+    } else {
+      file.frontmatter.summary = summary
+    }
 
     cb(null, file)
   })

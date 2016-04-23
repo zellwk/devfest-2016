@@ -41,7 +41,8 @@ var config = {
     watch: [
       src + '/templates/**/*',
       'data/**/*.json'
-    ]
+    ],
+    regenerateArchives: false
   },
 
   browserSync: {
@@ -109,6 +110,16 @@ var config = {
       retinaSrcFilter: src + '/images/sprites/*@2x.{png,jpg,jpeg}',
       retinaImgName: 'sprites@2x.png',
       retinaImgPath: '../images/sprites@2x.png'
+    }
+  },
+
+  svg: {
+    src: src + '/svg/**/*',
+    dest: dest,
+    opts: {
+      mode: {
+        symbol: true
+      }
     }
   },
 

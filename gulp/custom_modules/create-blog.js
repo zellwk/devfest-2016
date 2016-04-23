@@ -2,7 +2,7 @@ const through = require('through2')
 const generateArchives = require('./generate-archives')
 
 function createBlog (options) {
-  let stream = through.obj((file, enc, cb) => {
+  var stream = through.obj((file, enc, cb) => {
     cb(null, file)
   })
 

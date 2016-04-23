@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const plugins = require('gulp-load-plugins')
-const config = require('../config')
 const plumber = require('../custom_modules/plumber')
 const $ = plugins()
 
