@@ -9,17 +9,15 @@ profile
 .sublime-project
 .sublime-workspace
 
-#ignore packages 
+#ignore packages
 node_modules
 bower_components
 jspm_packages
 *.log
 
-#ignore generated files 
+#ignore generated files
 dev
 dist
-testing
-.publish
 
-# Ignore passwords 
+# Ignore passwords
 .secrets.json
