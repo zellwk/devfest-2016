@@ -1,9 +1,9 @@
-// Libraries 
+// Libraries
 // ---------
 
 @import 'lib/lib';
 
-// Helpers 
+// Helpers
 // -------
 @import 'helpers/helpers';
 // @import 'sprite'; // Import sprite if gulp-spriting is used
@@ -20,10 +20,10 @@
 @import 'base/reset';
 @import 'base/base';
 
-// Layouts 
+// Layouts
 // -------
-@import 'layouts/susy';
-@import 'layouts/layouts';
+// @import 'layouts/susy';
+// @import 'layouts/layouts';
 
 // Objects
 // -------
@@ -36,7 +36,7 @@
 // ----------
 // For individual, isolated components
 @import 'components/highlightjs';
-// @import 'components/nav'; 
+// @import 'components/nav';
 
 
 // Utilities

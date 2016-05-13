@@ -7,7 +7,8 @@ html {
   @include typi-base;
   @include ff(text);
   @include font-smoothing;
-  color: color(mine);
+  font-weight: 500;
+  color: #111;
 
   // Optmizes font rendering for legibility.
   // May break with some browsers, comment out as necessary.
@@ -18,23 +19,24 @@ html {
 }
 
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h1,
+.h2,
+.h3 {
   @include ff(header);
 }
 
-h1 {@include typi($h1-font-map); }
-h2 {@include typi($h2-font-map); }
-h3 {@include typi($h3-font-map); }
-h4 {@include typi($h4-font-map); }
-h5 {@include typi($h5-font-map); }
-h6 {@include typi($h6-font-map); }
-code {@include typi($code-font-map); }
+.h1 {
+  @include typi($h1-font-map);
+  color: #000;
+}
+
+.h2 {
+  @include typi($h2-font-map);
+  font-weight: 500;
+  color: color(mine);
+}
+
+.h3 {@include typi($h3-font-map); }
 
 strong { font-weight: bold; }
 em { font-style: italic; }
@@ -43,14 +45,3 @@ pre {
   white-space: pre;
   tab-size: 2;
 }
-
-// Custom Underlines
-// a {
-//   text-decoration: none;
-//   background: linear-gradient(gray, gray) no-repeat;
-//   background-size: 100% 1px;
-//   background-position: 0 1.15em;
-//   // If want to set text-shadow, must be same color as background color
-//   // text-shadow: 0.15em 0 white, -0.15em 0 white;
-// }
-

@@ -12,7 +12,7 @@ if (!process.env.CI) {
 
   gulp.task('deploy', () => {
     var deployMethod = config.deploy.method
-    gulp.start('deploy' + deployMethod)
+    gulp.start('deploy-' + deployMethod)
   })
 }
 

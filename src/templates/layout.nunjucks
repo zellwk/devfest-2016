@@ -33,7 +33,7 @@
   {% block robots %} {% endblock %}
 
   {# Open Graph Tags #}
-  <meta property="og:site_name" content="{{siteTitle}}"/>
+{#   <meta property="og:site_name" content="{{siteTitle}}"/>
   {% block ogTitle %} <meta property="og:title" content="{{title}} | {{siteTitle}}"/> {% endblock %}
   {% block ogDesc %} <meta name="og:description" content="{% if description %} {{description}}
   {% else %} {{siteDescription}}
@@ -41,23 +41,20 @@
   <meta property="og:email" content="{{siteEmail}}">
   {% block ogType %}<meta property="og:type" content="website"/>{% endblock %}
   <meta property="og:url" content="{{siteUrl}}"/>
-  <meta property="og:image" content="{{ogImage}}"/>
+  <meta property="og:image" content="{{ogImage}}"/> #}
 
   {# Twitter Tags #}
-  <meta name="twitter:card" content="summary">
+{#   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{twitterHandle}}">
   <meta name="twitter:creator" content="{{twitterHandle}}">
   {% block twitterTitle %}<meta name="twitter:title" content="{{title}} | {{siteTitle}}">{% endblock %}
   {% block twitterDesc %} <meta name="twitter:description" content="{% if description %} {{description}}
   {% else %} {{siteDescription}}
   {% endif %}" />{% endblock %}
-  <meta name="twitter:image" content="{{twitterImage}}">
+  <meta name="twitter:image" content="{{twitterImage}}"> #}
 
-  {# Webmaster Tools #}
-  <meta name="google-site verification" content="{{webmasterToolsUrl}}">
-  <meta name="msvalidate01" content="{{bingUrl}}">
-
-  <link rel="author" href="{{googlePlusUrl}}">
+  <script src="https://use.typekit.net/qvj6jdp.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
 

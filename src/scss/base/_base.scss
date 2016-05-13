@@ -32,30 +32,17 @@ figure {
 // Adaptation of Lobotomized Owls Selector on p elements
 // http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
 
-// p + p,
-// p + figure,
-// p + img,
-// figure + p,
-// img + p,
 p + *,
 * + p {
-  margin-top: vr(1);
-}
-
-h2 + p {
-  margin-top: vr(0.5);
-}
-
-h2 + figure {
-  margin-top: vr(1);
+  margin-top: vr(0.75);
 }
 
 // Adds default UL and LI styles back ONLY for articles
 // Adds margin bottom of 1 rhythm to images ONLY for articles
-article {
+main {
   ul,
   ol {
-    padding-left: 2rem;
+    padding-left: 1rem + vr(0.5);
   }
 
   li + li {
