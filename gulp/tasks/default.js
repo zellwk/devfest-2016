@@ -19,6 +19,7 @@ gulp.task('default', (cb) => {
       // Commented out because it took too long for multiple pages
       // 'critical',
       'sitemap',
+      'cname',
       cb
     )
   }
