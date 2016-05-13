@@ -6,7 +6,8 @@
 # git reset HEAD~1 --hard
 
 REV=`git rev-parse HEAD`
-git checkout production
+git checkout ghpages
+find . -and -not -path "./.git*" -and -not -path "./node_modules*" -and -not -path "./src*" -and -not -path "./dev*" -and -not -path "./dist*" |  xargs git rm -rf --ignore-unmatch
 mv dist/* . && rm -rf dist # might to be changed if you have hidden files
 git add .
 git add -u
