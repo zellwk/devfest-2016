@@ -1,4 +1,5 @@
 {% extends 'layout.nunjucks' %}
+{% block title %}<title> {{siteTitle}} </title>{% endblock %}
 {% block canonical %} <link rel="canonical" href="{{siteUrl}}"> {% endblock %}
 
 {% block content %}
