@@ -4,8 +4,12 @@ main {
 }
 
 .wrap {
-  max-width: 30em;
+  max-width: 38em;
   margin: auto;
+}
+
+.wrap > *:not(header) {
+  max-width: 30em;
 }
 
 section {
@@ -91,7 +95,7 @@ button {
 blockquote {
   color: #666;
   font-style: italic;
-  margin-left: vr(3);
+  margin-left: vr(2.5);
   // text-align: center;
 
   q {
