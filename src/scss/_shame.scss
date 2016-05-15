@@ -1,20 +1,6 @@
-main {
-  margin-top: vr(3);
-  margin-bottom: vr(3);
-}
 
-.wrap {
-  max-width: 38em;
-  margin: auto;
-}
-
-.wrap > *:not(header) {
-  max-width: 30em;
-}
-
-section {
-  margin-top: vr(2);
-  margin-bottom: 0;
+.small {
+  font-size: ms(-1);
 }
 
 .divider {
@@ -67,23 +53,6 @@ form {
 
   input:nth-child(even) {
     margin-left: vr(0.75);
-  }
-}
-
-button {
-  color: white;
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 0.6em;
-  margin-top: vr(0.75);
-  font-weight: bold;
-  background: darken(#0cc471, 3%);
-
-  &:hover,
-  &:active,
-  &:focus {
-    background: darken(#0cc471, 6%);
   }
 }
 

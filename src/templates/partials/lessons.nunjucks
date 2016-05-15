@@ -1,0 +1,17 @@
+<h2 class="h1">Skills You'll Learn:</h1>
+
+<ul class="l-structure Lessons">
+  {% for lesson in lessons %}
+  <li class="l-structure__item Lesson">
+    <div class="l-structure__supporting Lesson__img">
+      <img src="{{lesson.img}}" alt="">
+    </div>
+    <div class="l-structure__main">
+      <div class="Lesson__content">
+        <h3 class="h3">{{lesson.title}}</h3>
+        <p>{{lesson.desc}}</p>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

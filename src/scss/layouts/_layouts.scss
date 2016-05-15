@@ -1,0 +1,42 @@
+main {
+  margin-top: vr(3);
+  margin-bottom: vr(3);
+}
+
+.wrap {
+  @include container;
+
+  margin: auto;
+}
+
+.l-structure {
+  margin-top: vr(1.5);
+}
+
+.l-structure__item {
+  margin-left: vr(-0.375);
+  margin-right: vr(-0.375);
+
+  @include cf;
+}
+
+.l-structure__supporting {
+  @include span(1);
+}
+
+.l-structure__main {
+  @include span(3 last);
+}
+
+.l-structure__item + .l-structure__item {
+  margin-top: vr(1);
+}
+
+.Instructor__img {
+  margin-top: vr(0.25);
+  padding-right: vr(0.5);
+
+  > img {
+    border-radius: 4px;
+  }
+}

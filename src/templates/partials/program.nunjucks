@@ -1,0 +1,21 @@
+<h2 class="h1">Your Twelve Weeks</h2>
+
+<p>Your twelve weeks will be split into these three phases:</p>
+
+<ul class="l-program Program">
+  {% for item in program %}
+  <li class="Program__item">
+    <header>
+    <h3>{{item.duration}}</h3>
+    </header>
+    <div class="Program__content">
+      <p>{{item.desc}}</p>
+      <ul class="bullets">
+        {% for bullet in item.bullets %}
+        <li  class="small">{{bullet}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

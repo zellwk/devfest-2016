@@ -22,20 +22,22 @@
 
 // Layouts
 // -------
-// @import 'layouts/susy';
-// @import 'layouts/layouts';
+@import 'layouts/susy';
+@import 'layouts/layouts';
 
 // Objects
 // -------
 // Repeatable objects across the site
+@import 'objects/buttons';
+@import 'objects/section';
 @import 'objects/typography';
-// @import 'objects/buttons';
 
 
 // Components
 // ----------
 // For individual, isolated components
-@import 'components/highlightjs';
+@import 'components/lessons';
+@import 'components/program';
 // @import 'components/nav';
 
 

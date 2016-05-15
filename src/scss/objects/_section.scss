@@ -1,0 +1,37 @@
+section {
+  margin: vr(3);
+}
+
+.s--colored {
+  margin: 0;
+  padding: vr(3);
+}
+
+.s__gray {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.s__yellow {
+  background: color(sunglow);
+}
+
+// .wrap {
+//   @include themify {
+//     background: color(background);
+//   }
+// }
+
+@each $theme in map_keys($themes) {
+  $map: map-get($themes, $theme);
+
+  .s__#{$theme} {
+    background: map-get($map, background);
+      color: map-get($map, color);
+
+    @if map-has-key($map, color) {
+      color: map-get($map, color);
+    }
+  }
+}

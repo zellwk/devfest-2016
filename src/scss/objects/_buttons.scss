@@ -1,0 +1,17 @@
+ button,
+.button,
+.btn {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 0.75em 2.25em;
+  font-weight: bold;
+  background: color(coralred);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken(#0cc471, 6%);
+  }
+}

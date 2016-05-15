@@ -1,0 +1,28 @@
+{
+    "program": [{
+        "title": "Phase 1",
+        "desc": "Some text to summarize the phase",
+        "duration": "Weeks 1 - 5",
+        "bullets": [
+            "Learn to replicate any website with HTML and CSS so you",
+            "Learn solid design principles so you’ll always be proud of your work",
+            "Learn foundational JavaScript that will pave the way to advanced classes"
+        ]
+    }, {
+        "title": "Phase 2",
+        "desc": "Some text to summarize the phase",
+        "duration": "Weeks 6 - 10",
+        "bullets": [
+            "Learn to build interactive applications and data-driven applications",
+            "Get hands-on practice by building 3 projects",
+            "Learn how to quickly learn a new topic"
+        ]
+    }, {
+        "title": "Phase 3",
+        "desc": "Some text to summarize the phase",
+        "duration": "Week 11 & 12",
+        "bullets": [
+            "Focus on a real-world project with a startup"
+        ]
+    }]
+}

@@ -1,0 +1,30 @@
+.Program__item {
+  background: white;
+  margin-top: vr(0.5);
+
+  ul {
+    margin-top: vr(0.25);
+  }
+}
+
+.bullets {
+  padding-left: 1rem;
+
+  li {
+    list-style-type: disc;
+  }
+
+  li + li {
+    margin-top: vr(0.25);
+  }
+}
+
+.Program__item header {
+  background: color(midnight);
+  color: white;
+  padding: vr(0.5) vr(0.75);
+}
+
+.Program__content {
+  padding: vr(0.75);
+}

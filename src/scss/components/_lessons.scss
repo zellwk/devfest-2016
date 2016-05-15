@@ -1,0 +1,20 @@
+.Lessons {
+  counter-reset: lesson-counter;
+  margin-top: vr(1.5);
+}
+
+.Lesson {
+  h3:before {
+    content: counter(lesson-counter) ". ";
+    counter-increment: lesson-counter;
+  }
+
+  h3 + p {
+    margin-top: vr(0.25);
+  }
+}
+
+.Lesson__img > img {
+  padding: vr(0.5);
+  border-radius: 100%;
+}

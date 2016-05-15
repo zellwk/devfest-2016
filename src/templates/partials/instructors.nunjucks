@@ -1,0 +1,29 @@
+<h2 class="h1">Your Instructors:</h2>
+
+<div class="l-structure">
+  <div class="l-structure__item Instructor">
+    <div class="l-structure__supporting Instructor__img">
+      <img src="/images/zell.jpg" alt="Zell">
+    </div>
+    <div class="l-structure__main">
+      {% markdown %}
+      **Zell** is your course instructor. Like you, he came from a non-programming background (he had a finance degree). He taught himself how to code on the side when he was 25 and has been freelancing and bootstrapping his company ever since.
+
+      He authored two books---Learning Susy and Automate Your Workflow---and had written for well-known web publications like CSS Tricks and Smashing Magazine.
+      {% endmarkdown %}
+    </div>
+  </div>
+
+  <div class="l-structure__item Instructor">
+    <div class="l-structure__supporting Instructor__img">
+      <img src="/images/leigh.jpg" alt="Leigh">
+    </div>
+    <div class="l-structure__main">
+      {% markdown %}
+      Leigh is ...
+      {% endmarkdown %}
+    </div>
+  </div>
+</div>
+
+
