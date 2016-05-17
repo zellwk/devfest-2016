@@ -2,30 +2,22 @@
   "lessons": [{
     "title": "Design Fundamentals",
     "img": "http://lorempixel.com/200/200",
-    "desc": "Define what a user should be able to do with your app, appropriately model your data, develop simple wireframes, and learn to track a collaborative development process using version control."
-  }, {
-    "title": "Programming Fundamentals",
-    "img": "http://lorempixel.com/200/200",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis dignissimos accusamus tenetur debitis tempore exercitationem adipisci reiciendis assumenda enim quaerat voluptatem vitae dicta nobis neque, eos, corrupti ratione, beatae. Soluta."
+    "desc": "Learn typography, colors, grids and other design principles so you can produce respectable-looking websites and applications."
   }, {
     "title": "Frontend Web Development",
     "img": "http://lorempixel.com/200/200",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias modi pariatur magni est, dolores aperiam, animi esse, laboriosam quae iste corporis. Nemo molestiae et impedit iusto explicabo, repellat ipsum exercitationem!"
+    "desc": "Familiarize yourself with HTML, CSS and JavaScript—languages that let's you decide how your visitors view and interact with your website."
   }, {
     "title": "Backend Web Development",
     "img": "http://lorempixel.com/200/200",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consectetur laudantium a voluptatem veritatis quia, quos provident. Rem officiis sapiente repudiandae accusantium deserunt, culpa quos nihil provident dolor eum explicabo?"
-  }, {
-    "title": "Building Single Page Applications",
-    "img": "http://lorempixel.com/200/200",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consequuntur delectus odit a cumque, nesciunt illum. Ut repellat voluptatibus odit, tempore obcaecati, porro quidem mollitia harum, aliquid ipsum repudiandae ullam."
+    "desc": "Discover what goes on beyond Frontend Web Development. You'll learn to build membership portals, get data from twitter and more."
   }, {
     "title": "Project Management",
     "img": "http://lorempixel.com/200/200",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia libero vel, voluptate ad odit? Id obcaecati, doloremque dolor omnis, unde mollitia ipsam facilis eos, consequatur praesentium minima sint debitis. Quia."
+    "desc": "Gain the know-how of designing and developing minimum viable products through both short-term and real-life projects."
   }, {
     "title": "Working with Teams",
     "img": "http://lorempixel.com/200/200",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facere iste ab praesentium quo similique, at modi eaque ipsum consectetur eveniet dicta quibusdam animi perferendis sit voluptas placeat optio sint."
+    "desc": "Find out how developers collaborate and how they can work from anywhere in the world."
   }]
 }
