@@ -17,8 +17,7 @@ data: ['data/lessons.json', 'data/program.json']
       <div class="nav__right">
         <a href="#">Why</a>
         <a href="#">Instructors</a>
-        <a href="#">Price</a>
-        <a href="#">Location</a>
+        <a href="#">Tuition</a>
         <a href="#" class="btn">Apply now</a>
       </div>
     </div>
@@ -38,17 +37,24 @@ data: ['data/lessons.json', 'data/program.json']
       <p class="u-center intro__cta">
         <a href="#" class="btn">Apply Now</a>
       </p>
-
-      [Logo] [Logo] [Logo]
       {% endmarkdown %}
     </div>
   </section>
 
   <section class="s--colored s__gray">
     <div class="why wrap--large">
-      <h2 class="h1">Why We're Better</h2>
-      <h3 class="subtitle">Than any other coding schools</h3>
       <article>
+        <div class="why__item--first">
+          <div class="l-g2">
+            <div class="why__image"></div>
+            <div class="why__content">
+              <h2 class="h1">Why We're Better</h2>
+              <h3 class="subtitle">Than any other coding schools</h3>
+              <p>We're a tech and design bootcamp. In Singapore. We run 10-week courses, in web development that help you learn to think like a software engineer and build professional, functional and beautiful web applications.</p>
+            </div>
+          </div>
+        </div>
+
         <div class="why__item">
           <div class="wrap--large">
             <div class="l-g2">
@@ -178,7 +184,7 @@ data: ['data/lessons.json', 'data/program.json']
   </section>
 
   <section class="s--colored s__gray">
-    <div class="wrap tuition">
+    <div class="wrap--large tuition">
       {% markdown 'partials/tuition.nunjucks' %}
     </div>
   </section>
