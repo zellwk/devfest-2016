@@ -1,21 +1,157 @@
+// Headline
+// ------------
+
+.c-white {
+  color: white;
+}
+
+// Intro
+// ------------
+
+.intro > p {
+  max-width: 26em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: vr(0.75);
+}
+
+p.intro__cta {
+  margin-top: vr(1.5);
+}
+
+.u-left {
+  text-align: left !important;
+  max-width: none !important;
+}
+
+.u-center {
+  text-align: center !important;
+}
+
+.wrap--centered > p,
+.wrap--centered > article {
+  max-width: 30em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrap--centered > article {
+  margin-top: vr(1);
+}
+
+.header > p {
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .small {
   font-size: ms(-1);
 }
 
 .divider {
-  height: vr(0.5);
-  width: vr(3);
+  height: vr(0.25);
+  width: vr(2);
   background: black;
-  margin-top: vr(1);
-  margin-bottom: vr(1);
+  margin-top: vr(0.75);
+  margin-bottom: vr(0.5);
 }
 
+// Hooks
+.developer {
+  padding: vr(5) 0;
+  position: relative;
+  background-image: url("../images/developer.jpg");
+  background-size: cover;
+  background-position: 100% 50%;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  > * {
+    position: relative;
+    z-index: 10;
+
+    > * {
+      text-shadow: 0 1px 0 #000;
+    }
+  }
+
+  .divider {
+    background: white;
+  }
+}
+
+.work {
+  background-image: url("../images/launch.jpg");
+  background-position: 75% 65%;
+}
+
+.hook {
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.s--split {
+  margin: 0;
+  padding: 0;
+}
+
+.hook--second {
+  display: flex;
+
+  > * {
+    flex-basis: 50%;
+  }
+
+  .logos {
+    background: #eee;
+  }
+
+  .logos + div {
+    padding: vr(3) vr(2) vr(4);
+  }
+}
+
+.p4 {
+  padding: vr(4) 0;
+}
+
+.why {
+  h3 {
+    margin-bottom: vr(0.25);
+  }
+
+  p + h3 {
+    margin-top: vr(1.5);
+  }
+
+  h3 + p {
+    margin-top: 0;
+  }
+}
+
+.c-gray {
+  color: color(mine);
+}
+
+// Legacy
 .speaker {
   .container {
     margin-top: vr(0.5);
+
     @include cf;
   }
+
   .left {
     float: left;
     width: vr(7);
@@ -65,28 +201,10 @@ blockquote {
   color: #666;
   font-style: italic;
   margin-left: vr(2.5);
+
   // text-align: center;
 
   q {
     display: inline-block;
   }
 }
-
-// "“" "”" "‘" "’"
-
-.testimonial {
-  position: relative;
-  padding-top: vr(1);
-  &:before {
-    content: "“";
-    font-family: "Didot";
-    font-size: ms(8);
-    position: absolute;
-    top: 0;
-    color: #444;
-  }
-}
-cite {
-  display: inline-block;
-}
-

@@ -13,7 +13,7 @@ gulp.task('default', (cb) => {
   } else if (config.env === 'prod') {
     runSequence(
       ['lint:js'],
-      ['images', 'fonts', 'webpack'],
+      ['images', 'svg', 'fonts', 'webpack'],
       ['sass', 'generateSite'],
       'useref',
       // Commented out because it took too long for multiple pages

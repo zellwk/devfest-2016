@@ -9,7 +9,8 @@
 // Font Families
 // ------------
 $font-families: (
-  header: ('Ampersand', 'acumin-pro-condensed', Helvetica, Arial, sans-serif),
+  header: ('Ampersand', 'Adelle Condensed','adelle-condensed', Helvetica, Arial, sans-serif),
+  subtitle: ('Ampersand', 'acumin-pro-condensed', Helvetica, Arial, sans-serif),
   text: ('acumin-pro-semi-condensed', Helvetica, Arial, sans-serif),
   code: ('Menlo', 'Monaco', 'Consolas', monospace),
   );
@@ -19,14 +20,34 @@ $font-families: (
 // For all Typography related values.
 // ==========
 
-$ms-ratio: 1.25;
+$ms-base: 1em 1.5em;
 
-$typi: (
-  null: (21px, 1.4),
+$typi-ms:(
+  null: 1.1,
+  large: (1em 1.5em, 1.333)
   );
 
+$typi: (
+  null: (17px, 1.4),
+  large: (21px)
+  );
+
+$title-map: (
+  null: ms(3) 1,
+  large: 8 1.15
+  );
+
+$nav-map: (
+  null: -2 1,
+  large: -2
+  );
+
+$logo-map: (
+  null: 3 1.5
+);
+
 $h1-font-map: (
-  null: (ms(4), vr(2))
+  null: (6, 1)
   );
 
 $h2-font-map: (
@@ -34,18 +55,13 @@ $h2-font-map: (
   );
 
 $h3-font-map: (
-  null: (ms(2), 1.3)
-  );
-
-$h4-font-map: (
-  null: (ms(1), 1.3)
-  );
-
-$h5-font-map: (
-  null: (ms(1), 1.3)
-
+  null: (3, 1.25)
   );
 
 $h6-font-map: (
-  null: (ms(1), 1.3)
+  null: (ms(-1))
   );
+
+$small-map: (
+  null: (-1)
+);

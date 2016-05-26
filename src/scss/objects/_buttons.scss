@@ -1,17 +1,29 @@
- button,
 .button,
 .btn {
   color: white;
   display: inline-block;
   text-align: center;
-  padding: 0.75em 2.25em;
+  padding: 0.55em 1em 0.75em;
   font-weight: bold;
+  line-height: 1.2;
   background: color(coralred);
   text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
-    background: darken(#0cc471, 6%);
+    // background: darken(#0cc471, 6%);
+    background: color(midnight);
+  }
+
+  &--secondary {
+    @extend .btn;
+    background: lighten(desaturate(color(marine), 30%), 10%);
+    background: color(marine);
   }
 }
+
+.btn + .btn {
+  margin-left: vr(0.25);
+}
+

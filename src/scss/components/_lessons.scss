@@ -1,3 +1,38 @@
+.l-lesson {
+  display: flex;
+  margin-left: vr(-0.5);
+  margin-right: vr(-0.5);
+
+  > div {
+    flex-basis: calc(50% - #{vr(1)});
+    margin: 0 vr(0.5);
+    background: rgba(blue, 0.1);
+  }
+
+  + .l-lesson {
+    margin-top: vr(2);
+  }
+}
+
+.l-lesson__supporting {
+}
+
+.l-lesson__main {
+  padding-left: vr(1);
+}
+
+.l-lesson:nth-child(even) {
+  .l-lesson__supporting {
+    order: 3;
+  }
+
+  .l-lesson__main {
+    order: 1;
+    text-align: right;
+    padding-right: vr(1);
+  }
+}
+
 .Lessons {
   counter-reset: lesson-counter;
   margin-top: vr(1.5);
@@ -16,5 +51,4 @@
 
 .Lesson__img > img {
   padding: vr(0.5);
-  border-radius: 100%;
 }

@@ -1,8 +1,35 @@
-<h2 class="h1">Tuition and Dates</h2>
+<h2 class="title">Tuition and Dates</h2>
 
-**Tuition Fees** : $9970 <br>
-**Date**: 8 August, 2016 - 7 November, 2016
+{# **Tuition Fees** : $9990 <br>
+**Date**: 8 August, 2016 - 7 November, 2016 <br>
+(Term break from 3 Oct - 7 Oct) #}
 
-Seats are limited. We want to make sure you get personalized attention form our instructors so we'll cap each intake to a maximum of 15 students. That allows us to dedicate one instructor for every 5 students.
+**Dates:** 8 August, 2016 – 4 November, 2016 <br>
+**Times:** Mondays – Fridays, 9am–5pm
 
-<a href="#" class="button">Reserve My Seat</a>
+Seats are limited. We want to make sure you get personalized attention from our instructors so we'll cap each intake to a maximum of 15 students. We also provide FREE after-class fitness programs and FREE 1 year of 1-on-1 post-course support.
+
+
+<div class="l-g2 tuition__table">
+  <div class="tuition__price">
+    <h3 class="tuition__title">One Time Payment</h3>
+    <ul>
+      <li>One time payment of $8,970</li>
+    </ul>
+    <p>
+      <a href="#" class="btn">Reserve My Seat</a>
+    </p>
+  </div>
+  <div class="tuition__price--secondary">
+    <h3 class="tuition__title">Staggered Payment</h3>
+    <ul>
+      <li>Upfront payment of $4,970</li>
+      <li>Monthly payment of $900 for 6 months after graduation</li>
+    </ul>
+    <p>
+      <a href="#" class="btn--secondary">Reserve My Seat</a>
+    </p>
+  </div>
+</div>
+
+<p class="small c-gray u-text-center">Costs includes tuition, course materials, complimentary after-class fitness program and 1 year of 1-on-1 post-course support.</p>

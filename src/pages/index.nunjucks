@@ -7,56 +7,210 @@ data: ['data/lessons.json', 'data/program.json']
 {% block canonical %} <link rel="canonical" href="{{siteUrl}}"> {% endblock %}
 
 {% block content %}
+
 <main>
+  <nav>
+    <div class="wrap--flex">
+      <div class="nav__left">
+        <div class="logo">COHORT 19X</div>
+      </div>
+      <div class="nav__right">
+        <a href="#">Why</a>
+        <a href="#">Instructors</a>
+        <a href="#">Price</a>
+        <a href="#">Location</a>
+        <a href="#" class="btn">Apply now</a>
+      </div>
+    </div>
+  </nav>
+
   <section>
-    <div class="wrap">
-      {% markdown 'markdown/web-dev-bootcamp.md' %}
+    <div class="wrap intro">
+      {% markdown %}
+      <div class="header">
+        {# <h1 class="title">The Web Development Bootcamp</h1> #}
+        <h1 class="title">Become a Full Stack Developer in 10 Weeks</h1>
+        {# <h2 class="subtitle">Escape 9–5, Switch Careers Or Build Your Own Startup in just 12 weeks</h2> #}
+      </div>
+
+      Trapped in a rut with a joyless job? Just got laid off? Wanna switch career and not sure how to take the plunge? With the huge shortage of web developers around the world, experience how it feels to be sought-after and appreciated for your talent. Get hired by exciting startups and tech companies in Asia in just 10 weeks!
+
+      <p class="u-center intro__cta">
+        <a href="#" class="btn">Apply Now</a>
+      </p>
+
+      [Logo] [Logo] [Logo]
+      {% endmarkdown %}
     </div>
   </section>
 
   <section class="s--colored s__gray">
-    <div class="wrap">
-      {% include 'partials/lessons.nunjucks' %}
+    <div class="why wrap--large">
+      <h2 class="h1">Why We're Better</h2>
+      <h3 class="subtitle">Than any other coding schools</h3>
+      <article>
+        <div class="why__item">
+          <div class="wrap--large">
+            <div class="l-g2">
+              <div class="why__image">
+                <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#paint_palette"></svg>
+              </div>
+              <div class="why__content">
+                <h3 class="h3"> No other coding school in singapore teaches you design skills</h3>
+                <p>We know that to become a high-value, well-rounded developer, you will need more than frontend and backend tools. That’s why we teach you design fundamentals so you not only make functional websites, but also beautiful websites. While others become an in-demand full-stack software developer, you will become an in-demand full-stack software developer with an extra design edge. How’s that for standing apart from the rest?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why__item">
+          <div class="wrap--large">
+            <div class="l-g2">
+              <div class="why__image">
+                <svg class="flip"><use xlink:href="/symbol/svg/sprite.symbol.svg#for_experienced"></svg>
+              </div>
+              <div class="why__content">
+                <h3 class="h3">No other coding school in singapore cares about your well-being as much as we do</h3>
+                <p>
+                  We’ve come up with a <strong>NO BURNOUT BOOTCAMP</strong> designed for you, the absolute beginner in mind. You will grow in a fast but evenly paced environment where we not only share the best practices of coding and design but also the best lifestyle approaches to becoming the best in the business.
+                </p>
+
+                <p>
+                  In addition to coding lessons, we built in a FREE after-class fitness program to help you optimize your learning and networking sessions where you will meet industry veterans and people who have made the same amazing life transition you will.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why__item">
+          <div class="wrap--large">
+            <div class="l-g2">
+              <div class="why__image">
+                (Note: Use Logos for companies as SVG instead)
+              </div>
+              <div class="why__content">
+                <h3 class="h3">No other coding school in singapore guarantees you a 1-month internship</h3>
+                <p>
+                  Nothing beats real-world experience. We will place you in a 1-month internship with a startup so you can work with real mentors and in real projects, earn some $$ and be exposed to how a development team works in real-life. Here are some startups you could be attached to:
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why__item">
+          <div class="wrap--large">
+            <div class="l-g2">
+              <div class="why__image">
+                <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#employee_card"></svg>
+              </div>
+              <div class="why__content">
+                <h3 class="h3">No other coding school in singapore places you in a dream job like we do</h3>
+
+                {% markdown %}
+                Career switching need not be a scary process. Throughout the program, we work together with your job search in mind and to round you out as an immediately-employable, high-value candidate. By graduation, you will have a solid Github presence, tons of technical interview experience, a personal site, and a solid resume.
+
+                We are super enthusiastic about getting our graduates placed in great companies we have great relationships with. In regular exclusive Meet and Hire events after the 10-week course, we put you directly in front of hiring startups and well-established MNCs to be placed in junior developers roles, both locally and globally.
+
+                {% endmarkdown %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="why__item">
+          <div class="wrap--large">
+            <div class="l-g2">
+              <div class="why__image">
+                <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#cool"></svg>
+              </div>
+              <div class="why__content">
+                <h3 class="h3">No other coding school in singapore coaches you to be the best you</h3>
+
+                {% markdown %}
+                We care about your education and your success. We make it our job to discover the best way you learn and to help you learn fast. In addition, you will learn to manage time like a true hacker, design a result-optimal lifestyle, and receive **FREE 1 year of 1-on-1 post-course support** making career and life transitions, that meets your unique needs.
+                {% endmarkdown %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
-
+{#
   <section>
     <div class="wrap">
+      <h2 class="h1">About Us</h2>
+      <p>
+        We're a tech and design bootcamp. In Singapore. We run 10-week courses, in web development which culminate in you moving on to become employable and placed in high-growth startups and exciting tech companies in Singapore and globally.
+      </p>
+    </div>
+  </section> #}
+
+  {# <section>
+    <div class="wrap">
+      <h2 class="title">Join the Cohort</h2>
+
+      <article>
+        <div class="subtitle">
+          8 August, 2016 – 7 November, 2016 <br>
+          Monday–Friday, 9am–5pm
+        </div>
+        <p>
+          Seats are limited. We want to make sure you get personalized attention from our instructors so we'll only take in 15 students in each batch.
+        </p>
+
+        <p class="u-center">
+          <a href="#" class="btn">Reserve My Seat for $9,990</a> <br>
+          <small>You get $1,000 off if you register before 8 July, 2016</small>
+        </p>
+      </article>
+    </div>
+  </section>
+  #}
+
+  <section class="s--colored Instructors-container">
+    <div class="wrap--large">
       {% markdown 'partials/instructors.nunjucks' %}
     </div>
   </section>
 
-  <section class="s--colored s__yellow">
-    <div class="wrap">
-      {% include 'partials/program.nunjucks' %}
-    </div>
-  </section>
-
   <section class="s--colored s__gray">
-    <div class="wrap">
-      {% include 'partials/bonuses.nunjucks' %}
-    </div>
-  </section>
-
-  <section class="s--colored s__yellow">
-    <div class="wrap">
+    <div class="wrap tuition">
       {% markdown 'partials/tuition.nunjucks' %}
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      {% markdown 'partials/testimonials.nunjucks' %}
+      <h2 class="h1">Strategic Location</h2>
+
+      <p>Classes will be held at THE HUB SINGAPORE’s new location @ CUPPAGE.</p>
+      <p>This location is carefully chosen for its strategic position to provide great value to our students. With The Hub’s mission to educate and nurture the startup ecosystem, our graduates are placed strategically in the center of startup action and corporate innovation, and where industry connections can be made naturally and easily.</p>
     </div>
   </section>
+
 
   <section>
     <div class="wrap">
-      {% markdown 'partials/faq.nunjucks' %}
+      <h2 class="h1">Is this for you?</h2>
+      <h3 class="subtitle">Let's start a conversation</h3>
+      {% markdown %}
+      We approach our intake process like we approach the bootcamp. It is about knowing you as a person, your unique goals and learning style, and supporting you to take on the 12 weeks of intensive learning and network building. This life-changing challenge can be both exhilarating and scary at the same time. And you don’t have to go through it alone. Let’s do this together.
+
+      Whether you’re still exploring or you are ready to apply, we are here for you. Schedule a call or meeting with us.
+      {% endmarkdown %}
+
+      <p>
+        <a href="#" class="btn">Apply now</a>
+        <a href="#" class="btn btn--secondary">Request Syllabus</a>
+      </p>
     </div>
   </section>
 
-
+{#
   <section class="s--colored s__gray">
     <div class="wrap">
       <h2 class="h1">Realize Your Dreams</h2>
@@ -71,7 +225,7 @@ data: ['data/lessons.json', 'data/program.json']
       <a href="#" class="btn">Reserve My Seat</a>
       {% endmarkdown %}
     </div>
-  </section>
+  </section> #}
 </main>
 
 
