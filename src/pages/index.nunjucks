@@ -56,7 +56,7 @@ data: ['data/lessons.json', 'data/program.json']
                 <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#paint_palette"></svg>
               </div>
               <div class="why__content">
-                <h3 class="h3"> No other coding school in singapore teaches you design skills</h3>
+                <h3 class="h3"> No other coding school in Singapore teaches you design skills</h3>
                 <p>We know that to become a high-value, well-rounded developer, you will need more than frontend and backend tools. That’s why we teach you design fundamentals so you not only make functional websites, but also beautiful websites. While others become an in-demand full-stack software developer, you will become an in-demand full-stack software developer with an extra design edge. How’s that for standing apart from the rest?</p>
               </div>
             </div>
@@ -171,7 +171,7 @@ data: ['data/lessons.json', 'data/program.json']
   </section>
   #}
 
-  <section class="s--colored Instructors-container">
+  <section class="s--colored Instructors">
     <div class="wrap--large">
       {% markdown 'partials/instructors.nunjucks' %}
     </div>
@@ -183,17 +183,46 @@ data: ['data/lessons.json', 'data/program.json']
     </div>
   </section>
 
-  <section>
+  <section class="cuppage-container">
     <div class="wrap">
       <h2 class="h1">Strategic Location</h2>
-
       <p>Classes will be held at THE HUB SINGAPORE’s new location @ CUPPAGE.</p>
       <p>This location is carefully chosen for its strategic position to provide great value to our students. With The Hub’s mission to educate and nurture the startup ecosystem, our graduates are placed strategically in the center of startup action and corporate innovation, and where industry connections can be made naturally and easily.</p>
+      <br>
+    </div>
+    <div class="cuppage"> </div>
+  </section>
+
+  <section class="s--colored s__gray">
+    <div class="wrap">
+
+      <h2 class="h1">Have Questions?</h2>
+
+      <article>
+        {% markdown %}
+        <p></p>
+        <h2 class="h4">I’m not sure. What technology should I be learning?</h2>
+
+        Our hiring partners told us that our program should be focused on HTML, CSS and JavaScript - the three core languages you need to know to build amazing websites and applications. They are considered the most important and most widely deployed languages in programming.
+
+        That's why our 10-week program deep dives into them.
+
+        <h2 class="h4">I lack the support I need to learn. What can I expect from Cohort 19x? </h2>
+
+        Cohort 19x is built on community. We are available from 9am - 8pm, Monday to Friday and you'll have 24-hour access to your peer community to help you solve any problem.
+
+        <h2 class="h4">I’m worried I won’t get a job. How will you help? </h2>
+
+        We’ve teamed up with HackerTrail and together we will work with hiring partners at startups and tech companies to place our graduates. You can be sure the skills you take away are the skills that top-tier companies want.
+
+        [Logo] - Hackertrail
+
+        {% endmarkdown %}
+      </article>
     </div>
   </section>
 
-
-  <section>
+  <section class="s--colored s__sunglow">
     <div class="wrap">
       <h2 class="h1">Is this for you?</h2>
       <h3 class="subtitle">Let's start a conversation</h3>

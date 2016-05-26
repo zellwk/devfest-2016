@@ -197,14 +197,15 @@ nav a {
   border: vr(0.125) solid #ddd;
   background: white;
   color: color(coralred);
-  transition: border 0.3s ease-out, background 0.3s ease-out;
+  text-decoration: none;
+  transition: border 0.15s ease-out, background 0.15s ease-out;
 
   &:hover,
   &:active,
   &:focus {
     border-color: color(coralred);
     background: white;
-    transition: border 0.3s ease-in, background 0.3s ease-in;
+    transition: border 0.15s ease-in, background 0.15s ease-in;
   }
 
   .tuition__title:after {
@@ -259,11 +260,30 @@ nav a {
 // ==========
 
 .Instructors {
-  position: relative;
-  min-height: 80vh;
-  color: white;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-  background: rgba(color(midnight), 0.5);
+  overflow-x: hidden;
+}
+
+.l-structure {
+  margin-top: vr(1.5);
+}
+
+.l-structure__item + .l-structure__item {
+  // margin-top: vr(1);
+}
+
+.l-structure {
+  // overflow-x: hidden;
+  display: flex;
+  $sg: 1.25;
+
+  display: flex;
+  margin-left: vr($sg * -1);
+  margin-right: vr($sg * -1);
+
+  > div {
+    margin: 0 vr($sg);
+    flex-basis: calc(#{percentage(1/2)} - #{vr($sg * 2)});
+  }
 }
 
 .Instructors__bg {
@@ -287,6 +307,27 @@ nav a {
 .leigh {
   right: 0;
   background-image: url("../images/zell.jpg");
+}
+
+// Location
+// ------------
+
+.cuppage-container {
+  overflow-x: hidden;
+  margin-bottom: 0;
+}
+.cuppage {
+  margin-left: -2px;
+  margin-right: -2px;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
+    url('../images/cuppage.jpg');
+  background-size: cover;
+  background-position: 50% 100%;
+  text-shadow: 0 1px 0 #000;
+  font-weight: bold;
+  height: 0;
+  padding-bottom: 76.5011119%;
 }
 
 // Utilities

@@ -22,10 +22,12 @@
 // ==========
 
 $colors: (
-  mine: #484848,
+  mine: rgba(0,0,0,0.5),
+  // mine: #484848,
   coralred: #ff414a,
   marine: #395a9c,
   midnight: #222242,
-  sunglow: #ffcd47,
+  sunglow: scale_color(#ffcd47, $saturation: 0%, $lightness: -5%)
+  // sunglow: #ffcd47
   );
 

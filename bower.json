@@ -22,5 +22,8 @@
     "susy": "~2.2.5",
     "themify": "~0.1.0",
     "typi": "^2.2.3"
+  },
+  "devDependencies": {
+    "mathsass": "^0.9.5"
   }
 }

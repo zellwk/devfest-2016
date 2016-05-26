@@ -28,16 +28,14 @@ html {
   font-weight: 500;
 }
 
-.h2 {
-  @include ff(header);
-  @include typi($h2-font-map);
-
-  font-weight: 500;
-}
-
 .h3 {
   @include ff(subtitle);
   @include typi($h3-font-map);
+}
+
+.h4 {
+  @include ff(subtitle);
+  @include typi($h4-font-map);
 }
 
 strong {
@@ -64,7 +62,7 @@ em {
   top: -0.1em;
 }
 
-.h1 + .subtitle {
+.subtitle {
   @include ff(subtitle);
   color: color(mine);
   font-weight: 500;

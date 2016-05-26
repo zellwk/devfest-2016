@@ -1,4 +1,4 @@
-<h2 class="h1 u-center">Meet Your Instructors</h2>
+<h2 class="h1 u-text-center">Meet Your Instructors</h2>
 
 <div class="l-structure">
   <div class="l-structure__item Instructor">
@@ -6,10 +6,10 @@
       <img src="/images/zell.jpg" alt="Zell">
     </div>
     <div class="l-structure__main">
+      <h3 class="h3">Zell Liew</h3>
+      <h4 class="subtitle">Writer, Developer, Designer, Educator</h4>
       {% markdown %}
-      **Zell** is the lead instructor. Like you, he came from a non-programming background (he has a business). He taught himself how to code on the side when he was 25 and has been freelancing and bootstrapping his company ever since.
-
-      He authored two books---Learning Susy and Automate Your Workflow---and had written for well-known web publications like CSS Tricks and Smashing Magazine.
+      Zell is the lead instructor of the 10-week Web Development Bootcamp. He came from a non-programming background (he has a business degree). At the age of 25, while he was still in school, he taught himself how to code and went on to freelancing and eventually launch his own company. He authored two books—Learning Susy and Automate Your Workflow—and has written for well-known web publications like CSS Tricks and Smashing Magazine.
       {% endmarkdown %}
     </div>
   </div>
@@ -19,8 +19,10 @@
       <img src="/images/zell.jpg" alt="Leigh">
     </div>
     <div class="l-structure__main">
+      <h3 class="h3">Leigh Zhao</h3>
+      <h4 class="subtitle">Admissions &amp; Career Counselor, Bootcamp Manager</h4>
       {% markdown %}
-      Leigh is the manager for the 10-week Web Development Bootcamp and go-to pundit for all matters related to job prep, career support and industry network. She has worked alongside some of the region’s most talented developers in both her own startups and professional career. Her greatest satisfaction comes from connecting amazing people to other amazing people and making crazy sh** happen.
+      Leigh is the manager for the 10-week Web Development Bootcamp and go-to pundit for all matters related to job prep, career support and industry network. She has worked alongside some of the region’s most talented developers in both her own startups and professional career. In her role as a recruiter, she has helped placed people from all over the world in tech positions in Singapore and the region.
       {% endmarkdown %}
     </div>
   </div>

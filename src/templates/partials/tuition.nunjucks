@@ -11,25 +11,25 @@ Seats are limited. We want to make sure you get personalized attention from our 
 
 
 <div class="l-g2 tuition__table">
-  <div class="tuition__price">
-    <h3 class="tuition__title">One Time Payment</h3>
+  <a href="#" class="tuition__price">
+    <h3 class="tuition__title h3">One Time Payment</h3>
     <ul>
       <li>One time payment of $8,970</li>
     </ul>
     <p>
-      <a href="#" class="btn">Reserve My Seat</a>
+      <span class="btn">Reserve My Seat</span>
     </p>
-  </div>
-  <div class="tuition__price--secondary">
-    <h3 class="tuition__title">Staggered Payment</h3>
+  </a>
+  <a href="#" class="tuition__price--secondary">
+    <h3 class="tuition__title h3">Staggered Payment</h3>
     <ul>
       <li>Upfront payment of $4,970</li>
       <li>Monthly payment of $900 for 6 months after graduation</li>
     </ul>
     <p>
-      <a href="#" class="btn--secondary">Reserve My Seat</a>
+      <span href="#" class="btn--secondary">Reserve My Seat</span>
     </p>
-  </div>
+  </a>
 </div>
 
 <p class="small c-gray u-text-center">Costs includes tuition, course materials, complimentary after-class fitness program and 1 year of 1-on-1 post-course support.</p>
