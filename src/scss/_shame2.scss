@@ -403,20 +403,13 @@ nav a {
       flex-basis: calc(#{percentage(5 / 8)} - #{vr($sg * 2)});
     }
   }
+}
 
-
-  &.leigh {
-    img {
-      border-radius: 100%;
-    }
-
-    @include bp(max tiny) {
-      .h3,
-      .subtitle,
-      .Instructor__img {
-        text-align: center;
-      }
-    }
+.Instructor__title,
+.Instructor__name,
+.Instructor__pos {
+  @include bp(max small) {
+    text-align: center;
   }
 }
 
@@ -436,7 +429,6 @@ nav a {
 .Instructor__img {
   padding-top: vr(0.25);
 }
-
 // .Instructor {
 //   // overflow-x: hidden;
 //   // max-width: 50%;

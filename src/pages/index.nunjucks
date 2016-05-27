@@ -217,15 +217,19 @@ data: ['data/lessons.json', 'data/program.json']
 
 <section>
   <div class="wrap--large">
-    <h2 class="h1">Meet Your Recruiter</h2>
+    <h2 class="h1 Instructor__title">Meet Your Recruiter</h2>
 
     <div class="Instructor leigh">
-      <div class="Instructor__img">
-        <img src="/images/leigh.jpg" alt="Zell Liew">
+      <div class="Instructor__img u-hide-st-small">
+        <img src="/images/leigh.jpg" alt="Leigh Zhao">
       </div>
       <div class="Instructor__info">
-        <h3 class="h3">Leigh Zhao</h3>
-        <h4 class="subtitle">Admissions &amp; Career Counselor, Bootcamp Manager</h4>
+        <h3 class="h3 Instructor__name">Leigh Zhao</h3>
+        <h4 class="subtitle Instructor__pos">Admissions &amp; Career Counselor, Bootcamp Manager</h4>
+
+        <p class="u-hide-small u-text-center">
+          <img src="/images/leigh.jpg" alt="Leigh Zhao">
+        </p>
         {% markdown %}
         Leigh is the manager for the 10-week Web Development Bootcamp and go-to pundit for all matters related to job prep, career support and industry network.
 

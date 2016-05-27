@@ -1,12 +1,15 @@
-<h2 class="h1">Meet Your Instructor</h2>
+<h2 class="h1 Instructor__title">Meet Your Instructor</h2>
 
 <div class="Instructor">
-  <div class="Instructor__img">
+  <div class="Instructor__img u-hide-st-small">
     <img src="/images/zell.jpg" alt="Zell Liew">
   </div>
   <div class="Instructor__info">
-    <h3 class="h3">Zell Liew</h3>
-    <h4 class="subtitle">Writer, Developer, Designer, Educator</h4>
+    <h3 class="h3 Instructor__name">Zell Liew</h3>
+    <h4 class="subtitle Instructor__pos">Writer, Developer, Designer, Educator</h4>
+    <p class="u-hide-small">
+      <img src="/images/zell.jpg" alt="Zell Liew">
+    </p>
     {% markdown %}
     Zell is the lead instructor of the 10-week Web Development Bootcamp. He came from a non-programming background (he has a business degree).
 
