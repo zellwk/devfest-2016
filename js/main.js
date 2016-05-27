@@ -58,11 +58,11 @@
 	// Polyfill for external SVG spritesheets
 	(0, _svg4everybody2.default)();
 	
-	function add(num1, num2) {
-	  return num1 + num2;
-	}
+	console.log(window.innerWidth);
 	
-	module.exports = add;
+	window.addEventListener('resize', function () {
+	  console.log(window.innerWidth);
+	});
 
 /***/ },
 /* 1 */
