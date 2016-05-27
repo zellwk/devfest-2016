@@ -7,15 +7,19 @@ section {
   padding: vr(5) 0;
 }
 
-.s__gray {
-  background: #ddd;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+.s--small {
+  &.s--colored {
+    padding: vr(2) 0;
+    text-align: center;
+  }
+
+  p {
+    max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
-.s__yellow {
-  background: color(sunglow);
-}
 
 @each $theme in map_keys($themes) {
   $map: map-get($themes, $theme);

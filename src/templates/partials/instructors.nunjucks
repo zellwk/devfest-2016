@@ -1,5 +1,36 @@
-<h2 class="h1 u-text-center">Meet Your Instructors</h2>
+<h2 class="h1">Meet Your Instructor</h2>
 
+<div class="Instructor">
+  <div class="Instructor__img">
+    <img src="/images/zell.jpg" alt="Zell Liew">
+  </div>
+  <div class="Instructor__info">
+    <h3 class="h3">Zell Liew</h3>
+    <h4 class="subtitle">Writer, Developer, Designer, Educator</h4>
+    {% markdown %}
+    Zell is the lead instructor of the 10-week Web Development Bootcamp. He came from a non-programming background (he has a business degree).
+
+    At the age of 25, while he was still in school, he taught himself how to code and went on to freelancing and eventually launch his own company.
+
+    He authored two books—Learning Susy and Automate Your Workflow—and has written for well-known web publications like CSS Tricks and Smashing Magazine.
+    {% endmarkdown %}
+  </div>
+</div>
+
+{#
+<div class="l-structure">
+  <div class="Instructor">
+    <div class="Instructor__info">
+      <h3 class="h3">Zell Liew</h3>
+      <h4 class="subtitle">Writer, Developer, Designer, Educator</h4>
+    </div>
+    <img src="/images/zell.jpg" alt="Zell">
+    {% markdown %}
+    Zell is the lead instructor of the 10-week Web Development Bootcamp. He came from a non-programming background (he has a business degree). At the age of 25, while he was still in school, he taught himself how to code and went on to freelancing and eventually launch his own company. He authored two books—Learning Susy and Automate Your Workflow—and has written for well-known web publications like CSS Tricks and Smashing Magazine.
+    {% endmarkdown %}
+  </div>
+</div> #}
+{#
 <div class="l-structure">
   <div class="l-structure__item Instructor">
     <div class="l-structure__main">
@@ -30,4 +61,4 @@
 
 
 
-
+#}

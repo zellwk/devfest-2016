@@ -41,6 +41,13 @@ data: ['data/lessons.json', 'data/program.json']
     </div>
   </section>
 
+  <section class="s--colored s__sunglow s--small">
+    <div class="wrap">
+      <h3 class="h3">About Us</h3>
+      <p>We're a tech and design bootcamp. In Singapore. We run 10-week courses, in web development that help you learn to think like a software engineer and build professional, functional and beautiful web applications.</p>
+    </div>
+  </section>
+
   <section class="s--colored s__gray">
     <div class="why wrap--large">
       <article>
@@ -50,7 +57,6 @@ data: ['data/lessons.json', 'data/program.json']
             <div class="why__content">
               <h2 class="h1">Why We're Better</h2>
               <h3 class="subtitle">Than any other coding schools</h3>
-              <p>We're a tech and design bootcamp. In Singapore. We run 10-week courses, in web development that help you learn to think like a software engineer and build professional, functional and beautiful web applications.</p>
             </div>
           </div>
         </div>
@@ -93,7 +99,8 @@ data: ['data/lessons.json', 'data/program.json']
           <div class="wrap--large">
             <div class="l-g2">
               <div class="why__image">
-                (Note: Use Logos for companies as SVG instead)
+                <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#business"></svg>
+                {# (Note: Use Logos for companies as SVG instead) #}
               </div>
               <div class="why__content">
                 <h3 class="h3">No other coding school in singapore guarantees you a 1-month internship</h3>
@@ -177,7 +184,7 @@ data: ['data/lessons.json', 'data/program.json']
   </section>
   #}
 
-  <section class="s--colored Instructors">
+  <section>
     <div class="wrap--large">
       {% markdown 'partials/instructors.nunjucks' %}
     </div>
@@ -221,10 +228,31 @@ data: ['data/lessons.json', 'data/program.json']
 
         We’ve teamed up with HackerTrail and together we will work with hiring partners at startups and tech companies to place our graduates. You can be sure the skills you take away are the skills that top-tier companies want.
 
-        [Logo] - Hackertrail
+        <img src="/images/hackertrail.png" alt="Hackertrail">
 
         {% endmarkdown %}
       </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap--large">
+      <h2 class="h1">Meet Your Recruiter</h2>
+
+      <div class="Instructor">
+        <div class="Instructor__img leigh">
+          <img src="/images/leigh.jpg" alt="Zell Liew">
+        </div>
+        <div class="Instructor__info">
+          <h3 class="h3">Leigh Zhao</h3>
+          <h4 class="subtitle">Admissions &amp; Career Counselor, Bootcamp Manager</h4>
+          {% markdown %}
+          Leigh is the manager for the 10-week Web Development Bootcamp and go-to pundit for all matters related to job prep, career support and industry network.
+
+          She has worked alongside some of the region’s most talented developers in both her own startups and professional career. In her role as a recruiter, she has helped placed people from all over the world in tech positions in Singapore and the region.
+          {% endmarkdown %}
+        </div>
+      </div>
     </div>
   </section>
 
