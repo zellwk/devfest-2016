@@ -7,3 +7,9 @@ gulp.task('svg', () => {
     .pipe($.svgSprite(config.svg.opts))
     .pipe(gulp.dest(config.svg.dest))
 })
+
+gulp.task('copy-svg', function () {
+  gulp.src(config.svg.src)
+    .pipe($.svgo())
+    .pipe(gulp.dest(config.images.dest))
+})

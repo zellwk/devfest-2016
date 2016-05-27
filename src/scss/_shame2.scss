@@ -69,10 +69,15 @@
   }
 }
 
+.logo {
+  height: vr(1.5);
+  width: auto;
+}
+
 // Nav
 // ==========
 nav {
-  background: color(marine);
+  background: black;
 }
 
 nav .wrap--flex {
@@ -104,6 +109,46 @@ nav a {
   @include typi($logo-map);
 
   @include acumin;
+}
+
+// Intro
+.Intro {
+  background: url("../images/developer.jpg") no-repeat;
+  background-size: cover;
+  background-position: 100% 0%;
+  color: white;
+  text-shadow: 0 1px 0 black, 0 0 15px rgba(0, 0, 0, 0.45);
+}
+
+.Intro__overlay {
+  margin: vr(-2);
+  padding: vr(2);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.Intro__content {
+  max-width: 35rem;
+}
+
+.Intro__cta {
+  margin-top: vr(1.5);
+}
+
+.About {
+  position: relative;
+}
+
+.About__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/cohort-logo-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 120% 0;
+  opacity: 0.1;
 }
 
 // Why
@@ -429,6 +474,7 @@ nav a {
 .Instructor__img {
   padding-top: vr(0.25);
 }
+
 // .Instructor {
 //   // overflow-x: hidden;
 //   // max-width: 50%;
