@@ -19,12 +19,17 @@
 
   &--secondary {
     @extend .btn;
+
     background: lighten(desaturate(color(marine), 30%), 10%);
     background: color(marine);
   }
 }
 
 .btn + .btn {
-  margin-left: vr(0.25);
+  @include bp(max tiny) {
+    margin-top: vr(0.5);
+  }
+  @include bp(tiny) {
+    margin-left: vr(0.25);
+  }
 }
-

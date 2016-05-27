@@ -1,10 +1,16 @@
 section {
-  margin: vr(5) 0;
+  margin: vr(3) 0;
+  @include bp(med) {
+    margin: vr(5) 0;
+  }
 }
 
 .s--colored {
   margin: 0;
-  padding: vr(5) 0;
+  padding: vr(3) 0;
+  @include bp(med) {
+    padding: vr(5) 0;
+  }
 }
 
 .s--small {
@@ -20,13 +26,12 @@ section {
   }
 }
 
-
 @each $theme in map_keys($themes) {
   $map: map-get($themes, $theme);
 
   .s__#{$theme} {
     background: map-get($map, background);
-      color: map-get($map, color);
+    color: map-get($map, color);
 
     @if map-has-key($map, color) {
       color: map-get($map, color);

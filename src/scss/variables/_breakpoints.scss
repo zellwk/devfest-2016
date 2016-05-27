@@ -8,10 +8,14 @@
 // See https://github.com/zellwk/mappy-breakpoints for more info.
 // ================
 
+$pad: vr(1); //
+
 $breakpoints: (
-  'small': 400px,
-  'med': 640px,
+  'tiny': 350px,
+  'small': 500px,
+  'med': 680px,
   'large': 900px,
+  'large+pad': (900px + 50px),
   'wide': 1100px,
   'mega': 1500px,
   );

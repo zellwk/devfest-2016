@@ -23,18 +23,19 @@ $font-families: (
 $ms-base: 1em 1.5em;
 
 $typi-ms:(
-  null: 1.1,
-  large: (1em 1.5em, 1.333)
+  null: (1em 1.5em, 1.25),
+  med: (1em 1.5em, 1.333)
   );
 
 $typi: (
-  null: (17px, 1.4),
+  null: (16px, 1.4),
+  tiny: (17px),
   large: (21px)
   );
 
 $title-map: (
-  null: ms(3) 1,
-  large: 8 1.15
+  null: 6 1.2,
+  med: 8 1.15
   );
 
 $nav-map: (
@@ -51,7 +52,9 @@ $h1-font-map: (
   );
 
 $h3-font-map: (
-  null: (3, 1.25)
+  null: (2, 1.25),
+  med: (2, 1.25),
+  large: (2, 1.25)
   );
 
 $h4-font-map: (

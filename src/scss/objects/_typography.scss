@@ -23,18 +23,28 @@ html {
 
 .h1 {
   @include ff(header);
+
   @include typi($h1-font-map);
 
   font-weight: 500;
+
+  &,
+  & + .subtitle {
+    @include bp(max tiny) {
+      text-align: center;
+    }
+  }
 }
 
 .h3 {
   @include ff(subtitle);
+
   @include typi($h3-font-map);
 }
 
 .h4 {
   @include ff(subtitle);
+
   @include typi($h4-font-map);
 }
 
@@ -64,6 +74,7 @@ em {
 
 .subtitle {
   @include ff(subtitle);
+
   color: color(mine);
   font-weight: 500;
 }

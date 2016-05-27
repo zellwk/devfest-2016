@@ -3,8 +3,8 @@ import svg4everybody from 'svg4everybody'
 // Polyfill for external SVG spritesheets
 svg4everybody()
 
-function add (num1, num2) {
-  return num1 + num2
-}
+console.log(window.innerWidth)
 
-module.exports = add
+window.addEventListener('resize', () => {
+  console.log(window.innerWidth)
+})
