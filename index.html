@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
   
-  <link rel="stylesheet" href="/css/styles-fd11094657.min.css">
+  <link rel="stylesheet" href="/css/styles-df0537ae54.min.css">
   
 
   
@@ -39,24 +39,36 @@
 </head>
 <body>
 
-  
+  <div class="canvas jsCanvas">
+    
 
-<main>
+<div class="canvas__off jsCanvasOff">
+  <a href="#">Why We're Better</a>
+  <a href="#">Instructors</a>
+  <a href="#">Tuition</a>
+  <a href="#" class="btn jsModalTrigger" data-trigger="apply">Apply now</a>
+</div>
+
+<main class="canvas__on">
   <nav>
     <div class="wrap--flex">
       <div class="nav__left">
         <svg viewbox="0 0 834 294" preserveAspectRatio="xMinYMid" class="logo"><use xlink:href="/symbol/svg/sprite.symbol.svg#cohort-19-yellow"></svg>
       </div>
-      <div class="nav__right">
-        <a href="#">Why</a>
+      <div class="nav__right u-hide-st-med">
+        <a href="#">Why We're Better</a>
         <a href="#">Instructors</a>
         <a href="#">Tuition</a>
-        <a href="#" class="btn">Apply now</a>
+        <a href="#" class="btn jsModalTrigger" data-trigger="apply">Apply now</a>
+      </div>
+      <div class="nav__mobile u-hide-med jsCanvasTrigger">
+        <span>Menu</span><svg><use xlink:href="/symbol/svg/sprite.symbol.svg#menu_filled"></svg>
       </div>
     </div>
   </nav>
 
   <section class="s--colored Intro">
+    <div class="Intro__bg"></div>
     <div class="wrap--large">
       <div class="Intro__overlay">
         <div class="Intro__content">
@@ -66,7 +78,7 @@
 
 <p>Trapped in a rut with a joyless job? Just got laid off? Wanna switch career and not sure how to take the plunge? With the huge shortage of web developers around the world, experience how it feels to be sought-after and appreciated for your talent. Get hired by exciting startups and tech companies in Asia in just 10 weeks!</p>
 <p class="u-center Intro__cta">
-  <a href="#" class="btn">Apply Now</a>
+  <a href="#" class="btn jsModalTrigger" data-trigger="apply">Apply now</a>
 </p>
 
         </div>
@@ -133,14 +145,16 @@
         <div class="wrap--large">
           <div class="why__grid">
             <div class="why__image">
-              <svg class="u-hide-st-small"><use xlink:href="/symbol/svg/sprite.symbol.svg#business"></svg>
+              <img class="u-hide-st-small" src="/images/intern.jpg" alt="">
+              
               <!--(Note: Use Logos for companies as SVG instead)-->
             </div>
             <div class="why__content">
               <h3 class="h3 why__title">No other coding school in singapore guarantees you a 1-month internship</h3>
 
               <p class="u-hide-small u-text-center">
-                <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#business"></svg>
+                <img src="/images/intern.jpg" alt="">
+                
               </p>
 
               <p>
@@ -192,12 +206,11 @@
         </div>
       </div>
     </article>
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="wrap--large">
-    <h2 class="h1 Instructor__title">Meet Your Instructor</h2>
+  <section>
+    <div class="wrap--large">
+      <h2 class="h1 Instructor__title">Meet Your Instructor</h2>
 
 <div class="Instructor">
   <div class="Instructor__img u-hide-st-small">
@@ -219,12 +232,12 @@
 
 
 
-  </div>
-</section>
+    </div>
+  </section>
 
-<section class="s--colored s__gray">
-  <div class="wrap--large tuition">
-    <h2 class="h1 u-text-center">Tuition and Dates</h2>
+  <section class="s--colored s__gray">
+    <div class="wrap--large tuition">
+      <h2 class="h1 u-text-center">Tuition and Dates</h2>
 
 
 
@@ -236,7 +249,7 @@
 
 
 <div class="l-g2 tuition__table">
-  <a href="#" class="tuition__price">
+  <a href="#" class="tuition__price jsModalTrigger" data-trigger="apply" data-buy="full">
     <h3 class="tuition__title h3">One Time Payment</h3>
     <ul>
       <li>One time payment of $8,970</li>
@@ -245,7 +258,7 @@
       <span class="btn">Reserve My Seat</span>
     </p>
   </a>
-  <a href="#" class="tuition__price--secondary">
+  <a href="#" class="tuition__price--secondary  jsModalTrigger" data-trigger="info" data-buy="staggered">
     <h3 class="tuition__title h3">Staggered Payment</h3>
     <ul>
       <li>Upfront payment of $4,970</li>
@@ -258,26 +271,26 @@
 </div>
 
 <p class="small c-gray u-text-center">Costs includes tuition, course materials, complimentary after-class fitness program and 1 year of 1-on-1 post-course support.</p>
-  </div>
-</section>
+    </div>
+  </section>
 
-<section class="cuppage-container">
-  <div class="wrap">
-    <h2 class="h1">Strategic Location</h2>
-    <p>Classes will be held at THE HUB SINGAPORE’s new location @ CUPPAGE.</p>
-    <p>This location is carefully chosen for its strategic position to provide great value to our students. With The Hub’s mission to educate and nurture the startup ecosystem, our graduates are placed strategically in the center of startup action and corporate innovation, and where industry connections can be made naturally and easily.</p>
-    <br>
-  </div>
-  <div class="cuppage"> </div>
-</section>
+  <section class="cuppage-container">
+    <div class="wrap">
+      <h2 class="h1">Strategic Location</h2>
+      <p>Classes will be held at THE HUB SINGAPORE’s new location @ CUPPAGE.</p>
+      <p>This location is carefully chosen for its strategic position to provide great value to our students. With The Hub’s mission to educate and nurture the startup ecosystem, our graduates are placed strategically in the center of startup action and corporate innovation, and where industry connections can be made naturally and easily.</p>
+      <br>
+    </div>
+    <div class="cuppage"> </div>
+  </section>
 
-<section class="s--colored s__gray">
-  <div class="wrap">
+  <section class="s--colored s__gray">
+    <div class="wrap">
 
-    <h2 class="h1">Have Questions?</h2>
+      <h2 class="h1">Have Questions?</h2>
 
-    <article>
-      <p><p></p></p>
+      <article>
+        <p><p></p></p>
 <h2 class="h4">I’m not sure. What technology should I be learning?</h2>
 
 <p>Our hiring partners told us that our program should be focused on HTML, CSS and JavaScript - the three core languages you need to know to build amazing websites and applications. They are considered the most important and most widely deployed languages in programming.</p>
@@ -290,55 +303,92 @@
 <p>We’ve teamed up with HackerTrail and together we will work with hiring partners at startups and tech companies to place our graduates. You can be sure the skills you take away are the skills that top-tier companies want.</p>
 <p><img width="150px" src="/images/hackertrail.png" alt="Hackertrail"></p>
 
-    </article>
-  </div>
-</section>
+      </article>
+    </div>
+  </section>
 
-<section>
-  <div class="wrap--large">
-    <h2 class="h1 Instructor__title">Meet Your Recruiter</h2>
+  <section>
+    <div class="wrap--large">
+      <h2 class="h1 Instructor__title">Meet Your Recruiter</h2>
 
-    <div class="Instructor leigh">
-      <div class="Instructor__img u-hide-st-small">
-        <img src="/images/leigh.jpg" alt="Leigh Zhao">
-      </div>
-      <div class="Instructor__info">
-        <h3 class="h3 Instructor__name">Leigh Zhao</h3>
-        <h4 class="subtitle Instructor__pos">Admissions &amp; Career Counselor, Bootcamp Manager</h4>
-
-        <p class="u-hide-small u-text-center">
+      <div class="Instructor leigh">
+        <div class="Instructor__img u-hide-st-small">
           <img src="/images/leigh.jpg" alt="Leigh Zhao">
-        </p>
-        <p>Leigh is the manager for the 10-week Web Development Bootcamp and go-to pundit for all matters related to job prep, career support and industry network.</p>
+        </div>
+        <div class="Instructor__info">
+          <h3 class="h3 Instructor__name">Leigh Zhao</h3>
+          <h4 class="subtitle Instructor__pos">Admissions &amp; Career Counselor, Bootcamp Manager</h4>
+
+          <p class="u-hide-small u-text-center">
+            <img src="/images/leigh.jpg" alt="Leigh Zhao">
+          </p>
+          <p>Leigh is the manager for the 10-week Web Development Bootcamp and go-to pundit for all matters related to job prep, career support and industry network.</p>
 <p>She has worked alongside some of the region’s most talented developers in both her own startups and professional career. In her role as a recruiter, she has helped placed people from all over the world in tech positions in Singapore and the region.</p>
 
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="s--colored s__sunglow">
-  <div class="wrap">
-    <h2 class="h1">Is This For You?</h2>
-    <h3 class="subtitle">Let's start a conversation</h3>
-    <p>We approach our intake process like we approach the bootcamp. It is about knowing you as a person, your unique goals and learning style, and supporting you to take on the 12 weeks of intensive learning and network building. This life-changing challenge can be both exhilarating and scary at the same time. And you don’t have to go through it alone. Let’s do this together.</p>
+  <section class="s--colored s__sunglow">
+    <div class="wrap">
+      <h2 class="h1">Is This For You?</h2>
+      <h3 class="subtitle">Let's start a conversation</h3>
+      <p>We approach our intake process like we approach the bootcamp. It is about knowing you as a person, your unique goals and learning style, and supporting you to take on the 12 weeks of intensive learning and network building. This life-changing challenge can be both exhilarating and scary at the same time. And you don’t have to go through it alone. Let’s do this together.</p>
 <p>Whether you’re still exploring or you are ready to apply, we are here for you. Schedule a call or meeting with us.</p>
 
 
-    <p>
-      <a href="#" class="btn">Apply now</a>
-      <a href="#" class="btn btn--secondary">Request Syllabus</a>
-    </p>
-  </div>
-</section>
+      <p>
+        <a href="#" class="btn jsModalTrigger" data-trigger="apply">Apply now</a>
+        <a href="#" class="btn btn--secondary jsModalTrigger" data-trigger="info">Request Syllabus</a>
+      </p>
+    </div>
+  </section>
 </main>
 
+<div class="Modal jsModal">
+  <div class="Modal__overlay">
+    <div class="Modal__content">
+      <form id="form" name="form" novalidate>
+        <div class="form__content jsFormContent">
+          <h3 class="h2">Dig Deeper into the Curriculum</h3>
+          <p>Leave us your name, email and contact number and we'll get back to you shortly</p>
+          <label for="name">
+            <span class="subheader">Your Name</span>
+            <input type="text" name="name" class="" id="name" required>
+            <span class="form__error jsFormError"></span>
+          </label>
+          <label for="email">
+            <span class="subheader">Your Email</span>
+            <input type="email" value="" name="email" class="email" id="email" required>
+            <span class="form__error jsFormError"></span>
+          </label>
+          <label for="phone">
+            <span class="subheader">Your Phone number</span>
+            <input type="text" name="phone" class="" value="" id="phone" required>
+            <span class="form__error jsFormError"></span>
+          </label>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input id="hidden" type="text" name="hidden" tabindex="-1" value=""></div>
+          <label for="">
+            <button class="btn" type="submit" data-cta='apply'>Apply</button>
+            <button class="btn" type="submit" data-cta='info'>Get Syllabus</button>
+          </label>
+        </div>
+        <div class="form__success jsFormSuccess">
+          <span>Thanks! We'll get back to you shortly</span>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
 
 
 
+  </div>
   
 
-  <script src="/js/main-c8fdebfecc.min.js"></script>
+  <script src="/js/main-f91b9baf25.min.js"></script>
 
   
 </body>
