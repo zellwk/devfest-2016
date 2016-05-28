@@ -51,7 +51,8 @@ var config = {
     },
     host: 'localhost',
     port: 3000,
-    open: false
+    open: false,
+    notify: false
   },
 
   deploy: {

@@ -1,10 +1,7 @@
 import svg4everybody from 'svg4everybody'
+require('./modal')
+require('./canvas')
+require('./form')
 
 // Polyfill for external SVG spritesheets
 svg4everybody()
-
-console.log(window.innerWidth)
-
-window.addEventListener('resize', () => {
-  console.log(window.innerWidth)
-})

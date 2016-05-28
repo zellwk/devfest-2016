@@ -36,6 +36,12 @@ html {
   }
 }
 
+.h2 {
+  @include typi($h3-font-map);
+  @include ff(header);
+  font-weight: 500;
+}
+
 .h3 {
   @include ff(subtitle);
 
@@ -77,6 +83,11 @@ em {
 
   color: color(mine);
   font-weight: 500;
+}
+
+.subheader {
+  @include ff(subtitle);
+  font-weight: 700;
 }
 
 .small {

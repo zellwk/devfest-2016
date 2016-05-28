@@ -12,7 +12,7 @@
 
 
 <div class="l-g2 tuition__table">
-  <a href="#" class="tuition__price">
+  <a href="#" class="tuition__price jsModalTrigger" data-trigger="apply" data-buy="full">
     <h3 class="tuition__title h3">One Time Payment</h3>
     <ul>
       <li>One time payment of $8,970</li>
@@ -21,7 +21,7 @@
       <span class="btn">Reserve My Seat</span>
     </p>
   </a>
-  <a href="#" class="tuition__price--secondary">
+  <a href="#" class="tuition__price--secondary  jsModalTrigger" data-trigger="info" data-buy="staggered">
     <h3 class="tuition__title h3">Staggered Payment</h3>
     <ul>
       <li>Upfront payment of $4,970</li>

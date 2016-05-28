@@ -58,8 +58,9 @@
 </head>
 <body>
 
-  {% block content %} {% endblock %}
-
+  <div class="canvas jsCanvas">
+    {% block content %} {% endblock %}
+  </div>
   {% block footerScripts %}
 
   <!--build:js /js/main.min.js -->

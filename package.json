@@ -80,8 +80,12 @@
   },
   "dependencies": {
     "body-parser": "^1.14.2",
+    "es6-promise": "^3.2.1",
     "express": "^4.13.4",
     "github": "^0.2.4",
+    "isomorphic-fetch": "^2.2.1",
+    "mailgun-js": "^0.7.11",
+    "validate-js": "^2.0.1",
     "whatwg-fetch": "^0.11.0"
   },
   "scripts": {

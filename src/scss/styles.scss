@@ -55,3 +55,23 @@
 // @import 'shame';
 @import 'shame2';
 
+
+@mixin bp-utils($bp: $breakpoints) {
+  $keys: map-keys($bp);
+
+  @each $bp, $val in $bp {
+    .u-hide-st-#{$bp} {
+      @include bp(max $bp) {
+        display: none !important;
+      }
+    }
+
+    .u-hide-#{$bp} {
+      @include bp($bp) {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@include bp-utils;

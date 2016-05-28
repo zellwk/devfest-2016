@@ -20,7 +20,7 @@
   padding-left: vr(1);
   padding-right: vr(1);
 
-  @include bp("large+pad") {
+  @include bp("large-with-pad") {
     padding-left: 0;
     padding-right: 0;
   }
@@ -100,6 +100,80 @@ nav a {
   font-weight: bold;
 }
 
+.nav__mobile {
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+
+  span {
+    @include acumin;
+
+    margin-right: 0.5em;
+  }
+
+  svg {
+    color: white;
+    width: vr(1);
+    height: vr(0.9);
+  }
+}
+
+// Canvas
+// ------------
+.canvas {
+  overflow-x: hidden;
+}
+
+.canvas__off {
+  position: fixed;
+  right: vr(-10);
+  top: 0;
+  bottom: 0;
+  width: vr(10);
+  background: black;
+  z-index: 10;
+  transition: transform 0.4s ease-out;
+
+  .canvas.is-shown & {
+    transform: translateX(vr(-10));
+  }
+
+  a:not(.btn) {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: vr(0.5) vr(1);
+  }
+
+  a,
+  a:hover,
+  a:active,
+  a:focus {
+    transition: background 0s linear;
+  }
+
+  a:hover {
+    background: color(marine);
+  }
+
+  a + a:not(.btn) {
+    border-top: 1px solid #555;
+  }
+
+  .btn {
+    display: block;
+  }
+}
+
+.canvas__on {
+  transition: transform 0.4s ease-out;
+}
+
+.canvas.is-shown .canvas__on {
+  transform: translate3d(vr(-10), 0, 0);
+}
+
 .logo {
   @include ff(header);
 
@@ -113,17 +187,39 @@ nav a {
 
 // Intro
 .Intro {
-  background: url("../images/developer.jpg") no-repeat;
-  background-size: cover;
-  background-position: 100% 0%;
+  position: relative;
   color: white;
+  padding-top: vr(3.5);
+  padding-bottom: vr(3.5);
+
+  @include bp(mega) {
+    padding-top: vr(5);
+    padding-bottom: vr(5);
+  }
+}
+
+.Intro__bg {
+  $bgblur: 5px;
+
+  position: absolute;
+  top: $bgblur * -2;
+  left: $bgblur * -2;
+  right: $bgblur * -2;
+  bottom: $bgblur * -2;
+  z-index: -1;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/developer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
   text-shadow: 0 1px 0 black, 0 0 15px rgba(0, 0, 0, 0.45);
+  filter: blur($bgblur);
 }
 
 .Intro__overlay {
   margin: vr(-2);
   padding: vr(2);
-  background: rgba(0, 0, 0, 0.25);
+
+  // background: rgba(0, 0, 0, 0.25);
 }
 
 .Intro__content {
@@ -142,13 +238,14 @@ nav a {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  display: block;
   background-image: url("../images/cohort-logo-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 120% 0;
-  opacity: 0.1;
+  background-position: calc(100% + #{vr(4)}) calc(100% + #{vr(3)});
+  opacity: 0.05;
 }
 
 // Why
@@ -515,16 +612,118 @@ nav a {
 }
 
 .cuppage {
-  margin-top: vr(2);
+  margin-top: vr(0.75);
   margin-left: -2px;
   margin-right: -2px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("../images/cuppage.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("../images/collage.jpg");
   background-size: cover;
   background-position: 50% 100%;
   text-shadow: 0 1px 0 #000;
   font-weight: bold;
   height: 0;
-  padding-bottom: 76.5011119%;
+  padding-bottom: 56.7627494%;
+}
+
+// Modal
+.Modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  transition: background-color 0.25s ease-in, z-index 0s 0.25s linear;
+  align-items: center;
+
+  @include typi($small-map);
+}
+
+.Modal.is-shown {
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.25s ease-out, z-index 0s 0s linear;
+}
+
+.Modal__overlay {
+  // @extend %l-single--container;
+}
+
+.Modal__content {
+  max-width: 25rem;
+  position: relative;
+  padding: vr(2);
+  background: #fff;
+  opacity: 0;
+  box-shadow: 0 0 1rem #000;
+  transition: opacity 0.25s ease-in, transform 0.25s ease-in;
+  transform: scale(0.9, 0.9);
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: vr(0.5);
+  }
+}
+
+.Modal.is-shown .Modal__content {
+  opacity: 1;
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  transform: scale(1, 1);
+}
+
+.Modal__close {
+  position: absolute;
+  top: vr(0.75);
+  right: vr(0.75);
+  width: vr(1);
+  height: vr(1);
+  cursor: pointer;
+}
+
+// Form
+// ==========
+form {
+  display: block;
+
+  label {
+    display: block;
+    margin-top: vr(0.75);
+  }
+
+  span {
+    display: block;
+    margin-bottom: vr(0.125);
+
+    @include typi($small-map);
+  }
+
+  input {
+    display: block;
+    border: 1px solid #ddd;
+
+    @include typi($small-map);
+
+    padding: 0.5em 0.75em;
+    width: 100%;
+  }
+}
+
+.form__success {
+  display: none;
+}
+
+.form__error {
+  @include typi($even-smaller-map);
+  color: color(coralred)
+}
+
+.form__success.is-shown {
+  display: block;
 }
 
 // Utilities
@@ -535,28 +734,4 @@ nav a {
 
 .u-text-right {
   text-align: right !important;
-}
-
-.u-hide-tiny {
-  @include bp(max tiny) {
-    display: none !important;
-  }
-}
-
-.u-hide-st-small {
-  @include bp(max small) {
-    display: none !important;
-  }
-}
-
-.u-hide-small {
-  @include bp(small) {
-    display: none !important;
-  }
-}
-
-.u-hide-med {
-  @include bp(med) {
-    display: none !important;
-  }
 }

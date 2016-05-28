@@ -1,14 +1,14 @@
 section {
-  margin: vr(3) 0;
-  @include bp(med) {
+  margin: vr(2.5) 0;
+  @include bp(mega) {
     margin: vr(5) 0;
   }
 }
 
 .s--colored {
   margin: 0;
-  padding: vr(3) 0;
-  @include bp(med) {
+  padding: vr(2.5) 0;
+  @include bp(mega) {
     padding: vr(5) 0;
   }
 }
