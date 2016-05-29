@@ -10,12 +10,13 @@
 
 {# Seats are limited. We want to make sure you get personalized attention from our instructors so we'll cap each intake to a maximum of 15 students. We also provide FREE after-class fitness programs and FREE 1 year of 1-on-1 post-course support. #}
 
+<p class="u-text-center">We offer flexible payment terms. You may choose from:</p>
 
 <div class="l-g2 tuition__table">
   <a href="#" class="tuition__price jsModalTrigger" data-trigger="apply" data-buy="full">
     <h3 class="tuition__title h3">One Time Payment</h3>
     <ul>
-      <li>One time payment of $8,970</li>
+      <li>One time payment of $8,970 at registration</li>
     </ul>
     <p>
       <span class="btn">Reserve My Seat</span>
@@ -24,8 +25,8 @@
   <a href="#" class="tuition__price--secondary  jsModalTrigger" data-trigger="info" data-buy="staggered">
     <h3 class="tuition__title h3">Staggered Payment</h3>
     <ul>
-      <li>Upfront payment of $4,970</li>
-      <li>Monthly payment of $900 for 6 months after graduation</li>
+      <li>One upfront payment of $4470 at registration </li>
+      <li>monthly payment of $900 for 6 months after graduation </li>
     </ul>
     <p>
       <span href="#" class="btn--secondary">Reserve My Seat</span>
