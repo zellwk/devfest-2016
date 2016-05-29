@@ -76,11 +76,11 @@
 
 // Nav
 // ==========
-nav {
+.nav {
   background: black;
 }
 
-nav .wrap--flex {
+.nav .wrap--flex {
   justify-content: space-between;
   align-items: center;
   padding-top: vr(0.5);
@@ -91,7 +91,7 @@ nav .wrap--flex {
   color: white;
 }
 
-nav a {
+.nav a {
   color: white;
   text-decoration: none;
   display: inline-block;

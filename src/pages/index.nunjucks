@@ -9,22 +9,24 @@ data: ['data/lessons.json', 'data/program.json']
 {% block content %}
 
 <div class="canvas__off jsCanvasOff">
-  <a href="#">Why We're Better</a>
-  <a href="#">Instructors</a>
-  <a href="#">Tuition</a>
-  <a href="#" class="btn jsModalTrigger" data-trigger="apply">Apply now</a>
+  <nav>
+    <a href="#why">Why We're Better</a>
+    <a href="#instructor">Instructor</a>
+    <a href="#tuition">Tuition</a>
+    <a href="#" class="btn jsModalTrigger" data-trigger="apply">Apply now</a>
+  </nav>
 </div>
 
 <main class="canvas__on">
-  <nav>
+  <nav class="nav">
     <div class="wrap--flex">
       <div class="nav__left">
         <svg viewbox="0 0 834 294" preserveAspectRatio="xMinYMid" class="logo"><use xlink:href="/symbol/svg/sprite.symbol.svg#cohort-19-yellow"></svg>
       </div>
       <div class="nav__right u-hide-st-med">
-        <a href="#">Why We're Better</a>
-        <a href="#">Instructors</a>
-        <a href="#">Tuition</a>
+        <a href="#why">Why We're Better</a>
+        <a href="#instructor">Instructor</a>
+        <a href="#tuition">Tuition</a>
         <a href="#" class="btn jsModalTrigger" data-trigger="apply">Apply now</a>
       </div>
       <div class="nav__mobile u-hide-med jsCanvasTrigger">
@@ -61,7 +63,7 @@ data: ['data/lessons.json', 'data/program.json']
     </div>
   </section>
 
-  <section class="s--colored s__gray">
+  <section id='why' class="s--colored s__gray">
     <div class="why wrap--large">
       <h2 class="h1 u-text-center">Why We're Better</h2>
       <h3 class="subtitle u-text-center">Than any other coding schools</h3>
@@ -180,13 +182,13 @@ data: ['data/lessons.json', 'data/program.json']
     </article>
   </section>
 
-  <section>
+  <section id="instructor">
     <div class="wrap--large">
       {% markdown 'partials/instructors.nunjucks' %}
     </div>
   </section>
 
-  <section class="s--colored s__gray">
+  <section id='tuition' class="s--colored s__gray">
     <div class="wrap--large tuition">
       {% markdown 'partials/tuition.nunjucks' %}
     </div>

@@ -12,9 +12,13 @@ module.exports = {
     resolve: {
       root: [
         './src/bower_components/'
-      ]
+      ],
       // Using aliases (if needed)
-      // alias: { 'TweenLite': 'gsap/src/uncompressed/TweenLite' }
+      alias: {
+        'TweenLite': 'gsap/src/uncompressed/TweenLite' ,
+        // 'TweenMax': 'gsap/src/minified/TweenMax',
+        'ScrollTo': 'gsap/src/uncompressed/plugins/ScrollToPlugin'
+      }
     },
     devtool: '#source-map',
     module: {
