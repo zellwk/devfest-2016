@@ -1,0 +1,125 @@
+.c-logo {
+  margin: rhythm(1) 0;
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 0.5rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+
+  @include bp(large) {
+    font-size: 0.5rem;
+  }
+
+
+  .c-logo__devfest {
+    // font-size: 3em;
+    font-size: 2.75em;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .c-logo__2015 {
+    font-size: 2.5em;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.Logo--hero {
+  @extend .c-logo;
+
+  $fz: 15.68px;
+
+  font-size: 15.68px;
+  width: 300px / $fz * 1em;
+  height: 300px / $fz * 1em;
+  padding-top: 70px / $fz * 1em;
+  padding-left: .125em;
+  border-radius: 150px / $fz * 1em;
+  border: (6px / $fz * 1em) solid color(bleu-de-france);
+  box-shadow: 0 0 0 (9px / $fz * 1em) white, 0 0 0 (18px / $fz * 1em) color(bleu-de-france), 0 0 (18px / $fz * 1em) (20px / $fz * 1em) rgba(255, 255, 255, 0.2);
+  background: radial-gradient(lighten(color(bleu-de-france), 5%), color(bleu-de-france));
+  transform: scale(0.88);
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: none;
+  animation: openup 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
+
+  // @include bp(max 480px) {
+  //   margin-top: rhythm(9);
+  // }
+
+  &:after, &:before {
+    content: "";
+    position: absolute;
+    width: 400px / $fz * 1em;
+    background: linear-gradient(to bottom, color(bleu-de-france) 50%, white 100%);
+    height: 180px / $fz * 1em;
+    top: -130px / $fz * 1em;
+    left: -50px / $fz * 1em;
+    transform: rotateZ(-9deg);
+    border-bottom: (9px / $fz * 1em) solid white;
+    box-shadow: inset 0 0 0 (9px / $fz * 1em) color(bleu-de-france);
+    -webkit-animation: none;
+    animation: openup_top 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
+  }
+
+  &:after {
+    background: linear-gradient(to top, color(bleu-de-france) 50%, white 100%);
+    top: auto;
+    bottom: -130px / $fz * 1em;
+    border-top: (9px / $fz * 1em) solid white;
+    border-bottom: 0;
+    -webkit-animation: none;
+    animation: openup_bottom 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
+  }
+
+  .c-logo__devfest,
+  .c-logo__2015 {
+    display: block;
+  }
+
+  .c-logo__singapore {
+    padding: (10.5px / $fz * 1em) 0;
+    letter-spacing: 1.1em;
+  }
+}
+
+@keyframes openup {
+  0% {
+    overflow: hidden;
+    transform: scale(0.5);
+  }
+
+  100% {
+    overflow: hidden;
+    transform: scale(0.88);
+  }
+}
+
+@keyframes openup_top {
+  0% {
+    transform: translate(0, 96px) rotateZ(0);
+  }
+
+  100% {
+    transform: translate(0, 0) rotateZ(-9deg);
+  }
+}
+
+@keyframes openup_bottom {
+  0% {
+    transform: translate(0, -96px) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotateZ(-9deg);
+  }
+}

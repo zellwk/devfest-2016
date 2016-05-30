@@ -3,13 +3,32 @@
 // General mixins for projects
 // ======
 
+@mixin acolor($color, $colors: $colors) {
+  // Sets color to value in $colors map if possible, 
+  // else fall back to given color
+  $color: if(map-has-key($colors, $color), map-get($colors, $color), $color);
+
+  &,
+  &:visited {
+    color: $color;
+  }
+}
+
 // Clearfix
 // --------
 @mixin cf {
   &:after {
+    content: " ";
     display: table;
     clear: both;
-    content: ' ';
+  }
+}
+
+// EQ
+// --
+@mixin eq($state) {
+  [data-eq-state="#{$state}"] & {
+    @content;
   }
 }
 
@@ -20,25 +39,24 @@
   @if $value == on {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  } @else {
+  }
+
+  @else {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
 }
 
-// Mappy Breakpoint shortcuts
-//
-// BP [Mixin]
-// ----------
-// Convenience mixin for Mappy Breakpoints
-@mixin bp($queries, $type: all, $query-fallback: null, $breakpoints: $breakpoints) {
-  @include mappy-bp($queries, $type, $query-fallback, $breakpoints) {
-    @content;
-  }
-}
-
-@mixin query($query, $mappy-queries: $queries) {
-  @include mappy-query($query, $mappy-queries);
+// Image-replacement 
+// -----------------
+// Hides text for image replacement
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+@mixin hide-text {
+  font: #{0 / 0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
 
 // Is-invisible
@@ -47,12 +65,12 @@
 // - http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin is-invisible {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
   border: 0;
 }
 
@@ -61,17 +79,31 @@
 // Turns off the element-invisible effect.
 @mixin is-visible {
   position: static;
-  width: auto;
-  height: auto;
-  overflow: auto;
   clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
 }
 
 // Placeholder
 // -----------
 // Changes Placeholder styles
 @mixin placeholder {
-  &::placholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    //  Firefox 18-
+    @content;
+  }
+
+  &::-moz-placeholder {
+    // Firefox 19+
+    @content;
+  }
+
+  &:-ms-input-placeholder {
     @content;
   }
 }
@@ -79,79 +111,48 @@
 // SELECTION
 // ---------
 // Changes selected color and background color
-@mixin selection($bg-color, $text-color) {
+@mixin selection($bgColor, $textColor) {
+  &::-moz-selection {
+    background: $bgColor;
+    color: $textColor;
+  }
+
   &::selection {
-    color: $text-color;
-    background: $bg-color;
+    background: $bgColor;
+    color: $textColor;
   }
 }
 
-// Text overflow
-// -------------
-// Requires inline-block or block for proper styling
-@mixin text-overflow {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+// Text input
+// ------------
+// Calls addresses all text inputs in one selector
+$text-input-types: text, password, date, datetime, datetime-local, month, week, email, number, search, tel, time, url, color !default;
+
+@mixin text-input($types: $text-input-types) {
+  $selectors: ();
+
+  @each $type in $types {
+    $selector: unquote("input[type='#{$type}']");
+    $selectors: append($selectors, $selector, comma);
+  }
+
+  & #{$selectors} {
+    @content;
+  }
 }
 
+// Trans-prep
+// ----------
+// Prepares for transforms. Gives backface-visibility: hidden 
+// to remove flickering effect on Webkit browsers
+// - http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css
+@mixin trans-prep {
+  // backface visibility
+  backface-visibility: hidden;
+}
 
 // Z-index
 // -------
 @mixin zi($location) {
   z-index: map-get($zindex, $location);
-}
-
-// Shape mixins
-// -----
-// Shapes availble within this mixin files are:
-// ==========
-
-// Square
-// ------
-@mixin square($size) {
-  @include size($size, $size);
-}
-
-// Circle
-// ------
-@mixin circle($width) {
-  width: $width;
-  height: $width;
-  border-radius: 100%;
-}
-
-// Triangle
-// --------
-// We use this to create isosceles triangles
-// - $triangle-size       - Used to set border-size. No default, set a px or em size.
-// - $triangle-color      - Used to set border-color which makes up triangle. No default
-// - $triangle-direction  - Used to determine which direction triangle points.
-//                          Options: top, bottom, left, right
-@mixin triangle($triangle-size, $triangle-color, $triangle-direction) {
-  display: block;
-  width: 0;
-  height: 0;
-  border: inset $triangle-size;
-  content: '';
-
-  @if $triangle-direction == top {
-    border-color: $triangle-color transparent transparent;
-    border-top-style: solid;
-  }
-
-  @if $triangle-direction == bottom {
-    border-color: transparent transparent $triangle-color;
-    border-bottom-style: solid;
-  }
-
-  @if $triangle-direction == left {
-    border-color: transparent transparent transparent $triangle-color;
-    border-left-style: solid;
-  }
-
-  @if $triangle-direction == right {
-    border-color: transparent $triangle-color transparent transparent;
-    border-right-style: solid;
-  }
 }

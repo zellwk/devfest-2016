@@ -1,0 +1,81 @@
+// html,
+// body,
+// .c-canvas,
+// .c-canvas__off-canvas,
+// .c-canvas__on-canvas {
+//   height: 100%;
+// }
+
+$offCanvasWidth: 280px;
+
+// .c-canvas {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+.c-canvas__off-canvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -$offCanvasWidth;
+  width: $offCanvasWidth;
+  overflow: auto;
+  background: mix(black, color(bleu-de-france), 90%);
+  transition: right 0.4s ease-out;
+  z-index: 10000;
+}
+
+.c-canvas__on-canvas {
+  position: relative;
+  left: 0;
+  z-index: 20;
+  overflow: auto;
+  // Enable webkit overflow, but spoils the logo..
+  // -webkit-overflow-scrolling: touch;
+  background: whitesmoke;
+  transition: left 0.4s ease-out;
+}
+
+.c-canvas .c-canvas__fixed-item {
+  position: relative;
+  left: 0;
+  transition: all 0.4s ease-out;
+}
+
+// When Canvas is opened
+.c-canvas.is-open .c-canvas__off-canvas {
+  right: 0;
+}
+
+.c-canvas.is-open .c-canvas__on-canvas {
+  overflow: hidden;
+  left: -$offCanvasWidth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.c-canvas.is-open .jsSmartHeadClone .c-canvas__fixed-item {
+  left: -$offCanvasWidth;
+  right: $offCanvasWidth;
+}
+
+.c-canvas-toggle {
+  background: none;
+
+  span, .i-menu {
+    vertical-align: middle;
+  }
+
+  span {
+    margin-right: 0.25em;
+    color: white;
+  }
+
+  .i-menu {
+    path {
+      fill: white;
+    }
+  }
+}

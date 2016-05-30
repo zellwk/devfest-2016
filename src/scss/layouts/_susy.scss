@@ -1,9 +1,7 @@
-$column-width: vr(5.5);
-$susy: (
-  columns: 4,
-  column-width: $column-width,
-  gutters: vr(0.75)/$column-width,
-  gutter-position: inside-static,
+$susy:(
+  container: 1100px,
+  columns: 15,
+  gutters: 1,
   global-box-sizing: border-box,
-  // debug: (image: show-columns)
-);
+  debug: (image: show-columns, color: rgba(red, 0.5))
+  );

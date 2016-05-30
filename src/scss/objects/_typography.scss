@@ -2,94 +2,98 @@
 // ---------------
 // Sets typography for all of document
 // ===============
-
+//
 html {
-  @include typi-base;
+  @include ff(primary);
 
-  @include ff(text);
+  // font-weight: 300;
+}
 
-  @include font-smoothing;
-
-  font-weight: 500;
-  color: #111;
-
+body {
   // Optmizes font rendering for legibility.
   // May break with some browsers, comment out as necessary.
   text-rendering: optimizeLegibility;
-
-  // Remove discretionary-ligatures as necessary
-  font-variant-ligatures: common-ligatures;
 }
 
-.h1 {
-  @include ff(header);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
 
-  @include typi($h1-font-map);
+h1 {
+  margin-bottom: rhythm(0.5);
+  font-size: ms(3);
+  font-weight: normal;
+  line-height: rhythm(3);
+}
 
-  font-weight: 500;
+h2 {
+  font-weight: 400;
 
-  &,
-  & + .subtitle {
-    @include bp(max tiny) {
-      text-align: center;
-    }
+  @include bp(med) {
+    font-size: ms(2);
+
+    @include adjust-leading-to(2);
   }
 }
 
-.h2 {
-  @include typi($h3-font-map);
-  @include ff(header);
-  font-weight: 500;
+h3 {
+  font-size: ms(1);
+  font-weight: normal;
 }
 
-.h3 {
-  @include ff(subtitle);
-
-  @include typi($h3-font-map);
-}
-
-.h4 {
-  @include ff(subtitle);
-
-  @include typi($h4-font-map);
+h4 {
+  font-weight: normal;
 }
 
 strong {
-  font-weight: bold;
+  @include fw(bold);
 }
 
 em {
   font-style: italic;
 }
 
-.title {
-  @include ff(header);
-
-  @include typi($title-map);
-
-  font-weight: 500;
-  max-width: 50rem;
-  margin-right: auto;
-  margin-left: auto;
+pre {
+  white-space: pre;
 }
 
-@mixin acumin {
-  position: relative;
-  top: -0.1em;
+.o-cursive {
+  @include ff(secondary);
 }
 
-.subtitle {
-  @include ff(subtitle);
+.o-italic {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
 
-  color: color(mine);
-  font-weight: 500;
+  @include ff(secondary);
 }
 
-.subheader {
-  @include ff(subtitle);
+a {
+  color: color(charcoal);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: color(froly);
+  }
+}
+
+p {
+  line-height: 1.4;
+}
+
+.o-block__title-2 {
+  font-family: 'Open Sans Condensed';
   font-weight: 700;
 }
 
-.small {
-  @include typi($small-map);
+html {
+  @include typi-base;
 }

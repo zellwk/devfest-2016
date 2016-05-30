@@ -9,15 +9,9 @@
 // ================
 
 $breakpoints: (
-  'tiny': 350px,
-  'small': 500px,
-  'med': 680px,
-  'large': 900px,
-  'large-with-pad': (900px + 50px),
-  'wide': 1100px,
-  'mega': 1500px,
-  );
-
-$queries: (
-  'tablet': bp(med wide),
+  "small"     : 320px,
+  "med"       : 640px,
+  "large"     : 1000px,
+  "wide"      : 1400px,
+  "mega"      : 1800px,
   );

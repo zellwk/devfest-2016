@@ -1,20 +1,21 @@
 
 // Themes
 // ------
-// Map for project themes. Uses a theming method
-// developed by @zellwk with the help of @ezekkkg.
+// Map for project themes. Uses a theming method 
+// developed by @zellwk with the help of @ezekkkg. 
 // See Themify mixin for more info.
 // ======
 $themes: (
-  sunglow: (
-    background: color(sunglow),
+  theme1: (
+    color: #333,
+    background: #fff,
     ),
-  midnight: (
-    color: #fff,
-    background: color(midnight)
+  theme2: (
+    color: color(white),
+    background: #000
     ),
-  gray: (
-    background: #f6f6f6,
-    border: #eee
+  theme3: (
+    color: red, 
+    background: url("../images/someimage.png")
     )
   );

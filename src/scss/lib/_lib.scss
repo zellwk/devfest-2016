@@ -21,28 +21,32 @@
 // Then, import those libraries in the file here.
 // ==========
 
-@import 'normalize.css/normalize';
+// Reset
+// -----
+@import "normalize-scss/_normalize";
 
 // Susy and Susy Helpers
 // ---------------------
-@import 'susy/sass/susy';
-// @import 'susy-helpers/susy-helpers';
+@import "susy/sass/susy";
+@import "susy-helpers/susy-helpers";
 
 // Breakpoints
 // ------------
-@import 'mappy-breakpoints/mappy-breakpoints';
+@import "breakpoint-sass/stylesheets/breakpoint";
+@import "mappy-breakpoints/mappy-breakpoints";
 
 // Typography
 // ----------
-@import 'typi/scss/typi';
-@import 'modular-scale/stylesheets/modular-scale';
+@import "vertical-rhythms-without-compass/vertical-rhythms";
+@import "typi/scss/typi";
 
 // Forms
 // -----
-@import 'adaptive-placeholders/adaptive-placeholders';
+@import "adaptive-placeholders/adaptive-placeholders";
 
 // Misc
 // ----
-@import 'sass-hidpi/hidpi'; // for responsive images
-@import 'themify/themify'; // for theming
-@import 'mathsass/dist/math'; // for pow
+
+@import "sass-hidpi/hidpi"; // for responsive images
+@import "themify/themify"; // for theming
+@import "modular-scale/stylesheets/modular-scale";

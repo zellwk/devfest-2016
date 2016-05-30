@@ -1,49 +1,66 @@
-// Libraries
+// Libraries 
 // ---------
+@import "lib/lib";
 
-@import 'lib/lib';
-
-// Helpers
+// Helpers 
 // -------
-@import 'helpers/helpers';
-// @import 'sprite'; // Import sprite if gulp-spriting is used
+@import "helpers/helpers";
+
+// @import "sprite"; // Import sprite if gulp-spriting is used
 
 // Variables
 // ---------
-@import 'variables/colors';
-@import 'variables/typography';
-@import 'variables/themes';
-@import 'variables/breakpoints';
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/themes";
+@import "variables/breakpoints";
 
 // Reset and base files
 // --------------------
-@import 'base/reset';
-@import 'base/base';
+@import "base/reset";
+@import "base/base";
 
-// Layouts
+// Layouts 
 // -------
-@import 'layouts/susy';
-@import 'layouts/layouts';
+@import "layouts/susy";
+@import "layouts/layouts";
+@import "layouts/canvas";
+@import "layouts/header";
 
 // Objects
 // -------
 // Repeatable objects across the site
-@import 'objects/buttons';
-@import 'objects/section';
-@import 'objects/typography';
+@import "objects/buttons";
+@import "objects/block";
 
+@import "objects/form";
+
+// @import "objects/media";
+@import "objects/typography";
 
 // Components
 // ----------
 // For individual, isolated components
-// @import 'components/lessons';
-// @import 'components/program';
-// @import 'components/nav';
-
+@import "components/logo";
+@import "components/nav";
+@import "components/hero";
+@import "components/sponsors";
+@import "components/events";
+@import "components/events-header";
+@import "components/hotels";
+@import "components/interrupt";
+@import "components/css-clock";
+@import "components/spinner";
+@import "components/social";
+@import "components/jobs";
+@import "components/quote";
+@import "components/featured";
+@import "components/new";
+@import "components/sponsors-grid";
 
 // Utilities
 // ---------
-// @import 'utilities';
+// @import "utilities";
 
 // Page Specific Overrides
 // -----------------------
@@ -52,26 +69,8 @@
 // Shame
 // -----
 // For new style snippets that haven't been sorted and commented yet
-// @import 'shame';
-@import 'shame2';
+@import "shame";
 
-
-@mixin bp-utils($bp: $breakpoints) {
-  $keys: map-keys($bp);
-
-  @each $bp, $val in $bp {
-    .u-hide-st-#{$bp} {
-      @include bp(max $bp) {
-        display: none !important;
-      }
-    }
-
-    .u-hide-#{$bp} {
-      @include bp($bp) {
-        display: none !important;
-      }
-    }
-  }
+a {
+  text-decoration: underline;
 }
-
-@include bp-utils;

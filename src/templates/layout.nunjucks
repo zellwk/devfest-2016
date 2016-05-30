@@ -6,8 +6,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {# Favicon #}
-  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <title>DevFest.Asia 2016 Singapore</title>
+  <meta name="description" content="Southeast Asia's community organized web developer festival"/>
+
+  <meta property="og:title" content="DevFest.Asia - 12th to 22nd Nov 2016, Singapore"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://2016.devfest.asia/"/>
+  <meta property="og:image" content="http://2016.devfest.asia/images/devfest2016-og.png"/>
+  <meta property="og:site_name" content="DevFest.Asia"/>
+  <meta property="og:description" content="Southeast Asia's community organized web developer festival"/>
+
+  <link rel="shortcut icon" href="/images/favicon.png" type="image/png"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans300,400,700|Open+Sans+Condensed:300,300italic,700|Sue+Ellen+Francisco|Roboto+Slab:400,100,300,700|Roboto+Condensed:400,700|Fira+Sans:400,700' rel='stylesheet' type='text/css'>
 
   {% block css %}
   <!--build:css /css/styles.min.css-->
@@ -15,46 +26,9 @@
   <!--endbuild-->
   {% endblock %}
 
-  {% block headScripts %}
-  <!--build:js js/head.min.js -->
-  <!--endbuild -->
-  {% endblock %}
-
-  {# For SEO #}
-  {% block title %}<title> {{title}} | {{siteTitle}} </title>{% endblock %}
-  {% block desc %} <meta name="description" content="{% if description %} {{description}}
-  {% else %} {{siteDescription}}
-  {% endif %}" />{% endblock %}
-
-  {% block canonical %} {# Canonical Tag here #} {% endblock %}
-
-  {# Possible to ensure Google doesn't index pages with ROBOTS #}
-  {# Example: <meta name="robots" content="noindex, nofollow"> #}
-  {% block robots %} {% endblock %}
-
-  {# Open Graph Tags #}
-{#   <meta property="og:site_name" content="{{siteTitle}}"/>
-  {% block ogTitle %} <meta property="og:title" content="{{title}} | {{siteTitle}}"/> {% endblock %}
-  {% block ogDesc %} <meta name="og:description" content="{% if description %} {{description}}
-  {% else %} {{siteDescription}}
-  {% endif %}" />{% endblock %}
-  <meta property="og:email" content="{{siteEmail}}">
-  {% block ogType %}<meta property="og:type" content="website"/>{% endblock %}
-  <meta property="og:url" content="{{siteUrl}}"/>
-  <meta property="og:image" content="{{ogImage}}"/> #}
-
-  {# Twitter Tags #}
-{#   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="{{twitterHandle}}">
-  <meta name="twitter:creator" content="{{twitterHandle}}">
-  {% block twitterTitle %}<meta name="twitter:title" content="{{title}} | {{siteTitle}}">{% endblock %}
-  {% block twitterDesc %} <meta name="twitter:description" content="{% if description %} {{description}}
-  {% else %} {{siteDescription}}
-  {% endif %}" />{% endblock %}
-  <meta name="twitter:image" content="{{twitterImage}}"> #}
-
-  <script src="https://use.typekit.net/qvj6jdp.js"></script>
+  <script src="https://use.typekit.net/dgm4gfk.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 </head>
 <body>
 
@@ -68,5 +42,17 @@
   <!--endbuild -->
 
   {% endblock %}
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-31025490-10', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </body>
 </html>

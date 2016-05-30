@@ -1,0 +1,114 @@
+.c-events-header {
+  line-height: 1;
+  background: radial-gradient(circle, lighten(color(bleu-de-france), 10%), color(bleu-de-france));
+  overflow: hidden;
+  margin-bottom: rhythm(3);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.25);
+
+  a {
+    text-decoration: none;
+  }
+
+  &.is-fixed {
+    //
+ 
+  }
+}
+
+.c-events-wrap {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-top: rhythm(0.7);
+  padding-bottom: rhythm(0.8);
+  padding-right: rhythm(1);
+  padding-left: rhythm(1);
+
+  .wrap {
+    @include bp(med) {
+      max-width: 760px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.c-events-nav {
+  display: flex;
+  font-family: 'Open Sans Condensed';
+  font-weight: bold;
+
+  @include bp(med) {
+    justify-content: center;
+  }
+
+
+  a {
+    display: inline-block;
+    color: white;
+    padding: 0 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+
+    @include bp(max med) {
+      padding: 0 1em;
+    }
+
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    // &:last-child {
+    //   padding-right: 0;
+    // }
+ 
+  }
+
+  .c-events-nav__weekend {
+    color: rgba(white, 0.7);
+  }
+
+  .c-events-nav__day {
+    display: block;
+    text-transform: uppercase;
+    font-size: ms(-2);
+    font-weight: normal;
+    line-height: 1.2em;
+  }
+
+  .c-events-nav__date {
+    display: block;
+  }
+
+  .is-active {
+    color: mix(#E74840, white, 40%);
+  }
+}
+
+.c-events-nav__date--all-week {
+  min-width: 83px;
+}
+
+a.c-events__calendar {
+  display: flex;
+  flex-wrap: nowrap;
+
+  // justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: normal;
+  background-color: color(carmine);
+  margin: 0;
+
+  svg {
+    width: rhythm(1.25);
+    height: rhythm(1.25);
+    fill: white;
+  }
+}

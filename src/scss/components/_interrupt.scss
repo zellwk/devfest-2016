@@ -1,0 +1,99 @@
+// interrupt div
+.c-interrupt {
+  text-align: center;
+  display: block;
+
+  // background: #fafafa;
+  margin-top: rhythm(1);
+  margin-bottom: rhythm(1);
+  padding-top: rhythm(2);
+  padding-bottom: rhythm(2);
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: radial-gradient(circle, mix(black, color(bleu-de-france), 65%), mix(black, color(bleu-de-france), 75%));
+  color: #fff;
+
+  @include bp("med") {
+    margin-top: rhythm(3);
+    margin-bottom: rhythm(3);
+  }
+
+
+  h4, p {
+    color: rgba(#fff, 0.8);
+  }
+}
+
+.c-interrupt__desc {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  a {
+    color: white;
+    text-decoration: underline;
+    &:hover,
+    &:active,
+    &:focus {
+      color: color(carmine);
+    }
+  }
+}
+
+.c-tickets {
+  text-align: center;
+}
+
+.c-interrupt__jobs {
+  @include cf;
+
+  h4 {
+    margin-bottom: rhythm(0.5);
+  }
+}
+
+.c-interrupt__job {
+  text-decoration: none;
+  display: block;
+  margin-top: rhythm(1);
+
+  @include bp(med) {
+    @include gallery(4 of 12);
+
+    margin-top: rhythm(2);
+  }
+}
+
+.c-section-intro {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: rhythm(3);
+  margin-bottom: rhythm(2);
+}
+
+.c-generic {
+  text-align: center;
+  margin-top: rhythm(3);
+
+  ul {
+    max-width: span(8);
+    margin-top: rhythm(1);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    column-count: 2;
+    column-width: span(4 of 8);
+  }
+
+  li {
+    list-style-position: inside;
+  }
+}
+
+.c-interrupt__job-image {
+  padding: rhythm(0.75) rhythm(1);
+  margin-bottom: rhythm(0.25);
+  background: white;
+}

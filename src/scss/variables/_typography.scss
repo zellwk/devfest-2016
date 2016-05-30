@@ -1,5 +1,8 @@
-// Nicer Ampersands
+// Typography
+// ----------
+// ==========
 
+// Nicer Ampersands
 @font-face {
   font-family: 'Ampersand';
   src: local('Baskerville-Italic'), local('GoudyOldStyleT-Italic'), local('Palatino-Italic'), local('Garamond-Italic');
@@ -9,12 +12,11 @@
 // Font Families
 // ------------
 $font-families: (
-  header: ('Ampersand', 'Adelle Condensed','adelle-condensed', Helvetica, Arial, sans-serif),
-  subtitle: ('Ampersand', 'acumin-pro-condensed', Helvetica, Arial, sans-serif),
-  text: ('acumin-pro-semi-condensed', Helvetica, Arial, sans-serif),
-  code: ('Menlo', 'Monaco', 'Consolas', monospace),
-  );
-
+  primary: ('Open Sans', sans-serif),
+  secondary: ('Sue Ellen Francisco', cursive),
+  subtitle: ('Roboto Slab', serif),
+  code: ('Menlo', 'Monaco', 'Consolas', monospace)
+);
 // Typography
 // ----------
 // For all Typography related values.
@@ -33,35 +35,25 @@ $typi: (
   large: (21px)
   );
 
-$title-map: (
-  null: 6 1.2,
-  med: 8 1.15
+$h1-map: (
+  null: (4, 1.25)
   );
 
-$nav-map: (
-  null: -2 1,
-  large: -2
+$h2-map: (
+  null: 5 1.25
   );
 
-$logo-map: (
-  null: 3 1.5
-);
-
-$h1-font-map: (
-  null: (6, 1.25)
-  );
-
-$h3-font-map: (
+$h3-map: (
   null: (2, 1.25),
   med: (2, 1.25),
   large: (2, 1.25)
   );
 
-$h4-font-map: (
+$h4-map: (
   null: (1, 1.25)
   );
 
-$h6-font-map: (
+$h6-map: (
   null: (ms(-1))
   );
 
@@ -71,4 +63,88 @@ $small-map: (
 
 $even-smaller-map: (
   null: -2
+  );
+
+
+
+
+
+
+
+
+
+// Legacy
+
+// Compass Vertical Rhythms Settings
+// ---------------------------------
+$base-font-size: 16px;
+$base-line-height: 21px;
+$round-to-nearest-half-line: true;
+
+// Uses the `rem` unit for all vertical rhythm output
+$rhythm-unit: "rem";
+$ms-ratio: 1.333333333333;
+
+// Font Families
+// ------------
+$font-families: (
+  primary: ('Open Sans', sans-serif),
+  secondary: ('Sue Ellen Francisco', cursive),
+  code: ('Menlo', 'Monaco', 'Consolas', monospace)
+  );
+
+// Font Weights
+// ------------
+$font-weights : (
+  primary: (
+    light: 300 ,
+    normal: 400,
+    bold: 700
+    ),
+  secondary: (
+    light: 300 ,
+    normal: 400,
+    bold: 700
+    )
+  );
+
+// Type Sizes
+// ----------
+// Sets font sizes and line height.
+// Adapted from https://medium.com/p/8e51498c3713
+// See mixin type-scale for more info
+//
+// - requires compass vertical rhythm (included by default)
+// ==========
+
+// Type Scale
+$type-scale: (
+  h1: (
+    font-size: 39.063px,
+    base-lines: 1.75
+    ),
+  h2: (
+    font-size: 31.25px,
+    base-lines: 1.5
+    ),
+  h3: (
+    font-size: 25px,
+    base-lines: 1.25
+    ),
+  h4: (
+    font-size: 20px,
+    base-lines: 1
+    ),
+  h5: (
+    font-size: 12.8px,
+    base-lines: 0.75
+    ),
+  h6: (
+    font-size: 10.24px,
+    base-lines: 0.5
+    ),
+  base: (
+   font-size: $base-font-size,
+   base-lines: 1
+   ),
   );

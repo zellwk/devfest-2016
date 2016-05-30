@@ -1,35 +1,45 @@
 // Theme base
 // ----------
+@include establish-baseline;
 
-p + *,
-* + p {
-  margin-top: vr(0.75);
+html {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
+}
+
+// Adaptation of Lobotomized Owls Selector on p elements
+// http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+p + p,
+p + img,
+img + p {
+  margin-top: rhythm(1);
 }
 
 // Adds default UL and LI styles back ONLY for articles
 // Adds margin bottom of 1 rhythm to images ONLY for articles
 article {
+  h2 + p {
+    margin-top: 1em;
+  }
+
+  * + h2 {
+    margin-top: 2em;
+  }
+
   ul,
   ol {
-    padding-left: 1rem + vr(0.5);
+    margin-left: 1em;
   }
 
   li + li {
-    margin-top: vr(0.25);
-  }
-
-  ul li {
-    list-style-type: disc;
+    margin-top: rhythm(0.5);
   }
 
   ol li {
     list-style-type: decimal;
   }
 
-  * + h2 {
-    margin-top: vr(1.5);
-  }
-  h2 + p {
-    margin-top: vr(0.25);
+  ul li {
+    list-style-type: disc;
   }
 }

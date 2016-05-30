@@ -1,3 +1,169 @@
-main {
-  // margin-bottom: vr(3);
+// Layouts
+// =======
+
+.wrap {
+  @include container(hide);
+
+  padding-left: rhythm(0.5);
+  padding-right: rhythm(0.5);
+
+  @include bp(med) {
+    padding-left: rhythm(1.5);
+    padding-right: rhythm(1.5);
+  }
+}
+
+.wrap--header {
+  @extend .wrap;
+
+  max-width: 1240px;
+}
+
+.wrap--events-header {
+  @extend .wrap;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.l-content {
+  margin-top: rhythm(2);
+}
+
+// Events Layout
+.l-dates,
+.l-company-and-jobs {
+  display: flex;
+  align-items: stretch;
+  padding-top: gutter();
+  padding-bottom: gutter();
+
+  @include bp("med") {
+    margin-top: gutter();
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.l-content .wrap:first-child .l-dates {
+  padding-top: 0;
+}
+
+.l-date {
+  text-align: center;
+
+  @include bp("med") {
+    text-align: left;
+  }
+}
+
+.l-events {
+  width: calc(100% - #{rhythm(3)});
+  margin-left: #{rhythm(3)};
+  padding-left: span(1);
+
+  @include bp(max "med") {
+    margin-top: rhythm(-1);
+  }
+
+
+  @include bp("med") {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.l-event {
+  @include bp(max "med") {
+    margin-top: rhythm(1);
+  }
+
+
+  @include bp("med") {
+    width: span(7 of 14);
+    margin-right: gutter(14);
+    overflow: hidden;
+
+    + & {
+      margin-top: 0;
+    }
+
+    &:nth-child(2n+2) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n+3) {
+      margin-top: gutter(14);
+    }
+  }
+}
+
+// Hotel Layout
+// ------------
+
+.l-hotels {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include bp("med") {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.l-hotel {
+  display: block;
+  width: 100%;
+  margin-bottom: rhythm(1);
+
+  @include bp("med") {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 40px);
+    flex-grow: 1;
+    margin: 20px;
+
+    .TA_selfserveprop {
+      flex: 1;
+    }
+  }
+
+
+  @include bp(large) {
+    width: calc(33% - 40px);
+  }
+
+
+  .widSSP {
+    width: auto !important;
+  }
+}
+
+.c-hotel--featured {
+  width: 100%;
+
+  @include bp(large) {
+    width: calc(66% - 40px);
+  }
+}
+
+// Awesome Grids Margin with Flexbox
+.wrapper {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(red, 0.25);
+}
+
+.test-gallery {}
+
+.test-item {
+  background: rgba(blue, 0.25);
+  height: 60px;
+  border: 1px solid teal;
+  flex-grow: 1;
 }

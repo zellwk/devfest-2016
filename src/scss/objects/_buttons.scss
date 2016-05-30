@@ -1,35 +1,51 @@
-.button,
 .btn {
-  color: white;
   display: inline-block;
-  text-align: center;
-  padding: 0.55em 1em 0.75em;
+  padding: 0.75em 1.5em;
+  background: #E74840;
+  color: white;
+  font-family: 'Open Sans Condensed';
+  font-size: 1rem;
+  letter-spacing: 0.05em;
   font-weight: bold;
-  line-height: 1.2;
-  background: color(coralred);
   text-decoration: none;
-  transition: background 0.15s ease-in;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease;
+  text-transform: uppercase;
 
   &:hover,
   &:active,
   &:focus {
-    transition: background 0.15s ease-out;
-    background: color(midnight);
-  }
-
-  &--secondary {
-    @extend .btn;
-
-    background: lighten(desaturate(color(marine), 30%), 10%);
-    background: color(marine);
+    background: lighten(#E74840, 10%);
+    color: white;
   }
 }
 
-.btn + .btn {
-  @include bp(max tiny) {
-    margin-top: vr(0.5);
+.btn--highlight {
+  @extend .btn;
+
+  background: color(froly);
+  color: rgba(white, 0.85);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: color(charcoal);
+    color: white;
   }
-  @include bp(tiny) {
-    margin-left: vr(0.25);
+}
+
+.btn--disabled {
+  @extend .btn;
+
+  background: #aaa;
+  color: rgba(#fff, 0.7);
+  cursor: default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: #aaa;
+    color: rgba(#fff, 0.7);
   }
 }

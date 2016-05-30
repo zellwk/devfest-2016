@@ -1,9 +1,9 @@
 
 // Colors
 // ======
-// For project colors.
+// For project colors. 
 //
-// Approach:
+// Approach: 
 // ---------
 // @LandonSchropp's approach of naming color variables.
 // - http://davidwalsh.name/sass-color-variables-dont-suck
@@ -17,17 +17,20 @@
 //
 // OPTIONAL:
 // --------
-// Sublime gutter: https://sublime.wbond.net/packages/Gutter%20Color
+// Sublime gutter: https://sublime.wbond.net/packages/Gutter%20Color 
 // See the colors you used in the gutter (Awesome if you use sublime text)
 // ==========
 
 $colors: (
-  mine: rgba(0,0,0,0.5),
-  // mine: #484848,
-  coralred: #ff414a,
-  marine: #395a9c,
-  midnight: #222242,
-  sunglow: scale_color(#ffcd47, $saturation: 0%, $lightness: -5%)
-  // sunglow: #ffcd47
+  grandis: #fdd387,
+  hoki: #607D8B, 
+  charcoal: #37474F,
+  shadow-green: #9ecdc0,
+  froly: #ed706f,
+  revolver: #20172c,
+  malibu: #68b6f3,
+  bleu-de-france: #288ae2,
+  patterns-blue: #e3f2fc,
+  carmine: #e74840,
   );
 
