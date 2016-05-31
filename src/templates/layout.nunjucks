@@ -18,17 +18,13 @@
   <meta property="og:description" content="Southeast Asia's community organized web developer festival"/>
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans300,400,700|Open+Sans+Condensed:300,300italic,700|Sue+Ellen+Francisco|Roboto+Slab:400,100,300,700|Roboto+Condensed:400,700|Fira+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Sue+Ellen+Francisco|Fira+Sans:400,700' rel='stylesheet' type='text/css'>
 
   {% block css %}
   <!--build:css css/styles.min.css-->
   <link rel="stylesheet" href="/css/styles.css">
   <!--endbuild-->
   {% endblock %}
-
-  <script src="https://use.typekit.net/dgm4gfk.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
 </head>
 <body>
 
