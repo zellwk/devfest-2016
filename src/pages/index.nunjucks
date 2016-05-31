@@ -1,33 +1,50 @@
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-
 <div class="Hero">
   <div class="Hero__right-overlay"></div>
   <div class="Hero__main">
     <div class="Logo--hero Hero__logo">
       <div class="o-cursive c-logo__singapore">Singapore</div>
       <div class="o-cursive c-logo__devfest">DevFest.Asia</div>
-      <div class="o-cursive c-logo__2015">2015</div>
+      <div class="o-cursive c-logo__2015">2016</div>
     </div>
     <div class="Hero__content">
-      <h3 class="h2 Hero__title">Southeast Asia's <br>Community Organized <br> Web Developer Festival</h3>
+      <h3 class="h2 Hero__title">Southeast Asia's <br>Community Organized <br> Web Developer <span>Festival</span></h3>
       <div class="Hero__desc">
         <p>November 12th - 22nd, 2016</p>
         <p><a href="#" class="btn">List My Event</a></p>
-        <p><a href="#">See what we've done last year</a></p>
+        <p></p>
       </div>
     </div>
   </div>
-  <div class="Hero__menu">
-    <p>Stay up to date with the latest events:</p>
-    <form action="#">
-      <input type="text" placeholder="Your Name">
-      <input type="text" placeholder="Your Email">
-      <button type="submit" class="btn">Let me know</button>
-    </form>
+  <div class="Hero__cta">
+    <div>
+      <p>Stay up to date with the latest events:</p>
+      <form action="#">
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Your Email">
+        <button type="submit" class="btn">Let me know</button>
+        <a href="#">What we did last year</a>
+      </form>
+    </div>
   </div>
 </div>
+
+<div class="Hero__bottom--mobile">
+  <div class="Hero__cta--mobile">
+    <div>
+      <p>Stay up to date with the latest events:</p>
+      <form action="#">
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Your Email">
+        <button type="submit" class="btn">Let me know</button>
+        <p><a href="#">What we did last year</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 
 {# <div class="Hero" style="background-image: url('images/hero-4.jpg');">

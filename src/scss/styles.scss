@@ -1,8 +1,8 @@
-// Libraries 
+// Libraries
 // ---------
 @import "lib/lib";
 
-// Helpers 
+// Helpers
 // -------
 @import "helpers/helpers";
 
@@ -20,18 +20,18 @@
 @import "base/reset";
 @import "base/base";
 
-// Layouts 
+// Layouts
 // -------
-@import "layouts/susy";
-@import "layouts/layouts";
-@import "layouts/canvas";
-@import "layouts/header";
+// @import "layouts/susy";
+// @import "layouts/layouts";
+// @import "layouts/canvas";
+// @import "layouts/header";
 
 // Objects
 // -------
 // Repeatable objects across the site
 @import "objects/buttons";
-@import "objects/block";
+// @import "objects/block";
 
 @import "objects/form";
 
@@ -42,21 +42,21 @@
 // ----------
 // For individual, isolated components
 @import "components/logo";
-@import "components/nav";
+// @import "components/nav";
 @import "components/hero";
-@import "components/sponsors";
-@import "components/events";
-@import "components/events-header";
-@import "components/hotels";
-@import "components/interrupt";
-@import "components/css-clock";
-@import "components/spinner";
-@import "components/social";
-@import "components/jobs";
-@import "components/quote";
-@import "components/featured";
-@import "components/new";
-@import "components/sponsors-grid";
+// @import "components/sponsors";
+// @import "components/events";
+// @import "components/events-header";
+// @import "components/hotels";
+// @import "components/interrupt";
+// @import "components/css-clock";
+// @import "components/spinner";
+// @import "components/social";
+// @import "components/jobs";
+// @import "components/quote";
+// @import "components/featured";
+// @import "components/new";
+// @import "components/sponsors-grid";
 
 // Utilities
 // ---------
@@ -69,8 +69,27 @@
 // Shame
 // -----
 // For new style snippets that haven't been sorted and commented yet
-@import "shame";
+// @import "shame";
 
-a {
-  text-decoration: underline;
+
+
+
+@mixin bp-utils($bp: $breakpoints) {
+  $keys: map-keys($bp);
+
+  @each $bp, $val in $bp {
+    .u-hide-st-#{$bp} {
+      @include bp(max $bp) {
+        display: none !important;
+      }
+    }
+
+    .u-hide-#{$bp} {
+      @include bp($bp) {
+        display: none !important;
+      }
+    }
+  }
 }
+
+@include bp-utils;

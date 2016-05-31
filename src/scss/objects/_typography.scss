@@ -76,12 +76,13 @@ pre {
 
 a {
   color: color(charcoal);
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover,
   &:active,
   &:focus {
     color: color(froly);
+    text-decoration: none;
   }
 }
 
