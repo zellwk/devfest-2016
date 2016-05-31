@@ -4,7 +4,7 @@ body {
 
 .Hero {
   background-color: color(bleu-de-france);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.17)), url("/images/hero-4.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.17)), url("../images/hero-4.jpg");
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -116,7 +116,7 @@ body {
       height: 0;
       margin-top: -49.8%;
       padding-bottom: 50%;
-      background-image: url("/images/out-curve-vertical.svg");
+      background-image: url("../images/out-curve-vertical.svg");
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -183,7 +183,7 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      background-image: url("/images/out-curve.svg");
+      background-image: url("../images/out-curve.svg");
       background-repeat: no-repeat;
       background-position: calc(100% - 10em) 0%;
       background-size: contain;
