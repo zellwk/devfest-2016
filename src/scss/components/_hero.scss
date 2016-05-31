@@ -55,12 +55,14 @@ body {
 
 @include bp(orientation portrait) {
   .Hero__logo {
+    $hfz: 0.6em;
     position: absolute;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0.6em;
+    font-size: $hfz;
+    box-shadow: 0 0 0 (9px / $hfz * 1em) white, 0 0 0 (18px / $hfz * 1em) color(bleu-de-france), 0 0 (23px / $hfz * 1em) (17px / $hfz * 1em)  rgba(0, 0, 0, 0.15);
   }
 
   .Hero__content {
