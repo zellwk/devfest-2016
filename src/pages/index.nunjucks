@@ -20,21 +20,24 @@
   </div>
   <div class="Hero__cta u-hide-portrait">
     <div>
-      <p>Stay up to date with the latest events:</p>
-      <form class="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
-        <div class="inputs">
+      <div class="Hero__form">
+        <p>Stay up to date with the latest events:</p>
+        <form class="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
           <input type="hidden" style="display: none;" name="group" value="DevFest" />
           <input type="text" name="fname" id="fname" placeholder="Your Name" required>
           <input type="text" name="email" id="email" placeholder="Your Email" required>
-          <button class="btn">Let me know!</button>
+          <button class="btn">
+            <span class="spinner" style="display: none;">&nbsp;</span>
+            <span class="button-text">Let me know!</span>
+          </button>
+        </form>
+        <div class="msg" style="display: none">
+          <span>Thanks. We'll keep you updated!</span>
+        </div>
+        <div class="Hero__link">
           <a href="#">What we did last year</a>
         </div>
-        <div class="msg" style="display: block; textalign: center;">
-          <div class="spinner" style="display: none" required></div>
-          <span></span>
-          <div class="social-msg"></div>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>
@@ -42,21 +45,24 @@
 <div class="Hero__bottom--mobile u-hide-landscape">
   <div class="Hero__cta--mobile">
     <div>
-      <p>Stay up to date with the latest events:</p>
-      <form class="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
-        <div class="inputs">
+      <div class="Hero__form">
+        <p>Stay up to date with the latest events:</p>
+        <form class="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
           <input type="hidden" style="display: none;" name="group" value="DevFest" />
           <input type="text" name="fname" id="fname" placeholder="Your Name" required>
           <input type="text" name="email" id="email" placeholder="Your Email" required>
-          <button class="btn">Let me know!</button>
+          <button class="btn">
+            <span class="spinner" style="display: none;">&nbsp;</span>
+            <span class="button-text">Let me know!</span>
+          </button>
+        </form>
+        <div class="msg" style="display: none">
+          <span>Thanks. We'll keep you updated!</span>
+        </div>
+        <div class="Hero__link">
           <a href="#">What we did last year</a>
         </div>
-        <div class="msg" style="display: block; textalign: center;">
-          <div class="spinner" style="display: none" required></div>
-          <span></span>
-          <div class="social-msg"></div>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>

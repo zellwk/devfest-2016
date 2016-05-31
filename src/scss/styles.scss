@@ -109,3 +109,7 @@
     display: none !important;
   }
 }
+
+.is-invisible {
+  @include is-invisible;
+}

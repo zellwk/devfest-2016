@@ -28,6 +28,16 @@ body {
     border: 1px solid darken(color(bleu-de-france), 10%);
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
   }
+
+  .btn {
+    .spinner.is-hidden {
+      border-color: transparent;
+
+      &:before, &:after {
+        border-color: inherit;
+      }
+    }
+  }
 }
 
 .Hero__right-overlay {
@@ -51,6 +61,14 @@ body {
   text-shadow: 0 0 0.05em rgba(0, 0, 0, 1);
   font-weight: 700;
   letter-spacing: -0.01em;
+}
+
+.msg {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: white;
+  border: 1px solid transparent;
+  color: black;
 }
 
 @include bp(orientation portrait) {
@@ -129,7 +147,7 @@ body {
     padding-bottom: 3em;
     color: white;
 
-    .inputs > * {
+    .subscribeForm > * {
       margin-top: 0.75em;
       display: block;
       margin-right: auto;
@@ -138,6 +156,10 @@ body {
 
     a {
       color: white;
+    }
+
+    .Hero__link {
+      margin-top: 1em;
     }
   }
 }
@@ -260,28 +282,21 @@ body {
     font-family: 'Fira Sans';
     padding: 1.5em;
 
-    > div {
-      float: right;
-    }
-
-    p {
-      text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
-    }
-
-    .inputs > * + * {
-      margin-left: 0.125em;
-    }
-
     @include typi($even-smaller-map);
 
-    .btn {
-      font-size: inherit;
+    > div {
+      float: right;
     }
 
     p {
       font-size: 0.85em;
       margin-bottom: 0.5em;
       text-transform: uppercase;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn {
+      font-size: inherit;
     }
 
     a {
@@ -293,5 +308,20 @@ body {
         text-decoration: none;
       }
     }
+  }
+
+  .subscribeForm,
+  .msg,
+  .Hero__link {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .subscribeForm > * + * {
+    margin-left: 0.125em;
+  }
+
+  .Hero__link {
+    margin-left: 0.25em;
   }
 }
