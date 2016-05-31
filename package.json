@@ -84,5 +84,8 @@
     "express": "^4.13.4",
     "github": "^0.2.4",
     "gsap": "^1.18.5"
+  },
+  "scripts": {
+    "deploy": "gulp --prod && ./deploy.sh"
   }
 }
