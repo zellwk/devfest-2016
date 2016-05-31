@@ -21,7 +21,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans300,400,700|Open+Sans+Condensed:300,300italic,700|Sue+Ellen+Francisco|Roboto+Slab:400,100,300,700|Roboto+Condensed:400,700|Fira+Sans:400,700' rel='stylesheet' type='text/css'>
 
   
-  <link rel="stylesheet" href="css/styles-2b8e3153c0.min.css">
+  <link rel="stylesheet" href="css/styles-820317eb37.min.css">
   
 
   <script src="https://use.typekit.net/dgm4gfk.js"></script>
@@ -44,33 +44,49 @@
       <h3 class="h2 Hero__title">Southeast Asia's <br>Community Organized <br> Web Developer <span>Festival</span></h3>
       <div class="Hero__desc">
         <p>November 12th - 22nd, 2016</p>
-        <p><a href="#" class="btn">List My Event</a></p>
+        <p><a href="https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/" class="btn">List My Event</a></p>
         <p></p>
       </div>
     </div>
   </div>
-  <div class="Hero__cta">
+  <div class="Hero__cta u-hide-portrait">
     <div>
       <p>Stay up to date with the latest events:</p>
-      <form action="#">
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Your Email">
-        <button type="submit" class="btn">Let me know</button>
-        <a href="#">What we did last year</a>
+      <form class="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
+        <div class="inputs">
+          <input type="hidden" style="display: none;" name="group" value="DevFest" />
+          <input type="text" name="fname" id="fname" placeholder="Your Name" required>
+          <input type="text" name="email" id="email" placeholder="Your Email" required>
+          <button class="btn">Let me know!</button>
+          <a href="#">What we did last year</a>
+        </div>
+        <div class="msg" style="display: block; textalign: center;">
+          <div class="spinner" style="display: none" required></div>
+          <span></span>
+          <div class="social-msg"></div>
+        </div>
       </form>
     </div>
   </div>
 </div>
 
-<div class="Hero__bottom--mobile">
+<div class="Hero__bottom--mobile u-hide-landscape">
   <div class="Hero__cta--mobile">
     <div>
       <p>Stay up to date with the latest events:</p>
-      <form action="#">
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Your Email">
-        <button type="submit" class="btn">Let me know</button>
-        <p><a href="#">What we did last year</a></p>
+      <form class="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
+        <div class="inputs">
+          <input type="hidden" style="display: none;" name="group" value="DevFest" />
+          <input type="text" name="fname" id="fname" placeholder="Your Name" required>
+          <input type="text" name="email" id="email" placeholder="Your Email" required>
+          <button class="btn">Let me know!</button>
+          <a href="#">What we did last year</a>
+        </div>
+        <div class="msg" style="display: block; textalign: center;">
+          <div class="spinner" style="display: none" required></div>
+          <span></span>
+          <div class="social-msg"></div>
+        </div>
       </form>
     </div>
   </div>
@@ -84,7 +100,7 @@
   </div>
   
 
-  <script src="js/main-3332f1361e.min.js"></script>
+  <script src="js/main-6fe8d85e22.min.js"></script>
 
   
 
