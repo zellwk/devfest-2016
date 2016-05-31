@@ -63,48 +63,64 @@
 	(0, _svg4everybody2.default)();
 	
 	// Form submission
-	
 	$(document).ready(function () {
-	  var $form = $('#subscribeForm');
-	  var $text = $('#subscribeForm .msg').find('span');
-	  var $spinner = $form.find('.spinner');
-	  var $social = $('.social');
-	
 	  $('.subscribeForm').ajaxForm({
 	    url: 'http://2014.cssconf.asia/addsubscriber.php',
 	    dataType: 'html',
-	    beforeSubmit: function beforeSubmit() {
+	    beforeSubmit: function beforeSubmit(fields, $form) {
+	      var $spinner = $form.find('.spinner');
+	      var $msg = $form.siblings('.msg');
+	      var $text = $msg.find('span');
+	      var $btn = $form.find('.btn');
+	      var $padding = $btn.width() - $text.width();
+	
 	      // Resets text before submitting
-	      $text.text('');
-	      // Starts spinner
+	      var $btnHeight = $btn.outerHeight();
+	      $btn.css('height', $btnHeight);
+	      $btn.animate({
+	        width: $padding
+	      }, 400, 'swing');
+	      $btn.find('.button-text').text('');
 	      $spinner.show().addClass('play');
-	      $social.hide();
 	    },
-	    success: function success(r) {
+	    success: function success(r, status, response, context) {
+	      var $form = $(context[0]);
+	      var $spinner = $form.find('.spinner');
+	      var $msg = $form.siblings('.msg');
+	      var $text = $msg.find('span');
+	
 	      if (r.substr(0, 6) !== 'Thanks') {
 	        console.log('No Thanks');
 	        $text.text(r.substr(0, r.indexOf('<br/>')));
 	      } else {
 	        console.log('Thanks');
-	        $form.find('input').val('');
-	        $text.text('Thanks. We\'ll keep you updated!');
-	
-	        $form.find('.social-msg').text('Check out our facebook page now! :)');
-	        // $social.show().addClass('form-show');
+	        $spinner.removeClass('play');
+	        $form.siblings('p').fadeOut(300);
+	        $form.fadeOut('300', function () {
+	          $text.text('Thanks. We\'ll keep you updated!');
+	          $msg.fadeIn('300');
+	        });
 	
 	        setTimeout(function () {
 	          window.location.href = 'http://facebook.com/devfestasia';
 	        }, 2000);
 	      }
 	    },
-	    error: function error(r, s) {
-	      // $("#subscribeForm").removeClass("load").addClass("failure");
-	      $text.text('Something went utterly wrong...');
+	    error: function error(r, status, response, context) {
+	      var $form = $(context[0]);
+	      var $spinner = $form.find('.spinner');
+	      var $msg = $form.siblings('.msg');
+	      var $text = $msg.find('span');
+	
+	      $spinner.removeClass('play');
+	      $form.siblings('p').fadeOut(300);
+	      $form.fadeOut('300', function () {
+	        $text.text('Something went utterly wrong...');
+	        $msg.fadeIn('300');
+	      });
 	    },
 	    complete: function complete() {
 	      console.log('complete');
-	      $spinner.hide().removeClass('play');
-	      // Stops spinner
 	    }
 	  });
 	});
