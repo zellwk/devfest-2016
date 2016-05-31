@@ -83,18 +83,6 @@
     "es6-promise": "^3.2.1",
     "express": "^4.13.4",
     "github": "^0.2.4",
-    "gsap": "^1.18.5",
-    "isomorphic-fetch": "^2.2.1",
-    "mailgun-js": "^0.7.11",
-    "validate-js": "^2.0.1",
-    "whatwg-fetch": "^0.11.0"
-  },
-  "scripts": {
-    "start": "pm2 server.js",
-    "deploy": "gulp --prod && ./deploy.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/zellwk/zellwk.com.git"
+    "gsap": "^1.18.5"
   }
 }
