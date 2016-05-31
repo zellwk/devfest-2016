@@ -46,7 +46,7 @@ $(document).ready(function () {
         })
 
         setTimeout(function () {
-          // window.location.href = 'http://facebook.com/devfestasia'
+          window.location.href = 'http://facebook.com/devfestasia'
         }, 2000)
       }
     },
