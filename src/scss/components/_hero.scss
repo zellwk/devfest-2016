@@ -56,13 +56,14 @@ body {
 @include bp(orientation portrait) {
   .Hero__logo {
     $hfz: 0.6em;
+
     position: absolute;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     font-size: $hfz;
-    box-shadow: 0 0 0 (9px / $hfz * 1em) white, 0 0 0 (18px / $hfz * 1em) color(bleu-de-france), 0 0 (23px / $hfz * 1em) (17px / $hfz * 1em)  rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 (9px / $hfz * 1em) white, 0 0 0 (18px / $hfz * 1em) color(bleu-de-france), 0 0 (23px / $hfz * 1em) (17px / $hfz * 1em) rgba(0, 0, 0, 0.15);
   }
 
   .Hero__content {
@@ -128,7 +129,7 @@ body {
     padding-bottom: 3em;
     color: white;
 
-    form > * {
+    .inputs > * {
       margin-top: 0.75em;
       display: block;
       margin-right: auto;
@@ -251,6 +252,14 @@ body {
   }
 
   .Hero__cta {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-family: 'Fira Sans';
+    padding: 1.5em;
+
     > div {
       float: right;
     }
@@ -259,27 +268,14 @@ body {
       text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
     }
 
-    form > * + * {
+    .inputs > * + * {
       margin-left: 0.125em;
     }
 
     @include typi($even-smaller-map);
 
-    color: white;
-    font-family: 'Fira Sans';
-
-    // font-size: _ty-strip-unit(ms(-1)) * 1rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    // background: rgba(0,0,0,0.5);
-    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    padding: 1.5em;
-
     .btn {
-      @include typi($even-smaller-map);
+      font-size: inherit;
     }
 
     p {

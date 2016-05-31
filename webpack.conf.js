@@ -1,6 +1,7 @@
 const environment = require('./env')
 const BowerWebpackPlugin = require('bower-webpack-plugin')
 const env = environment.env
+const webpack = require('webpack')
 
 module.exports = {
   options: {
@@ -13,11 +14,8 @@ module.exports = {
       root: [
         './src/bower_components/'
       ],
-      // Using aliases (if needed)
       alias: {
-        'TweenLite': 'gsap/src/uncompressed/TweenLite' ,
-        // 'TweenMax': 'gsap/src/minified/TweenMax',
-        'ScrollTo': 'gsap/src/uncompressed/plugins/ScrollToPlugin'
+        'jquery': 'jquery/dist/jquery'
       }
     },
     devtool: '#source-map',
@@ -30,7 +28,13 @@ module.exports = {
         test: /\.(nunj|nunjucks)$/,
         loader: 'nunjucks-loader'
       }],
-      plugins: [new BowerWebpackPlugin()]
+      plugins: [
+        new BowerWebpackPlugin(),
+        // new webpack.ProvidePlugin({
+        //   $: 'jquery',
+        //   jQuery: 'jquery'
+        // })
+      ]
     }
   }
 }

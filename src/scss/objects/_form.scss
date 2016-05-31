@@ -4,39 +4,3 @@ input {
   @include adaptive-placeholder;
   color: color(revolver);
 }
-
-.input-group {
-  text-align: left;
-
-  @include bp(400px) {
-    margin-right: rhythm(1);
-  }
-
-  label {
-    margin-bottom: 0;
-    margin-bottom: rhythm(1);
-  }
-
-  .o-btn {
-    margin-top: 0;
-    margin-bottom: rhythm(1);
-  }
-}
-
-.inputs {
-  margin-top: rhythm(2);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: rhythm(1);
-
-  @include bp(400px) {
-    flex-wrap: no-wrap;
-  }
-}
-
-.msg {
-  margin-top: rhythm(-0.5);
-  margin-bottom: rhythm(1);
-}
