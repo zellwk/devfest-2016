@@ -65,7 +65,7 @@
 	// Form submission
 	$(document).ready(function () {
 	  $('.subscribeForm').ajaxForm({
-	    url: 'http://2014.cssconf.asia/addsubscriber.php',
+	    url: 'https://2014.cssconf.asia/addsubscriber.php',
 	    dataType: 'html',
 	    beforeSubmit: function beforeSubmit(fields, $form) {
 	      var $spinner = $form.find('.spinner');
