@@ -12,7 +12,7 @@
     <div class="Hero__content">
       <h3 class="h2 Hero__title">Southeast Asia's <br>Community Organized <br> Web Developer <span>Festival</span></h3>
       <div class="Hero__desc">
-        <p>November 12th - 22nd, 2016</p>
+        <p>November 18th - 27th, 2016</p>
         <p><a href="https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/" class="btn">List My Event</a></p>
         <p></p>
       </div>
@@ -22,7 +22,7 @@
     <div>
       <div class="Hero__form">
         <p>Stay up to date with the latest events:</p>
-        <form class="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
+        <form class="subscribeForm" action="https://2014.cssconf.asia/addsubscriber.php" method="get">
           <input type="hidden" style="display: none;" name="group" value="DevFest" />
           <input type="text" name="fname" id="fname" placeholder="Your Name" required>
           <input type="text" name="email" id="email" placeholder="Your Email" required>
@@ -35,7 +35,7 @@
           <span>Thanks. We'll keep you updated!</span>
         </div>
         <div class="Hero__link">
-          <a href="http://2015.devfest.asia">What we did last year</a>
+          <a href="https://2015.devfest.asia">What we did last year</a>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
     <div>
       <div class="Hero__form">
         <p>Stay up to date with the latest events:</p>
-        <form class="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
+        <form class="subscribeForm" action="https://2014.cssconf.asia/addsubscriber.php" method="get">
           <input type="hidden" style="display: none;" name="group" value="DevFest" />
           <input type="text" name="fname" id="fname" placeholder="Your Name" required>
           <input type="text" name="email" id="email" placeholder="Your Email" required>
@@ -60,7 +60,7 @@
           <span>Thanks. We'll keep you updated!</span>
         </div>
         <div class="Hero__link">
-          <a href="http://2015.devfest.asia">What we did last year</a>
+          <a href="https://2015.devfest.asia">What we did last year</a>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@
       <p class="Hero__description">November 12th - 22nd, 2015</p>
     </div>
 
-    <form id="subscribeForm" action="http://2014.cssconf.asia/addsubscriber.php" method="get">
+    <form id="subscribeForm" action="https://2014.cssconf.asia/addsubscriber.php" method="get">
       <div class="inputs">
         <input type="hidden" style="display: none;" name="group" value="DevFest" />
         <div class="input-group">
@@ -104,7 +104,7 @@
     </form>
 
     <a class="downarr" href="#content">
-      <svg class="c-downarr" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+      <svg class="c-downarr" viewBox="0 0 84 84" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:sketch="https://www.bohemiancoding.com/sketch/ns">
         <defs></defs>
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
           <g id="noun_70948_cc" sketch:type="MSLayerGroup" fill="#000000">
