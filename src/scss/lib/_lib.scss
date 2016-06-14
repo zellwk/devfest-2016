@@ -28,16 +28,13 @@
 // Susy and Susy Helpers
 // ---------------------
 @import "susy/sass/susy";
-@import "susy-helpers/susy-helpers";
 
 // Breakpoints
 // ------------
-@import "breakpoint-sass/stylesheets/breakpoint";
 @import "mappy-breakpoints/mappy-breakpoints";
 
 // Typography
 // ----------
-@import "vertical-rhythms-without-compass/vertical-rhythms";
 @import "typi/scss/typi";
 
 // Forms
@@ -47,6 +44,5 @@
 // Misc
 // ----
 
-@import "sass-hidpi/hidpi"; // for responsive images
 @import "themify/themify"; // for theming
 @import "modular-scale/stylesheets/modular-scale";
