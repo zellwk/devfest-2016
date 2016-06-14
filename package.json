@@ -87,6 +87,7 @@
     "jquery": "^3.0.0"
   },
   "scripts": {
+    "dev": "bower install && npm install && gulp",
     "deploy": "gulp --prod && ./deploy.sh"
   }
 }
