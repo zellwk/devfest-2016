@@ -2,66 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://zellwk.com/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/blog/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/index-old/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/opt-in/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
-    </url>
-    <url>
-        <loc>http://zellwk.com/blog/first-awesome-post/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/blog/444/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
+    </url>
+    <url>
+        <loc>http://zellwk.com/blog/first-awesome-post/</loc>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/blog/testing-post/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
-    </url>
-    <url>
-        <loc>http://zellwk.com/blog/tinkie-winkie/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
-    </url>
-    <url>
-        <loc>http://zellwk.com/blog/yeehar/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/blog/testing-training/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
-        <loc>http://zellwk.com/tags/gulp/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <loc>http://zellwk.com/blog/tinkie-winkie/</loc>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
+    </url>
+    <url>
+        <loc>http://zellwk.com/blog/yeehar/</loc>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/tags/awesome/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
+    </url>
+    <url>
+        <loc>http://zellwk.com/tags/gulp/</loc>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/tags/space/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/tags/test/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/tags/training/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
     <url>
         <loc>http://zellwk.com/tags/writing/</loc>
-        <lastmod>2016-06-01T04:27:05.000Z</lastmod>
+        <lastmod>2016-06-14T09:12:40.000Z</lastmod>
     </url>
 </urlset>
