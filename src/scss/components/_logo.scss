@@ -1,4 +1,4 @@
-.c-logo {
+.logo {
   margin: rhythm(1) 0;
   line-height: 1.4;
   text-transform: uppercase;
@@ -13,7 +13,7 @@
   }
 
 
-  .c-logo__devfest {
+  .logo__devfest {
     // font-size: 3em;
     font-size: 2.75em;
     letter-spacing: 0.1em;
@@ -21,7 +21,7 @@
     vertical-align: middle;
   }
 
-  .c-logo__2015 {
+  .logo__2015 {
     font-size: 2.5em;
     line-height: 1.1;
     letter-spacing: 0.1em;
@@ -31,7 +31,7 @@
 }
 
 .Logo--hero {
-  @extend .c-logo;
+  @extend .logo;
 
   $fz: 15.68px;
 
@@ -81,12 +81,12 @@
     animation: openup_bottom 0.8s cubic-bezier(0.88, -0.03, 0.63, 1.52);
   }
 
-  .c-logo__devfest,
-  .c-logo__2015 {
+  .logo__devfest,
+  .logo__2015 {
     display: block;
   }
 
-  .c-logo__singapore {
+  .logo__singapore {
     padding: (10.5px / $fz * 1em) 0;
     letter-spacing: 1.1em;
   }
