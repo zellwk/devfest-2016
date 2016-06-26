@@ -1,4 +1,4 @@
-.c-events-header {
+.Events-header {
   line-height: 1;
   background: radial-gradient(circle, lighten(color(bleu-de-france), 10%), color(bleu-de-france));
   overflow: hidden;
@@ -11,11 +11,11 @@
 
   &.is-fixed {
     //
- 
+
   }
 }
 
-.c-events-wrap {
+.Events-wrap {
   overflow-x: scroll;
   overflow-y: hidden;
   padding-top: rhythm(0.7);
@@ -36,7 +36,7 @@
   }
 }
 
-.c-events-nav {
+.Events-nav {
   display: flex;
   font-family: 'Open Sans Condensed';
   font-weight: bold;
@@ -66,14 +66,14 @@
     // &:last-child {
     //   padding-right: 0;
     // }
- 
+
   }
 
-  .c-events-nav__weekend {
+  .Events-nav__weekend {
     color: rgba(white, 0.7);
   }
 
-  .c-events-nav__day {
+  .Events-nav__day {
     display: block;
     text-transform: uppercase;
     font-size: ms(-2);
@@ -81,7 +81,7 @@
     line-height: 1.2em;
   }
 
-  .c-events-nav__date {
+  .Events-nav__date {
     display: block;
   }
 
@@ -90,11 +90,11 @@
   }
 }
 
-.c-events-nav__date--all-week {
+.Events-nav__date--all-week {
   min-width: 83px;
 }
 
-a.c-events__calendar {
+a.Events__calendar {
   display: flex;
   flex-wrap: nowrap;
 

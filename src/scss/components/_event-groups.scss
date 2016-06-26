@@ -1,0 +1,81 @@
+
+.Event-group {
+  position: relative;
+
+  @include bp("med") {
+    left: vr(-0.75);
+  }
+
+
+  @include bp(1000px) {
+    left: vr(-1.5);
+  }
+
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: calc(#{vr(1.5)} - 1px);
+    width: 2px;
+    background: color(malibu);
+  }
+}
+
+.Event-group__cal {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: radial-gradient(lighten(color(bleu-de-france), 5%), color(bleu-de-france));
+  border: 2px solid color(bleu-de-france);
+  box-shadow: inset 0 0 0 2px white;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  height: vr(3);
+  width: vr(3);
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans Condensed';
+}
+
+.day {
+  font-weight: bold;
+  font-size: ms(1);
+  line-height: 1;
+}
+
+.weekday {
+  font-size: ms(-1);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.allweek {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: ms(0);
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+
+// Adding new items
+
+.Event-groups--new {
+  .Event-group:before {
+    background: #ddd;
+  }
+
+  .Event-group__cal {
+    background: #ddd;
+    border: 2px solid #ddd;
+    box-shadow: inset 0 0 0 2px white;
+    text-shadow: none;
+  }
+}

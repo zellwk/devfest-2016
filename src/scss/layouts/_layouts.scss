@@ -35,7 +35,7 @@
 }
 
 // Events Layout
-.l-dates,
+.l-event-groups,
 .l-company-and-jobs {
   display: flex;
   align-items: stretch;
@@ -49,11 +49,11 @@
   }
 }
 
-.l-content .wrap:first-child .l-dates {
+.l-content .wrap:first-child .l-event-groups {
   padding-top: 0;
 }
 
-.l-date {
+.l-event-group {
   text-align: center;
 
   @include bp("med") {

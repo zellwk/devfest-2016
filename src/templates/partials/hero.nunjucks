@@ -1,10 +1,10 @@
 <div class="Hero">
   <div class="Hero__right-overlay"></div>
   <div class="Hero__main">
-    <div class="Logo--hero Hero__logo">
-      <div class="o-cursive logo__singapore">Singapore</div>
-      <div class="o-cursive logo__devfest">DevFest.Asia</div>
-      <div class="o-cursive logo__2015">2016</div>
+    <div class="logo--hero Hero__logo">
+      <div class="logo__singapore">Singapore</div>
+      <div class="logo__devfest">DevFest.Asia</div>
+      <div class="logo__2015">2016</div>
     </div>
     <div class="Hero__content">
       <h3 class="h2 Hero__title">Southeast Asia's <br>Community Organized <br> Web Developer <span>Festival</span></h3>

@@ -13,10 +13,10 @@
 // ------------
 $font-families: (
   primary: ('Fira Sans', sans-serif),
-  secondary: ('Sue Ellen Francisco', cursive),
-  subtitle: ('Roboto Slab', serif),
-  code: ('Menlo', 'Monaco', 'Consolas', monospace)
+  secondary: ('Open Sans Condensed', sans-serif),
+  logo: ('Sue Ellen Francisco', cursive)
 );
+
 // Typography
 // ----------
 // For all Typography related values.
@@ -45,8 +45,8 @@ $h2-map: (
 
 $h3-map: (
   null: (2, 1.25),
-  med: (2, 1.25),
-  large: (2, 1.25)
+  // med: (2, 1.25),
+  // large: (2, 1.25)
   );
 
 $h4-map: (

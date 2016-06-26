@@ -1,26 +1,26 @@
 {% for date in dates %}
   {% if date.type == 'event' %}
     <div class="wrap">
-      <div id="{% if date.date %}{{date.day}}{{date.date}}{% elif date.text%}allweek{% endif %}-hash" class="c-dates l-dates">
-        <div class="c-date l-date jsScrollSpyContainer">
-          <div class="c-date__cal jsScrollSpy" data-scrollSpyHighlight="{{date.date}}">
+      <div id="{% if date.date %}{{date.day}}{{date.date}}{% elif date.text%}allweek{% endif %}-hash" class="Event-groups l-event-groups">
+        <div class="Event-group l-event-group jsScrollSpyContainer">
+          <div class="Event-group__cal jsScrollSpy" data-scrollSpyHighlight="{{date.date}}">
             {% if date.day %} <h4 class="weekday">Nov</h4> {% endif %}
             <h2 class="day">{{date.date}}</h2>
             {% if date.text %} <h4 class="allweek">All<br>Week</h4>{% endif %}
           </div>
         </div>
 
-        <div class="c-events l-events">
+        <div class="Events l-events">
           {% for event in date.events %}
-            <div class="c-event l-event">
-              <a class="c-event__image" style="background-image:url('{{event.image}}')"{% if event.imageLink %} href="{{event.imageLink}}" target="_blank" {% endif %}>
+            <div class="Event l-event">
+              <a class="Event__image" style="background-image:url('{{event.image}}')"{% if event.imageLink %} href="{{event.imageLink}}" target="_blank" {% endif %}>
                 {% if event.logo %}
-                  <div class="c-event__logo" style="background-image:url('{{event.logo}}');">logo placeholder</div>
+                  <div class="Event__logo" style="background-image:url('{{event.logo}}');">logo placeholder</div>
                 {% endif %}
               </a>
 
-              <div class="c-event__content">
-                <div class="c-event__desc">
+              <div class="Event__content">
+                <div class="Event__desc">
                   {% if event.featured %}
                     <div class="c-devfest-featured c-devfest-featured--coworking">
                       <div class="c-devfest-featured__badge c-devfest-featured__badge--coworking">
@@ -30,13 +30,13 @@
                     </div>
                   {% endif %}
 
-                  <h3 class="c-event__title">{{event.title}}</h3>
+                  <h3 class="Event__title">{{event.title}}</h3>
                   <p>{{event.desc | safe }}</p>
-                  <div class="c-event__time">
+                  <div class="Event__time">
                     <div class="css-clock" data-time="{{event.startTime}}-{{event.endTime}}"></div>
                     {{event.startTime}}{{event.startTimeSuffix}} - {{event.endTime}}{{event.endTimeSuffix}}{% if event.weekdays %} on weekdays {% endif %}
                   </div>
-                  <div class="c-event__location">
+                  <div class="Event__location">
                     <img class="i-location jsSvgInject" src="images/location1.svg" />
                     <a href="http://maps.google.com/?q={% if event.gmap %}{{event.gmap}}{% else %}{{ event.location }}{% endif %}">
                       <div> {{event.location | safe}}</div>
@@ -121,14 +121,14 @@
 
 {{!-- {{#compare this.type "add-event" }}
 <div class="wrap">
-  <div class="c-dates c-dates--new l-dates">
-    <div class="c-date l-date jsScrollSpyContainer">
-      <div class="c-date__cal jsScrollSpy" data-scrollSpyHighlight="{{date}}">
+  <div class="Event-groups Event-groups--new l-event-groups">
+    <div class="Event-group l-event-group jsScrollSpyContainer">
+      <div class="Event-group__cal jsScrollSpy" data-scrollSpyHighlight="{{date}}">
         <h2 class="day">?</h2>
       </div>
     </div>
 
-    <div class="c-events l-events">
+    <div class="Events l-events">
 
     <a href="https://jsconfasia.wufoo.com/forms/devfestasia-2015-list-my-event/" class="c-new--large l-event">
         <div class="c-new__item">

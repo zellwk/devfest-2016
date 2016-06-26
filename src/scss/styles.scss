@@ -22,8 +22,8 @@
 
 // Layouts
 // -------
-// @import "layouts/susy";
-// @import "layouts/layouts";
+@import "layouts/susy";
+@import "layouts/layouts";
 // @import "layouts/canvas";
 // @import "layouts/header";
 
@@ -38,22 +38,22 @@
 
 // @import "objects/media";
 @import "objects/typography";
+@import "components/logo";
 
 // Components
 // ----------
 // For individual, isolated components
-@import "components/logo";
-
-// @import "components/nav";
+@import "components/event-groups";
+@import "components/events";
+// @import "components/events-header";
 @import "components/hero";
+@import "components/spinner";
+// @import "components/nav";
 
 // @import "components/sponsors";
-// @import "components/events";
-// @import "components/events-header";
 // @import "components/hotels";
 // @import "components/interrupt";
 // @import "components/css-clock";
-@import "components/spinner";
 
 // @import "components/social";
 // @import "components/jobs";

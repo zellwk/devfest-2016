@@ -39,7 +39,7 @@
 
 a.c-job {
   display: block;
-  @extend .c-event;
+  @extend .Event;
   padding: rhythm(1);
   margin-bottom: rhythm(0.5);
 
@@ -67,7 +67,7 @@ a.c-job {
   }
 }
 
-// new 
+// new
 .c-company--new,
 .c-jobs--new {
   .c-new {

@@ -1,4 +1,6 @@
 .logo {
+  @include ff(logo);
+
   margin: rhythm(1) 0;
   line-height: 1.4;
   text-transform: uppercase;
@@ -30,7 +32,7 @@
   }
 }
 
-.Logo--hero {
+.logo--hero {
   @extend .logo;
 
   $fz: 15.68px;
