@@ -1,120 +1,12 @@
+---
+data: ['data/events.json']
+---
+
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-<div class="Hero">
-  <div class="Hero__right-overlay"></div>
-  <div class="Hero__main">
-    <div class="Logo--hero Hero__logo">
-      <div class="o-cursive c-logo__singapore">Singapore</div>
-      <div class="o-cursive c-logo__devfest">DevFest.Asia</div>
-      <div class="o-cursive c-logo__2015">2016</div>
-    </div>
-    <div class="Hero__content">
-      <h3 class="h2 Hero__title">Southeast Asia's <br>Community Organized <br> Web Developer <span>Festival</span></h3>
-      <div class="Hero__desc">
-        <p>November 18th - 27th, 2016</p>
-        <p><a href="https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/" class="btn">List My Event</a></p>
-        <p></p>
-      </div>
-    </div>
-  </div>
-  <div class="Hero__cta u-hide-portrait">
-    <div>
-      <div class="Hero__form">
-        <p>Stay up to date with the latest events:</p>
-        <form class="subscribeForm" action="https://2014.cssconf.asia/addsubscriber.php" method="get">
-          <input type="hidden" style="display: none;" name="group" value="DevFest" />
-          <input type="text" name="fname" id="fname" placeholder="Your Name" required>
-          <input type="text" name="email" id="email" placeholder="Your Email" required>
-          <button class="btn">
-            <span class="spinner" style="display: none;">&nbsp;</span>
-            <span class="button-text">Let me know!</span>
-          </button>
-        </form>
-        <div class="msg" style="display: none">
-          <span>Thanks. We'll keep you updated!</span>
-        </div>
-        <div class="Hero__link">
-          <a href="https://2015.devfest.asia">What we did last year</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="Hero__bottom--mobile u-hide-landscape">
-  <div class="Hero__cta--mobile">
-    <div>
-      <div class="Hero__form">
-        <p>Stay up to date with the latest events:</p>
-        <form class="subscribeForm" action="https://2014.cssconf.asia/addsubscriber.php" method="get">
-          <input type="hidden" style="display: none;" name="group" value="DevFest" />
-          <input type="text" name="fname" id="fname" placeholder="Your Name" required>
-          <input type="text" name="email" id="email" placeholder="Your Email" required>
-          <button class="btn">
-            <span class="spinner" style="display: none;">&nbsp;</span>
-            <span class="button-text">Let me know!</span>
-          </button>
-        </form>
-        <div class="msg" style="display: none">
-          <span>Thanks. We'll keep you updated!</span>
-        </div>
-        <div class="Hero__link">
-          <a href="https://2015.devfest.asia">What we did last year</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-{# <div class="Hero" style="background-image: url('images/hero-4.jpg');">
-  <div class="wrap">
-    <div class="Hero__intro">
-      <div class="c-logo--hero">
-        <div class="o-cursive c-logo__singapore">Singapore</div>
-        <div class="o-cursive c-logo__devfest">DevFest.Asia</div>
-        <div class="o-cursive c-logo__2015">2015</div>
-      </div>
-      <h3 class="Hero__subtitle">Southeast Asia's first community organized web developer festival</h3>
-      <p class="Hero__description">November 12th - 22nd, 2015</p>
-    </div>
-
-    <form id="subscribeForm" action="https://2014.cssconf.asia/addsubscriber.php" method="get">
-      <div class="inputs">
-        <input type="hidden" style="display: none;" name="group" value="DevFest" />
-        <div class="input-group">
-          <input type="text" name="fname" id="fname" required>
-          <label for="name" placeholder="Your name" alt="Name"></label>
-        </div>
-        <div class="input-group">
-          <input type="text" name="email" id="email" required>
-          <label for="email" placeholder="Your email" alt="Email"></label>
-        </div>
-        <div class="input-group">
-          <button class="o-btn">Let me know!</button>
-        </div>
-      </div>
-      <div class="msg" style="display: block; textalign: center;">
-        <div class="spinner" style="display: none" required></div>
-        <span></span>
-        <div class="social-msg"></div>
-      </div>
-    </form>
-
-    <a class="downarr" href="#content">
-      <svg class="c-downarr" viewBox="0 0 84 84" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:sketch="https://www.bohemiancoding.com/sketch/ns">
-        <defs></defs>
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-          <g id="noun_70948_cc" sketch:type="MSLayerGroup" fill="#000000">
-            <path d="M40.366,62.375 C40.741,62.75 41.25,62.961 41.78,62.961 C42.31,62.961 42.819,62.75 43.194,62.375 L60.096,45.474 C60.877,44.693 60.877,43.427 60.096,42.645 C59.315,41.864 58.048,41.864 57.268,42.645 L44,55.913 L44,22 C44,20.896 43.104,20 42,20 C40.896,20 40,20.896 40,22 L40,56.353 L26.292,42.645 C25.511,41.864 24.244,41.864 23.464,42.645 C22.683,43.426 22.683,44.692 23.464,45.474 L40.366,62.375 L40.366,62.375 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-            <path d="M42,84 C64.766,84 84,64.767 84,42 C84,19.233 64.766,0 42,0 C19.234,0 0,19.233 0,42 C0,64.767 19.234,84 42,84 L42,84 Z M42,4 C62.598,4 80,21.402 80,42 C80,62.598 62.598,80 42,80 C21.402,80 4,62.598 4,42 C4,21.402 21.402,4 42,4 L42,4 Z" id="Shape" sketch:type="MSShapeGroup"></path>
-          </g>
-        </g>
-      </svg>
-    </a>
-  </div>
-</div> #}
+{% include "partials/hero.nunjucks" %}
+{% include "partials/events/index.nunjucks" %}
 
 {% endblock %}

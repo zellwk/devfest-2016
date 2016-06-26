@@ -124,8 +124,8 @@
 }
 
 .c-event__title {
-  @extend .o-block__title-2;
-
+  font-family: 'Open Sans Condensed';
+  font-weight: 700;
   font-size: rhythm(1);
   margin-bottom: rhythm(0.5);
 }

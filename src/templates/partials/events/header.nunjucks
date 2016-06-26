@@ -1,0 +1,25 @@
+tooting
+{# <div class="c-events-header jsFixedHeader" data-SH-offset="68">
+  <div class="c-events-wrap">
+    <div class="wrap c-canvas__fixed-item">
+      <nav class="c-events-nav">
+
+        {{#each dates}}
+        {{#compare this.type "event"}}
+        {{#if date}}
+        <a href="#{{day}}{{date}}-hash" class="{{#compare day "Sat"}}c-events-nav__weekend{{/compare}}{{#compare day "Sun"}}c-events-nav__weekend{{/compare}} jsScrollSpyHighlight" data-scrollSpyHighlight="{{date}}">
+          <span class="c-events-nav__day">{{day}}</span>
+          <span class="c-events-nav__date">{{date}}</span>
+        </a>
+        {{else}}
+        <a href="#allweek-hash" class="jsScrollSpyHighlight" data-scrollSpyHighlight="{{date}}">
+          <span class="c-events-nav__day"><br></span>
+          <span class="c-events-nav__date c-events-nav__date--all-week">All Week</span>
+        </a>
+        {{/if}}
+        {{/compare}}
+        {{/each }}
+      </nav>
+    </div>
+  </div>
+</div> #}
