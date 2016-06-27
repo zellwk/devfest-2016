@@ -1,16 +1,16 @@
-<div class="Events-header jsFixedHeader" data-SH-offset="68">
+<div class="Events-header jsEventsHeader jsFixedHeader" data-SH-offset="68">
   <div class="Events-wrap">
-    <div class="wrap c-canvas__fixed-item">
-      <nav class="Events-nav">
+    <div class="wrap Canvas__fixed-item">
+      <nav class="Events-nav jsEventsNav">
         {% for date in dates %}
           {% if date.type == 'event' %}
             {% if date.date %}
-              <a href="#{{date.day}}{{date.date}}-hash" class="h4 {% if date.day == 'Sat' %}Events-nav__weekend{% elif date.day =='Sun' %}Events-nav__weekend{% endif %} jsScrollSpyHighlight" data-scrollSpyHighlight="{{date.date}}">
-                <span class="Events-nav__day">{{date.day}}</span>
-                <span class="Events-nav__date">{{date.date}}</span>
+              <a href="#{{date.day}}{{date.date}}-hash" class="{% if date.day == 'Sat' %}Events-nav__weekend{% elif date.day =='Sun' %}Events-nav__weekend{% endif %} jsScrollSpyHighlight" data-scrollSpyHighlight="{{date.date}}">
+                <span class="h6 Events-nav__day">{{date.day}}</span>
+                <span class="h4 Events-nav__date">{{date.date}}</span>
               </a>
             {% else %}
-               <a href="#allweek-hash" class="h4 jsScrollSpyHighlight" data-scrollSpyHighlight="{{date.date}}">
+               <a href="#allweek-hash" class="jsScrollSpyHighlight" data-scrollSpyHighlight="{{date.date}}">
                 {# <span class="Events-nav__day"><br></span> #}
                 <span class="Events-nav__date Events-nav__date--all-week">All <br> Week</span>
               </a>

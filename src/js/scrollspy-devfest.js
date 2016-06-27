@@ -259,7 +259,7 @@ $(window).load(function () {
     el.scrollSpy = new ScrollSpy({
       $el: $(el),
       $item: $(el).find('.jsScrollSpy'),
-      // container: '.c-canvas__on-canvas',
+      // container: '.Canvas__on-canvas',
       props: props,
       min: props.min,
       max: props.max,

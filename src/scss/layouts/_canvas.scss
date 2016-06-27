@@ -1,19 +1,19 @@
 // html,
 // body,
-// .c-canvas,
-// .c-canvas__off-canvas,
-// .c-canvas__on-canvas {
+// .Canvas,
+// .Canvas__off-canvas,
+// .Canvas__on-canvas {
 //   height: 100%;
 // }
 
 $offCanvasWidth: 280px;
 
-// .c-canvas {
+// .Canvas {
 //   position: relative;
 //   overflow: hidden;
 // }
 
-.c-canvas__off-canvas {
+.Canvas__off-canvas {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -25,7 +25,7 @@ $offCanvasWidth: 280px;
   z-index: 10000;
 }
 
-.c-canvas__on-canvas {
+.Canvas__on-canvas {
   position: relative;
   left: 0;
   z-index: 20;
@@ -36,18 +36,18 @@ $offCanvasWidth: 280px;
   transition: left 0.4s ease-out;
 }
 
-.c-canvas .c-canvas__fixed-item {
+.Canvas .Canvas__fixed-item {
   position: relative;
   left: 0;
   transition: all 0.4s ease-out;
 }
 
 // When Canvas is opened
-.c-canvas.is-open .c-canvas__off-canvas {
+.Canvas.is-open .Canvas__off-canvas {
   right: 0;
 }
 
-.c-canvas.is-open .c-canvas__on-canvas {
+.Canvas.is-open .Canvas__on-canvas {
   overflow: hidden;
   left: -$offCanvasWidth;
 
@@ -56,12 +56,12 @@ $offCanvasWidth: 280px;
   }
 }
 
-.c-canvas.is-open .jsSmartHeadClone .c-canvas__fixed-item {
+.Canvas.is-open .jsSmartHeadClone .Canvas__fixed-item {
   left: -$offCanvasWidth;
   right: $offCanvasWidth;
 }
 
-.c-canvas-toggle {
+.Canvas-toggle {
   background: none;
 
   span, .i-menu {
