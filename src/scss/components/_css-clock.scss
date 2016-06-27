@@ -17,21 +17,21 @@ $background-color: white !default;
       $bgc: $background-color;
     }
 
-    .css-clock[data-time="#{$firstTime}-#{$secondTime}"]:before {
+    .Clock[data-time="#{$firstTime}-#{$secondTime}"]:before {
       transform: rotate($firstDeg);
       background: $fill-color;
     }
 
-    .css-clock[data-time="#{$firstTime}-#{$secondTime}"]:after {
+    .Clock[data-time="#{$firstTime}-#{$secondTime}"]:after {
       transform: rotate($secondDeg);
       background: $bgc;
     }
   }
 }
 
-$cssclockSize: 16px;
+$cssclockSize: 18px;
 
-.css-clock {
+.Clock {
   background: white;
   box-sizing: content-box;
   display: inline-block;

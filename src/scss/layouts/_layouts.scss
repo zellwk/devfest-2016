@@ -4,12 +4,12 @@
 .wrap {
   @include container(hide);
 
-  padding-left: rhythm(0.5);
-  padding-right: rhythm(0.5);
+  padding-left: vr(0.5);
+  padding-right: vr(0.5);
 
   @include bp(med) {
-    padding-left: rhythm(1.5);
-    padding-right: rhythm(1.5);
+    padding-left: vr(1.5);
+    padding-right: vr(1.5);
   }
 }
 
@@ -31,7 +31,9 @@
 }
 
 .l-content {
-  margin-top: rhythm(2);
+  padding-top: vr(2);
+  padding-bottom: vr(2);
+  background: #F5F5F5;
 }
 
 // Events Layout
@@ -62,14 +64,13 @@
 }
 
 .l-events {
-  width: calc(100% - #{rhythm(3)});
-  margin-left: #{rhythm(3)};
+  width: calc(100% - #{gutter(14)});
+  margin-left: gutter(14) / 2;
   padding-left: span(1);
 
   @include bp(max "med") {
-    margin-top: rhythm(-1);
+    margin-top: vr(-1);
   }
-
 
   @include bp("med") {
     display: flex;
@@ -79,9 +80,8 @@
 
 .l-event {
   @include bp(max "med") {
-    margin-top: rhythm(1);
+    margin-top: vr(1);
   }
-
 
   @include bp("med") {
     width: span(7 of 14);
@@ -118,7 +118,7 @@
 .l-hotel {
   display: block;
   width: 100%;
-  margin-bottom: rhythm(1);
+  margin-bottom: vr(1);
 
   @include bp("med") {
     display: flex;

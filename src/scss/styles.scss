@@ -43,9 +43,11 @@
 // Components
 // ----------
 // For individual, isolated components
+@import "components/css-clock";
 @import "components/event-groups";
 @import "components/events";
-// @import "components/events-header";
+@import "components/events-header";
+@import "components/footer";
 @import "components/hero";
 @import "components/spinner";
 // @import "components/nav";
@@ -53,7 +55,6 @@
 // @import "components/sponsors";
 // @import "components/hotels";
 // @import "components/interrupt";
-// @import "components/css-clock";
 
 // @import "components/social";
 // @import "components/jobs";

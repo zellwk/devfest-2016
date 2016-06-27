@@ -1,4 +1,4 @@
-
+{% include "partials/events/header.nunjucks" %}
 <div id="content-hash" class="l-content">
   {% include "partials/events/main.nunjucks" %}
 </div>

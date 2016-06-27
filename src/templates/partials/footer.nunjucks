@@ -1,0 +1,49 @@
+ <div class="Footer">
+
+  {# {{> _footer-menu active=active}} #}
+
+  <div class="logo--hero">
+    <div class="logo__singapore">Singapore</div>
+    <div class="logo__devfest">DevFest.Asia</div>
+    <div class="logo__2015">2016</div>
+  </div>
+
+    {# {{> _social-icons}} #}
+
+  <div class="Creds">
+    <div class="h6 Creds__title">DevFest.Asia is brought to you by:</div>
+
+    <div class="Creds__sigs">
+      <a href="https://twitter.com/serrynaimo">
+        <span>Thomas Gorissen</span>
+        <img src="images/thomas-sig.png" alt="">
+      </a>
+      <a href="https://twitter.com/zellwk">
+        <span>Zell Liew</span>
+        <img class="zell" src="images/zell-sig-3.png" alt="">
+      </a>
+      <a href="https://www.facebook.com/jacin.lee?_rdr=p">
+        <span>Jacin Lee</span>
+        <img src="images/jacin-sig.png" alt="">
+      </a>
+     <a href="https://www.linkedin.com/in/moritzrossmanith">
+        <span>Moritz Rossmanith</span>
+        <img class="moritz" src="images/moritz1.png" alt="">
+      </a>
+    </div>
+  </div>
+
+  <div class="nerdherd">
+    <p>A Nerdherd Pte. Ltd. event
+      <br>
+      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      <br>
+      <a href="code-of-conduct.html">Code of conduct</a>
+    </p>
+  </div>
+
+  <div class="c-designed">
+    Design and developed by <a href="http://zell-weekeat.com" target="_blank">Zell Liew</a>
+  </div>
+</div>
+

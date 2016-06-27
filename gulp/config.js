@@ -39,8 +39,8 @@ var config = {
       basename: '/tags'
     },
     watch: [
-      src + '/templates/**/*',
-      'data/**/*.json'
+    src + '/templates/**/*',
+    'data/**/*.json'
     ],
     regenerateArchives: false
   },
@@ -70,8 +70,8 @@ var config = {
 
   images: {
     src: [
-      src + '/images/**/*.{png,jpeg,jpg,gif}',
-      '!' + src + '/images/sprites/*'
+    src + '/images/**/*.{png,jpeg,jpg,gif}',
+    '!' + src + '/images/sprites/*'
     ],
     dest: dest + '/images',
     opts: {
@@ -86,18 +86,18 @@ var config = {
     dest: dest + '/css',
     opts: {
       includePaths: [
-        src + '/bower_components',
-        './node_modules'
+      src + '/bower_components',
+      './node_modules'
       ]
     }
   },
 
   scsslint: {
     src: [
-      src + '/scss/**/*.scss',
+    src + '/scss/**/*.scss',
       // Don't lint SCSS files because it's generated
       '!' + src + '/scss/_sprites.scss'
-    ]
+      ]
   },
 
   sprites: {
@@ -140,9 +140,9 @@ var config = {
 
   uncss: {
     ignore: [
-      /.is-/,
-      /.has-/,
-      /.hljs-/
+    /.is-/,
+    /.has-/,
+    /.hljs-/
     ]
   }
 }

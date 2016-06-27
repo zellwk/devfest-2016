@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1024px" height="213px" viewBox="0 0 1024 213" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-267.000000, -406.000000)" fill="#288AE2">
+            <path d="M884.961328,501.346097 L884.961328,0.0386719734 L672.961328,0.0386719734 L672.961328,1024.03867 L884.961328,1024.03867 L884.961328,522.731247 C885.012832,519.173208 885.038672,515.608958 885.038672,512.038672 C885.038672,508.468386 885.012832,504.904136 884.961328,501.346097 Z M884.961328,501.346097 L884.961328,522.731247 C882.128446,718.435746 801.653839,895.346161 672.961328,1024.03867 L672.961328,0.0386719734 C801.653839,128.731183 882.128446,305.641598 884.961328,501.346097 Z" id="Combined-Shape" transform="translate(779.000000, 512.038672) rotate(-270.000000) translate(-779.000000, -512.038672) "></path>
+        </g>
+    </g>
+</svg>

@@ -30,11 +30,14 @@ module.exports = {
       }],
       plugins: [
         new BowerWebpackPlugin(),
-        // new webpack.ProvidePlugin({
-        //   $: 'jquery',
-        //   jQuery: 'jquery'
-        // })
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery'
+        })
       ]
+    },
+    externals: {
+      jquery: 'jQuery'
     }
   }
 }

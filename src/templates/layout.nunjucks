@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +17,7 @@
   <meta property="og:description" content="Southeast Asia's community organized web developer festival"/>
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
-  <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Sue+Ellen+Francisco|Fira+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700|Sue+Ellen+Francisco|Fira+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
   {% block css %}
   <!--build:css css/styles.min.css-->
@@ -31,14 +30,16 @@
   <div class="canvas jsCanvas">
     {% block content %} {% endblock %}
   </div>
-  {% block footerScripts %}
 
+  {% include "partials/footer.nunjucks" %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  {% block footerScripts %}
   <!--build:js js/main.min.js -->
   <script src="/js/main.js"></script>
   <!--endbuild -->
-
   {% endblock %}
-
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

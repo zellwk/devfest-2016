@@ -1,7 +1,3 @@
-body {
-  background: color(bleu-de-france);
-}
-
 .Hero {
   background-color: color(bleu-de-france);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.17), rgba(0, 0, 0, 0.17)), url("../images/hero-2.jpg");
@@ -134,12 +130,12 @@ body {
       z-index: 10;
       display: block;
       left: 0;
-      right: -2px;
+      right: 0px;
       width: 100%;
       height: 0;
-      margin-top: -49.8%;
-      padding-bottom: 50%;
-      background-image: url("../images/out-curve-vertical.svg");
+      margin-top: -20.503125%;
+      padding-bottom: 25.703125%;
+      background-image: url("../images/out-curve-vertical-1.svg");
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -208,15 +204,15 @@ body {
     }
 
     &:before {
-      top: 0;
-      bottom: 0;
+      top: -1px;
+      bottom: -1px;
       left: 0;
       right: 0;
-      background-image: url("../images/out-curve.svg");
+      background-image: url("../images/out-curve-1.svg");
       background-repeat: no-repeat;
       background-position: calc(100% - 9.9em) 0%;
       background-size: contain;
-      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+      // filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 
       @include bp(max large) {
         background-position: calc(100% - 9.85em) 0%;

@@ -1,4 +1,3 @@
-
 .Event-group {
   position: relative;
 
@@ -18,13 +17,15 @@
     display: block;
     top: 0;
     bottom: 0;
-    left: calc(#{vr(1.5)} - 1px);
+    left: calc(#{vr(1.125)} - 1px);
     width: 2px;
     background: color(malibu);
   }
 }
 
 .Event-group__cal {
+  @include ff(secondary);
+
   position: absolute;
   z-index: 20;
   display: flex;
@@ -32,38 +33,32 @@
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  background: radial-gradient(lighten(color(bleu-de-france), 5%), color(bleu-de-france));
+  background: color(bleu-de-france);
+  background: white;
   border: 2px solid color(bleu-de-france);
-  box-shadow: inset 0 0 0 2px white;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
-  height: vr(3);
-  width: vr(3);
+  height: vr(2.25);
+  width: vr(2.25);
   text-align: center;
   color: white;
-  font-family: 'Open Sans Condensed';
-}
-
-.day {
-  font-weight: bold;
-  font-size: ms(1);
-  line-height: 1;
+  color: color(bleu-de-france);
 }
 
 .weekday {
-  font-size: ms(-1);
-  line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+
+.day {
+  line-height: 1;
+  font-weight: bold;
 }
 
 .allweek {
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-size: ms(0);
-  line-height: 1.2;
-  font-weight: bold;
+  line-height: 1.15;
 }
-
 
 // Adding new items
 

@@ -16,7 +16,7 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "The Working Capitol",
-        "location-2": "1A Keong Saik Road<br/>Singapore 089109",
+        "location2": "1A Keong Saik Road<br/>Singapore 089109",
         "ticketinfo": "Registration ended",
         "gmap": "The Working Capitol 1A Keong Saik Road Singapore 089109"
       }]
@@ -36,7 +36,7 @@
         "endTime": "12",
         "endTimeSuffix": "am",
         "location": "111 Middle Road",
-        "location-2": "#01-05, Café Kapok <br> Singapore 188969",
+        "location2": "#01-05, Café Kapok <br> Singapore 188969",
         "ticketinfo": "Free for all DevFest.Asia ticket holders"
       }]
     },
@@ -55,7 +55,7 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
-        "location-2": "#09-01 Suntec Tower Five <br/> Singapore 038985",
+        "location2": "#09-01 Suntec Tower Five <br/> Singapore 038985",
         "ticketinfo": "Registration ended"
       },
       {
@@ -67,7 +67,7 @@
         "endTime": "12",
         "endTimeSuffix": "pm (the next day)",
         "location": "The Impact Hub",
-        "location-2": "128 Prinsep St, Singapore 188655",
+        "location2": "128 Prinsep St, Singapore 188655",
         "ticketinfo": "Registration Ended"
       }]
     },
@@ -92,7 +92,7 @@
         "endTime": "5",
         "endTimeSuffix": "pm",
         "location": "Microsoft Singapore",
-        "location-2": "1 Marina Boulevard #21-01 <br> Singapore 018989",
+        "location2": "1 Marina Boulevard #21-01 <br> Singapore 018989",
         "ticketinfo": "Registration ended"
       },
       {
@@ -105,7 +105,7 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "The Working Capitol, ",
-        "location-2": "1 Keong Saik Road <br> Singapore 089109",
+        "location2": "1 Keong Saik Road <br> Singapore 089109",
         "ticketinfo": "Registration ended"
       }]
     },
@@ -125,7 +125,7 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
-        "location-2": "#07-01 Suntec Tower Five <br/> Singapore 038985",
+        "location2": "#07-01 Suntec Tower Five <br/> Singapore 038985",
         "ticketinfo": "Registration ended"
       },
       {
@@ -138,7 +138,7 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "TradeGecko",
-        "location-2": "121 Telok Ayer #02 <br/>Singapore 068590",
+        "location2": "121 Telok Ayer #02 <br/>Singapore 068590",
         "price": "free",
         "ticketinfo": "Registration ended"
       }]
@@ -166,7 +166,7 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "TradeGecko",
-        "location-2": "121 Telok Ayer #02 <br/>Singapore 068590",
+        "location2": "121 Telok Ayer #02 <br/>Singapore 068590",
         "ticketinfo": "Registration ended"
       },
       {
@@ -180,7 +180,7 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "Microsoft Singapore",
-        "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
+        "location2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
         "ticketinfo": "Registration ended"
       }]
     },
@@ -201,7 +201,7 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
-        "location-2": "28 Maxwell Road, Singapore 069120",
+        "location2": "28 Maxwell Road, Singapore 069120",
         "ticketinfo": "Registration ended"
       },
       {
@@ -226,7 +226,7 @@
         "endTime": "10",
         "endTimeSuffix": "pm",
         "location": "Microsoft Singapore",
-        "location-2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
+        "location2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
         "ticketinfo": "Registration Ended"
       }]
     },
@@ -247,7 +247,7 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
-        "location-2": "28 Maxwell Road, Singapore 069120",
+        "location2": "28 Maxwell Road, Singapore 069120",
         "ticketinfo": "Registration Ended"
       },
       {
@@ -261,7 +261,7 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "The Working Capitol, ",
-        "location-2": "1 Keong Saik Road <br> Singapore 089109",
+        "location2": "1 Keong Saik Road <br> Singapore 089109",
         "ticketinfo": "Registration Ended"
       }]
     },
@@ -282,7 +282,7 @@
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "Red Dot Design Museum",
-        "location-2": "28 Maxwell Road, Singapore 069120",
+        "location2": "28 Maxwell Road, Singapore 069120",
         "ticketinfo": "Registration Ended"
 
       },
@@ -296,7 +296,7 @@
         "endTime": "12",
         "endTimeSuffix": "am",
         "location": "offsite",
-        "location-2": "",
+        "location2": "",
         "ticketinfo": "For JSConf.Asia attendees"
 
       }]
@@ -318,7 +318,7 @@
         "endTime": "1",
         "endTimeSuffix": "pm",
         "location": "The Impact Hub",
-        "location-2": "128 Prinsep St, Singapore 188655",
+        "location2": "128 Prinsep St, Singapore 188655",
         "ticketinfo": "Registration Ended"
 
       },
@@ -332,7 +332,7 @@
         "endTime": "9",
         "endTimeSuffix": "pm",
         "location": "Skyscanner Singapore",
-        "location-2": "39 Robinson Road, #08-01<br/>Singapore 068911",
+        "location2": "39 Robinson Road, #08-01<br/>Singapore 068911",
         "ticketinfo": "Registration Ended",
         "gmap": "39 Robinson Road"
       }]
@@ -354,7 +354,7 @@
           "endTime": "3",
           "endTimeSuffix": "pm",
           "location": "Ya Kun Kaya Toast",
-          "location-2": "18 China St #01-01<br/>Singapore 049560",
+          "location2": "18 China St #01-01<br/>Singapore 049560",
           "ticketinfo": "Registration Ended",
           "gmap": "18 China St #01-01 Singapore 049560"
         },
@@ -369,7 +369,7 @@
           "endTime": "9",
           "endTimeSuffix": "pm",
           "location": "Hackerspace.SG",
-          "location-2": "344B King George’s Avenue<br>Singapore 208576",
+          "location2": "344B King George’s Avenue<br>Singapore 208576",
           "ticketinfo": "Registration Ended"
         }
       ]
@@ -392,7 +392,7 @@
         "endTimeSuffix": "pm",
         "weekdays": true,
         "location": "1 Keong Saik Road",
-        "location-2": "Singapore 089109",
+        "location2": "Singapore 089109",
         "ticketinfo": "Hop by and sign up"
       },
       {
@@ -407,7 +407,7 @@
         "endTimeSuffix": "pm",
         "weekdays": true,
         "location": "344B King George’s Avenue",
-        "location-2": "Singapore 208576",
+        "location2": "Singapore 208576",
         "ticketinfo": "Register at the entrance upon arrival"
       },
       {
@@ -422,9 +422,9 @@
         "endTimeSuffix": "pm",
         "weekdays": true,
         "location": "128 Prinsep Street",
-        "location-2": "Singapore 188655",
+        "location2": "Singapore 188655",
         "ticketinfo": "Free",
-        "event-link": "http://bit.ly/hubpass",
+        "eventLink": "http://bit.ly/hubpass",
         "ticket": "Register free"
       },
       {
@@ -433,14 +433,14 @@
         "imageLink": "http://jointhe.co",
         "logo": "images/workspaces/co-logo.jpg",
         "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance. Includes all access hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
-        "event-link": "http://jointhe.co",
+        "eventLink": "http://jointhe.co",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "weekdays": true,
         "location": "75 High Street",
-        "location-2": "Singapore 179435",
+        "location2": "Singapore 179435",
         "ticketinfo": "Register at the entrance upon arrival"
       },
       {
@@ -448,14 +448,14 @@
         "image": "images/workspaces/woolf1.jpg",
         "imageLink": "http://www.woolfworks.sg",
         "desc": "Woolf Works is a shared work space specifically for women, located on lively Joo Chiat Road, on the east coast of Singapore. Meet our great community of women to chat over coffee. Includes hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://www.woolfworks.sg' target='_blank'>http://www.woolfworks.sg</a>",
-        "event-link": "http://www.woolfworks.sg",
+        "eventLink": "http://www.woolfworks.sg",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "weekdays": true,
         "location": "176 Joo Chiat Road",
-        "location-2": "Singpaore 427447",
+        "location2": "Singpaore 427447",
         "ticketinfo": "Register at the entrance upon arrival (women only)"
       },
       {
@@ -463,14 +463,14 @@
         "image": "images/workspaces/ace.jpg",
         "logo": "images/workspaces/ace-logo.jpg",
         "desc": "Visit the Action Community for Entrepreneurship (ACE), a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events' target='_blank'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
-        "event-link": "http://www.ace.sg/#calendar-of-events",
+        "eventLink": "http://www.ace.sg/#calendar-of-events",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "weekdays": true,
         "location": "79 Ayer Rajah Crescent #01-13",
-        "location-2": "Singapore 139955",
+        "location2": "Singapore 139955",
         "ticketinfo": "Register at the entrance upon arrival"
       }]
     }

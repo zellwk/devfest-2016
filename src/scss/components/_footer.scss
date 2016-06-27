@@ -1,0 +1,69 @@
+.Footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: vr(4);
+  padding-bottom: vr(4);
+  background: #0A233A;
+  color: rgba(white, 0.5);
+  text-align: center;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+    }
+  }
+}
+
+.Creds {
+  margin-top: vr(2);
+}
+
+.Creds__title {
+  font-weight: 300;
+}
+
+.Creds__sigs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: vr(0.75);
+  padding-bottom: vr(1.5);
+
+  a {
+    padding: 0 vr(0.5);
+  }
+
+  img {
+    max-height: vr(1.5);
+    width: auto;
+  }
+
+  img.zell {
+    max-height: vr(1.4);
+  }
+
+  img.moritz {
+    max-height: vr(1.5);
+  }
+
+  span {
+    @include is-invisible;
+  }
+}
+
+.nerdherd {
+  // margin-top: vr(1);
+  font-size: 13px;
+}
+
+.c-designed {
+  font-size: 13px;
+  margin-top: 1em;
+  font-weight: 400;
+}

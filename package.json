@@ -83,8 +83,7 @@
     "es6-promise": "^3.2.1",
     "express": "^4.13.4",
     "github": "^0.2.4",
-    "gsap": "^1.18.5",
-    "jquery": "^3.0.0"
+    "gsap": "^1.18.5"
   },
   "scripts": {
     "dev": "bower install && npm install && gulp",

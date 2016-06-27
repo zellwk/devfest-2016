@@ -52,85 +52,6 @@ form {
   }
 }
 
-// Footer
-// ------------
-
-.c-interrupt-2 + .site-footer {
-  margin-top: auto;
-}
-
-.site-footer {
-  font-weight: 100;
-  margin-top: rhythm(3);
-  padding: 1px 0 rhythm(4);
-  background: radial-gradient(circle, mix(black, color(bleu-de-france), 65%), mix(black, color(bleu-de-france), 80%));
-  color: rgba(white, 0.5);
-  text-align: center;
-
-  h4 {
-    font-weight: 100;
-  }
-
-  // .logo--hero {
-  //   margin-top: rhythm(4);
-  //   margin-bottom: rhythm(1);
-  // }
-
-  a {
-    color: inherit;
-    text-decoration: underline;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: white;
-
-      // text-decoration: none;
-
-    }
-  }
-}
-
-.c-creds__sigs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: rhythm(1);
-  padding-bottom: rhythm(1);
-
-  a {
-    padding: rhythm(1) rhythm(1);
-  }
-
-  img {
-    max-height: rhythm(2);
-    width: auto;
-  }
-
-  img.zell {
-    max-height: rhythm(1.4);
-  }
-
-  img.moritz {
-    max-height: rhythm(1.5);
-  }
-
-  span {
-    @include is-invisible;
-  }
-}
-
-.nerdherd {
-  // margin-top: rhythm(1);
-  font-size: 13px;
-}
-
-.c-designed {
-  font-size: 13px;
-  margin-top: 1em;
-  font-weight: 400;
-}
-
 // hangouts
 
 .c-hangouts {
@@ -450,7 +371,7 @@ article {
     margin-top: rhythm(1);
   }
 
-  + .site-footer {
+  + .Footer {
     margin-top: 0;
   }
 }

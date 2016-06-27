@@ -4,22 +4,24 @@
       <div id="{% if date.date %}{{date.day}}{{date.date}}{% elif date.text%}allweek{% endif %}-hash" class="Event-groups l-event-groups">
         <div class="Event-group l-event-group jsScrollSpyContainer">
           <div class="Event-group__cal jsScrollSpy" data-scrollSpyHighlight="{{date.date}}">
-            {% if date.day %} <h4 class="weekday">Nov</h4> {% endif %}
-            <h2 class="day">{{date.date}}</h2>
-            {% if date.text %} <h4 class="allweek">All<br>Week</h4>{% endif %}
+            <div class="Cal">
+              {% if date.day %} <h4 class="small weekday">Nov</h4> {% endif %}
+              <div class="h4 day">{{date.date}}</div>
+              {% if date.text %} <div class="h6 allweek">All<br>Week</div>{% endif %}
+            </div>
           </div>
         </div>
 
         <div class="Events l-events">
           {% for event in date.events %}
             <div class="Event l-event">
-              <a class="Event__image" style="background-image:url('{{event.image}}')"{% if event.imageLink %} href="{{event.imageLink}}" target="_blank" {% endif %}>
+              <a class="Event__header" style="background-image:url('{{event.image}}')"{% if event.imageLink %} href="{{event.imageLink}}" target="_blank" {% endif %}>
                 {% if event.logo %}
-                  <div class="Event__logo" style="background-image:url('{{event.logo}}');">logo placeholder</div>
+                  <div class="Event__logo" style="background-image:url('{{event.logo}}');"></div>
                 {% endif %}
               </a>
 
-              <div class="Event__content">
+              <div class="Event__body">
                 <div class="Event__desc">
                   {% if event.featured %}
                     <div class="c-devfest-featured c-devfest-featured--coworking">
@@ -30,19 +32,36 @@
                     </div>
                   {% endif %}
 
-                  <h3 class="Event__title">{{event.title}}</h3>
+                  <h3 class="Event__title h3">{{event.title}}</h3>
                   <p>{{event.desc | safe }}</p>
                   <div class="Event__time">
-                    <div class="css-clock" data-time="{{event.startTime}}-{{event.endTime}}"></div>
-                    {{event.startTime}}{{event.startTimeSuffix}} - {{event.endTime}}{{event.endTimeSuffix}}{% if event.weekdays %} on weekdays {% endif %}
+                    <div class="Clock" data-time="{{event.startTime}}-{{event.endTime}}"></div>
+                    <span> {{event.startTime}}{{event.startTimeSuffix}} - {{event.endTime}}{{event.endTimeSuffix}}{% if event.weekdays %} on weekdays {% endif %} </span>
                   </div>
                   <div class="Event__location">
-                    <img class="i-location jsSvgInject" src="images/location1.svg" />
+                    <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#location1" /></svg>
                     <a href="http://maps.google.com/?q={% if event.gmap %}{{event.gmap}}{% else %}{{ event.location }}{% endif %}">
-                      <div> {{event.location | safe}}</div>
-                      <div>{{event.location-2 | safe }}</div>
+                      <div>{{event.location | safe}}</div>
+                      <div>{{event.location2 | safe }}</div>
                     </a>
                   </div>
+                </div>
+
+                <div class="Event__aside">
+                  {% if event.featured %}
+                  {% else %}
+                    {% if event.ticket %}
+                      {% if event.eventLink %}
+                        <a href="{{event.eventLink}}" target="_blank" class="o-btn">{{event.ticket}}</a>
+                        {% else %}
+                        <a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank"  class="o-btn">{{event.ticket}}</a>
+                      {% endif %}
+                    {% else %}
+                      <div class="ticket-info">
+                        {{event.ticketinfo}}
+                      </div>
+                    {% endif %}
+                  {% endif %}
                 </div>
               </div>
             </div>

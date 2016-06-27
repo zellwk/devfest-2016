@@ -1,57 +1,39 @@
-.l-content {
-  background: #F5F5F5;
-}
-
 .Event {
   background: white;
-  border: 1px solid #eee;
-
-  @include bp("med") {
-    // display: flex;
-    // flex-direction: column;
-    border-radius: 3px;
-    box-shadow: 0 1px 0px 0px rgba(black, 0.1);
-  }
 }
 
-.Event__image {
+// Event Header Image
+// ==================
+.Event__header {
   display: block;
   position: relative;
   background-position: center center;
   background-size: cover;
   height: 0;
   padding-bottom: 56.25%;
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: vr(0.25);
-    width: 100%;
-    background: color(malibu);
-  }
+  border-bottom: 1px solid #ddd;
 }
 
 .Event__logo {
   position: absolute;
-
-  // border: 4px solid white;
-  box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.5);
-  bottom: vr(0.25);
+  bottom: 0;
   right: vr(1);
   width: vr(4.5);
   height: vr(4.5);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+
+  // bottom: -1px;
+  // border: 1px solid #ddd;
 }
 
-.Event__content {
-  position: relative;
-
+// Event body
+// ==================
+.Event__body {
   @include cf;
 
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -65,9 +47,6 @@
 }
 
 .Event__title {
-  font-family: 'Open Sans Condensed';
-  font-weight: 700;
-  font-size: vr(1);
   margin-bottom: vr(0.5);
 }
 
@@ -102,10 +81,15 @@
 .Event__time {
   margin-top: vr(0.75);
 
-  .css-clock {
+  .css-clock, span {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 0.25em;
+  }
+
+  span {
+    position: relative;
+    top: -0.25em;
+    margin-left: 0.25em;
   }
 }
 
@@ -113,32 +97,22 @@
   display: block;
   margin-top: vr(0.25);
 
-  a {
-    text-decoration: none;
-  }
-
-  img {
-    float: left;
-  }
-
   svg {
-    display: inline-block;
-    vertical-align: middle;
+    float: left;
     width: 18px;
-  }
+    height: 24px;
 
-  svg path {
-    fill: color(bleu-de-france);
+    use {
+      fill: color(bleu-de-france);
+    }
   }
 
   a {
-    display: inline-block;
+    display: block;
+    padding-left: 24px;
     vertical-align: top;
-    margin-top: 5px;
-  }
-
-  div {
-    line-height: 1.33;
+    margin-top: 0.05em;
+    margin-left: 6px;
   }
 }
 
