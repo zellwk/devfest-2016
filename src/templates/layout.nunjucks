@@ -26,9 +26,10 @@
   {% endblock %}
 </head>
 <body>
-
-  <div class="canvas jsCanvas">
-    {% block content %} {% endblock %}
+  <div class="Canvas jsCanvas">
+    <div class="Canvas__on">
+      {% block content %} {% endblock %}
+    </div>
   </div>
 
   {% include "partials/footer.nunjucks" %}

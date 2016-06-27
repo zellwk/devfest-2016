@@ -1,17 +1,4 @@
-// html,
-// body,
-// .Canvas,
-// .Canvas__off-canvas,
-// .Canvas__on-canvas {
-//   height: 100%;
-// }
-
 $offCanvasWidth: 280px;
-
-// .Canvas {
-//   position: relative;
-//   overflow: hidden;
-// }
 
 .Canvas__off-canvas {
   position: fixed;
@@ -25,7 +12,7 @@ $offCanvasWidth: 280px;
   z-index: 10000;
 }
 
-.Canvas__on-canvas {
+.Canvas__on {
   position: relative;
   left: 0;
   z-index: 20;
@@ -47,7 +34,7 @@ $offCanvasWidth: 280px;
   right: 0;
 }
 
-.Canvas.is-open .Canvas__on-canvas {
+.Canvas.is-open .Canvas__on {
   overflow: hidden;
   left: -$offCanvasWidth;
 

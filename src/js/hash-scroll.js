@@ -8,21 +8,7 @@ $(document).ready(function () {
     }, 800)
   }
 
-  $('.downarr').click(function (event) {
-    event.preventDefault()
-    replaceHashAndScroll($(this))
-  })
-
-  $('.c-events-nav').on('click', 'a', function (event) {
-    event.preventDefault()
-    if (!$(this).hasClass('c-events__calendar')) {
-      replaceHashAndScroll($(this))
-    } else {
-      window.location = $(this).attr('href')
-    }
-  })
-
-  $('.c-community__ways').on('click', 'a', function (event) {
+  $('.jsEventsNav').on('click', 'a', function (event) {
     event.preventDefault()
     replaceHashAndScroll($(this))
   })
@@ -40,19 +26,19 @@ $(document).ready(function () {
   }
 
   function hashChangeScroll () {
-    var eventsHeaderHeight = $('.c-events-header').outerHeight()
+    var eventsHeaderHeight = $('.jsEventsHeader').outerHeight()
 
     // scrolls to hash location
     var curPos = $(window).scrollTop()
     var currHash = location.hash
-    var targetHash = location.hash
+    var targetHash = location.hash + '-hash'
     var $target = $(targetHash)
     var targetTop = parseInt($target.offset().top)
 
-    // console.log($target);
-
-    $('body').animate({
-      scrollTop: targetTop - eventsHeaderHeight
+    console.log(targetTop - eventsHeaderHeight);
+    var scroll = targetTop - eventsHeaderHeight
+    $('html').animate({
+      scrollTop: scroll
     }, 1500)
   }
 })
