@@ -52,9 +52,9 @@
                   {% else %}
                     {% if event.ticket %}
                       {% if event.eventLink %}
-                        <a href="{{event.eventLink}}" target="_blank" class="o-btn">{{event.ticket}}</a>
+                        <a href="{{event.eventLink}}" target="_blank" class="btn">{{event.ticket}}</a>
                         {% else %}
-                        <a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank"  class="o-btn">{{event.ticket}}</a>
+                        <a href="https://www.eventnook.com/event/devfestasia2015/home" target="_blank"  class="btn">{{event.ticket}}</a>
                       {% endif %}
                     {% else %}
                       <div class="ticket-info">

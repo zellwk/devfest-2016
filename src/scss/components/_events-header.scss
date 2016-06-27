@@ -4,9 +4,14 @@
   background: #37474f;
   background: #0A233A;
   overflow: hidden;
+  margin-bottom: vr(2);
 
   a {
     text-decoration: none;
+  }
+
+  & + .l-content {
+    padding-top: 0;
   }
 }
 

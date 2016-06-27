@@ -152,15 +152,15 @@ var ScrollSpy = (function () {
 
     onEnter: function ($el, pos) {
       this.status = 'enter'
+      this.options.$item.addClass('is-active')
       this.removeTransition()
-
       this.options.props.highlightComponent.addClass('is-active')
     },
 
     onLeave: function ($el, pos) {
       this.status = 'leave'
+      this.options.$item.removeClass('is-active')
       this.removeTransition()
-
       this.options.props.highlightComponent.removeClass('is-active')
 
       if (this.direction === 'down') {
@@ -281,8 +281,8 @@ $(window).load(function () {
   function getProps () {
     var o = {}
     o.hiddenHeader = $('.c-site-header').outerHeight()
-    o.stickyHeadHeight = $('.c-events-header').outerHeight()
-    o.extraPadding = parseInt($('.c-events-header').css('margin-bottom')) || 0
+    o.stickyHeadHeight = $('.jsEventsHeader').outerHeight()
+    o.extraPadding = parseInt($('.jsEventsHeader').css('margin-bottom')) || 0
     o.circleSize = $('.jsScrollSpy').outerHeight()
     o.fixedTop = o.stickyHeadHeight + o.extraPadding
 

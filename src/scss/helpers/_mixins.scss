@@ -4,7 +4,7 @@
 // ======
 
 @mixin acolor($color, $colors: $colors) {
-  // Sets color to value in $colors map if possible, 
+  // Sets color to value in $colors map if possible,
   // else fall back to given color
   $color: if(map-has-key($colors, $color), map-get($colors, $color), $color);
 
@@ -13,6 +13,28 @@
     color: $color;
   }
 }
+
+
+@mixin bp-utils($bp: $breakpoints) {
+  $keys: map-keys($bp);
+
+  @each $bp, $val in $bp {
+    .u-hide-st-#{$bp} {
+
+      @include bp(max $bp) {
+        display: none !important;
+      }
+    }
+
+    .u-hide-#{$bp} {
+
+      @include bp($bp) {
+        display: none !important;
+      }
+    }
+  }
+}
+
 
 // Clearfix
 // --------
@@ -47,7 +69,7 @@
   }
 }
 
-// Image-replacement 
+// Image-replacement
 // -----------------
 // Hides text for image replacement
 // Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
@@ -143,7 +165,7 @@ $text-input-types: text, password, date, datetime, datetime-local, month, week, 
 
 // Trans-prep
 // ----------
-// Prepares for transforms. Gives backface-visibility: hidden 
+// Prepares for transforms. Gives backface-visibility: hidden
 // to remove flickering effect on Webkit browsers
 // - http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css
 @mixin trans-prep {

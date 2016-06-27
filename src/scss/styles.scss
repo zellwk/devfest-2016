@@ -30,19 +30,17 @@
 // Objects
 // -------
 // Repeatable objects across the site
+@import "objects/typography";
 @import "objects/buttons";
-
+@import "objects/form";
+@import "components/logo";
 // @import "objects/block";
 
-@import "objects/form";
 
 // @import "objects/media";
-@import "objects/typography";
-@import "components/logo";
 
 // Components
 // ----------
-// For individual, isolated components
 @import "components/css-clock";
 @import "components/event-groups";
 @import "components/events";
@@ -65,6 +63,7 @@
 
 // Utilities
 // ---------
+@include bp-utils;
 // @import "utilities";
 
 // Page Specific Overrides
@@ -76,41 +75,3 @@
 // For new style snippets that haven't been sorted and commented yet
 // @import "shame";
 
-@mixin bp-utils($bp: $breakpoints) {
-  $keys: map-keys($bp);
-
-  @each $bp, $val in $bp {
-    .u-hide-st-#{$bp} {
-
-      @include bp(max $bp) {
-        display: none !important;
-      }
-    }
-
-    .u-hide-#{$bp} {
-
-      @include bp($bp) {
-        display: none !important;
-      }
-    }
-  }
-}
-
-@include bp-utils;
-
-.u-hide-portrait {
-  @include bp(orientation portrait) {
-    display: none !important;
-  }
-}
-
-
-.u-hide-landscape {
-  @include bp(orientation landscape) {
-    display: none !important;
-  }
-}
-
-.is-invisible {
-  @include is-invisible;
-}

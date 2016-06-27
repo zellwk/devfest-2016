@@ -64,10 +64,8 @@
 }
 
 .l-events {
-  width: calc(100% - #{gutter(14)});
-  margin-left: gutter(14) / 2;
-  padding-left: span(1);
-
+  width: calc(100% - #{vr(3)});
+  margin-left: vr(3);
   @include bp(max "med") {
     margin-top: vr(-1);
   }
@@ -75,6 +73,8 @@
   @include bp("med") {
     display: flex;
     flex-wrap: wrap;
+    margin-left: gutter(14) / 2;
+    padding-left: span(1);
   }
 }
 

@@ -35,7 +35,7 @@ $(document).ready(function () {
     var $target = $(targetHash)
     var targetTop = parseInt($target.offset().top)
 
-    console.log(targetTop - eventsHeaderHeight);
+    console.log(targetTop - eventsHeaderHeight)
     var scroll = targetTop - eventsHeaderHeight
     $('html').animate({
       scrollTop: scroll

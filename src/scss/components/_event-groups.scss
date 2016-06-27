@@ -33,14 +33,17 @@
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  background: color(bleu-de-france);
   background: white;
   border: 2px solid color(bleu-de-france);
   height: vr(2.25);
   width: vr(2.25);
   text-align: center;
-  color: white;
   color: color(bleu-de-france);
+}
+
+.Event-group__cal.is-active {
+  background: color(bleu-de-france);
+  color: white;
 }
 
 .weekday {
@@ -58,6 +61,19 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.15;
+}
+
+.Event__aside {
+  @include typi($even-smaller-map);
+
+  text-align: center;
+
+  .ticket-info {
+    display: inline-block;
+    padding: 0.75em 0.75em;
+    color: black;
+    border: 1px solid #ddd;
+  }
 }
 
 // Adding new items
