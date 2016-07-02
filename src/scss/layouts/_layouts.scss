@@ -31,76 +31,29 @@
 }
 
 .l-content {
-  padding-top: vr(2);
+  position: relative;
+  padding-top: vr(1);
   padding-bottom: vr(2);
   background: #F5F5F5;
 }
 
-// Events Layout
-.l-event-groups,
-.l-company-and-jobs {
-  display: flex;
-  align-items: stretch;
-  padding-top: gutter();
-  padding-bottom: gutter();
+.nav {
+  float: left;
+  margin-top: vr(0.4);
+  width: vr(5);
+  text-align: right;
+  line-height: vr(0.8);
 
-  @include bp("med") {
-    margin-top: gutter();
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
+  a {
+    display: block;
+    text-decoration: none;
 
-.l-content .wrap:first-child .l-event-groups {
-  padding-top: 0;
-}
-
-.l-event-group {
-  text-align: center;
-
-  @include bp("med") {
-    text-align: left;
-  }
-}
-
-.l-events {
-  width: calc(100% - #{vr(3)});
-  margin-left: vr(3);
-  @include bp(max "med") {
-    margin-top: vr(-1);
-  }
-
-  @include bp("med") {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: gutter(14) / 2;
-    padding-left: span(1);
-  }
-}
-
-.l-event {
-  @include bp(max "med") {
-    margin-top: vr(1);
-  }
-
-  @include bp("med") {
-    width: span(7 of 14);
-    margin-right: gutter(14);
-    overflow: hidden;
-
-    + & {
-      margin-top: 0;
-    }
-
-    &:nth-child(2n+2) {
-      margin-right: 0;
-    }
-
-    &:nth-child(n+3) {
-      margin-top: gutter(14);
+    &:first-child {
+      color: color(bleu-de-france);
     }
   }
 }
+
 
 // Hotel Layout
 // ------------

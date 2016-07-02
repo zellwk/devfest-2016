@@ -409,7 +409,7 @@
         "weekdays": true,
         "location": "344B King George’s Avenue",
         "location2": "Singapore 208576",
-        "ticketinfo": "Register at the entrance upon arrival"
+        "ticketinfo": "Register on arrival"
       },
       {
         "title": "Free Impact Hub co-working",
@@ -442,7 +442,7 @@
         "weekdays": true,
         "location": "75 High Street",
         "location2": "Singapore 179435",
-        "ticketinfo": "Register at the entrance upon arrival"
+        "ticketinfo": "Register on arrival"
       },
       {
         "title": "$25 Day-Pass at Woolf Works",
@@ -457,7 +457,7 @@
         "weekdays": true,
         "location": "176 Joo Chiat Road",
         "location2": "Singpaore 427447",
-        "ticketinfo": "Register at the entrance upon arrival (women only)"
+        "ticketinfo": "Register on arrival (women only)"
       },
       {
         "title": "Free co-working at ACE",
@@ -472,7 +472,7 @@
         "weekdays": true,
         "location": "79 Ayer Rajah Crescent #01-13",
         "location2": "Singapore 139955",
-        "ticketinfo": "Register at the entrance upon arrival"
+        "ticketinfo": "Register on arrival"
       }]
     }
   ]

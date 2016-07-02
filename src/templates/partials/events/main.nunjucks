@@ -1,17 +1,17 @@
 {% for date in dates %}
   {% if date.type == 'event' %}
-    <div class="wrap">
-      <div id="{% if date.date %}{{date.day}}{{date.date}}{% elif date.text%}allweek{% endif %}-hash" class="Event-groups l-event-groups">
-        <div class="Event-group l-event-group jsScrollSpyContainer">
-          <div class="Event-group__cal jsScrollSpy" data-scrollSpyHighlight="{{date.date}}">
-            <div class="Cal">
-              {% if date.text %} <div class="h4 allweek">All<br>Week</div>{% endif %}
-              <div class="h4 day">{{date.date}}</div>
-              {% if date.day %} <h4 class="small weekday">Nov</h4> {% endif %}
-            </div>
+    <div class="Event-groups l-event-groups" id="{% if date.date %}{{date.day}}{{date.date}}{% elif date.text%}allweek{% endif %}-hash" >
+      <div class="Event-group l-event-group jsScrollSpyContainer">
+        <div class="Event-group__cal jsScrollSpy" data-scrollSpyHighlight="{{date.date}}">
+          <div class="Cal">
+            {% if date.text %} <div class="h4 allweek">All<br>Week</div>{% endif %}
+            <div class="h4 day">{{date.date}}</div>
+            {% if date.day %} <h4 class="small weekday">Nov</h4> {% endif %}
           </div>
         </div>
+      </div>
 
+      <div class="l-events-container">
         <div class="Events l-events">
           {% for event in date.events %}
             <div class="Event l-event">
@@ -23,15 +23,6 @@
 
               <div class="Event__body">
                 <div class="Event__desc">
-                  {% if event.featured %}
-                    <div class="c-devfest-featured c-devfest-featured--coworking">
-                      <div class="c-devfest-featured__badge c-devfest-featured__badge--coworking">
-                        <span>Devfest <br> Co-working</span>
-                      </div>
-                      <div class="c-devfest-featured__aura"></div>
-                    </div>
-                  {% endif %}
-
                   <h3 class="Event__title h3">{{event.title}}</h3>
                   <p>{{event.desc | safe }}</p>
                   <div class="Event__time">

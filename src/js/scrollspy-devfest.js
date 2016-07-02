@@ -223,13 +223,8 @@ var ScrollSpy = (function () {
 
     changeMinMax: function () {
       var o = this.options
-      // if (this.direction === 'down') {
       o.min = o.props.min
       o.max = o.props.max
-      // } else {
-      //   o.min = o.props.min - o.props.buffer;
-      //   o.max = o.props.max - o.props.buffer;
-      // }
 
       this.options = o
     },
@@ -259,7 +254,7 @@ $(window).load(function () {
     el.scrollSpy = new ScrollSpy({
       $el: $(el),
       $item: $(el).find('.jsScrollSpy'),
-      // container: '.Canvas__on',
+      container: window,
       props: props,
       min: props.min,
       max: props.max,
@@ -291,8 +286,7 @@ $(window).load(function () {
 
   function calcScrollSpyProps (globalProps, $el) {
     var props = {}
-
-    props.height = parseInt($el.outerHeight())
+    props.height = parseInt($el.siblings('.l-events-container').outerHeight())
     props.min = parseInt($el.offset().top) - globalProps.stickyHeadHeight - globalProps.extraPadding
     props.max = props.min + props.height - globalProps.circleSize
     props.buffer = globalProps.hiddenHeader

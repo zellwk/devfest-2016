@@ -6,3 +6,9 @@ require('./hash-scroll')
 require('./form')
 // Polyfill for external SVG spritesheets
 svg4everybody()
+
+let $ = require('jquery')
+
+$(window).resize(function (event) {
+  console.log($(window).width())
+})

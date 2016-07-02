@@ -1,32 +1,24 @@
 .Event-group {
   position: relative;
 
-  // @include bp("med") {
-  //   left: vr(-0.75);
-  // }
-
-  // @include bp(1000px) {
-  //   left: vr(-1.5);
-  // }
-
-  // &:before {
-  //   content: "";
-  //   position: absolute;
-  //   display: block;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: calc(#{vr(1.125)} - 1px);
-  //   width: 2px;
-  //   background: color(malibu);
-  // }
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+  }
 }
 
 .Event-group__cal {
   @include ff(secondary);
 
   position: absolute;
+  top: 0;
+  bottom: 0;
   z-index: 20;
   color: #0A233A;
+  height: 3.5em;
 }
 
 .Event-group__cal.is-active {
@@ -51,7 +43,7 @@
     content: '';
     display: block;
     height: 2px;
-    width: 52px;
+    width: calc(#{vr(2.5)} - 1px);
     background: #0A233A;
   }
 }
@@ -62,19 +54,6 @@
   letter-spacing: 0.01em;
   line-height: 1;
   margin-bottom: 0.05em;
-}
-
-.Event__aside {
-  @include typi($even-smaller-map);
-
-  text-align: center;
-
-  .ticket-info {
-    display: inline-block;
-    padding: 0.75em 0.75em;
-    color: black;
-    border: 1px solid #ddd;
-  }
 }
 
 // Adding new items

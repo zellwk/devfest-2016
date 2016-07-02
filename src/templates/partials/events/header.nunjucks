@@ -1,7 +1,7 @@
 <div class="Events-header jsEventsHeader jsFixedHeader" data-SH-offset="68">
   <div class="Events-wrap">
-    <div class="wrap Canvas__fixed-item">
-      <nav class="Events-nav jsEventsNav">
+    <div class="Canvas__fixed-item">
+      <nav class="Events-nav l-Events-nav jsEventsNav">
         {% for date in dates %}
           {% if date.type == 'event' %}
             {% if date.date %}

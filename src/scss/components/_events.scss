@@ -23,9 +23,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-
-  // bottom: -1px;
-  // border: 1px solid #ddd;
 }
 
 // Event body
@@ -34,16 +31,7 @@
   @include cf;
 
   position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: vr(1);
-  font-size: 0.875rem;
-  line-height: 1.333;
-
-  @include bp("large") {
-    display: block;
-  }
+  padding: vr(0.75);
 }
 
 .Event__title {
@@ -51,30 +39,23 @@
 }
 
 .Event__desc {
-  flex-grow: 1;
-
-  @include bp("large") {
-    @include span(5 of 7);
-  }
+  @include typi($h6-map);
 }
 
 .Event__aside {
+  @include typi($even-smaller-map);
+
+  margin-top: vr(0.5);
+
   .o-btn {
     display: block;
-    text-align: center;
   }
 
-  @include bp("large") {
-    @include span(2 of 7 last);
-
-    .o-btn {
-      float: right;
-      display: inline-block;
-      margin-top: vr(0);
-      font-size: 1rem;
-      padding: 0.5em 0.5em;
-      line-height: 1.2em;
-    }
+  .ticket-info {
+    display: inline-block;
+    padding: 0.75em 0.75em;
+    color: black;
+    border: 1px solid #ddd;
   }
 }
 

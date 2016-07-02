@@ -1,4 +1,15 @@
 {% include "partials/events/header.nunjucks" %}
 <div id="content-hash" class="l-content">
-  {% include "partials/events/main.nunjucks" %}
+  <nav class="nav h6 u-hide-st-med-large">
+    <a href="#">Events</a>
+    <a href="#">Hotels</a>
+    <a href="#">Jobs</a>
+    <a href="#">Sponsors</a>
+    <a href="#">Community</a>
+    <a href="#">Blog</a>
+  </nav>
+
+  <div class="l-event-layout">
+    {% include "partials/events/main.nunjucks" %}
+  </div>
 </div>
