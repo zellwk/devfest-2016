@@ -11,7 +11,7 @@
               </a>
             {% else %}
                <a href="#allweek-hash" class="jsScrollSpyHighlight" data-scrollSpyHighlight="{{date.date}}">
-                {# <span class="Events-nav__day"><br></span> #}
+                <span class="h6 Events-nav__day">&nbsp; <br/></span>
                 <span class="Events-nav__date Events-nav__date--all-week">All <br> Week</span>
               </a>
             {% endif %}

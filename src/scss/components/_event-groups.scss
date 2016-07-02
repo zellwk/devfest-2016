@@ -1,26 +1,24 @@
 .Event-group {
   position: relative;
 
-  @include bp("med") {
-    left: vr(-0.75);
-  }
+  // @include bp("med") {
+  //   left: vr(-0.75);
+  // }
 
+  // @include bp(1000px) {
+  //   left: vr(-1.5);
+  // }
 
-  @include bp(1000px) {
-    left: vr(-1.5);
-  }
-
-
-  &:before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: calc(#{vr(1.125)} - 1px);
-    width: 2px;
-    background: color(malibu);
-  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   display: block;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: calc(#{vr(1.125)} - 1px);
+  //   width: 2px;
+  //   background: color(malibu);
+  // }
 }
 
 .Event-group__cal {
@@ -28,39 +26,42 @@
 
   position: absolute;
   z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  background: white;
-  border: 2px solid color(bleu-de-france);
-  height: vr(2.25);
-  width: vr(2.25);
-  text-align: center;
-  color: color(bleu-de-france);
+  color: #0A233A;
 }
 
 .Event-group__cal.is-active {
-  background: color(bleu-de-france);
-  color: white;
+  // background: color(bleu-de-france);
+  // color: white;
 }
 
 .weekday {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 1.2;
+  margin-top: 0.15em;
 }
 
 .day {
   line-height: 1;
   font-weight: bold;
+  font-size: 2.5em;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 52px;
+    background: #0A233A;
+  }
 }
 
 .allweek {
+  font-size: 1em;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  line-height: 1.15;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-bottom: 0.05em;
 }
 
 .Event__aside {

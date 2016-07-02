@@ -5,9 +5,9 @@
         <div class="Event-group l-event-group jsScrollSpyContainer">
           <div class="Event-group__cal jsScrollSpy" data-scrollSpyHighlight="{{date.date}}">
             <div class="Cal">
-              {% if date.day %} <h4 class="small weekday">Nov</h4> {% endif %}
+              {% if date.text %} <div class="h4 allweek">All<br>Week</div>{% endif %}
               <div class="h4 day">{{date.date}}</div>
-              {% if date.text %} <div class="h6 allweek">All<br>Week</div>{% endif %}
+              {% if date.day %} <h4 class="small weekday">Nov</h4> {% endif %}
             </div>
           </div>
         </div>

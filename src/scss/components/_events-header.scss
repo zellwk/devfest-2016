@@ -18,8 +18,8 @@
 .Events-wrap {
   overflow-x: scroll;
   overflow-y: hidden;
-  padding-top: vr(0.65);
-  padding-bottom: vr(0.5);
+  padding-top: vr(0.5);
+  padding-bottom: vr(0.25);
   padding-right: vr(1);
   padding-left: vr(1);
 
@@ -48,10 +48,12 @@
     justify-content: center;
   }
 
+
   a {
     display: inline-block;
     color: color(white);
-    padding: 0 0.5em;
+
+    // padding: 0 0.5em;
     text-align: center;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
 
@@ -59,21 +61,55 @@
       padding: 0 0.75em;
     }
 
+
     &:first-child {
       padding-left: 0;
     }
   }
 
   .is-active {
-    color: mix(#E74840, white, 40%);
+    color: white;
   }
 }
 
 .Events-nav__day {
   text-transform: uppercase;
+  font-family: 'Fira Sans';
   display: block;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  font-size: 0.5em;
 }
 
 a.Events-nav__weekend {
   color: rgba(white, 0.7);
+}
+
+.Events-nav__date {
+  position: relative;
+  display: block;
+  margin-top: 0.1em;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+  }
+}
+
+.is-active .Events-nav__date {
+  background: color(carmine);
+}
+
+.Events-nav__date--all-week {
+  font-size: 0.6em;
+  width: 3.5em;
+  height: 3.5em;
+  margin-top: 0.1666666667em;
 }
