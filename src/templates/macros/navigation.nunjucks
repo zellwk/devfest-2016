@@ -1,8 +1,8 @@
 {% macro active(active='events') %}
 <a href="#" class="{%if active == 'events' %} is-active {% endif %}">Events</a>
-<a href="#" class="{%if active == 'hotels' %} is-active {% endif %}">Hotels</a>
+{# <a href="#" class="{%if active == 'hotels' %} is-active {% endif %}">Hotels</a>
 <a href="#" class="{%if active == 'jobs' %} is-active {% endif %}">Jobs</a>
-<a href="#" class="{%if active == 'sponsors' %} is-active {% endif %}">Sponsors</a>
-<a href="/community" class="{%if active == 'community' %} is-active {% endif %}">Community</a>
+<a href="#" class="{%if active == 'sponsors' %} is-active {% endif %}">Sponsors</a> #}
+{# <a href="/community" class="{%if active == 'community' %} is-active {% endif %}">Community</a> #}
 <a href="#" >Blog</a>
 {% endmacro %}

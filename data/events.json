@@ -2,6 +2,30 @@
   "dates": [
     {
       "type": "event",
+      "date": "18",
+      "day": "Fri",
+      "events": []
+    },
+    {
+      "type": "event",
+      "date": "19",
+      "day": "Sat",
+      "events": []
+    },
+    {
+      "type": "event",
+      "date": "20",
+      "day": "Sun",
+      "events": []
+    },
+    {
+      "type": "event",
+      "date": "21",
+      "day": "Mon",
+      "events": []
+    },
+    {
+      "type": "event",
       "date": "22",
       "day": "Tue",
       "events": [
@@ -19,6 +43,13 @@
         "location2": "",
         "ticketinfo": "Registration opening soon"
       }]
+    },
+
+    {
+      "type": "event",
+      "date": "23",
+      "day": "Wed",
+      "events": []
     },
 
     {
@@ -46,7 +77,8 @@
     {
       "type": "interrupt",
       "item": "job",
-      "title": "Do you want to have your own event be part of DevFest.Asia",
+      "title": "More events are coming!",
+      "text": "Do you want to have your own event be part of DevFest.Asia?",
       "button": "Submit your event here",
       "link": "https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/"
     },
@@ -149,6 +181,11 @@
         "location2": "",
         "ticketinfo": "Registration opening soon"
       }]
+    },
+    {
+      "type": "event",
+      "text": "All<br>Week",
+      "events": []
     }
   ]
 }
