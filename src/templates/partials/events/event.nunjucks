@@ -22,7 +22,7 @@
           <div class="Event__body">
             <div class="Event__desc">
               <h3 class="Event__title h3">{{event.title}}</h3>
-              <p>{{event.desc | safe }}</p>
+              <p class="jsShowMore">{{event.desc | safe }}</p>
               <div class="Event__time">
                 <div class="Clock" data-time="{{event.startTime}}-{{event.endTime}}"></div>
                 <span> {{event.startTime}}{{event.startTimeSuffix}} - {{event.endTime}}{{event.endTimeSuffix}}{% if event.weekdays %} on weekdays {% endif %} </span>
