@@ -2,14 +2,14 @@
   line-height: 1;
   background: color(firefly);
   overflow: hidden;
+  margin-bottom: vr(1.1);
 
   a {
     text-decoration: none;
   }
 
   & + .l-content {
-    // padding-top: 0;
-
+    margin-top: vr(-1.1);
   }
 }
 
@@ -47,6 +47,11 @@
 
     &:first-child {
       padding-left: 0;
+    }
+
+    @include bp(max med) {
+      padding: 0 0.25em;
+      min-width: min-content;
     }
   }
 

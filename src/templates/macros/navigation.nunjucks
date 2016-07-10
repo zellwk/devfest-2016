@@ -4,5 +4,7 @@
 <a href="#" class="{%if active == 'jobs' %} is-active {% endif %}">Jobs</a>
 <a href="#" class="{%if active == 'sponsors' %} is-active {% endif %}">Sponsors</a> #}
 {# <a href="/community" class="{%if active == 'community' %} is-active {% endif %}">Community</a> #}
-<a href="#" >Blog</a>
+<a href="https://blog.devfest.asia" >Blog</a>
+<a href="https://jsconfasia.wufoo.com/forms/mawgx6w16px4ur/">Post a Job</a>
+<a href="https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/">List your event</a>
 {% endmacro %}

@@ -181,11 +181,6 @@
         "location2": "",
         "ticketinfo": "Registration opening soon"
       }]
-    },
-    {
-      "type": "event",
-      "text": "All<br>Week",
-      "events": []
     }
   ]
 }

@@ -1,5 +1,3 @@
-.u-hide-mobile {
-  @include bp(max $bp-med) {
-    display: none !important;
-  }
+.is-invisible {
+  @include is-invisible;
 }

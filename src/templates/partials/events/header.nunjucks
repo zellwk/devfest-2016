@@ -3,7 +3,7 @@
     <div class="Canvas__fixed-item">
       <nav class="Nav-trigger jsNavTrigger u-hide-med-large">
         <a href="#">
-          <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#menu" /></svg>
+          <svg viewbox="0 0 100 100"><use xlink:href="/symbol/svg/sprite.symbol.svg#menu" /></svg>
         </a>
       </nav>
       <nav class="Events-nav l-Events-nav jsEventsNav">

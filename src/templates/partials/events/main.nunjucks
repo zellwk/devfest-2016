@@ -1,8 +1,6 @@
 {% for date in dates %}
   {% if date.type == 'event' %}
-    {% if date.events.length > 0 %}
-      {% include "partials/events/event.nunjucks" %}
-    {% endif %}
+    {% include "partials/events/event.nunjucks" %}
   {% endif %}
 
   {% if date.type == 'interrupt' %}

@@ -1,12 +1,11 @@
 .Nav-trigger {
-  margin-right: vr(0.75);
+  margin-right: vr(1.25);
   a {
     position: relative;
     bottom: vr(0.1);
   }
 
   svg {
-    width: vr(1.25);
     height: vr(1.25 * 0.73016);
     fill: white;
   }

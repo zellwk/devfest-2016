@@ -1,5 +1,5 @@
 <div class="Event-groups l-event-groups l-new-wrap" id="{% if date.date %}{{date.day}}{{date.date}}{% elif date.text%}allweek{% endif %}-hash" >
-  <div class="Event-group l-event-group jsScrollSpyContainer">
+  <div class="Event-group l-event-group jsScrollSpyContainer {% if date.events.length == 0 %} is-invisible {% endif %}">
     <div class="Event-group__cal jsScrollSpy" data-scrollSpyHighlight="{{date.date}}">
       <div class="Cal">
         {% if date.text %} <div class="h4 allweek">All<br>Week</div>{% endif %}

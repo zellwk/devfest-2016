@@ -16,7 +16,7 @@
   &:hover,
   &:active,
   &:focus {
-    background: lighten(#E74840, 10%);
+    background: darken(#E74840, 10%);
     color: white;
   }
 }
