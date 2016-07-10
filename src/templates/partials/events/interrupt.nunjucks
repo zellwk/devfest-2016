@@ -1,0 +1,11 @@
+<div class="Interrupt">
+  <div class="l-new-wrap">
+    <h2 class="th1 Interrupt__title">{{date.title}}</h1>
+    {% if date.text %}
+      <p class="h6">{{date.text}}</p>
+    {% endif %}
+    <p class="h6 Interrupt__cta">
+      <a href="{{date.link}}" class="btn">{{date.button}}</a>
+    </p>
+  </div>
+</div>

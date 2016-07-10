@@ -1,15 +1,25 @@
-$offCanvasWidth: 280px;
+$off-canvas-width: 280px;
+$transition-duration: 0.3s;
 
-.Canvas__off-canvas {
+// Off Canvas Menu
+// ----------
+// - Stays fixed to the left side.
+// - Transitions with 'left' property because of the need for a sticky header (for context)
+// ==========
+.Canvas__off {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: -$offCanvasWidth;
-  width: $offCanvasWidth;
-  overflow: auto;
+  left: -$off-canvas-width;
+  width: $off-canvas-width;
   background: mix(black, color(bleu-de-france), 90%);
-  transition: right 0.4s ease-out;
+  transition: left $transition-duration ease-out;
+  overflow: auto;
   z-index: 10000;
+
+  .show-off-canvas & {
+    left: 0;
+  }
 }
 
 .Canvas__on {
@@ -20,49 +30,19 @@ $offCanvasWidth: 280px;
   // Enable webkit overflow, but spoils the logo..
   // -webkit-overflow-scrolling: touch;
   background: whitesmoke;
-  transition: left 0.4s ease-out;
+  transition: left $transition-duration ease-out;
+
+  .show-off-canvas & {
+    left: $off-canvas-width;
+  }
 }
 
-.Canvas .Canvas__fixed-item {
+.jsFixedHeaderClone .Canvas__fixed-item {
   position: relative;
   left: 0;
-  transition: all 0.4s ease-out;
-}
+  transition: left $transition-duration ease-out;
 
-// When Canvas is opened
-.Canvas.is-open .Canvas__off-canvas {
-  right: 0;
-}
-
-.Canvas.is-open .Canvas__on {
-  overflow: hidden;
-  left: -$offCanvasWidth;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.Canvas.is-open .jsSmartHeadClone .Canvas__fixed-item {
-  left: -$offCanvasWidth;
-  right: $offCanvasWidth;
-}
-
-.Canvas-toggle {
-  background: none;
-
-  span, .i-menu {
-    vertical-align: middle;
-  }
-
-  span {
-    margin-right: 0.25em;
-    color: white;
-  }
-
-  .i-menu {
-    path {
-      fill: white;
-    }
+  .show-off-canvas & {
+    left: $off-canvas-width;
   }
 }

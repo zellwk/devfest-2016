@@ -1,8 +1,41 @@
-.Nav-trigger {
+// Navigation (Mobile)
+// ----------
+// - Off Canvas Navigation that's triggered by
+//   clicking on Menu button
+// - TODO: Think of how mobile nav triggers for other pages
+// ==========
 
+.Nav--mobile {
+  a {
+    display: block;
+
+    // Make top and bottom visually equal
+    padding: vr(0.65) vr(0.75) vr(0.5);
+    color: color(white);
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: rgba(color(bleu-de-france), 0.2);
+    }
+  }
+
+  a.is-active {
+    background: rgba(color(bleu-de-france), 0.6);
+  }
 }
 
+// Navigation (Desktop)
+// ----------
+// - Navigation that's always present on the left of every page
+// ==========
 .Nav--desktop {
+  position: relative;
+  left: vr(-0.5);
+
+  @include typi($h5-map);
+
   line-height: vr(0.8);
 
   a {
@@ -10,8 +43,13 @@
     text-decoration: none;
 
     &:first-child {
-      color: color(bleu-de-france);
+      font-weight: bold;
     }
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: vr(3.75);
   }
 }
 

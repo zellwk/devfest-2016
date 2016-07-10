@@ -52,7 +52,7 @@ $h4-map: (
   );
 
 $h5-map: (
-  null: (-1)
+  null: (-2)
   );
 
 $h6-map: (
@@ -63,10 +63,14 @@ $even-smaller-map: (
   null: -4
   );
 
+$interrupt-header: (
+  null: 7 1.2,
+);
 
 .small {
   @include typi($even-smaller-map);
 }
+
 
 
 

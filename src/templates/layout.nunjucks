@@ -30,6 +30,12 @@
     <div class="Canvas__on">
       {% block content %} {% endblock %}
     </div>
+    <div class="Canvas__off jsOffCanvas">
+      <nav class="Nav--mobile">
+        {% block offCanvasNav %}
+        {% endblock %}
+      </nav>
+    </div>
   </div>
 
   {% include "partials/footer.nunjucks" %}

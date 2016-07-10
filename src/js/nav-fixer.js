@@ -29,6 +29,10 @@ $(window).ready(function () {
       'display': 'block',
       'position': 'fixed'
     })
+
+    if ($('.jsDesktopNav').length) {
+      $('.jsDesktopNav').addClass('is-fixed')
+    }
   }
 
   function deactivateFixed () {
@@ -36,6 +40,10 @@ $(window).ready(function () {
       'display': 'none',
       'position': 'absolute',
     })
+
+    if ($('.jsDesktopNav').length) {
+      $('.jsDesktopNav').removeClass('is-fixed')
+    }
   }
 
   $(window).scroll(function (event) {

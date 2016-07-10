@@ -38,6 +38,11 @@ h6 {
   font-weight: 700;
 }
 
+.th1 {
+   @include typi($interrupt-header);
+  @include ff(logo);
+}
+
 .h4 {
   @include typi($h4-map);
 }

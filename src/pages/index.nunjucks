@@ -10,3 +10,8 @@ data: ['data/events.json']
 {% include "partials/events/index.nunjucks" %}
 
 {% endblock %}
+
+{% block offCanvasNav %}
+  {% import 'macros/navigation.nunjucks' as nav %}
+  {{nav.active('events')}}
+{% endblock %}

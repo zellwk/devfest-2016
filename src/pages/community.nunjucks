@@ -1,0 +1,17 @@
+---
+data: ['data/events.json']
+---
+
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+
+{# {% include "partials/hero.nunjucks" %}
+{% include "partials/events/index.nunjucks" %} #}
+
+{% endblock %}
+
+{% block offCanvasNav %}
+  {# {% import 'macros/navigation.nunjucks' as nav %}
+  {{nav.active('events')}} #}
+{% endblock %}

@@ -1,12 +1,8 @@
 {% include "partials/events/header.nunjucks" %}
 <div id="content-hash" class="l-content">
-  <nav class="Nav--desktop jsNavDesktop h6 u-hide-st-med-large">
-    <a href="#">Events</a>
-    <a href="#">Hotels</a>
-    <a href="#">Jobs</a>
-    <a href="#">Sponsors</a>
-    <a href="#">Community</a>
-    <a href="#">Blog</a>
+  <nav class="h6 Nav--desktop u-hide-st-med-large jsDesktopNav">
+    {% import 'macros/navigation.nunjucks' as nav %}
+    {{nav.active('events')}}
   </nav>
 
   <div class="l-event-layout">

@@ -2,477 +2,152 @@
   "dates": [
     {
       "type": "event",
-      "date": "18",
-      "day": "Wed",
+      "date": "22",
+      "day": "Tue",
       "events": [
       {
-        "title": "CSSConf.Asia",
-        "image": "images/events/cssconf.jpg",
-        "imageLink": "http://2015.cssconf.asia",
-        "logo": "images/events/cssconf-logo.png",
-        "desc": "Bridging web design and implementation. Southeast-Asia's premier front-end and design conference hosting the international who-is-who of web stylists.<br/><br/><a href='http://2015.cssconf.asia' target='_blank'>http://2015.cssconf.asia</a>",
-        "startTime": "9",
-        "startTimeSuffix": "am",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "location": "Red Dot Design Museum",
-        "location2": "28 Maxwell Road, Singapore 069120",
-        "ticketinfo": "Registration ended"
-      },
-      {
-        "title": "CSSConf.Asia After Party",
-        "image": "images/events/cssconfparty.jpg",
-        "imageLink": "http://2015.cssconf.asia",
-        "desc": "Offical CSSConf.Asia after party for conference attendees",
+        "title": "Talk.CSS",
+        "desc": "It's our first anniversary! Join us for a celebration and learn something new about the front end world. There will be cake!",
+        "logo": "/images/events/talk.css-logo.png",
+        "image": "/images/events/talk.css.jpg",
+        "imagelink": "http://www.meetup.com/SingaporeCSS/events/232466438/",
         "startTime": "7",
-        "startTimeSuffix": "pm",
-        "endTime": "12",
-        "endTimeSuffix": "am",
+        "startTimeSuffix": ":pm",
+        "endTime": "9",
+        "endTimeSuffix": "pm",
         "location": "TBC",
-        "ticketinfo": "For CSSConf.Asia attendees"
-      },
-      {
-        "title": "Haskell with Web Technologies",
-        "image": "images/events/haskell.png",
-        "imageLink": "http://www.meetup.com/HASKELL-SG/",
-        "desc": "Haskell.SG plans a special edition of a meetup that would be entirely devoted to making web applications with Haskell. This would include hosting Haskell code in the browser with GHCjs, interoperating with Web API portals, and more.",
-        "startTime": "7",
-        "startTimeSuffix": "pm",
-        "endTime": "10",
-        "endTimeSuffix": "pm",
-        "location": "Microsoft Singapore",
-        "location2": "1 Marina Boulevard #22-01 <br> Singapore 018989",
-        "ticketinfo": "Registration Ended"
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
       }]
     },
 
     {
       "type": "event",
-      "date": "19",
+      "date": "24",
       "day": "Thu",
       "events": [
       {
-        "title": "JSConf.Asia (Day 1)",
-        "image": "images/events/jsconf1.jpg",
-        "imageLink": "http://2015.jsconf.asia",
-        "logo": "images/events/jsconf-logo.png",
-        "desc": "It‘s a bit like TED just for web devs. JSConf.Asia hosts 20+ JavaScript and web pros over 2-days from around the world in an exciting and intimate environment.<br/><br/><a href='http://2015.jsconf.asia' target='_blank'>http://2015.jsconf.asia</a>",
-        "startTime": "9",
+        "title": "CSSConf.Asia",
+        "desc": "Bridging web design and implementation. The technical conference for experience designers and front-end engineers.",
+        "logo": "/images/events/cssconf-logo.png",
+        "image": "/images/events/cssconf.jpg",
+        "imagelink": "https://2016.cssconf.asia",
+        "startTime": "8",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "Red Dot Design Museum",
-        "location2": "28 Maxwell Road, Singapore 069120",
-        "ticketinfo": "Registration Ended"
-      },
-      {
-        "title": "NodeBots - Sumo Bot Battles",
-        "image": "images/events/nodebots.png",
-        "imageLink": "http://nodebots.io",
-        "logo": "images/workspaces/workingcapitol-logo.jpg",
-        "desc": "A day workshop where participants will learn how to build a simplebot with Arduino, servos and cardboard. They will then programme it using node.js.",
-        "startTime": "9",
-        "startTimeSuffix": "am",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "location": "The Working Capitol, ",
-        "location2": "1 Keong Saik Road <br> Singapore 089109",
-        "ticketinfo": "Registration Ended"
+        "location": "Capitol Theatre Singapore",
+        "location2": "",
+        "ticket": "Get your ticket NAOW!!1",
+        "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
       }]
     },
 
     {
+      "type": "interrupt",
+      "item": "job",
+      "title": "Do you want to have your own event be part of DevFest.Asia",
+      "button": "Submit your event here",
+      "link": "https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/"
+    },
+
+    {
       "type": "event",
-      "date": "20",
+      "date": "25",
       "day": "Fri",
       "events": [
       {
-        "title": "JSConf.Asia (Day 2)",
-        "image": "images/events/jsconf2.jpg",
-        "imageLink": "http://2015.jsconf.asia",
-        "logo": "images/events/jsconf-logo.png",
-        "desc": "It‘s a bit like TED just for web devs. JSConf.Asia hosts 20+ JavaScript and web pros over 2-days from around the world in an exciting and intimate environment.<br/><br/><a href='http://2015.jsconf.asia' target='_blank'>http://2015.jsconf.asia</a>",
-        "startTime": "9",
+        "title": "Tessel Workshop",
+        "desc": "The founders of the Tessel project Kelsey Bresemann and Jon McKay are in town and are hosting this hands-on Tessel \"Internet of Things\" workshop. Curious? Find out more at <a href='https://tessel.io'>https://tessel.io</a>.",
+        "logo": "/images/events/tessel-logo.png",
+        "image": "/images/events/tessel.jpg",
+        "imagelink": "https://tessel.io",
+        "startTime": "10",
+        "startTimeSuffix": ":30 am",
+        "endTime": "3",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
+      },
+      {
+        "title": "JSConf.Asia Day 1",
+        "desc": "5 years of Southeast Asia's largest web developer conference. Join more than 500 of the most amazing devs in web tech for the coolest conference around.",
+        "logo": "/images/events/jsconf-logo.png",
+        "image": "/images/events/jsconfday1.jpg",
+        "imagelink": "https://2016.jsconf.asia",
+        "startTime": "8",
         "startTimeSuffix": "am",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "Red Dot Design Museum",
-        "location2": "28 Maxwell Road, Singapore 069120",
-        "ticketinfo": "Registration Ended"
-
-      },
-      {
-        "title": "JSConf.Asia After Party",
-        "image": "images/events/jsconfparty.jpg",
-        "imageLink": "http://2015.jsconf.asia",
-        "desc": "Offical JSConf.Asia after party for conference attendees",
-        "startTime": "7",
-        "startTimeSuffix": "pm",
-        "endTime": "12",
-        "endTimeSuffix": "am",
-        "location": "offsite",
+        "location": "Capitol Theatre Singapore",
         "location2": "",
-        "ticketinfo": "For JSConf.Asia attendees"
-
+        "ticket": "Get your ticket NAOW!!1",
+        "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
       }]
     },
 
     {
       "type": "event",
-      "date": "21",
+      "date": "26",
       "day": "Sat",
       "events": [
       {
-        "title": "Rails Girls (DevFest.Asia Edition)",
-        "image": "images/events/railsgirls.jpg",
-        "imageLink": "http://www.meetup.com/Singapore-Ruby-Group/",
-        "logo": "images/events/railsgirls-logo.jpg",
-        "desc": "Rails Girls is an initiative that provides a community for women to understand technology and to build their ideas.",
-        "startTime": "10",
+        "title": "JSConf.Asia Day 2",
+        "desc": "5 years of Southeast Asia's largest web developer conference. Join more than 500 of the most amazing devs in web tech for the coolest conference around.",
+        "logo": "/images/events/jsconf-logo.png",
+        "image": "/images/events/jsconfday2.jpg",
+        "imagelink": "https://2016.jsconf.asia",
+        "startTime": "8",
         "startTimeSuffix": "am",
-        "endTime": "1",
+        "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "The Impact Hub",
-        "location2": "128 Prinsep St, Singapore 188655",
-        "ticketinfo": "Registration Ended"
-
-      },
-      {
-        "title": "WebAudio Hack Day",
-        "image": "images/events/webaudio-js.jpg",
-        "logo": "images/events/webaudio-js-logo.png",
-        "desc": "Expect a whole day of sound hacking with the Web Audio spec author and Firefox coder Paul Adenot and New Zealands web audio musician Matt McKegg! Bring headsets and prepare for some serious beats!",
-        "startTime": "11",
-        "startTimeSuffix": "am",
-        "endTime": "9",
-        "endTimeSuffix": "pm",
-        "location": "Skyscanner Singapore",
-        "location2": "39 Robinson Road, #08-01<br/>Singapore 068911",
-        "ticketinfo": "Registration Ended",
-        "gmap": "39 Robinson Road"
+        "location": "Capitol Theatre Singapore",
+        "location2": "",
+        "ticket": "Get your ticket NAOW!!1",
+        "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
       }]
     },
 
     {
-      "type": "event",
-      "date": "22",
-      "day": "Sun",
-      "events": [
-        {
-          "title": "KopiJS",
-          "image": "images/events/kopijs.jpg",
-          "imageLink": "http://kopijs.org",
-          "logo": "images/events/kopijs-logo.png",
-          "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
-          "startTime": "11",
-          "startTimeSuffix": "am",
-          "endTime": "3",
-          "endTimeSuffix": "pm",
-          "location": "Ya Kun Kaya Toast",
-          "location2": "18 China St #01-01<br/>Singapore 049560",
-          "ticketinfo": "Registration Ended",
-          "gmap": "18 China St #01-01 Singapore 049560"
-        },
-
-        {
-          "title": "CSS Singapore Meetup",
-          "image": "images/events/csssingapore.png",
-          "imageLink": "http://www.meetup.com/Singapore-CSS/events/226313643/",
-          "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
-          "startTime": "7",
-          "startTimeSuffix": "pm",
-          "endTime": "9",
-          "endTimeSuffix": "pm",
-          "location": "Hackerspace.SG",
-          "location2": "344B King George’s Avenue<br>Singapore 208576",
-          "ticketinfo": "Registration Ended"
-        }
-      ]
+      "type": "interrupt",
+      "item": "job",
+      "title": "Looking for dev talent in the region?",
+      "text": " You can list your job opening right here.",
+      "button": "Post a great position now",
+      "link": "https://jsconfasia.wufoo.com/forms/mawgx6w16px4ur/"
     },
-
-     {
-      "type": "event",
-      "date": "23",
-      "day": "Sun",
-      "events": [
-        {
-          "title": "KopiJS",
-          "image": "images/events/kopijs.jpg",
-          "imageLink": "http://kopijs.org",
-          "logo": "images/events/kopijs-logo.png",
-          "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
-          "startTime": "11",
-          "startTimeSuffix": "am",
-          "endTime": "3",
-          "endTimeSuffix": "pm",
-          "location": "Ya Kun Kaya Toast",
-          "location2": "18 China St #01-01<br/>Singapore 049560",
-          "ticketinfo": "Registration Ended",
-          "gmap": "18 China St #01-01 Singapore 049560"
-        },
-
-        {
-          "title": "CSS Singapore Meetup",
-          "image": "images/events/csssingapore.png",
-          "imageLink": "http://www.meetup.com/Singapore-CSS/events/226313643/",
-          "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
-          "startTime": "7",
-          "startTimeSuffix": "pm",
-          "endTime": "9",
-          "endTimeSuffix": "pm",
-          "location": "Hackerspace.SG",
-          "location2": "344B King George’s Avenue<br>Singapore 208576",
-          "ticketinfo": "Registration Ended"
-        }
-      ]
-    },
-
- {
-      "type": "event",
-      "date": "24",
-      "day": "Sun",
-      "events": [
-        {
-          "title": "KopiJS",
-          "image": "images/events/kopijs.jpg",
-          "imageLink": "http://kopijs.org",
-          "logo": "images/events/kopijs-logo.png",
-          "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
-          "startTime": "11",
-          "startTimeSuffix": "am",
-          "endTime": "3",
-          "endTimeSuffix": "pm",
-          "location": "Ya Kun Kaya Toast",
-          "location2": "18 China St #01-01<br/>Singapore 049560",
-          "ticketinfo": "Registration Ended",
-          "gmap": "18 China St #01-01 Singapore 049560"
-        },
-
-        {
-          "title": "CSS Singapore Meetup",
-          "image": "images/events/csssingapore.png",
-          "imageLink": "http://www.meetup.com/Singapore-CSS/events/226313643/",
-          "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
-          "startTime": "7",
-          "startTimeSuffix": "pm",
-          "endTime": "9",
-          "endTimeSuffix": "pm",
-          "location": "Hackerspace.SG",
-          "location2": "344B King George’s Avenue<br>Singapore 208576",
-          "ticketinfo": "Registration Ended"
-        }
-      ]
-    },
-
- {
-      "type": "event",
-      "date": "25",
-      "day": "Sun",
-      "events": [
-        {
-          "title": "KopiJS",
-          "image": "images/events/kopijs.jpg",
-          "imageLink": "http://kopijs.org",
-          "logo": "images/events/kopijs-logo.png",
-          "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
-          "startTime": "11",
-          "startTimeSuffix": "am",
-          "endTime": "3",
-          "endTimeSuffix": "pm",
-          "location": "Ya Kun Kaya Toast",
-          "location2": "18 China St #01-01<br/>Singapore 049560",
-          "ticketinfo": "Registration Ended",
-          "gmap": "18 China St #01-01 Singapore 049560"
-        },
-
-        {
-          "title": "CSS Singapore Meetup",
-          "image": "images/events/csssingapore.png",
-          "imageLink": "http://www.meetup.com/Singapore-CSS/events/226313643/",
-          "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
-          "startTime": "7",
-          "startTimeSuffix": "pm",
-          "endTime": "9",
-          "endTimeSuffix": "pm",
-          "location": "Hackerspace.SG",
-          "location2": "344B King George’s Avenue<br>Singapore 208576",
-          "ticketinfo": "Registration Ended"
-        }
-      ]
-    },
-
- {
-      "type": "event",
-      "date": "26",
-      "day": "Sun",
-      "events": [
-        {
-          "title": "KopiJS",
-          "image": "images/events/kopijs.jpg",
-          "imageLink": "http://kopijs.org",
-          "logo": "images/events/kopijs-logo.png",
-          "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
-          "startTime": "11",
-          "startTimeSuffix": "am",
-          "endTime": "3",
-          "endTimeSuffix": "pm",
-          "location": "Ya Kun Kaya Toast",
-          "location2": "18 China St #01-01<br/>Singapore 049560",
-          "ticketinfo": "Registration Ended",
-          "gmap": "18 China St #01-01 Singapore 049560"
-        },
-
-        {
-          "title": "CSS Singapore Meetup",
-          "image": "images/events/csssingapore.png",
-          "imageLink": "http://www.meetup.com/Singapore-CSS/events/226313643/",
-          "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
-          "startTime": "7",
-          "startTimeSuffix": "pm",
-          "endTime": "9",
-          "endTimeSuffix": "pm",
-          "location": "Hackerspace.SG",
-          "location2": "344B King George’s Avenue<br>Singapore 208576",
-          "ticketinfo": "Registration Ended"
-        }
-      ]
-    },
-
- {
+    {
       "type": "event",
       "date": "27",
       "day": "Sun",
       "events": [
-        {
-          "title": "KopiJS",
-          "image": "images/events/kopijs.jpg",
-          "imageLink": "http://kopijs.org",
-          "logo": "images/events/kopijs-logo.png",
-          "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
-          "startTime": "11",
-          "startTimeSuffix": "am",
-          "endTime": "3",
-          "endTimeSuffix": "pm",
-          "location": "Ya Kun Kaya Toast",
-          "location2": "18 China St #01-01<br/>Singapore 049560",
-          "ticketinfo": "Registration Ended",
-          "gmap": "18 China St #01-01 Singapore 049560"
-        },
-
-        {
-          "title": "CSS Singapore Meetup",
-          "image": "images/events/csssingapore.png",
-          "imageLink": "http://www.meetup.com/Singapore-CSS/events/226313643/",
-          "desc": "Come to the first ever CSS Singapore! Featuring short talks to learn something new about the front end world. Whether you're a CSS veteran or are just starting out, there's something for you.",
-          "startTime": "7",
-          "startTimeSuffix": "pm",
-          "endTime": "9",
-          "endTimeSuffix": "pm",
-          "location": "Hackerspace.SG",
-          "location2": "344B King George’s Avenue<br>Singapore 208576",
-          "ticketinfo": "Registration Ended"
-        }
-      ]
-    },
-
-
-    {
-      "type": "event",
-      "text": "All<br>Week",
-      "events": [
       {
-        "title": "$50 for your DevFest.Asia desk",
-        "image": "images/workspaces/workingcapitol.jpg",
-        "imageLink": "http://www.theworkingcapitol.com/en",
-        "logo": "images/workspaces/workingcapitol-logo.jpg",
-        "desc": "The Working Capitol gives you access to its beautiful space, Wi-Fi and community for the entire timespan of DevFest.Asia. It's also the venue for some of our other events. Hop by, sign up with your DevFest.Asia identification and enjoy!<br/><br/><a href='http://www.theworkingcapitol.com' target='_blank'>http://www.theworkingcapitol.com</a>",
-        "featured": true,
-        "startTime": "9",
+        "title": "Web Audio",
+        "desc": "Q. What is this WebAudio you speak of? <br/> <br/> A. WebAudio is a (widely supported) W3C standard for generating, analysing and playing audio in the Browser. Checkout the spec here (<a href='http://webaudio.github.io/web-audio-api/'>http://webaudio.github.io/web-audio-api/</a>) <br/> <br/> Q. Where can I learn more about WebAudio <br/> <br/> A. WebAudio School is a self-help style tutorial for learning WebAudio (<a href='http://mmckegg.github.io/web-audio-school/'>http://mmckegg.github.io/web-audio-school/</a>). <br/><br /> Q. What shall I bring to this HackDay? <br/><br /> A. Please bring you down laptop, headphones and anything else you want to use for your project, like MIDI controllers, Arduino, etc.",
+        "logo": "/images/events/webaudio-js-logo.png",
+        "image": "/images/events/webaudio-js.jpg",
+        "startTime": "10",
         "startTimeSuffix": "am",
-        "endTime": "6",
+        "endTime": "5",
         "endTimeSuffix": "pm",
-        "weekdays": true,
-        "location": "1 Keong Saik Road",
-        "location2": "Singapore 089109",
-        "ticketinfo": "Hop by and sign up"
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
       },
       {
-        "title": "Free co-hacking at HSG",
-        "image": "images/workspaces/hackerspace1.jpg",
-        "imageLink": "http://hackerspace.sg",
-        "logo": "images/events/hackerspacesg-party-logo.png",
-        "desc": "Built by and for geeks, nerds, inventors, engineers, and entrepreneurs, Hackerspace.SG is the Singapore hacker community's home, living room and laboratory. DevFest.Asia participants are most welcome.<br/><br/><a href='http://hackerspace.sg' target='_blank'>http://hackerspace.sg</a>",
-        "startTime": "9",
+        "title": "KopiJS",
+        "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
+        "logo": "/images/events/kopijs-logo.png",
+        "image": "/images/events/kopijs.jpg",
+        "imagelink": "http://kopijs.org",
+        "startTime": "11",
         "startTimeSuffix": "am",
-        "endTime": "6",
+        "endTime": "1",
         "endTimeSuffix": "pm",
-        "weekdays": true,
-        "location": "344B King George’s Avenue",
-        "location2": "Singapore 208576",
-        "ticketinfo": "Register on arrival"
-      },
-      {
-        "title": "Free Impact Hub co-working",
-        "image": "images/workspaces/hub.jpg",
-        "imageLink": "http://thehub.sg",
-        "logo": "images/workspaces/hub-logo.jpg",
-        "desc": "The Hub Singapore is Singapore’s largest community of entrepreneurs, creatives and techies. Come join us during DevFest.Asia for free co-working at our lovely, super new place. Desks only for registered visitors.<br/><br/><a href='http://thehub.sg' target='_blank'>http://thehub.sg</a>",
-        "startTime": "9",
-        "startTimeSuffix": "am",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "weekdays": true,
-        "location": "128 Prinsep Street",
-        "location2": "Singapore 188655",
-        "ticketinfo": "Free",
-        "eventLink": "http://bit.ly/hubpass",
-        "ticket": "Register free"
-      },
-      {
-        "title": "$20 Day-Pass at The Co",
-        "image": "images/workspaces/co1.jpg",
-        "imageLink": "http://jointhe.co",
-        "logo": "images/workspaces/co-logo.jpg",
-        "desc": "The Co is an award-winning ecosystem of workspaces, and is home to a community of global businesses and digital companies. Please bring DevFest.Asia identification, and call 6595 6288 in advance. Includes all access hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://jointhe.co' target='_blank'>http://jointhe.co</a>",
-        "eventLink": "http://jointhe.co",
-        "startTime": "9",
-        "startTimeSuffix": "am",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "weekdays": true,
-        "location": "75 High Street",
-        "location2": "Singapore 179435",
-        "ticketinfo": "Register on arrival"
-      },
-      {
-        "title": "$25 Day-Pass at Woolf Works",
-        "image": "images/workspaces/woolf1.jpg",
-        "imageLink": "http://www.woolfworks.sg",
-        "desc": "Woolf Works is a shared work space specifically for women, located on lively Joo Chiat Road, on the east coast of Singapore. Meet our great community of women to chat over coffee. Includes hot-desk, WiFi + coffee/tea.<br/><br/><a href='http://www.woolfworks.sg' target='_blank'>http://www.woolfworks.sg</a>",
-        "eventLink": "http://www.woolfworks.sg",
-        "startTime": "9",
-        "startTimeSuffix": "am",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "weekdays": true,
-        "location": "176 Joo Chiat Road",
-        "location2": "Singpaore 427447",
-        "ticketinfo": "Register on arrival (women only)"
-      },
-      {
-        "title": "Free co-working at ACE",
-        "image": "images/workspaces/ace.jpg",
-        "logo": "images/workspaces/ace-logo.jpg",
-        "desc": "Visit the Action Community for Entrepreneurship (ACE), a private sector-led movement for entrepreneurs, by entrepreneurs. Located right at Singapore's entrepreneurial heart at one-north.<br><br> Check <a href='http://www.ace.sg/#calendar-of-events' target='_blank'>http://www.ace.sg/#calendar-of-events</a> to look out for days without events. ",
-        "eventLink": "http://www.ace.sg/#calendar-of-events",
-        "startTime": "9",
-        "startTimeSuffix": "am",
-        "endTime": "6",
-        "endTimeSuffix": "pm",
-        "weekdays": true,
-        "location": "79 Ayer Rajah Crescent #01-13",
-        "location2": "Singapore 139955",
-        "ticketinfo": "Register on arrival"
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
       }]
     }
   ]

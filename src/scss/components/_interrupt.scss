@@ -1,45 +1,34 @@
-// interrupt div
-.c-interrupt {
-  text-align: center;
-  display: block;
+// Interrupt Banner
+// ----------------
+// - Found between bars of content
+// - Insert new Interrupt in events.json by setting
+//   type to interrupt
+// ==========
+.Interrupt {
+  background: color(bleu-de-france);
+  margin-top: vr(1);
+  margin-bottom: vr(1);
+  padding-top: vr(2);
+  padding-bottom: vr(2);
+  color: color(white);
 
-  // background: #fafafa;
-  margin-top: rhythm(1);
-  margin-bottom: rhythm(1);
-  padding-top: rhythm(2);
-  padding-bottom: rhythm(2);
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background: radial-gradient(circle, mix(black, color(bleu-de-france), 65%), mix(black, color(bleu-de-france), 75%));
-  color: #fff;
+  // padding-left: vr(2.5);
+}
 
-  @include bp("med") {
-    margin-top: rhythm(3);
-    margin-bottom: rhythm(3);
-  }
+.Interrupt__title {
+  margin-bottom: vr(0.75);
+}
 
+.Interrupt__cta {
+  margin-top: vr(0.5);
 
-  h4, p {
-    color: rgba(#fff, 0.8);
+  .Interrupt__title + & {
+    margin-top: vr(1);
   }
 }
 
-.c-interrupt__desc {
-  max-width: 50em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
-  a {
-    color: white;
-    text-decoration: underline;
-    &:hover,
-    &:active,
-    &:focus {
-      color: color(carmine);
-    }
-  }
-}
-
+// LEGACY
+// ==========
 .c-tickets {
   text-align: center;
 }
