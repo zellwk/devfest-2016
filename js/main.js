@@ -68,6 +68,37 @@
 	$(window).resize(function (event) {
 	  console.log($(window).width());
 	});
+	
+	if ($('.jsShowMore').length) {
+	  (function () {
+	    var showFullText = function showFullText(e) {
+	      e.preventDefault();
+	      var $target = $(e.target);
+	      var $container = $(e.target).closest('.jsShowMore');
+	      var fullText = $container.attr('full-text');
+	      $container.html(fullText);
+	      $target.off('click', showFullText);
+	    };
+	
+	    var $showMore = $('.jsShowMore');
+	    $showMore.each(function (index, el) {
+	      var $el = $(el);
+	      var fullText = $el.html();
+	      var shortenedText = void 0;
+	      var maxLength = 400;
+	      $el.attr('full-text', fullText);
+	
+	      if (fullText.length > 400) {
+	        shortenedText = fullText.substr(0, maxLength);
+	        shortenedText = shortenedText.substr(0, Math.min(shortenedText.length, shortenedText.lastIndexOf(' ')));
+	        shortenedText += '... <a href="#" class="jsSeeMoreLink"> See More </a>';
+	        $el.html(shortenedText);
+	      }
+	    });
+	
+	    $('.jsSeeMoreLink').on('click', showFullText);
+	  })();
+	}
 
 /***/ },
 /* 1 */
