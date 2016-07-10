@@ -7,6 +7,9 @@
     display: block;
     top: 0;
     bottom: 0;
+    left: calc(#{vr(1.5)} - 1px);
+    width: 2px;
+    background: color(malibu);
   }
 }
 
@@ -17,7 +20,7 @@
   top: 0;
   bottom: 0;
   z-index: 20;
-  color: #0A233A;
+  color: color(firefly);
   height: 3.5em;
 }
 
@@ -44,7 +47,7 @@
     display: block;
     height: 2px;
     width: calc(#{vr(2.5)} - 1px);
-    background: #0A233A;
+    background: color(firefly);
   }
 }
 

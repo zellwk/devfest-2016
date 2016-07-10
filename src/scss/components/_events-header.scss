@@ -1,10 +1,7 @@
 .Events-header {
   line-height: 1;
-  background: lighten(color(bleu-de-france), 3%);
-  background: #37474f;
-  background: #0A233A;
+  background: color(firefly);
   overflow: hidden;
-  // margin-bottom: vr(2);
 
   a {
     text-decoration: none;
@@ -12,6 +9,7 @@
 
   & + .l-content {
     // padding-top: 0;
+
   }
 }
 
@@ -21,16 +19,13 @@
   padding-top: vr(0.5);
   padding-bottom: vr(0.25);
 
-  .wrap {
-    @include bp(med) {
-      max-width: 760px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
-
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  > .Canvas__fixed-item {
+    display: flex;
+    align-items: flex-end;
   }
 }
 
@@ -49,11 +44,6 @@
     // padding: 0 0.5em;
     text-align: center;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
-
-    @include bp(max med) {
-      padding: 0 0.75em;
-    }
-
 
     &:first-child {
       padding-left: 0;
@@ -97,7 +87,7 @@ a.Events-nav__weekend {
 }
 
 .is-active .Events-nav__date {
-  background: color(carmine);
+  background: color(bleu-de-france);
 }
 
 .Events-nav__date--all-week {

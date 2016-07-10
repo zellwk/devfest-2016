@@ -1,57 +1,74 @@
-.c-mobile-menu {
-  color: rgba(white, 0.9);
-  padding: rhythm(0.5) rhythm(1);
+.Nav-trigger {
 
-  .Event__title {
-    padding-top: rhythm(0.5);
-    padding-bottom: rhythm(0.5);
-  }
-
-  a {
-    text-decoration: none;
-  }
 }
 
-.c-mobile-menu__nav {
+.Nav--desktop {
+  line-height: vr(0.8);
+
   a {
     display: block;
-    color: rgba(white, 0.5);
-    padding: rhythm(0.5) 0;
-    margin-right: rhythm(-1);
-    padding-right: rhythm(1);
-    border-top: 1px solid rgba(white, 0.25);
+    text-decoration: none;
 
-    &:hover,
-    &:active,
-    &:focus,
-    &.active {
-      color: white;
+    &:first-child {
+      color: color(bleu-de-france);
     }
   }
 }
 
-.c-footer__nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: rhythm(2);
-  margin-bottom: rhythm(-2);
-  padding: rhythm(0) rhythm(0.5);
+// .c-mobile-menu {
+//   color: rgba(white, 0.9);
+//   padding: rhythm(0.5) rhythm(1);
 
-  a {
-    padding: 0 rhythm(0.25);
-    line-height: rhythm(1.5);
-    text-decoration: none !important;
+//   .Event__title {
+//     padding-top: rhythm(0.5);
+//     padding-bottom: rhythm(0.5);
+//   }
 
-    @include bp("med") {
-      padding: 0 0.5em;
-    }
+//   a {
+//     text-decoration: none;
+//   }
+// }
 
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-      color: white;
-    }
-  }
-}
+// .c-mobile-menu__nav {
+//   a {
+//     display: block;
+//     color: rgba(white, 0.5);
+//     padding: rhythm(0.5) 0;
+//     margin-right: rhythm(-1);
+//     padding-right: rhythm(1);
+//     border-top: 1px solid rgba(white, 0.25);
+
+//     &:hover,
+//     &:active,
+//     &:focus,
+//     &.active {
+//       color: white;
+//     }
+//   }
+// }
+
+// .c-footer__nav {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   margin-top: rhythm(2);
+//   margin-bottom: rhythm(-2);
+//   padding: rhythm(0) rhythm(0.5);
+
+//   a {
+//     padding: 0 rhythm(0.25);
+//     line-height: rhythm(1.5);
+//     text-decoration: none !important;
+
+//     @include bp("med") {
+//       padding: 0 0.5em;
+//     }
+
+//     &:hover,
+//     &:active,
+//     &:focus {
+//       text-decoration: underline;
+//       color: white;
+//     }
+//   }
+// }

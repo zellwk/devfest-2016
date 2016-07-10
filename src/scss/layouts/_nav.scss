@@ -1,0 +1,20 @@
+.Nav-trigger {
+  margin-right: vr(0.75);
+  a {
+    position: relative;
+    bottom: vr(0.1);
+  }
+
+  svg {
+    width: vr(1.25);
+    height: vr(1.25 * 0.73016);
+    fill: white;
+  }
+}
+
+.Nav--desktop {
+  float: left;
+  margin-top: vr(0.4);
+  width: vr(5);
+  text-align: right;
+}

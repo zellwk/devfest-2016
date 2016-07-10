@@ -1,6 +1,11 @@
 <div class="Events-header jsEventsHeader jsFixedHeader" data-SH-offset="68">
-  <div class="Events-wrap">
+  <div class="Events-wrap l-new-wrap">
     <div class="Canvas__fixed-item">
+      <nav class="Nav-trigger jsNavTrigger u-hide-med-large">
+        <a href="#">
+          <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#menu" /></svg>
+        </a>
+      </nav>
       <nav class="Events-nav l-Events-nav jsEventsNav">
         {% for date in dates %}
           {% if date.type == 'event' %}

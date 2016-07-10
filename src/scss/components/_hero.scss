@@ -260,18 +260,17 @@
 
   .Hero__desc {
     position: absolute;
-
     @include bp(mega) {
       font-size: 0.8vw;
     }
 
 
     p {
-      margin-top: -0.25em;
+      font-size: 1.2em;
     }
 
     p + p {
-      margin-top: 0.75em;
+      margin-top: 0.5em;
     }
 
     .btn {
