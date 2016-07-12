@@ -16,23 +16,23 @@
     <div class="Creds__sigs">
       <a href="https://twitter.com/serrynaimo">
         <span>Thomas Gorissen</span>
-        <img src="images/signatures/thomas.png" alt="">
+        <img src="/images/signatures/thomas.png" alt="">
       </a>
       <a href="https://twitter.com/zellwk">
         <span>Zell Liew</span>
-        <img class="zell" src="images/signatures/zell.png" alt="">
+        <img class="zell" src="/images/signatures/zell.png" alt="">
       </a>
       <a href="https://twitter.com/jacinsofialeew">
         <span>Jacin Lee</span>
-        <img src="images/signatures/jacin.png" alt="">
+        <img src="/images/signatures/jacin.png" alt="">
       </a>
-      <a href="#">
+      <a href="https://twitter.com/AqilahMisuary">
         <span>Aqilah Misuary</span>
-        <img class="aqilah" src="images/signatures/aqilah.png" alt="">
+        <img class="aqilah" src="/images/signatures/aqilah.png" alt="">
       </a>
       <a href="https://twitter.com/ongmin">
         <span>Min Ong</span>
-        <img class="min" src="images/signatures/min.png" alt="">
+        <img class="min" src="/images/signatures/min.png" alt="">
       </a>
     </div>
   </div>
@@ -40,9 +40,9 @@
   <div class="nerdherd">
     <p>A Nerdherd Pte. Ltd. event
       <br>
-      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      <a href="/terms-and-conditions">Terms &amp; Conditions</a>
       <br>
-      <a href="code-of-conduct.html">Code of conduct</a>
+      <a href="/code-of-conduct">Code of conduct</a>
     </p>
   </div>
 

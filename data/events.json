@@ -36,7 +36,7 @@
         "image": "/images/events/talk.css.jpg",
         "imagelink": "http://www.meetup.com/SingaporeCSS/events/232466438/",
         "startTime": "7",
-        "startTimeSuffix": ":pm",
+        "startTimeSuffix": "pm",
         "endTime": "9",
         "endTimeSuffix": "pm",
         "location": "TBC",
@@ -89,20 +89,6 @@
       "day": "Fri",
       "events": [
       {
-        "title": "Tessel Workshop",
-        "desc": "The founders of the Tessel project Kelsey Bresemann and Jon McKay are in town and are hosting this hands-on Tessel \"Internet of Things\" workshop. Curious? Find out more at <a href='https://tessel.io'>https://tessel.io</a>.",
-        "logo": "/images/events/tessel-logo.png",
-        "image": "/images/events/tessel.jpg",
-        "imagelink": "https://tessel.io",
-        "startTime": "10",
-        "startTimeSuffix": ":30 am",
-        "endTime": "3",
-        "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location2": "",
-        "ticketinfo": "Registration opening soon"
-      },
-      {
         "title": "JSConf.Asia Day 1",
         "desc": "5 years of Southeast Asia's largest web developer conference. Join more than 500 of the most amazing devs in web tech for the coolest conference around.",
         "logo": "/images/events/jsconf-logo.png",
@@ -116,6 +102,19 @@
         "location2": "",
         "ticket": "Get your ticket NAOW!!1",
         "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
+      },  {
+        "title": "Tessel Workshop",
+        "desc": "The founders of the Tessel project Kelsey Bresemann and Jon McKay are in town and are hosting this hands-on Tessel \"Internet of Things\" workshop. Curious? Find out more at <a href='https://tessel.io'>https://tessel.io</a>.",
+        "logo": "/images/events/tessel-logo.png",
+        "image": "/images/events/tessel.jpg",
+        "imagelink": "https://tessel.io",
+        "startTime": "10",
+        "startTimeSuffix": ":30am",
+        "endTime": "3",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
       }]
     },
 

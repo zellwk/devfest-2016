@@ -1,0 +1,59 @@
+article {
+  max-width: 34em;
+
+  h1 {
+    @extend .h2;
+
+    font-weight: 400;
+  }
+
+  h2 {
+    @include typi($h2-5-map);
+
+    font-weight: 400;
+
+    @include ff(secondary);
+  }
+
+  p {
+    @include typi($small-map)
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  ul li {
+    list-style-type: disc;
+  }
+
+  ul, ol {
+    margin-top: vr(0.75);
+    padding-left: 1rem + vr(0.5);
+  }
+
+  li + li {
+    margin-top: vr(0.25);
+  }
+
+  * + p {
+    margin-top: vr(0.75);
+  }
+
+  h2 + p {
+    margin-top: vr(0.5);
+  }
+
+  * + h2 {
+    margin-top: vr(2.25);
+  }
+
+  * + dd,
+  * + dt {
+    margin-top: vr(0.75);
+  }
+
+  dt {
+    font-weight: bold;
+  }
+}
