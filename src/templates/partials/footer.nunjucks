@@ -16,15 +16,23 @@
     <div class="Creds__sigs">
       <a href="https://twitter.com/serrynaimo">
         <span>Thomas Gorissen</span>
-        <img src="images/thomas-sig.png" alt="">
+        <img src="images/signatures/thomas.png" alt="">
       </a>
       <a href="https://twitter.com/zellwk">
         <span>Zell Liew</span>
-        <img class="zell" src="images/zell-sig-3.png" alt="">
+        <img class="zell" src="images/signatures/zell.png" alt="">
       </a>
-      <a href="https://www.facebook.com/jacin.lee?_rdr=p">
+      <a href="https://twitter.com/jacinsofialeew">
         <span>Jacin Lee</span>
-        <img src="images/jacin-sig.png" alt="">
+        <img src="images/signatures/jacin.png" alt="">
+      </a>
+      <a href="#">
+        <span>Aqilah Misuary</span>
+        <img class="aqilah" src="images/signatures/aqilah.png" alt="">
+      </a>
+      <a href="https://twitter.com/ongmin">
+        <span>Min Ong</span>
+        <img class="min" src="images/signatures/min.png" alt="">
       </a>
     </div>
   </div>
