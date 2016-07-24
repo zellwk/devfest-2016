@@ -14,8 +14,8 @@ $(document).ready(function () {
   })
 
   function replaceHashAndScroll ($this) {
-    var hash = $this.attr('href')
-    var targetHash = hash.replace('-hash', '')
+    let hash = $this.attr('href')
+    let targetHash = hash.replace('-hash', '')
 
     if (history.pushState) {
       history.pushState(null, null, targetHash)
@@ -26,18 +26,17 @@ $(document).ready(function () {
   }
 
   function hashChangeScroll () {
-    var eventsHeaderHeight = $('.jsEventsHeader').outerHeight()
+    let eventsHeaderHeight = $('.jsEventsHeader').outerHeight()
 
     // scrolls to hash location
-    var curPos = $(window).scrollTop()
-    var currHash = location.hash
-    var targetHash = location.hash + '-hash'
-    var $target = $(targetHash)
-    var targetTop = parseInt($target.offset().top)
+    let curPos = $(window).scrollTop()
+    let currHash = location.hash
+    let targetHash = location.hash + '-hash'
+    let $target = $(targetHash)
+    let targetTop = parseInt($target.offset().top)
 
-    console.log(targetTop - eventsHeaderHeight)
-    var scroll = targetTop - eventsHeaderHeight
-    $('html').animate({
+    let scroll = targetTop - eventsHeaderHeight
+    $('html, body').animate({
       scrollTop: scroll
     }, 1500)
   }

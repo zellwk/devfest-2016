@@ -9,9 +9,9 @@ require('./form')
 // Polyfill for external SVG spritesheets
 svg4everybody()
 
-$(window).resize(function (event) {
-  console.log($(window).width())
-})
+// $(window).resize(function (event) {
+// console.log($(window).width())
+// })
 
 if ($('.jsShowMore').length) {
   let $showMore = $('.jsShowMore')
