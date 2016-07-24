@@ -65,9 +65,9 @@
 	// Polyfill for external SVG spritesheets
 	(0, _svg4everybody2.default)();
 	
-	$(window).resize(function (event) {
-	  console.log($(window).width());
-	});
+	// $(window).resize(function (event) {
+	// console.log($(window).width())
+	// })
 	
 	if ($('.jsShowMore').length) {
 	  (function () {
@@ -714,9 +714,8 @@
 	    var $target = $(targetHash);
 	    var targetTop = parseInt($target.offset().top);
 	
-	    console.log(targetTop - eventsHeaderHeight);
 	    var scroll = targetTop - eventsHeaderHeight;
-	    $('html').animate({
+	    $('html, body').animate({
 	      scrollTop: scroll
 	    }, 1500);
 	  }
