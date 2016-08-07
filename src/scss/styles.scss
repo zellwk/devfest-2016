@@ -27,6 +27,7 @@
 @import "layouts/canvas";
 @import "layouts/events";
 @import "layouts/nav";
+
 // @import "layouts/header";
 
 // Objects
@@ -36,8 +37,8 @@
 @import "objects/buttons";
 @import "objects/form";
 @import "components/logo";
-// @import "objects/block";
 
+// @import "objects/block";
 
 // @import "objects/media";
 
@@ -67,6 +68,7 @@
 // Utilities
 // ---------
 @include bp-utils;
+
 @import "utilities";
 
 // Page Specific Overrides
@@ -78,3 +80,8 @@
 // For new style snippets that haven't been sorted and commented yet
 // @import "shame";
 
+.Blacky {
+  color: color(white);
+  background: color(firefly);
+  padding: vr(0.75) 0;
+}

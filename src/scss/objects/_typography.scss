@@ -5,7 +5,7 @@
 //
 html {
   @include ff(primary);
-
+  @include typi-base;
   // font-weight: 300;
 }
 
@@ -38,8 +38,18 @@ h6 {
   font-weight: 700;
 }
 
+.l1 {
+  @include ff(logo);
+  @include typi($h4-map);
+  position: relative;
+  top: 0.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  span { font-size: 1.1em;}
+}
+
 .th1 {
-   @include typi($interrupt-header);
+  @include typi($interrupt-header);
   @include ff(logo);
 }
 
@@ -52,11 +62,8 @@ h6 {
 }
 
 h1 {
-  // margin-bottom: rhythm(0.5);
   font-size: ms(3);
   font-weight: normal;
-
-  // line-height: rhythm(3);
 }
 
 h3 {
@@ -106,8 +113,4 @@ a {
 
 p {
   line-height: 1.4;
-}
-
-html {
-  @include typi-base;
 }
