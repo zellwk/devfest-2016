@@ -40,6 +40,22 @@ if ($('.jsShowMore').length) {
   }
 
   $('.jsSeeMoreLink').on('click', showFullText)
-
 }
 
+if ($('.jsFilterSearchBox').length && $('.jsFilteredItems').length) {
+  let $allItems = $('.jsFilteredItem')
+
+  $('.jsFilterSearchBox').on('keyup', function (e) {
+    let searchTerm = e.target.value.toLowerCase()
+
+    $allItems.each(function (index, val) {
+      let filterAttribute = val.querySelector('.jsFilterAttribute').innerHTML.toLowerCase()
+
+      if (filterAttribute.indexOf(searchTerm) > -1) {
+        $(val).removeClass('is-hidden')
+      } else {
+        $(val).addClass('is-hidden')
+      }
+    })
+  })
+}

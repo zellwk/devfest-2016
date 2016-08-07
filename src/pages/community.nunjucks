@@ -1,18 +1,46 @@
 ---
-data: ['data/events.json']
+data: ['data/community.json']
 ---
 
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
+
 {% include "partials/static-nav.nunjucks" %}
 
+<div class="l-content">
+
+  <nav class="h6 Nav--desktop u-hide-st-med-large jsDesktopNav">
+    {% import 'macros/navigation.nunjucks' as nav %}
+    {{nav.active('events')}}
+  </nav>
+
+  <div class="l-new-wrap">
+    <article>
+      <h1 class="h1">The Developer Community in Singapore</h1>
+      <p>The community in Singapore is has grown over the last 5 years to become maybe the most vibrant in Southeast Asia. Here's how you can get to know us.</p>
+      <br />
+    </article>
+
+    <div class="Community-search jsFilterSearchBox">
+      <input type="text" placeholder="Search for a community... E.G. JS">
+    </div>
+
+    <div class="flex-wrapper">
+      <div class="l-community Community jsFilteredItems">
+        {% for com in community|sort(false, false, 'name') %}
+        <a href="{{com.url}}" class="l-community-item Community__item jsFilteredItem">
+          <span class="Community__type--{{com.type}}">{{com.type|capitalize}}</span>
+          <div class="Item__content">
+            <h3 class="h3 jsFilterAttribute">{{com.name}} </h3>
+            {% if com.image %} <img src="/images/community/{{com.image}}" alt=""> {% endif %}
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 {# {% include "partials/hero.nunjucks" %}
 {% include "partials/events/index.nunjucks" %} #}
-
-{% endblock %}
-
-{% block offCanvasNav %}
-  {# {% import 'macros/navigation.nunjucks' as nav %}
-  {{nav.active('events')}} #}
 {% endblock %}

@@ -45,6 +45,7 @@
 // Components
 // ----------
 @import "components/article";
+@import "components/community";
 @import "components/css-clock";
 @import "components/event-groups";
 @import "components/events";
@@ -84,4 +85,19 @@
   color: color(white);
   background: color(firefly);
   padding: vr(0.75) 0;
+  margin-bottom: vr(1);
+  a {
+    text-decoration: none;
+    color: color(white);
+  }
+}
+
+.Community-search {
+  input {
+    width: 100%;
+  }
+}
+
+.is-hidden {
+  display: none;
 }

@@ -1,0 +1,86 @@
+$com-margin: vr(0.5);
+
+.l-community {
+  margin-top: vr(0.75);
+
+  @include bp(med-large) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: $com-margin * -1;
+    margin-right: $com-margin * -1;
+  }
+}
+
+.l-community-item {
+  margin: vr(0.5) 0;
+
+  @include bp(med-large) {
+    flex-basis: calc(#{percentage(1 / 3)} - #{$com-margin * 2});
+    flex-grow: 1;
+    margin: $com-margin;
+  }
+
+
+  @include bp(wide) {
+    flex-basis: calc(#{percentage(1 / 4)} - #{$com-margin * 2});
+  }
+}
+
+.Community__item {
+  display: flex;
+  background: white;
+  text-decoration: none;
+  min-height: vr(4);
+
+  .Item__content {
+    display: block;
+    padding: vr(0.75);
+  }
+
+  img {
+    display: block;
+    margin: 0;
+    margin-top: vr(0.5);
+    max-height: vr(3);
+  }
+}
+
+@mixin Community__type {
+  display: inline-block;
+  padding-top: vr(0.75);
+  color: color(white);
+
+  // @include ff(secondary);
+
+  @include typi($h6-map);
+
+  width: vr(1);
+  line-height: vr(1);
+  font-weight: 400;
+  transform: rotate(180deg);
+
+  // letter-spacing: 0.075em;
+  text-decoration: none;
+  writing-mode: vertical-lr;
+}
+
+.Community__type--meetup {
+  @include Community__type;
+
+  background: color(malibu);
+}
+
+.Community__type--conference {
+  @include Community__type;
+
+  background: color(froly);
+}
+
+.Community__type--chat {
+  @include Community__type;
+
+  background: desaturate(color(candlelight), 10%);
+  color: black;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,358 @@
+{
+  "community": [{
+    "name": "Adobe InDesign Singapore User Group",
+    "image": "adobe-indesign.png",
+    "url": "http://www.meetup.com/Singapore-Graphic-Design-and-Publishing-Group/",
+    "type": "meetup"
+  }, {
+    "name": "Agile & DevOps SG",
+    "url": "https://www.facebook.com/groups/agiledevopssg",
+    "type": "meetup"
+  }, {
+    "name": "Agile Singapore",
+    "image": "agile-singapore.jpeg",
+    "url": "http://www.meetup.com/Agile-Singapore/",
+    "type": "meetup"
+  }, {
+    "name": "Arduino Community Singapore",
+    "image": "arduino.png",
+    "url": "https://www.facebook.com/groups/arduinosg",
+    "type": "meetup"
+  }, {
+    "name": "ArtScience Museum",
+    "url": "http://www.marinabaysands.com/museum.html",
+    "type": "meetup"
+  }, {
+    "name": "AWS User Group Singapore",
+    "image": "aws.jpeg",
+    "url": "http://www.meetup.com/AWS-SG/",
+    "type": "meetup"
+  }, {
+    "name": "Azure community Singapore",
+    "image": "azure.png",
+    "url": "http://www.meetup.com/AzureSG/",
+    "type": "meetup"
+  }, {
+    "name": "BigData SG",
+    "url": "https://www.facebook.com/groups/bigdatasg",
+    "type": "meetup"
+  }, {
+    "name": "BigData.SG & Hadoop.SG",
+    "url": "http://www.meetup.com/BigData-Hadoop-SG/",
+    "type": "meetup"
+  }, {
+    "name": "Bitcoin Singapore Meetup Group",
+    "image": "bitcoin.png",
+    "url": "http://www.meetup.com/BitcoinSingapore/",
+    "type": "meetup"
+  }, {
+    "name": "Creative Coders",
+    "url": "https://www.facebook.com/groups/ccmail",
+    "type": "meetup"
+  }, {
+    "name": "Creative Crew Singapore",
+    "image": "creativecrew.png",
+    "url": "https://www.facebook.com/groups/creativecrewsg",
+    "type": "meetup"
+  }, {
+    "name": "DataScience SG",
+    "image": "datascience.jpeg",
+    "url": "http://www.meetup.com/DataScience-SG-Singapore/",
+    "type": "meetup"
+  }, {
+    "name": "DevOps Singapore",
+    "image": "devops.png",
+    "url": "http://www.meetup.com/devops-singapore/",
+    "type": "meetup"
+  }, {
+    "name": "DIYbio sg",
+    "url": "https://www.facebook.com/groups/300351496770239",
+    "type": "meetup"
+  }, {
+    "name": "Drupal Developer Network (Singapore)",
+    "url": "https://www.facebook.com/groups/drupal.singapore",
+    "type": "meetup"
+  }, {
+    "name": "Engineers.SG",
+    "url": "http://engineers.sg/",
+    "type": "meetup"
+  }, {
+    "name": "FPGA Community Singapore",
+    "url": "https://www.facebook.com/groups/835999373134899",
+    "type": "meetup"
+  }, {
+    "name": "Front End Developers Singapore",
+    "url": "http://feds.strikingly.com/",
+    "type": "meetup"
+  }, {
+    "name": "Grumpy Gits Singapore",
+    "url": "https://www.facebook.com/groups/sggrumpygits",
+    "type": "meetup"
+  }, {
+    "name": "Hackers and Painters",
+    "url": "https://www.facebook.com/groups/hackerspainters",
+    "type": "meetup"
+  }, {
+    "name": "HackerspaceSG",
+    "image": "hackerspace-sg.png",
+    "url": "http://hackerspace.sg/",
+    "type": "meetup"
+  }, {
+    "name": "Hackware",
+    "image": "hackware.png",
+    "url": "http://www.meetup.com/hackware/",
+    "type": "meetup"
+  }, {
+    "name": "Haskell.SG",
+    "url": "http://www.meetup.com/HASKELL-SG/",
+    "type": "meetup"
+  }, {
+    "name": "iOS Dev Scout",
+    "image": "iosdevscout.png",
+    "url": "https://www.facebook.com/groups/iosdevscout",
+    "type": "meetup"
+  }, {
+    "name": "MakerSpace.sg",
+    "url": "https://www.facebook.com/groups/makerspacesg",
+    "type": "meetup"
+  }, {
+    "name": "Meteor Singapore",
+    "image": "meteor.png",
+    "url": "http://www.meetup.com/Meteor-Singapore/",
+    "type": "meetup"
+  }, {
+    "name": ".Net Developers Singapore",
+    "image": "net.png",
+    "url": "http://www.meetup.com/Net-Developers-SG",
+    "type": "meetup"
+  }, {
+    "name": "NodeBots Singapore",
+    "image": "nodebots.png",
+    "url": "http://www.meetup.com/NodeBotsSingapore/",
+    "type": "meetup"
+  }, {
+    "name": "NTU Open Source Society",
+    "image": "ntu.png",
+    "url": "http://www.ntuoss.com/",
+    "type": "meetup"
+  }, {
+    "name": "NUS Hackers",
+    "image": "nus.gif",
+    "url": "http://nushackers.org/",
+    "type": "meetup"
+  }, {
+    "name": "Papers We Love Singapore",
+    "url": "https://www.facebook.com/groups/paperswelovesg",
+    "type": "meetup"
+  }, {
+    "name": "Postgres Users Group",
+    "url": "http://www.meetup.com/PUGS-Postgres-Users-Group-Singapore/",
+    "type": "meetup"
+  }, {
+    "name": "PyData Singapore",
+    "image": "pydata.png",
+    "url": "https://www.facebook.com/groups/pydatasg",
+    "type": "meetup"
+  }, {
+    "name": "R User Group (Singapore RUGS)",
+    "image": "r.png",
+    "url": "http://www.meetup.com/R-User-Group-SG/",
+    "type": "meetup"
+  }, {
+    "name": "RaspberryPI & Co Singapore",
+    "url": "https://www.facebook.com/groups/raspberrypisingapore",
+    "type": "meetup"
+  }, {
+    "name": "SG Geek Girls",
+    "image": "geekgirls.png",
+    "url": "http://www.sggeekgirls.com/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Clojure Meetup",
+    "image": "singaporeclojure.jpeg",
+    "url": "http://www.meetup.com/Singapore-Clojure-Meetup/",
+    "type": "meetup"
+  }, {
+    "name": "SingaporeCSS",
+    "image": "singaporecss.png",
+    "url": "http://www.meetup.com/Singapore-CSS/",
+    "type": "meetup"
+  }, {
+    "name": "SingaporeJS",
+    "image": "singaporejs.png",
+    "url": "http://www.meetup.com/Singapore-JS/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Amateur Radio",
+    "image": "sarts.jpg",
+    "url": "https://www.facebook.com/AmateurRadioSingapore",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Android Developers",
+    "image": "sgandroid.png",
+    "url": "http://www.meetup.com/Singapore-Android-Developers/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Creative Coding",
+    "image": "creativecoding.png",
+    "url": "http://www.meetup.com/Singapore-Creative-Coding-Meetup/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Docker Group",
+    "image": "docker.png",
+    "url": "http://www.meetup.com/Docker-Singapore/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Drone Fun Meetup",
+    "image": "drone.jpeg",
+    "url": "http://www.meetup.com/dronesg/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Gophers",
+    "image": "gopher.png",
+    "url": "https://www.facebook.com/groups/golang.sg",
+    "type": "meetup"
+  }, {
+    "name": "Singapore GPU Users",
+    "image": "gpu.png",
+    "url": "http://www.meetup.com/Singapore-GPU-Users/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Makers",
+    "image": "makers.jpg",
+    "url": "https://www.facebook.com/sgmakers",
+    "type": "meetup"
+  }, {
+    "name": "Singapore MongoDB User Group",
+    "url": "https://www.facebook.com/groups/mongosg",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Node.JS User Group",
+    "url": "https://www.facebook.com/groups/sg.nodejs",
+    "type": "meetup"
+  }, {
+    "name": "Singapore PHP User Group",
+    "url": "https://www.facebook.com/groups/sghypertextpreprocessors",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Python User Group",
+    "url": "https://www.facebook.com/groups/pythonsg",
+    "type": "meetup"
+  }, {
+    "name": "Singapore Ruby Group",
+    "url": "http://ruby.sg/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore WebRTC Meetup",
+    "url": "http://www.meetup.com/Singapore-WebRTC-Meetup/",
+    "type": "meetup"
+  }, {
+    "name": "Singapore WordPress User Group",
+    "url": "https://www.facebook.com/groups/wpug.sg",
+    "type": "meetup"
+  }, {
+    "name": "Team Ubuntu Singapore",
+    "url": "https://www.facebook.com/groups/ubuntu.sg",
+    "type": "meetup"
+  }, {
+    "name": "The Orange Hive Community",
+    "image": "orangehive.png",
+    "url": "http://www.theorangehive.com/",
+    "type": "meetup"
+  }, {
+    "name": "UXSG",
+    "image": "uxsg.png",
+    "url": "https://www.facebook.com/groups/uxsingapore",
+    "type": "meetup"
+  }, {
+    "name": "We Build SG",
+    "image": "webuild.png",
+    "url": "https://webuild.sg",
+    "type": "meetup"
+  }, {
+    "name": "Singapore JS Gitter",
+    "image": "singaporejs.png",
+    "url": "https://gitter.im/SingaporeJS/discussions",
+    "type": "meetup"
+
+  }, {
+    "name": "KopiJS Slack",
+    "image": "kopijs.png",
+    "url": "http://kopijs.herokuapp.com",
+    "type": "chat"
+
+  }, {
+    "name": "Ruby Slack Group",
+    "image": "rubysg.png",
+    "url": "https://rubysg.slack.com",
+    "type": "chat"
+
+  }, {
+    "name": "Hackerspace IRC on Freenode (#hackerspacesg)",
+    "image": "hackerspace-sg.png",
+    "url": "https://webchat.freenode.net",
+    "type": "chat"
+  }, {
+    "name": "CSSConf.Asia",
+    "image": "cssconf.png",
+    "url": "http://cssconf.asia",
+    "devfest": true,
+    "type": "conference"
+  }, {
+    "name": "JSConf.Asia",
+    "image": "jsconf.png",
+    "url": "http://jsconf.asia",
+    "devfest": true,
+    "type": "conference"
+  }, {
+    "name": "Agile Conf",
+    "image": "agile-singapore.jpeg",
+    "url": "http://agilesingapore.org/",
+    "type": "conference"
+  }, {
+    "name": "Barcamp",
+    "image": "barcamp.jpeg",
+    "url": "http://letsjoin.in/barcampsg",
+    "type": "conference"
+  }, {
+    "name": "Drupal Camp",
+    "image": "drupalcamp.png",
+    "url": "http://www.drupalcamp.sg",
+    "type": "conference"
+  }, {
+    "name": "Geekcamp",
+    "image": "geekcamp.png",
+    "url": "http://www.geekcamp.sg",
+    "type": "conference"
+  }, {
+    "name": "iOS Conf",
+    "image": "iosconf.png",
+    "url": "http://www.iosconf.sg/",
+    "type": "conference"
+  }, {
+    "name": "Maker Faire Singapore",
+    "image": "makerfaire.png",
+    "url": "http://makerfairesingapore.com/",
+    "type": "conference"
+  }, {
+    "name": "PHP Conf Asia",
+    "image": "phpconf.png",
+    "url": "http://phpconf.asia",
+    "type": "conference"
+  }, {
+    "name": "Pycon",
+    "image": "pyconf.jpg",
+    "url": "https://pycon.sg",
+    "type": "conference"
+  }, {
+    "name": "Red Dot Ruby conf",
+    "image": "rubyconf.png",
+    "url": "http://www.reddotrubyconf.com",
+    "type": "conference"
+  }, {
+    "name": "UX SG",
+    "image": "uxsg.png",
+    "url": "http://uxsg.org",
+    "type": "conference"
+  }]
+}
