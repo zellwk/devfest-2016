@@ -99,6 +99,26 @@
 	    $('.jsSeeMoreLink').on('click', showFullText);
 	  })();
 	}
+	
+	if ($('.jsFilterSearchBox').length && $('.jsFilteredItems').length) {
+	  (function () {
+	    var $allItems = $('.jsFilteredItem');
+	
+	    $('.jsFilterSearchBox').on('keyup', function (e) {
+	      var searchTerm = e.target.value.toLowerCase();
+	
+	      $allItems.each(function (index, val) {
+	        var filterAttribute = val.querySelector('.jsFilterAttribute').innerHTML.toLowerCase();
+	
+	        if (filterAttribute.indexOf(searchTerm) > -1) {
+	          $(val).removeClass('is-hidden');
+	        } else {
+	          $(val).addClass('is-hidden');
+	        }
+	      });
+	    });
+	  })();
+	}
 
 /***/ },
 /* 1 */
