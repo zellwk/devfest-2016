@@ -28,16 +28,19 @@ data: ['data/community.json']
 
     <div class="flex-wrapper">
       <div class="l-community Community jsFilteredItems">
-        {% for com in community|sort(false, false, 'name') %}
-        <a href="{{com.url}}" class="l-community-item Community__item jsFilteredItem">
-        <div class="Community__type--{{com.type}}">
-            <span>{{com.type|capitalize}}</span>
-          </div>
-          <div class="Item__content">
-            <h3 class="h3 jsFilterAttribute">{{com.name}} </h3>
-            {% if com.image %} <img src="/images/community/{{com.image}}" alt=""> {% endif %}
-          </div>
-        </a>
+        {% for com in community.conference|sort(false, false, 'name') %}
+          {% set type = 'conference' %}
+          {% include "partials/community.nunjucks" %}
+        {% endfor %}
+
+        {% for com in community.chat|sort(false, false, 'name') %}
+          {% set type = 'chat' %}
+          {% include "partials/community.nunjucks" %}
+        {% endfor %}
+
+        {% for com in community.meetup|sort(false, false, 'name') %}
+          {% set type = 'meetup' %}
+          {% include "partials/community.nunjucks" %}
         {% endfor %}
       </div>
     </div>

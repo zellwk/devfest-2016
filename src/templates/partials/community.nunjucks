@@ -1,0 +1,9 @@
+<a href="{{com.url}}" class="l-community-item Community__item jsFilteredItem">
+  <div class="Community__type--{{type}}">
+    <span>{{type|capitalize}}</span>
+  </div>
+  <div class="Item__content">
+    <h3 class="h3 jsFilterAttribute">{{com.name}} </h3>
+    {% if com.image %} <img src="/images/community/{{com.image}}" alt=""> {% endif %}
+  </div>
+</a>
