@@ -29,6 +29,7 @@ $com-margin: vr(0.5);
 
 .Community__item {
   display: flex;
+  align-items: stretch;
   background: white;
   text-decoration: none;
   min-height: vr(4);
@@ -47,22 +48,24 @@ $com-margin: vr(0.5);
 }
 
 @mixin Community__type {
-  display: inline-block;
-  padding-top: vr(0.75);
+  position: relative;
   color: color(white);
-
-  // @include ff(secondary);
 
   @include typi($h6-map);
 
-  width: vr(1);
+  flex-basis: vr(1);
+  flex-shrink: 0;
   line-height: vr(1);
   font-weight: 400;
-  transform: rotate(180deg);
-
-  // letter-spacing: 0.075em;
   text-decoration: none;
-  writing-mode: vertical-lr;
+
+  span {
+    position: absolute;
+    left: 0;
+    bottom: vr(0.75);
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+  }
 }
 
 .Community__type--meetup {

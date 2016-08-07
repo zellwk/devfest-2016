@@ -1,6 +1,8 @@
-$adaptive-placeholder: (border-radius: 0, active-color: #E74840);
+$adaptive-placeholder: (border-radius: 0, border-color: color(bleu-de-france),  valid-color: color(bleu-de-france),
+active-color: color(bleu-de-france));
 
 input {
   @include adaptive-placeholder;
   color: color(revolver);
+
 }
