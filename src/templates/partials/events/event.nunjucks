@@ -1,8 +1,10 @@
-<div class="Event-groups l-event-groups l-new-wrap" id="{% if date.date %}{{date.day}}{{date.date}}{% elif date.text%}allweek{% endif %}-hash" >
+<div class="Event-groups l-event-groups l-new-wrap" id="{% if date.date %}{{date.day}}{{date.date}}{% elif date.text%}{{date.text}}{% endif %}-hash" >
   <div class="Event-group l-event-group jsScrollSpyContainer {% if date.events.length == 0 %} is-invisible {% endif %}">
     <div class="Event-group__cal jsScrollSpy" data-scrollSpyHighlight="{{date.date}}">
       <div class="Cal">
-        {% if date.text %} <div class="h4 allweek">All<br>Week</div>{% endif %}
+        {% if date.text %}
+          <div class="h4 {{date.text}}">{{date.text}}</div>
+        {% endif %}
         <div class="h4 day">{{date.date}}</div>
         {% if date.day %} <h4 class="small weekday">Nov</h4> {% endif %}
       </div>
@@ -22,11 +24,16 @@
           <div class="Event__body">
             <div class="Event__desc">
               <h3 class="Event__title h3">{{event.title}}</h3>
+
               <p class="jsShowMore">{{event.desc | safe }}</p>
+
+              {% if event.startTime %}
               <div class="Event__time">
                 <div class="Clock" data-time="{{event.startTime}}-{{event.endTime}}"></div>
                 <span> {{event.startTime}}{{event.startTimeSuffix}} - {{event.endTime}}{{event.endTimeSuffix}}{% if event.weekdays %} on weekdays {% endif %} </span>
               </div>
+              {% endif  %}
+
               <div class="Event__location">
                 <svg><use xlink:href="/symbol/svg/sprite.symbol.svg#location1" /></svg>
                 <a target="_blank" href="http://maps.google.com/?q={% if event.gmap %}{{event.gmap}}{% else %}{{ event.location }}{% endif %}">
@@ -41,7 +48,8 @@
               {% else %}
                 {% if event.ticket %}
                   <a href="{{event.ticketlink}}" target="_blank" class="btn">{{event.ticket}}</a>
-                {% else %}
+                {% endif %}
+                {% if event.ticketinfo %}
                   <div class="ticket-info">
                     {{event.ticketinfo}}
                   </div>

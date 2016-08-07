@@ -1,47 +1,55 @@
 {
-  "dates": [
-    {
+  "dates": [{
       "type": "event",
       "date": "18",
       "day": "Fri",
       "events": []
-    },
-    {
+    }, {
       "type": "event",
       "date": "19",
       "day": "Sat",
       "events": []
-    },
-    {
+    }, {
       "type": "event",
       "date": "20",
       "day": "Sun",
-      "events": []
-    },
-    {
+      "events": [{
+        "title": "Nodeschool",
+        "desc": "NodeSchool is an open source project run by volunteers with two goals: to create high quality programming curriculum and to host community web-tech learning events.",
+        "logo": "/images/events/nodeschool-logo.png",
+        "image": "/images/events/nodeschool.jpg",
+        "imagelink": "http://nodeschool.io",
+        "startTime": "10",
+        "startTimeSuffix": "am",
+        "endTime": "5",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
+      }]
+    }, {
       "type": "event",
       "date": "21",
       "day": "Mon",
       "events": []
-    },
-    {
+    }, {
       "type": "event",
       "date": "22",
       "day": "Tue",
-      "events": [
-      {
+      "events": [{
         "title": "Talk.CSS",
         "desc": "It's our first anniversary! Join us for a celebration and learn something new about the front end world. There will be cake!",
         "logo": "/images/events/talk.css-logo.png",
         "image": "/images/events/talk.css.jpg",
-        "imagelink": "http://www.meetup.com/SingaporeCSS/events/232466438/",
+        "imagelink": "https://www.meetup.com/es-ES/SingaporeCSS/events/232466438/",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "9",
         "endTimeSuffix": "pm",
         "location": "TBC",
         "location2": "",
-        "ticketinfo": "Registration opening soon"
+        "ticket": "Register",
+        "ticketlink": "https://www.meetup.com/es-ES/SingaporeCSS/events/232466438/"
       }]
     },
 
@@ -56,8 +64,7 @@
       "type": "event",
       "date": "24",
       "day": "Thu",
-      "events": [
-      {
+      "events": [{
         "title": "CSSConf.Asia",
         "desc": "Bridging web design and implementation. The technical conference for experience designers and front-end engineers.",
         "logo": "/images/events/cssconf-logo.png",
@@ -100,8 +107,7 @@
       "type": "event",
       "date": "25",
       "day": "Fri",
-      "events": [
-      {
+      "events": [{
         "title": "JSConf.Asia Day 1",
         "desc": "5 years of Southeast Asia's largest web developer conference. Join more than 500 of the most amazing devs in web tech for the coolest conference around.",
         "logo": "/images/events/jsconf-logo.png",
@@ -115,7 +121,7 @@
         "location2": "",
         "ticket": "Get your ticket NAOW!!1",
         "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
-      },  {
+      }, {
         "title": "Tessel Workshop",
         "desc": "The founders of the Tessel project Kelsey Bresemann and Jon McKay are in town and are hosting this hands-on Tessel \"Internet of Things\" workshop. Curious? Find out more at <a href='https://tessel.io'>https://tessel.io</a>.",
         "logo": "/images/events/tessel-logo.png",
@@ -135,8 +141,7 @@
       "type": "event",
       "date": "26",
       "day": "Sat",
-      "events": [
-      {
+      "events": [{
         "title": "JSConf.Asia Day 2",
         "desc": "5 years of Southeast Asia's largest web developer conference. Join more than 500 of the most amazing devs in web tech for the coolest conference around.",
         "logo": "/images/events/jsconf-logo.png",
@@ -161,12 +166,12 @@
       "button": "Post a great position now",
       "link": "https://jsconfasia.wufoo.com/forms/mawgx6w16px4ur/"
     },
+
     {
       "type": "event",
       "date": "27",
       "day": "Sun",
-      "events": [
-      {
+      "events": [{
         "title": "Web Audio Hack Day",
         "desc": "Q. What is this WebAudio you speak of? <br/> <br/> A. WebAudio is a (widely supported) W3C standard for generating, analysing and playing audio in the Browser. Checkout the spec here (<a href='http://webaudio.github.io/web-audio-api/'>http://webaudio.github.io/web-audio-api/</a>) <br/> <br/> Q. Where can I learn more about WebAudio <br/> <br/> A. WebAudio School is a self-help style tutorial for learning WebAudio (<a href='http://mmckegg.github.io/web-audio-school/'>http://mmckegg.github.io/web-audio-school/</a>). <br/><br /> Q. What shall I bring to this HackDay? <br/><br /> A. Please bring you down laptop, headphones and anything else you want to use for your project, like MIDI controllers, Arduino, etc.",
         "logo": "/images/events/webaudio-js-logo.png",
@@ -178,8 +183,7 @@
         "location": "TBC",
         "location2": "",
         "ticketinfo": "Registration opening soon"
-      },
-      {
+      }, {
         "title": "KopiJS",
         "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
         "logo": "/images/events/kopijs-logo.png",
@@ -192,6 +196,18 @@
         "location": "TBC",
         "location2": "",
         "ticketinfo": "Registration opening soon"
+      }]
+    }, {
+      "type": "event",
+      "text": "Partners",
+      "events": [{
+        "title": "Collision 8",
+        // "desc": "Some description",
+        "logo": "/images/events/collision8-logo.png",
+        "image": "/images/events/collision8.jpg",
+        "imagelink": "https://www.collision8.com",
+        "location": "High Street Centre, 1 North Bridge Road",
+        "loction2": "#08-08 Singapore 179094"
       }]
     }
   ]

@@ -101,3 +101,23 @@ a.Events-nav__weekend {
   height: 3.5em;
   margin-top: 0.1666666667em;
 }
+
+.Events-nav__text {
+  position: relative;
+  display: block;
+  margin-top: 0.51em;
+  margin-left: 0.25em;
+  font-size: 1.125em;
+  font-weight: normal;
+  color: rgba(white, 0.7);
+}
+
+.is-active .Events-nav__text {
+    color: color(white);
+  &:after {
+    content: "";
+    display: block;
+    margin-top: vr(0.125);
+    border-bottom: vr(0.15) solid color(bleu-de-france);
+  }
+}
