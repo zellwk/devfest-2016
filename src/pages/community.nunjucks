@@ -5,6 +5,7 @@ data: ['data/events.json']
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
+{% include "partials/static-nav.nunjucks" %}
 
 {# {% include "partials/hero.nunjucks" %}
 {% include "partials/events/index.nunjucks" %} #}

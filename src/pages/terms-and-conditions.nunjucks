@@ -2,9 +2,7 @@
 
 {% block content %}
 
-<div class="Blacky">
-  <div class="l-new-wrap"> <h2 class="l1">Devfest.Asia <span>2016</span> </h2> </div>
-</div>
+{% include "partials/static-nav.nunjucks" %}
 
 <div class="l-content">
   <nav class="h6 Nav--desktop u-hide-st-med-large jsDesktopNav">

@@ -201,7 +201,7 @@
       "type": "event",
       "text": "Partners",
       "events": [{
-        "title": "Collision 8",
+        "title": "Collision8",
         // "desc": "Some description",
         "logo": "/images/events/collision8-logo.png",
         "image": "/images/events/collision8.jpg",
