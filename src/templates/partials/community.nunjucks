@@ -4,6 +4,6 @@
   </div>
   <div class="Item__content">
     <h3 class="h3 jsFilterAttribute">{{com.name}} </h3>
-    {% if com.image %} <img src="/images/community/{{com.image}}" alt=""> {% endif %}
+    {% if com.image %} <img src="/images/community/{{com.image}}" alt="{{com.name}}"> {% endif %}
   </div>
 </a>
