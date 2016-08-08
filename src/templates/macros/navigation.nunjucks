@@ -1,9 +1,9 @@
 {% macro active(active='events') %}
-<a href="#" class="{%if active == 'events' %} is-active {% endif %}">Events</a>
+<a href="/" class="{%if active == 'events' %} is-active {% endif %}">Events</a>
 {# <a href="#" class="{%if active == 'hotels' %} is-active {% endif %}">Hotels</a>
 <a href="#" class="{%if active == 'jobs' %} is-active {% endif %}">Jobs</a>
 <a href="#" class="{%if active == 'sponsors' %} is-active {% endif %}">Sponsors</a> #}
-{# <a href="/community" class="{%if active == 'community' %} is-active {% endif %}">Community</a> #}
+<a href="/community" class="{%if active == 'community' %} is-active {% endif %}">Community</a>
 <a href="https://blog.devfest.asia" >Blog</a>
 <a href="https://jsconfasia.wufoo.com/forms/mawgx6w16px4ur/">Post a Job</a>
 <a href="https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/">List your event</a>
