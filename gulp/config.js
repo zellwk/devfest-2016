@@ -70,7 +70,7 @@ var config = {
 
   images: {
     src: [
-    src + '/images/**/*.{png,jpeg,jpg,gif}',
+    src + '/images/**/*.{png,jpeg,jpg,gif,svg}',
     '!' + src + '/images/sprites/*'
     ],
     dest: dest + '/images',

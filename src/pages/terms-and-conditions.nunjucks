@@ -7,7 +7,7 @@
 <div class="l-content">
   <nav class="h6 Nav--desktop u-hide-st-med-large jsDesktopNav">
     {% import 'macros/navigation.nunjucks' as nav %}
-    {{nav.active('events')}}
+    {{nav.active('terms')}}
   </nav>
 
   <div class="l-new-wrap">

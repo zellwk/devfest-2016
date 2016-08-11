@@ -13,7 +13,7 @@
       "url": "http://www.meetup.com/Agile-Singapore/"
     }, {
       "name": "Arduino Community Singapore",
-      "image": "arduino.svg",
+      "image": "arduino.png",
       "url": "https://www.facebook.com/groups/arduinosg"
     }, {
       "name": "ArtScience Late",
@@ -218,7 +218,7 @@
       "url": "https://gitter.im/SingaporeJS/discussions"
     }, {
       "name": "KopiJS Slack",
-      "image": "kopijs.svg",
+      "image": "kopijs.png",
       "url": "http://kopijs.herokuapp.com"
     }, {
       "name": "Ruby Slack Group",
