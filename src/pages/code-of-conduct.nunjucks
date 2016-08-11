@@ -35,3 +35,8 @@
  </div>
 </div>
 {% endblock %}
+
+{% block offCanvasNav %}
+  {% import 'macros/navigation.nunjucks' as nav %}
+  {{nav.active('coc')}}
+{% endblock %}

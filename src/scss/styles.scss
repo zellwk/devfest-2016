@@ -86,9 +86,29 @@
   background: color(firefly);
   padding: vr(0.75) 0;
   margin-bottom: vr(1);
+
   a {
     text-decoration: none;
     color: color(white);
+  }
+
+  .l-new-wrap {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.Blacky .Nav-trigger {
+  position: relative;
+  top: vr(0.125);
+  margin-right: vr(0.5);
+  a {
+    position: static;
+  }
+
+  svg {
+    height: vr(1);
+    width: auto;
   }
 }
 

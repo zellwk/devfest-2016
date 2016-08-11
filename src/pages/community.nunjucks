@@ -46,6 +46,9 @@ data: ['data/community.json']
     </div>
   </div>
 </div>
-{# {% include "partials/hero.nunjucks" %}
-{% include "partials/events/index.nunjucks" %} #}
+{% endblock %}
+
+{% block offCanvasNav %}
+  {% import 'macros/navigation.nunjucks' as nav %}
+  {{nav.active('community')}}
 {% endblock %}
