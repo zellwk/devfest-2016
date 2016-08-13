@@ -9,6 +9,7 @@ $transition-duration: 0.3s;
 .Canvas {
   overflow: hidden;
 }
+
 .Canvas__off {
   position: fixed;
   top: 0;
@@ -30,6 +31,7 @@ $transition-duration: 0.3s;
   left: 0;
   z-index: 20;
   overflow: auto;
+
   // Enable webkit overflow, but spoils the logo..
   // -webkit-overflow-scrolling: touch;
   background: whitesmoke;
