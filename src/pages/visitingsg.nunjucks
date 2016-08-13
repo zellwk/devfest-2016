@@ -1,0 +1,101 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+
+{% include "partials/static-nav.nunjucks" %}
+
+<div class="l-content">
+  <nav class="h6 Nav--desktop u-hide-st-med-large jsDesktopNav">
+    {% import 'macros/navigation.nunjucks' as nav %}
+    {{nav.active('visiting')}}
+  </nav>
+
+  <div class="l-new-wrap">
+    <article>
+{% markdown %}
+
+# All you need to know about your arrival in Singapore
+
+## 1. Stay in a good hotel
+
+Some text here!
+
+<p><a href="/hotels" class="btn">See hotels we've curated for you</a></p>
+
+## 2. Getting into Singapore
+
+Singapore has only one airport — [Changi Airport](http://www.changiairport.com). Please make sure you get the correct airport if you're flying! :)
+
+Once you arrive on Singapore, you can get to the city either by Bus, MRT (trains) or Taxi.
+
+The cheapest method to get into the city is through Trains, and you can find a station located in Terminal 2.
+
+## 3. Getting around Singapore
+
+Public transport (MRT and buses) in Singapore is excellent. It should probably be your first choice if you're going around Singapore.
+
+### MRT and Buses
+
+Singapore's public transport system runs on a reloadable contactless card called [EZ-Link](http://www.ezlink.com.sg). You can get an EZ-link card either from transit-link office in Changi Airport, or from convenience stores like 7-Eleven.
+
+Singapore also has 1,2 and 3 day unlimited "Tourists passes". There's no need to buy these passes unless you plan on making more than four trips a day.
+
+You might find these two apps useful for helping you get around in Singapore:
+
+1.  Google Maps (both [iOS](https://itunes.apple.com/en/app/google-maps/id585027354?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en)) — Tells you which bus or MRT to take to your destination.
+2.  SG Buses (both [iOS](https://itunes.apple.com/sg/app/sg-buses-singapore-public/id384353741?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.iridianstudio.sgbuses&hl=en)) — Tells you how long you have to wait before you next bus arrives.
+
+### Taxis
+
+Taxis are great for going around Singapore if you have some spare cash. They're generally pricier compared to public transport, but can get you where you want to go quickly.
+
+You can either flag taxis from a Taxi stand, off the street, or call one using the following apps:
+
+1.  Grab Taxi (both [iOS](https://itunes.apple.com/sg/app/grabtaxi-book-a-ride/id647268330?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.grabtaxi.passenger&hl=en))
+2.  Uber (both [iOS](https://itunes.apple.com/us/app/uber/id368677368?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.ubercab&hl=en))
+
+Note: Taxis are pricier during peak hours. It can also be difficult to grab a taxi on rainy days.
+
+## 4. WIFI
+
+Changi Airport has free WIFI. Use it!
+
+Singapore also has a wireless network called Wireless@SG that allows you to enjoy free WIFI all around Singapore. It requires you to have a local mobile number. You can [sign up here](https://mya.singnet.com.sg/wireless@sg_signup/onlineapplication.jsp?apptype=was&browser=web&tab=local).
+
+Otherwise, you can hang around at any McDonalds or Starbucks outlet to get your free WIFI.
+
+Here are some [cafés with free WIFI](http://www.ladyironchef.com/2013/08/cafes-free-wifi-singapore/) if you're a café goer.
+
+## 5. Power Sockets
+
+Singapore uses the [British three-prong plug](http://www.iec.ch/worldplugs/typeG.htm) (Type G, BS 1363 UK, 230-240V). Take note we're using 230V here.
+
+![Three prong plug](/images/plug.png)
+
+You can also force the [two prong European Type C](http://www.iec.ch/worldplugs/typeC.htm) into the socket. It involves shoving a small and non-metallic into the third hole though...
+
+## 6. Data SIM Cards (and mobile internet)
+
+You can get a prepaid card from either M1, Singtel or Starhub. Look for one that offers you great data plans. Here are some good choices:
+
+1.  [M1 Prepaid Broadband Card](https://www.m1.com.sg/PrepaidBroadband)
+2.  [Singtel Hi card](http://info.singtel.com/personal/phones-plans/mobile/prepaid/data-bundles#addons_data-plans)
+3.  [Starhub prepaid data plan](http://www.starhub.com/personal/mobile/prepaid-plans/data-add-on-plans/prepaid-data-plan.html)
+
+That's it! Enjoy your trip around Singapore! Now, go find yourself a good accommodation!
+
+If you want to know more about Singapore, you can take a look at this [handy guide](https://github.com/rubysg/singapore) made by [the Ruby community in Singapore](http://ruby.sg).
+</article>
+
+
+{% endmarkdown %}
+    </article>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block offCanvasNav %}
+{% import 'macros/navigation.nunjucks' as nav %}
+{{nav.active('visiting')}}
+{% endblock %}

@@ -1,101 +1,30 @@
-.c-hotel-carousel {
-  > div {
-    height: 0;
-    padding-bottom: 56.25%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+// Hotel
+// ==========
+.Hotels {
+  h2 {
+    margin-top: vr(2.25);
   }
 }
 
-.c-hotel {
-  position: relative;
-  background: white;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  box-shadow: 0 1px 0px 0px rgba(black, 0.1);
-
-  .sold-out {
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    left: 0;
-  }
+.Hotel {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
-.c-hotel--featured {
-  border: rhythm(0.25) solid color(malibu);
+.Hotel__image {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
-.c-hotel__title {
-  padding: rhythm(0.75) rhythm(0.5);
-  display: none;
-
-  @include bp("med") {
-    padding: rhythm(0.25) rhythm(0.5);
-  }
-
-
-  text-align: center;
-}
-
-.c-hotel-carousel {
-  position: relative;
-  overflow: hidden;
-
-  // border-radius: 6px 6px 0 0;
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: rhythm(0.25);
-    background: color(malibu);
-  }
-}
-
-.TA_selfserveprop {
-  padding: rhythm(0.25) rhythm(0.5) 0 !important;
-}
-
-.widSSPData {
-  padding: rhythm(0.25) rhythm(0.5) 0 !important;
-  padding: 0 !important;
-}
-
-.c-hotel__cta {
-  text-align: center;
-
-  .o-btn {
-    margin-bottom: rhythm(1);
-  }
-}
-
-.trip-advisor {
-  position: relative;
+.Hotel__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
-  min-height: rhythm(6);
-}
-
-@-webkit-keyframes rotater {
-  0%,100% {
-    transform: rotateZ(0deg);
-  }
-
-  50% {
-    transform: rotateZ(30deg);
-  }
-}
-
-@-webkit-keyframes aura {
-  0% {
-    opacity: 1;
-  }
-
-  50%, 100% {
-    opacity: 0;
-    transform: scale(1.3, 1.3);
-  }
+  text-align: center;
 }

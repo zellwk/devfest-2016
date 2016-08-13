@@ -42,8 +42,13 @@
     display: block;
     text-decoration: none;
 
-    &:first-child {
+    &.is-active {
       font-weight: bold;
+    }
+
+    &:first-child {
+      margin-bottom: vr(0.375);
+      padding-right: 1em;
     }
   }
 

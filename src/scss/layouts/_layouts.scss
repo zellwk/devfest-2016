@@ -46,68 +46,56 @@
   background: #F5F5F5;
 }
 
+// Community Layout
+// ==========
+$com-margin: vr(0.5);
+
+.l-community {
+  margin-top: vr(0.75);
+
+  @include bp(med-large) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-left: $com-margin * -1;
+    margin-right: $com-margin * -1;
+  }
+}
+
+.l-community-item {
+  margin: vr(0.5) 0;
+
+  @include bp(med-large) {
+    flex-basis: calc(#{percentage(1 / 3)} - #{$com-margin * 2});
+    flex-grow: 1;
+    margin: $com-margin;
+  }
+
+
+  @include bp(wide) {
+    flex-basis: calc(#{percentage(1 / 4)} - #{$com-margin * 2});
+  }
+}
+
 // Hotel Layout
 // ------------
+$hotel-margin: vr(0.75);
 
 .l-hotels {
-  display: flex;
-  flex-wrap: wrap;
-
-  @include bp("med") {
-    margin-left: -20px;
-    margin-right: -20px;
+  @include bp(med) {
+    display: flex;
+    flex-wrap: row wrap;
+    margin-left: -$hotel-margin;
+    margin-right: -$hotel-margin;
   }
 }
 
 .l-hotel {
-  display: block;
-  width: 100%;
-  margin-bottom: vr(1);
+  margin: vr(1) 0;
 
-  @include bp("med") {
-    display: flex;
-    flex-direction: column;
-    width: calc(50% - 40px);
+  @include bp(med) {
+    margin: $hotel-margin;
+    flex-basis: calc(#{percentage(1 / 3)} - #{$hotel-margin * 2});
     flex-grow: 1;
-    margin: 20px;
-
-    .TA_selfserveprop {
-      flex: 1;
-    }
   }
-
-
-  @include bp(large) {
-    width: calc(33% - 40px);
-  }
-
-
-  .widSSP {
-    width: auto !important;
-  }
-}
-
-.c-hotel--featured {
-  width: 100%;
-
-  @include bp(large) {
-    width: calc(66% - 40px);
-  }
-}
-
-// Awesome Grids Margin with Flexbox
-.wrapper {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  background: rgba(red, 0.25);
-}
-
-.test-gallery {}
-
-.test-item {
-  background: rgba(blue, 0.25);
-  height: 60px;
-  border: 1px solid teal;
-  flex-grow: 1;
 }

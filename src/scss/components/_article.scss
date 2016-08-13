@@ -10,9 +10,15 @@ article {
   h2 {
     @include typi($h2-5-map);
 
-    font-weight: 400;
+    font-weight: 700;
 
     @include ff(secondary);
+  }
+
+  h3 {
+    font-weight: 400;
+    @include ff(secondary);
+    margin-top: vr(0.75);
   }
 
   p {

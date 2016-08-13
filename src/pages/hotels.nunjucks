@@ -1,1 +1,66 @@
-{# https://www.google.com/maps/d/u/2/edit?mid=1ZslQi4olpYASIC4ELgdWwcFcq94&authuser=2 #}
+---
+data: ['data/hotels.json']
+---
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+{% include "partials/static-nav.nunjucks" %}
+
+<div class="l-content">
+  <nav class="h6 Nav--desktop u-hide-st-med-large jsDesktopNav">
+    {% import 'macros/navigation.nunjucks' as nav %}
+    {{nav.active('hotels')}}
+  </nav>
+
+  <div class="l-new-wrap Venue">
+    <article>
+      <h2>Hotels in Singapore</h2>
+      <p>Here are some hotels and hostels close to our event locations that we recommend. Tip: Click on the top left drawer on the map!</p>
+    </article>
+
+    <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1ZslQi4olpYASIC4ELgdWwcFcq94&z=15" frameborder="0"></iframe>
+
+    <div class="Hotels">
+      <h2>Hotels we recommend > $200</h2>
+
+      <div class="l-hotels">
+        {% for hotel in hotels.above200 %}
+        <div class="l-hotel Hotel">
+          <a class="Hotel__image" href="{{hotel.link}}?cid=1733091" style="background-image: url('/images/hotels/{{hotel.image}}.jpg')"></a>
+          {# <h2>{{hotel.name}}</h2> #}
+          <a class="btn Hotel__link" href="{{hotel.link}}?cid=1733091">{{hotel.name}}</a>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2>Hotels we recommend < $200</h2>
+
+      <div class="l-hotels">
+        {% for hotel in hotels.below200 %}
+        <div class="l-hotel Hotel">
+          <a class="Hotel__image" href="{{hotel.link}}?cid=1733091" style="background-image: url('/images/hotels/{{hotel.image}}.jpg')"></a>
+          {# <h2>{{hotel.name}}</h2> #}
+          <a class="btn Hotel__link" href="{{hotel.link}}?cid=1733091">{{hotel.name}}</a>
+        </div>
+        {% endfor %}
+      </div>
+
+      <h2>Hostels we recommend < $150</h2>
+
+      <div class="l-hotels">
+        {% for hotel in hotels.below150 %}
+        <div class="l-hotel Hotel">
+          <a class="Hotel__image" href="{{hotel.link}}?cid=1733091" style="background-image: url('/images/hotels/{{hotel.image}}.jpg')"></a>
+          {# <h2>{{hotel.name}}</h2> #}
+          <a class="btn Hotel__link" href="{{hotel.link}}?cid=1733091">{{hotel.name}}</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block offCanvasNav %}
+{{nav.active('hotels')}}
+{% endblock %}

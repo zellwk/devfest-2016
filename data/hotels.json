@@ -1,0 +1,43 @@
+{
+  "hotels": {
+    "above200": [{
+      "name": "New Majestic Hotel",
+      "link": "http://www.agoda.com/new-majestic-hotel/hotel/singapore-sg.html",
+      "image": "new-majestic"
+    }, {
+      "name": "Raffles Singapore",
+      "link": "http://www.agoda.com/raffles-singapore/hotel/singapore-sg.html",
+      "image": "raffles"
+    }, {
+      "name": "Naumi",
+      "link": "http://www.agoda.com/naumi-hotel/hotel/singapore-sg.html",
+      "image": "naumi"
+    }],
+    "below200": [{
+      "name": "Hotel Kai",
+      "link": "http://www.agoda.com/hotel-kai/hotel/singapore-sg.html",
+      "image": "kai"
+    }, {
+      "name": "85 Beach Garden Hotel",
+      "link": "http://www.agoda.com/85-beach-garden-hotel/hotel/singapore-sg.html",
+      "image": "beach-garden"
+    }, {
+      "name": "85 Beach Garden Hotel",
+      "link": "http://www.agoda.com/hotel-grand-pacific/hotel/singapore-sg.html",
+      "image": "grand-pacific"
+    }],
+    "below150": [{
+      "name": "River City Inn",
+      "link": "http://www.agoda.com/river-city-inn/hotel/singapore-sg.html",
+      "image": "river-city"
+    }, {
+      "name": "Beds and Dreams Inn",
+      "link": "http://www.agoda.com/beds-and-dreams-inn-clarke-quay/hotel/singapore-sg.html",
+      "image": "beds-and-dreams"
+    }, {
+      "name": "Quarters Hostel",
+      "link": "http://www.agoda.com/quarters-hostel/hotel/singapore-sg.html",
+      "image": "quarters"
+    }]
+  }
+}
