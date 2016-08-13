@@ -1,82 +1,25 @@
-.l-company-and-jobs {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+// Jobs Layout
+// ==========
+$j-margin: vr(0.5);
 
-  @include bp(max med) {
-    flex-wrap: wrap;
+.l-jobs {}
+
+.l-job {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-right: $j-margin * -1;
+  margin-left: $j-margin * -1;
+
+  > div {
+    margin: $j-margin;
   }
 
-  .c-jobs--new {
-    flex:1;
+  > div:first-child {
+    flex-basis: calc(#{percentage(1 / 3)} - #{$j-margin * 2});
   }
 
-  a {
-    text-decoration: none;
-  }
-}
-
-.l-company {
-  position: relative;
-  flex-grow: 1;
-  margin-bottom: rhythm(1);
-  @include bp(med) {
-    @include span(first 5 before);
-  }
-
-  .jsScrollSpy {
-    max-width: 300px;
-  }
-}
-
-.l-jobs {
-  flex-grow: 1;
-  margin-bottom: rhythm(1);
-  @include bp(med) {
-    @include span(before 10);
-  }
-}
-
-a.c-job {
-  display: block;
-  @extend .Event;
-  padding: rhythm(1);
-  margin-bottom: rhythm(0.5);
-
-  h4 {
-    font-weight: bold;
-    margin-bottom: rhythm(0.25);
-  }
-
-  p {
-    font-size: 14px;
-  }
-}
-
-.c-company {
-  text-align: center;
-
-  img {
-    display: inline-block;
-
-    @include bp(med) {
-      display: block;
-      padding: rhythm(0.75) rhythm(1);
-      background: white;
-    }
-  }
-}
-
-// new
-.c-company--new,
-.c-jobs--new {
-  .c-new {
-    padding: rhythm(1);
-  }
-}
-
-.c-company--new {
-  @include bp(max med) {
-    display: none;
+  > div:last-child {
+    flex-basis: calc(#{percentage(2 / 3)} - #{$j-margin * 2});
   }
 }

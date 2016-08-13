@@ -79,6 +79,19 @@
         "ticket": "Get your ticket NAOW!!1",
         "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
       }, {
+        "title": "CSSConf.Asia After-Party",
+        "desc": "The official CSSConf.Asia 2016 After-Party for conference attendees. Come and mingle, have a drink and make friends.",
+        "logo": "/images/events/cssconf-logo.png",
+        "image": "/images/events/cssconf-after.png",
+        "imagelink": "https://2016.cssconf.asia",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "12",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
+      }, {
         "title": "Talk.js Devfest.Asia Special Edition",
         "desc": "Javascript, Javascript, Javascript and Javascript's friends.",
         "logo": "/images/events/talk.js-logo.png",
@@ -155,6 +168,19 @@
         "location2": "",
         "ticket": "Get your ticket NAOW!!1",
         "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
+      }, {
+        "title": "JSConf.Asia 5 year anniversary party",
+        "desc": "The JSConf.Asia 2016 after party for conference attendees and all of you that want to join in for the official 5th anniversary celebration!",
+        "logo": "/images/events/jsconf-logo.png",
+        "image": "/images/events/jsconf-after.png",
+        "imagelink": "https://2016.jsconf.asia",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "12",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
       }]
     },
 

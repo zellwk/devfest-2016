@@ -1,0 +1,45 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+
+{% include "partials/static-nav.nunjucks" %}
+
+<div class="l-content">
+  <nav class="h6 Nav--desktop u-hide-st-med-large jsDesktopNav">
+    {% import 'macros/navigation.nunjucks' as nav %}
+    {{nav.active(active='jobs')}}
+  </nav>
+
+  <div class="l-new-wrap">
+    <article>
+      <h1 class="h1">Dev Careers Meetup</h1>
+      <p>We're holding a meetup on Sunday, Nov 15 at 3pm to help you learn more about developer opportunities and visa process in Singapore. You can also participate in 3min speed interviews with some of the coolest companies in town.</p>
+
+      <p>This meetup is enabled by</p>
+
+      <img src="" alt="TribeHired">
+
+      <p>
+        <a href="#" class="btn">Check out the meetup!</a>
+      </p>
+    </article>
+
+    <div class="Community-search jsFilterSearchBox">
+      <br/>
+      <input type="text" placeholder="Search for a company or job... E.G. developer">
+    </div>
+
+    <div class="l-jobs jsFilteredItems">
+      <div class="l-job jsFilteredItem">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block offCanvasNav %}
+  {% import 'macros/navigation.nunjucks' as nav %}
+  {{nav.active('jobs')}}
+{% endblock %}
