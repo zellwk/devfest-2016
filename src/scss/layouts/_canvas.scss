@@ -6,6 +6,9 @@ $transition-duration: 0.3s;
 // - Stays fixed to the left side.
 // - Transitions with 'left' property because of the need for a sticky header (for context)
 // ==========
+.Canvas {
+  overflow: hidden;
+}
 .Canvas__off {
   position: fixed;
   top: 0;

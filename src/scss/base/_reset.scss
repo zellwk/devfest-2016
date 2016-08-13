@@ -23,10 +23,15 @@ li {
   list-style: none;
 }
 
+// Viewports for Windows Phone 8
+// http://trentwalton.com/2013/01/16/windows-phone-8-viewport-fix/
+// ==========
+@viewport{width:device-width}
+
 // Completely resets form items
 // ----------------------------
-// Super hard reset that removes all borders 
-// and radiuses of all form items. 
+// Super hard reset that removes all borders
+// and radiuses of all form items.
 // ============================
 input,
 textarea,
