@@ -11,9 +11,9 @@ $(document).ready(function () {
   let links = document.querySelectorAll('a')
   Array.from(links).forEach(node => {
     node.addEventListener('click', e => {
-      e.preventDefault()
       let match = /#.*-hash/
       if (e.target.hash.match(match)) {
+        e.preventDefault()
         replaceHashAndScroll($(e.target))
       }
     })
