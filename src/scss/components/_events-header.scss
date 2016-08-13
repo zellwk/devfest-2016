@@ -58,6 +58,10 @@
   .is-active {
     color: white;
   }
+
+  span {
+    pointer-events: none;
+  }
 }
 
 .Events-nav__day {

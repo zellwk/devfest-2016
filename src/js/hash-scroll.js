@@ -8,9 +8,15 @@ $(document).ready(function () {
     }, 800)
   }
 
-  $('.jsEventsNav').on('click', 'a', function (event) {
-    event.preventDefault()
-    replaceHashAndScroll($(this))
+  let links = document.querySelectorAll('a')
+  Array.from(links).forEach(node => {
+    node.addEventListener('click', e => {
+      e.preventDefault()
+      let match = /#.*-hash/
+      if (e.target.hash.match(match)) {
+        replaceHashAndScroll($(e.target))
+      }
+    })
   })
 
   function replaceHashAndScroll ($this) {
