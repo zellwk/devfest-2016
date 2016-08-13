@@ -707,9 +707,15 @@
 	    }, 800);
 	  }
 	
-	  $('.jsEventsNav').on('click', 'a', function (event) {
-	    event.preventDefault();
-	    replaceHashAndScroll($(this));
+	  var links = document.querySelectorAll('a');
+	  Array.from(links).forEach(function (node) {
+	    node.addEventListener('click', function (e) {
+	      e.preventDefault();
+	      var match = /#.*-hash/;
+	      if (e.target.hash.match(match)) {
+	        replaceHashAndScroll($(e.target));
+	      }
+	    });
 	  });
 	
 	  function replaceHashAndScroll($this) {
