@@ -1,3 +1,6 @@
+---
+data: ['data/jobs.json']
+---
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
@@ -30,16 +33,29 @@
     </div>
 
     <div class="l-jobs jsFilteredItems">
+      {% for job in jobs %}
+      {% if job.type == 'company' %}
       <div class="l-job jsFilteredItem">
-        <div></div>
-        <div></div>
+        <div class="Employer">
+          <img src="{{job.image}}" alt="{{job.employer}}">
+        </div>
+        <div>
+          {% for j in job.jobs %}
+          <a href="{{j.url}}" class="Job">
+            <div class="Job__title">{{j.title}}</div>
+            <p class="Job__description">{{j.description}}</p>
+          </a>
+          {% endfor %}
+        </div>
       </div>
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>
 {% endblock %}
 
 {% block offCanvasNav %}
-  {% import 'macros/navigation.nunjucks' as nav %}
-  {{nav.active('jobs')}}
+{% import 'macros/navigation.nunjucks' as nav %}
+{{nav.active('jobs')}}
 {% endblock %}

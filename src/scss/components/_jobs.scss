@@ -2,7 +2,9 @@
 // ==========
 $j-margin: vr(0.5);
 
-.l-jobs {}
+.l-jobs {
+  max-width: 45em;
+}
 
 .l-job {
   display: flex;
@@ -16,10 +18,23 @@ $j-margin: vr(0.5);
   }
 
   > div:first-child {
-    flex-basis: calc(#{percentage(1 / 3)} - #{$j-margin * 2});
+    flex-basis: calc(#{percentage(1 / 4)} - #{$j-margin * 2});
   }
 
   > div:last-child {
-    flex-basis: calc(#{percentage(2 / 3)} - #{$j-margin * 2});
+    flex-basis: calc(#{percentage(3 / 4)} - #{$j-margin * 2});
   }
+}
+
+
+
+.Employer, .Job {
+  display: block;
+  padding: vr(1);
+  background: #fff;
+}
+
+.Job + .Job {
+  margin-top: vr(1);
+  text-decoration: none;
 }

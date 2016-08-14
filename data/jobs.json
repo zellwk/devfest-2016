@@ -1,0 +1,76 @@
+{
+  "jobs": [{
+    "type": "featured",
+    "jobs": [{
+      "employer": "sonoport",
+      "image": "/images/jobs/sonoport.png",
+      "title": "Senior Frontend Developer",
+      "jd": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
+      "url": "http://sonoport.com/jobs/"
+    }, {
+      "employer": "Meteor",
+      "image": "/images/jobs/meteor.png",
+      "title": "Core Developer - Applications",
+      "jd": "You love making things. Make gorgeous components and interfaces that are used by tens of thousands of open source developers all over the world. See your work inside successful startups, be thanked by developers at Devshop for your contributions.",
+      "url": "https://www.meteor.com/jobs/core-developer-applications"
+    }]
+  }, {
+    "type": "company",
+    "employer": "Piktochart",
+    "image": "/images/jobs/piktochart.png",
+    "jobs": [{
+      "title": "Javascript Developer",
+      "description": "Piktochart team is looking for a solid Javascript developer who loves writing JavaScript from scratch. You will be creating visually appealing interfaces.",
+      "url": "http://grnh.se/xwy2jg"
+    }, {
+      "title": "UI Developer (HTML/CSS)",
+      "description": "We are looking to improve our web app and there's so much new interactions to implement to better the user experience. We are looking for a UI developer who is motivated to combine the art of design with the science of programming.",
+      "url": "http://grnh.se/kfbs17"
+    }]
+  }, {
+    "type": "company",
+    "employer": "Redmart",
+    "image": "/images/jobs/redmart.png",
+    "jobs": [{
+      "title": "Software Developers all levels/tech stacks",
+      "description": "Build the world's most customer centric ecommerce and logistics company.",
+      "url": "http://geeks.redmart.com/2015/01/07/skiing-in-singapore-a-coding-diversion"
+    }]
+  }, {
+    "type": "company",
+    "employer": "Meteor",
+    "image": "/images/jobs/meteor.png",
+    "jobs": [{
+      "title": "Core Developer - Applications",
+      "description": "You love making things. Make gorgeous components and interfaces that are used by tens of thousands of open source developers all over the world. See your work inside successful startups, be thanked by developers at Devshop for your contributions.",
+      "url": "https://www.meteor.com/jobs/core-developer-applications"
+    }]
+  }, {
+    "type": "company",
+    "employer": "Smove",
+    "image": "/images/jobs/smove.png",
+    "jobs": [{
+      "title": "3x Awesome JS Engineers",
+      "description": "At smove, our software engineers create innovative technology to solve real world problems in the urban mobility/transportation space. We code really cool realtime “Internet of Things” systems that connect to our growing fleet of hybrid cars.",
+      "url": "https://www.smove.sg/wp-content/uploads/2015/09/smove_recruitment_150915.pdf"
+    }]
+  }, {
+    "type": "company",
+    "employer": "Sonoport",
+    "image": "/images/jobs/sonoport.png",
+    "jobs": [{
+      "title": "Senior Frontend Developer",
+      "description": "Sonoport FrontEnd team is looking for a Senior FrontEnd Developer. We build a platform allowing users to create multisensory experiences with touch, sight and especially sound. We work with cutting edge Web technologies like WebAudio and WebComponents.",
+      "url": "http://sonoport.com/jobs"
+    }]
+  }, {
+    "type": "company",
+    "employer": "TradeGecko",
+    "image": "/images/jobs/tradegecko.png",
+    "jobs": [{
+      "title": "Senior engineers in Ruby and JavaScript (EmberJS)",
+      "description": "Help build the future of commerce in an exciting and rapidly growing company.",
+      "url": "https://www.tradegecko.com/jobs"
+    }]
+  }]
+}
