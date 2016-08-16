@@ -4,7 +4,7 @@
       <div class="Cal">
         {% if date.text %}
           <div class="h4 {{date.text}}">
-            {% if date.text == 'Partners' %} Venue <br> Partners {%else %} {{date.text}} {% endif %}
+            {% if date.text == 'Partners' %} Partners {%else %} {{date.text}} {% endif %}
           </div>
         {% endif %}
         <div class="h4 day">{{date.date}}</div>

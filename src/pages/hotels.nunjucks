@@ -14,7 +14,7 @@ data: ['data/hotels.json']
 
   <div class="l-new-wrap Venue">
     <article>
-      <h2>Hotels in Singapore</h2>
+      <h2>Where to stay in Singapore</h2>
       <p>Here are some hotels and hostels close to our event locations that we recommend. Tip: Click on the top left drawer on the map!</p>
     </article>
 

@@ -3,7 +3,18 @@
       "type": "event",
       "date": "18",
       "day": "Fri",
-      "events": []
+      "events": [{
+        "title": "DevFest.Asia Welcome Party!",
+        "desc": "Meet other fellow DevFest.Asia attendees and organisers over some food and drinks! First arrivers get free drinks on us 😁.",
+        "image": "/images/events/devfest-party.png",
+        "startTime": "6",
+        "startTimeSuffix": ":30pm",
+        "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
+      }]
     }, {
       "type": "event",
       "date": "19",
@@ -57,7 +68,19 @@
       "type": "event",
       "date": "23",
       "day": "Wed",
-      "events": []
+      "events": [{
+        "title": "Hacking UX: Product thinking for techies",
+        "desc": "So you've got a techy business idea? How do you know exactly what is the product you should be building? <br><br> Designing product can seem daunting, but it doesn't have to be so. From understanding the basics of business models and user behaviours, this workshop with the amazing Melissa Ng will teach you the basics of how to design a stellar product your users will love.",
+        "logo": "/images/events/hacking-ux-logo.jpg",
+        "image": "/images/events/hacking-ux.jpeg",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": ":30pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
+      }]
     },
 
     {
@@ -96,7 +119,7 @@
         "desc": "Javascript, Javascript, Javascript and Javascript's friends.",
         "logo": "/images/events/talk.js-logo.png",
         "image": "/images/events/talk.js.jpg",
-        "imagelink": "http://www.meetup.com/Singapore-JS",
+        "imagelink": "http://www.meetup.com/en-US/Singapore-JS/events/232635707/",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "9",
@@ -228,12 +251,17 @@
       "text": "Partners",
       "events": [{
         "title": "Collision8",
-        // "desc": "Some description",
         "logo": "/images/events/collision8-logo.png",
         "image": "/images/events/collision8.jpg",
         "imagelink": "https://www.collision8.com",
         "location": "High Street Centre, 1 North Bridge Road",
         "loction2": "#08-08 Singapore 179094"
+      }, {
+        "title": "General Assembly",
+        "logo": "/images/events/ga-logo.jpg",
+        "image": "/images/events/ga.png",
+        "imagelink": "https://generalassemb.ly/singapore",
+        "location": "1A Keong Saik Rd"
       }]
     }
   ]
