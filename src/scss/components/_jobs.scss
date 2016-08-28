@@ -8,33 +8,63 @@ $j-margin: vr(0.5);
 
 .l-job {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-flow: column;
+  align-items: center;
   margin-right: $j-margin * -1;
   margin-left: $j-margin * -1;
+
+  @include bp(med) {
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
 
   > div {
     margin: $j-margin;
   }
 
   > div:first-child {
-    flex-basis: calc(#{percentage(1 / 4)} - #{$j-margin * 2});
+    margin-top: vr(2);
+
+    @include bp(med) {
+      margin-top: vr(0.5);
+      flex-basis: calc(#{percentage(1 / 4)} - #{$j-margin * 2});
+    }
   }
 
   > div:last-child {
-    flex-basis: calc(#{percentage(3 / 4)} - #{$j-margin * 2});
+    @include bp(med) {
+      flex-basis: calc(#{percentage(3 / 4)} - #{$j-margin * 2});
+    }
   }
 }
 
+.Jobs {
+  margin-top: vr(1);
+}
 
-
-.Employer, .Job {
-  display: block;
+.Job {
   padding: vr(1);
   background: #fff;
 }
 
 .Job + .Job {
   margin-top: vr(1);
+}
+
+.Job__title a {
+  font-weight: bold;
   text-decoration: none;
+}
+
+.Employer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include bp(med) {
+    padding: vr(1);
+    background: #fff;
+  }
 }

@@ -6,6 +6,7 @@
       "events": [{
         "title": "DevFest.Asia Welcome Party!",
         "desc": "Meet other fellow DevFest.Asia attendees and organisers over some food and drinks! First arrivers get free drinks on us 😁.",
+        "logo": "/images/events/devfest-logo.png",
         "image": "/images/events/devfest-party.png",
         "startTime": "6",
         "startTimeSuffix": ":30pm",

@@ -18,13 +18,16 @@ data: ['data/jobs.json']
       <h1 class="h1">Dev Careers Meetup</h1>
       <p>We're holding a meetup on Sunday, Nov 15 at 3pm to help you learn more about developer opportunities and visa process in Singapore. You can also participate in 3min speed interviews with some of the coolest companies in town.</p>
 
-      <p>This meetup is enabled by</p>
-
-      <img src="" alt="TribeHired">
-
       <p>
         <a href="#" class="btn">Check out the meetup!</a>
       </p>
+
+      <p>This meetup is enabled by</p>
+
+      <p><img src="/images/tribehired.jpg" alt="Tribe Hired"></p>
+
+      <h2 class="h1">These companies are hiring!</h2>
+
     </article>
 
     <div class="Community-search jsFilterSearchBox">
@@ -32,7 +35,7 @@ data: ['data/jobs.json']
       <input type="text" placeholder="Search for a company or job... E.G. developer">
     </div>
 
-    <div class="l-jobs jsFilteredItems">
+    <div class="l-jobs Jobs jsFilteredItems">
       {% for job in jobs %}
       {% if job.type == 'company' %}
       <div class="l-job jsFilteredItem">
@@ -41,10 +44,10 @@ data: ['data/jobs.json']
         </div>
         <div>
           {% for j in job.jobs %}
-          <a href="{{j.url}}" class="Job">
-            <div class="Job__title">{{j.title}}</div>
+          <div class="Job">
+            <div class="Job__title"><a href="{{j.url}}">{{j.title}}</a></div>
             <p class="Job__description">{{j.description}}</p>
-          </a>
+          </div>
           {% endfor %}
         </div>
       </div>
