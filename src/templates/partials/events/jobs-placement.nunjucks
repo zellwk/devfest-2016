@@ -1,6 +1,6 @@
 {% for job in jobs %}
 <div class="Interrupt-job l-event">
-  <img src="{{job.image}}" alt="">
+  <a href="{{job.url}}"><img src="{{job.image}}" alt=""></a>
   <p><strong>{{job.title}}</strong></p>
   <p>{{job.description}}</p>
 </div>

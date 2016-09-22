@@ -3,11 +3,13 @@
 {# <a href="#" class="{%if active == 'hotels' %} is-active {% endif %}">Hotels</a>
 <a href="#" class="{%if active == 'jobs' %} is-active {% endif %}">Jobs</a>
 <a href="#" class="{%if active == 'sponsors' %} is-active {% endif %}">Sponsors</a> #}
-<a href="https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/">List your Event</a>
 <a href="/community" class="{%if active == 'community' %} is-active {% endif %}">Community</a>
-<a href="https://jsconfasia.wufoo.com/forms/mawgx6w16px4ur/">Post a Job</a>
 <a href="/visitingsg" class="{%if active == 'visiting' %} is-active {% endif %}">Visiting SG</a>
 <a href="/hotels" class="{%if active == 'hotels' %} is-active {% endif %}">Map &amp; Hotels</a>
+<a href="/jobs" >Jobs in SG</a>
 <a href="https://blog.devfest.asia" >Blog</a>
+<br/>
+<a href="https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/">List your Event</a>
+<a href="https://jsconfasia.wufoo.com/forms/mawgx6w16px4ur/">Post a Job</a>
 
 {% endmacro %}
