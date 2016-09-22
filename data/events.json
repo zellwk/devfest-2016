@@ -12,8 +12,8 @@
         "startTimeSuffix": ":30pm",
         "endTime": "9",
         "endTimeSuffix": "pm",
-        "location": "High Street Centre, 1 North Bridge Road",
-        "location2": "#08-08 Singapore 179094",
+        "location": "Collision8",
+        "location2": "High Street Centre, #08-08",
         "ticketinfo": "Registration opening soon"
       }]
     }, {
@@ -30,8 +30,8 @@
         "startTimeSuffix": "pm",
         "endTime": "6",
         "endTimeSuffix": "pm",
-        "location": "High Street Centre, 1 North Bridge Road",
-        "location2": "#08-08 Singapore 179094",
+        "location": "Collision8",
+        "location2": "High Street Centre, #08-08",
         "ticketinfo": "Registration opening soon"
       }, {
         "title": "Prototype Sprint",
@@ -127,8 +127,8 @@
         "startTimeSuffix": ":30pm",
         "endTime": "9",
         "endTimeSuffix": "pm",
-        "location": "High Street Centre, 1 North Bridge Road",
-        "location2": "#08-08 Singapore 179094",
+        "location": "Collision8",
+        "location2": "High Street Centre, #08-08",
         "ticketinfo": "Registration opening soon"
       }]
     },
@@ -174,7 +174,7 @@
         "endTime": "9",
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
-        "location2": "5 Temasek Boulevard #09-01, Singapore 038985",
+        "location2": "5 Temasek Boulevard #09-01",
         "ticketinfo": "Registration opening soon"
       }]
     },
@@ -292,8 +292,8 @@
         "logo": "/images/events/collision8-logo.png",
         "image": "/images/events/collision8.jpg",
         "imagelink": "https://www.collision8.com",
-        "location": "High Street Centre, 1 North Bridge Road",
-        "location2": "#08-08 Singapore 179094"
+        "location": "High Street Centre",
+        "location2": "1 North Bridge Road, #08-08"
       }, {
         "title": "General Assembly",
         "logo": "/images/events/ga-logo.jpg",
@@ -305,8 +305,7 @@
         "logo": "/images/events/palo-it.png",
         "image": "/images/events/prototype-sprint.jpeg",
         "imagelink": "http://sg.palo-it.com",
-        "location": "Palo IT Singapore",
-        "location2": "26A Circular Road"
+        "location": "26A Circular Road"
       }]
     }
   ]

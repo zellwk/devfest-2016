@@ -3,6 +3,7 @@
     "type": "company",
     "employer": "Palo IT Singapore",
     "image": "/images/jobs/palo-it.png",
+    "employerlink": "http://sg.palo-it.com",
     "jobs": [{
       "title": "Full Stack Developer",
       "description": "Within exciting projects, you will contribute to the creation of innovative solutions and put into practice TDD and XP in an Open Source environment.",
