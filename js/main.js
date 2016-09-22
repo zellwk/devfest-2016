@@ -3975,6 +3975,7 @@
 				"type": "company",
 				"employer": "Palo IT Singapore",
 				"image": "/images/jobs/palo-it.png",
+				"employerlink": "http://sg.palo-it.com",
 				"jobs": [
 					{
 						"title": "Full Stack Developer",
