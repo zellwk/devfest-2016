@@ -12,7 +12,8 @@ module.exports = {
     },
     resolve: {
       root: [
-        './src/bower_components/'
+        './src/bower_components/',
+        ''
       ],
       alias: {
         'jquery': 'jquery/dist/jquery'
@@ -27,6 +28,9 @@ module.exports = {
       }, {
         test: /\.(nunj|nunjucks)$/,
         loader: 'nunjucks-loader'
+      }, {
+        test: /\.(json)$/,
+        loader: 'json-loader'
       }],
       plugins: [
         new BowerWebpackPlugin(),

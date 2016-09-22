@@ -12,15 +12,42 @@
         "startTimeSuffix": ":30pm",
         "endTime": "9",
         "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location2": "",
+        "location": "High Street Centre, 1 North Bridge Road",
+        "location2": "#08-08 Singapore 179094",
         "ticketinfo": "Registration opening soon"
       }]
     }, {
       "type": "event",
       "date": "19",
       "day": "Sat",
-      "events": []
+      "events": [
+      {
+        "title": "Dev Careers Meetup",
+        "desc": "Learn about the engineering and design talent landscape in Singapore and participate in our legendary 3min speed interviews with some of the coolest employers in town!",
+        "image": "/images/events/devcareers.jpg",
+        "imagelink": "/jobs",
+        "startTime": "3",
+        "startTimeSuffix": "pm",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "High Street Centre, 1 North Bridge Road",
+        "location2": "#08-08 Singapore 179094",
+        "ticketinfo": "Registration opening soon"
+      }
+      // {
+      //   "title": "Prototype Sprint",
+      //   "desc": "Learn how to design and develop a mobile app by building a working prototype in 2-days! A step by step hands-on workshop that combines the best of the Design Thinking and Extreme Programming worlds that will not leave you the same.",
+      //   "logo": "/images/events/devfest-logo.png",
+      //   "image": "/images/events/devfest-party.png",
+      //   "startTime": "10",
+      //   "startTimeSuffix": "am",
+      //   "endTime": "6",
+      //   "endTimeSuffix": "pm",
+      //   "location": "TBC",
+      //   "location2": "",
+      //   "ticketinfo": "Registration opening soon"
+      // }
+      ]
     }, {
       "type": "event",
       "date": "20",
@@ -28,7 +55,7 @@
       "events": [{
         "title": "Nodeschool",
         "desc": "NodeSchool is an open source project run by volunteers with two goals: to create high quality programming curriculum and to host community web-tech learning events.",
-        "logo": "/images/events/nodeschool-logo.png",
+        "logo": "/images/events/nodeschool-logo.jpg",
         "image": "/images/events/nodeschool.jpg",
         "imagelink": "http://nodeschool.io",
         "startTime": "10",
@@ -43,7 +70,22 @@
       "type": "event",
       "date": "21",
       "day": "Mon",
-      "events": []
+      "events": [
+      // {
+      //   "title": "Wordpress Singapore Meetup",
+      //   "desc": "The meetup for developers using WordPress!",
+      //   "logo": "/images/events/wordpress-logo.jpg",
+      //   "image": "/images/events/wordpress.jpg",
+      //   "imagelink": "http://www.meetup.com/WordPress-Singapore/",
+      //   "startTime": "7",
+      //   "startTimeSuffix": "pm",
+      //   "endTime": "9",
+      //   "endTimeSuffix": "pm",
+      //   "location": "TBC",
+      //   "location2": "",
+      //   "ticketinfo": "Registration opening soon"
+      // }
+    ]
     }, {
       "type": "event",
       "date": "22",
@@ -73,12 +115,12 @@
         "title": "Hacking UX: Product thinking for techies",
         "desc": "So you've got a techy business idea? How do you know exactly what is the product you should be building? <br><br> Designing product can seem daunting, but it doesn't have to be so. From understanding the basics of business models and user behaviours, this workshop with the amazing Melissa Ng will teach you the basics of how to design a stellar product your users will love.",
         "image": "/images/events/hacking-ux.jpeg",
-        "startTime": "7",
-        "startTimeSuffix": "pm",
+        "startTime": "6",
+        "startTimeSuffix": ":30pm",
         "endTime": "9",
-        "endTimeSuffix": ":30pm",
-        "location": "TBC",
-        "location2": "",
+        "endTimeSuffix": "pm",
+        "location": "High Street Centre, 1 North Bridge Road",
+        "location2": "#08-08 Singapore 179094",
         "ticketinfo": "Registration opening soon"
       }]
     },
@@ -131,7 +173,6 @@
 
     {
       "type": "interrupt",
-      "item": "job",
       "title": "More events are coming!",
       "text": "Do you want to have your own event be part of DevFest.Asia?",
       "button": "Submit your event here",
@@ -158,7 +199,7 @@
         "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
       }, {
         "title": "Tessel Workshop",
-        "desc": "The founders of the Tessel project Kelsey Bresemann and Jon McKay are in town and are hosting this hands-on Tessel \"Internet of Things\" workshop. Curious? Find out more at <a href='https://tessel.io'>https://tessel.io</a>.",
+        "desc": "The founders of the Tessel project Kelsey Bresemann and Jon McKay are in town and are hosting this hands-on Tessel \"Internet of Things\" workshop. Kelsey and Jon will teach developers about the basics of hardware communication (GPIO, ADC, I2C, SPI, etc.), how to read datasheets, and how to start talking to sensors using JavaScript and Tessel 2. Curious? Find out more at <a href='https://tessel.io'>https://tessel.io</a>.",
         "logo": "/images/events/tessel-logo.png",
         "image": "/images/events/tessel.jpg",
         "imagelink": "https://tessel.io",
@@ -206,11 +247,10 @@
     },
 
     {
-      "type": "interrupt",
-      "item": "job",
+      "type": "jobs",
       "title": "Looking for dev talent in the region?",
       "text": " You can list your job opening right here.",
-      "button": "Post a great position now",
+      "button": "Post your great position now",
       "link": "https://jsconfasia.wufoo.com/forms/mawgx6w16px4ur/"
     },
 
@@ -253,7 +293,7 @@
         "image": "/images/events/collision8.jpg",
         "imagelink": "https://www.collision8.com",
         "location": "High Street Centre, 1 North Bridge Road",
-        "loction2": "#08-08 Singapore 179094"
+        "location2": "#08-08 Singapore 179094"
       }, {
         "title": "General Assembly",
         "logo": "/images/events/ga-logo.jpg",

@@ -6,6 +6,7 @@ require('./nav-fixer')
 require('./scrollspy-devfest')
 require('./hash-scroll')
 require('./form')
+require('./jobsroll')
 // Polyfill for external SVG spritesheets
 svg4everybody()
 

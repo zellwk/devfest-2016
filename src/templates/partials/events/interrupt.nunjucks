@@ -4,6 +4,13 @@
     {% if date.text %}
       <p class="h6">{{date.text}}</p>
     {% endif %}
+
+    {% if date.item == 'job' %}
+      {% for job in jobs %}
+        {{job.employer}}
+      {% endfor %}
+    {% endif %}
+
     <p class="h6 Interrupt__cta">
       <a href="{{date.link}}" class="btn">{{date.button}}</a>
     </p>

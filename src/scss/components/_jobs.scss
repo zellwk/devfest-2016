@@ -68,3 +68,30 @@ $j-margin: vr(0.5);
     background: #fff;
   }
 }
+
+.Interrupt-jobs {
+  .l-events-container {
+    overflow: hidden;
+  }
+}
+
+.Interrupt-job {
+  overflow-x: hidden;
+  .Job__title {
+    font-weight: normal;
+  }
+
+  p {
+    margin-top: vr(0.5);
+    @include typi($h6-map);
+  }
+
+  p + p {
+    margin-top: vr(0.25);
+  }
+
+  img {
+    background: white;
+    padding: vr(1);
+  }
+}

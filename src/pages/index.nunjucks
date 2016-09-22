@@ -1,5 +1,5 @@
 ---
-data: ['data/events.json']
+data: ['data/events.json', 'data/jobs.json']
 ---
 
 {% extends 'layout.nunjucks' %}

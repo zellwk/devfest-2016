@@ -1,0 +1,7 @@
+{% for job in jobs %}
+<div class="Interrupt-job l-event">
+  <img src="{{job.image}}" alt="">
+  <p><strong>{{job.title}}</strong></p>
+  <p>{{job.description}}</p>
+</div>
+{% endfor %}

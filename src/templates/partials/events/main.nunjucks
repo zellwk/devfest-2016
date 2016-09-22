@@ -6,6 +6,10 @@
   {% if date.type == 'interrupt' %}
     {% include "partials/events/interrupt.nunjucks" %}
   {% endif %}
+
+  {% if date.type == 'jobs' %}
+    {% include "partials/events/jobs.nunjucks" %}
+  {% endif %}
 {% endfor %}
 
 {# {{#each dates}}
