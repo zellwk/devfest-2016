@@ -1185,9 +1185,11 @@
 	frame.set("loop.first", t_1 === 0);
 	frame.set("loop.last", t_1 === t_2 - 1);
 	frame.set("loop.length", t_2);
-	output += "\n<div class=\"Interrupt-job l-event\">\n  <img src=\"";
+	output += "\n<div class=\"Interrupt-job l-event\">\n  <a href=\"";
+	output += runtime.suppressValue(runtime.memberLookup((t_4),"url"), env.opts.autoescape);
+	output += "\"><img src=\"";
 	output += runtime.suppressValue(runtime.memberLookup((t_4),"image"), env.opts.autoescape);
-	output += "\" alt=\"\">\n  <p><strong>";
+	output += "\" alt=\"\"></a>\n  <p><strong>";
 	output += runtime.suppressValue(runtime.memberLookup((t_4),"title"), env.opts.autoescape);
 	output += "</strong></p>\n  <p>";
 	output += runtime.suppressValue(runtime.memberLookup((t_4),"description"), env.opts.autoescape);
