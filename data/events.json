@@ -34,12 +34,27 @@
         "location2": "High Street Centre, #08-08",
         "ticketinfo": "Registration opening soon"
       }, {
-        "title": "Prototype Sprint",
+        "title": "Zombie Apocalypse Workshop: Building Serverless Microservices",
+        "desc": "Fight Zombies and Build Serverless Microservices! <br><br>Scenario: <br>A widespread viral infection transmitted through bites that cause human corpses to reanimate and try to eat other living humans has caused the fall of civilization as we know it. This epidemic (the “Zombie Apocalypse”) has spread through every major metropolitan area around the world.<br><br>In order to fight this battle, we invite you with great urgency to register and attend the AWS Zombie Apocalypse workshop to restore order and rebuild what remains of our great civilization.",
+        "logo": "/images/events/zombie-logo.png",
+        "image": "/images/events/zombie.png",
+        "imagelink": "/jobs",
+        "startTime": "3",
+        "startTimeSuffix": "pm",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "Collision8",
+        "location2": "High Street Centre, #08-08",
+        "ticketinfo": "Registration opening soon"
+      }, {
+        "title": "Prototype Sprint Workshop",
         "desc": "Learn how to design and develop a mobile app by building a working prototype in 2-days! A step by step hands-on workshop that combines the best of the Design Thinking and Extreme Programming worlds that will not leave you the same.",
         "logo": "/images/events/palo-it.png",
         "image": "/images/events/prototype-sprint.jpeg",
+        "startTimePrefix": "Nov 19, ",
         "startTime": "10",
         "startTimeSuffix": "am",
+        "endTimePrefix": "Nov 20, ",
         "endTime": "6",
         "endTimeSuffix": "pm",
         "location": "Palo IT Singapore",
@@ -72,6 +87,20 @@
         "endTimeSuffix": "pm",
         "location": "TBC",
         "location2": "",
+        "ticketinfo": "Registration opening soon"
+      }, {
+        "title": "Prototype Sprint Workshop",
+        "desc": "Learn how to design and develop a mobile app by building a working prototype in 2-days! A step by step hands-on workshop that combines the best of the Design Thinking and Extreme Programming worlds that will not leave you the same.",
+        "logo": "/images/events/palo-it.png",
+        "image": "/images/events/prototype-sprint.jpeg",
+        "startTimePrefix": "Nov 19, ",
+        "startTime": "10",
+        "startTimeSuffix": "am",
+        "endTimePrefix": "Nov 20, ",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "Palo IT Singapore",
+        "location2": "26A Circular Road",
         "ticketinfo": "Registration opening soon"
       }]
     }, {

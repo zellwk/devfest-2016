@@ -32,7 +32,7 @@
               {% if event.startTime %}
               <div class="Event__time">
                 <div class="Clock" data-time="{{event.startTime}}-{{event.endTime}}"></div>
-                <span> {{event.startTime}}{{event.startTimeSuffix}} - {{event.endTime}}{{event.endTimeSuffix}}{% if event.weekdays %} on weekdays {% endif %} </span>
+                <span>{{event.startTimePrefix}}{{event.startTime}}{{event.startTimeSuffix}} - {{event.endTimePrefix}}{{event.endTime}}{{event.endTimeSuffix}}{% if event.weekdays %} on weekdays {% endif %} </span>
               </div>
               {% endif  %}
 
