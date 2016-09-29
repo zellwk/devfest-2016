@@ -1126,22 +1126,24 @@
 	var data = __webpack_require__(/*! ../../data/jobs.json */ 14);
 	var shuffle = __webpack_require__(/*! shuffle-array */ 15);
 	
-	var companies = data.jobs;
-	var jobs = companies.reduce(function (initial, curr) {
-	  var newMap = curr.jobs.map(function (el) {
-	    el.employer = curr.employer;
-	    el.image = curr.image;
-	    return el;
-	  });
-	  return initial.concat(newMap);
-	}, []);
-	
-	var html = tpl.render({
-	  jobs: shuffle(jobs)
-	});
-	
 	var jobPlacement = document.querySelector('.jsJobsPlacement');
-	jobPlacement.innerHTML = html;
+	if (jobPlacement) {
+	  var companies = data.jobs;
+	  var jobs = companies.reduce(function (initial, curr) {
+	    var newMap = curr.jobs.map(function (el) {
+	      el.employer = curr.employer;
+	      el.image = curr.image;
+	      return el;
+	    });
+	    return initial.concat(newMap);
+	  }, []);
+	
+	  var html = tpl.render({
+	    jobs: shuffle(jobs)
+	  });
+	
+	  jobPlacement.innerHTML = html;
+	}
 
 /***/ },
 /* 11 */
