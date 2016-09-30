@@ -320,8 +320,6 @@
 	    return;
 	  }
 	
-	  var activationPos = $el.position().top;
-	
 	  $clone.css({
 	    display: 'none',
 	    position: 'absolute',
@@ -332,6 +330,19 @@
 	  });
 	
 	  $el.after($clone);
+	
+	  $(window).resize(toggleClone);
+	  $(window).scroll(toggleClone);
+	
+	  function toggleClone(event) {
+	    var $container = $(window);
+	    var activationPos = $el.position().top;
+	    if ($container.scrollTop() > activationPos) {
+	      activateFixed();
+	    } else {
+	      deactivateFixed();
+	    }
+	  }
 	
 	  function activateFixed() {
 	    $clone.css({
@@ -354,15 +365,6 @@
 	      $('.jsDesktopNav').removeClass('is-fixed');
 	    }
 	  }
-	
-	  $(window).scroll(function (event) {
-	    var $container = $(window);
-	    if ($container.scrollTop() > activationPos) {
-	      activateFixed();
-	    } else {
-	      deactivateFixed();
-	    }
-	  });
 	});
 
 /***/ },
@@ -440,25 +442,8 @@
 	        SS.scrollEvent();
 	      });
 	
-	      // Hack for momentum scroll
-	      // Problem: Scroll event fires only on end when momentum scrolling
-	      // Possible solution: Timeout to check for page Offset
-	      // (when between scroll start and scroll end). If Pos change, update.
-	
-	      this.$container.on('touchstart.' + o.namespace, function (event) {
-	        // Cannot prevent default, otherwise cannot scroll
-	        // event.preventDefault();
-	
-	        SS.intervalId = setInterval(function () {
-	          SS.scrollEvent();
-	        }, 3);
-	      });
-	
-	      this.$container.on('touchend.' + o.namespace, function (event) {
-	        if (SS.intervalId) {
-	          console.log('TOUCHEND + clearing interval');
-	          clearInterval(SS.intervalId);
-	        }
+	      this.$container.on('touchmove.' + o.namespace, function (event) {
+	        SS.scrollEvent();
 	      });
 	    },
 	
@@ -485,7 +470,7 @@
 	
 	      // Updates Direction
 	      if (this.mode === 'vertical') {
-	        this.direction = this.curPosition.top > this.oldPosition.top ? 'down' : 'up';
+	        this.direction = this.curPosition.top >= this.oldPosition.top ? 'down' : 'up';
 	      }
 	
 	      if (oldDirection != this.direction) {
