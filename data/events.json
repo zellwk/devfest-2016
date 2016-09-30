@@ -300,7 +300,7 @@
       "events": [{
         "title": "Web Audio Hack Day",
         "desc": "Q. What is this WebAudio you speak of? <br/> <br/> A. WebAudio is a (widely supported) W3C standard for generating, analysing and playing audio in the Browser. Checkout the spec here (<a href='http://webaudio.github.io/web-audio-api/'>http://webaudio.github.io/web-audio-api/</a>) <br/> <br/> Q. Where can I learn more about WebAudio <br/> <br/> A. WebAudio School is a self-help style tutorial for learning WebAudio (<a href='http://mmckegg.github.io/web-audio-school/'>http://mmckegg.github.io/web-audio-school/</a>). <br/><br /> Q. What shall I bring to this HackDay? <br/><br /> A. Please bring you down laptop, headphones and anything else you want to use for your project, like MIDI controllers, Arduino, etc. <br><br> Hosted by <a href='https://www.bandlab.com'>Bandlab </a>",
-        "logo": "/images/events/bandlab-logo.png",
+        "logo": "/images/events/bandlab-host.png",
         "image": "/images/events/webaudio-js.jpg",
         "imagelink": "https://www.bandlab.com",
         "startTime": "10",
@@ -353,6 +353,12 @@
         "image": "/images/events/braintree.jpeg",
         "imagelink": "http://sg.palo-it.com",
         "location": "26A Circular Road"
+      }, {
+        "title": "Bandlab",
+        "logo": "/images/events/bandlab-logo.png",
+        "image": "/images/events/bandlab.jpg",
+        "imagelink": "https://www.bandlab.com",
+        "location": "12 Jln Kilang Barat"
       }]
     }
   ]
