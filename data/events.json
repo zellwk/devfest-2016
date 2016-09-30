@@ -212,7 +212,8 @@
         "endTimeSuffix": "pm",
         "location": "Paypal Singapore",
         "location2": "5 Temasek Boulevard #09-01",
-        "ticketinfo": "Registration opening soon"
+        "ticket": "Register for free",
+        "ticketlink": "http://www.meetup.com/Singapore-JS/events/232635707/"
       }]
     },
 
