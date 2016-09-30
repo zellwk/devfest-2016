@@ -64,25 +64,8 @@ var ScrollSpy = (function () {
         SS.scrollEvent()
       })
 
-      // Hack for momentum scroll
-      // Problem: Scroll event fires only on end when momentum scrolling
-      // Possible solution: Timeout to check for page Offset
-      // (when between scroll start and scroll end). If Pos change, update.
-
-      this.$container.on('touchstart.' + o.namespace, function (event) {
-        // Cannot prevent default, otherwise cannot scroll
-        // event.preventDefault();
-
-        SS.intervalId = setInterval(function () {
-          SS.scrollEvent()
-        }, 3)
-      })
-
-      this.$container.on('touchend.' + o.namespace, function (event) {
-        if (SS.intervalId) {
-          console.log('TOUCHEND + clearing interval')
-          clearInterval(SS.intervalId)
-        }
+      this.$container.on('touchmove.' + o.namespace, function (event) {
+        SS.scrollEvent()
       })
     },
 
@@ -109,7 +92,7 @@ var ScrollSpy = (function () {
 
       // Updates Direction
       if (this.mode === 'vertical') {
-        this.direction = (this.curPosition.top > this.oldPosition.top ? 'down' : 'up')
+        this.direction = (this.curPosition.top >= this.oldPosition.top ? 'down' : 'up')
       }
 
       if (oldDirection != this.direction) {
@@ -179,6 +162,7 @@ var ScrollSpy = (function () {
     },
 
     onTick: function ($el, pos, inside, enters, leaves) {
+        console.log('ticking', this.direction, this.options.props.fixedTop,);
       if (this.direction === 'down') {
         this.options.$item.css({
           position: 'fixed',
