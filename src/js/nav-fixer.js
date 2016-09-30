@@ -11,8 +11,6 @@ $(window).ready(function () {
     return
   }
 
-  var activationPos = $el.position().top
-
   $clone.css({
     display: 'none',
     position: 'absolute',
@@ -23,6 +21,19 @@ $(window).ready(function () {
   })
 
   $el.after($clone)
+
+  $(window).resize(toggleClone)
+  $(window).scroll(toggleClone)
+
+  function toggleClone (event) {
+    var $container = $(window)
+    var activationPos = $el.position().top
+    if ($container.scrollTop() > activationPos) {
+      activateFixed()
+    } else {
+      deactivateFixed()
+    }
+  }
 
   function activateFixed () {
     $clone.css({
@@ -46,12 +57,4 @@ $(window).ready(function () {
     }
   }
 
-  $(window).scroll(function (event) {
-    var $container = $(window)
-    if ($container.scrollTop() > activationPos) {
-      activateFixed()
-    } else {
-      deactivateFixed()
-    }
-  })
 })
