@@ -162,7 +162,6 @@ var ScrollSpy = (function () {
     },
 
     onTick: function ($el, pos, inside, enters, leaves) {
-        console.log('ticking', this.direction, this.options.props.fixedTop,);
       if (this.direction === 'down') {
         this.options.$item.css({
           position: 'fixed',
