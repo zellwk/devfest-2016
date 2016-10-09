@@ -373,6 +373,12 @@
         "image": "/images/events/bandlab.jpg",
         "imagelink": "https://www.bandlab.com",
         "location": "12 Jln Kilang Barat"
+      }, {
+        "title": "Art Science Museum",
+        "logo": "/images/events/art-science-logo.png",
+        "image": "/images/events/art-science.jpeg",
+        "imagelink": "http://www.marinabaysands.com/museum.html",
+        "location": "10 Bayfront Avenue"
       }]
     }
   ]
