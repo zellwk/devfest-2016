@@ -50,22 +50,21 @@
         "location2": "High Street Centre, #08-08",
         "ticket": "Register for free",
         "ticketlink": "http://www.eventnook.com/event/devfestasiaevents2016/home"
-      }
-      //, {
-      //   "title": "Zombie Apocalypse Workshop: Building Serverless Microservices",
-      //   "desc": "Fight Zombies and Build Serverless Microservices! <br><br>Scenario: <br>A widespread viral infection transmitted through bites that cause human corpses to reanimate and try to eat other living humans has caused the fall of civilization as we know it. This epidemic (the “Zombie Apocalypse”) has spread through every major metropolitan area around the world.<br><br>In order to fight this battle, we invite you with great urgency to register and attend the AWS Zombie Apocalypse workshop to restore order and rebuild what remains of our great civilization.",
-      //   "logo": "/images/events/zombie-logo.png",
-      //   "image": "/images/events/zombie.png",
-      //   "imagelink": "/jobs",
-      //   "startTime": "3",
-      //   "startTimeSuffix": "pm",
-      //   "endTime": "6",
-      //   "endTimeSuffix": "pm",
-      //   "location": "Collision 8",
-      //   "location2": "High Street Centre, #08-08",
-      //   "ticketinfo": "Registration opening soon"
-      // },
-      ]
+      },
+      {
+        "title": "Zombie Apocalypse Workshop: Building Serverless Microservices",
+        "desc": "Fight Zombies and Build Serverless Microservices! <br><br>Scenario: <br>A widespread viral infection transmitted through bites that cause human corpses to reanimate and try to eat other living humans has caused the fall of civilization as we know it. This epidemic (the “Zombie Apocalypse”) has spread through every major metropolitan area around the world.<br><br>In order to fight this battle, we invite you with great urgency to register and attend the AWS Zombie Apocalypse workshop to restore order and rebuild what remains of our great civilization.",
+        "logo": "/images/events/zombie-logo.png",
+        "image": "/images/events/zombie.png",
+        "imagelink": "/jobs",
+        "startTime": "3",
+        "startTimeSuffix": "pm",
+        "endTime": "6",
+        "endTimeSuffix": "pm",
+        "location": "Collision 8",
+        "location2": "High Street Centre, #08-08",
+        "ticketinfo": "Registration opening soon"
+      }]
     },
 
     {
@@ -114,20 +113,34 @@
       "date": "21",
       "day": "Mon",
       "events": [
-      // {
-      //   "title": "Wordpress Singapore Meetup",
-      //   "desc": "The meetup for developers using WordPress!",
-      //   "logo": "/images/events/wordpress-logo.jpg",
-      //   "image": "/images/events/wordpress.jpg",
-      //   "imagelink": "http://www.meetup.com/WordPress-Singapore/",
-      //   "startTime": "7",
-      //   "startTimeSuffix": "pm",
-      //   "endTime": "9",
-      //   "endTimeSuffix": "pm",
-      //   "location": "TBC",
-      //   "location2": "",
-      //   "ticketinfo": "Registration opening soon"
-      // }
+      {
+        "title": "The technology behind RedMart’s eCommerce and logistics",
+        "desc": "RedMart will host a DevFest.Asia 2016 satellite event, with four 20-30 minute talks on how RedMart uses technology to power its ecommerce and logistics operations. <br><br> Talk 1: Evolution of Infrastructure and Developer Tools at RedMart - a look at DevOps tool chains and processes powering high velocity software delivery pipeline at RedMart. <br><br> Talk 2: A story of fractals, discrete optimisation and tissue paper delivery - a technical overview of our past and current attempts at solving RedMart's variant of the vehicle routing problem (VRP) for last mile delivery.<br><br> Talk 3: Building Realtime Transport Monitoring with Event Sourcing and Akka Persistence - an approach to building an event-based system that provides real-time view of the driver state and preserves all historical events for predictive analytics. <br><br> Talk 4: Creating a Micro Service in One Step - scaling the ability to scale by abstracting away common configuration and boilerplate in our micro services.",
+        "image": "/images/events/redmart.png",
+        "imagelink": "https://www.eventbrite.sg/e/the-technology-behind-redmarts-ecommerce-and-logistics-registration-28328261593",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": ":30pm",
+        "location": "General Assembly",
+        "location2": "8 Claymore Hill Spacemob",
+        "ticket": "Register for free",
+        "ticketlink": "https://www.eventbrite.sg/e/the-technology-behind-redmarts-ecommerce-and-logistics-registration-28328261593"
+      },
+      {
+        "title": "Wordpress Singapore Meetup",
+        "desc": "The meetup for developers using WordPress!",
+        "logo": "/images/events/wordpress-logo.jpg",
+        "image": "/images/events/wordpress.jpg",
+        "imagelink": "http://www.meetup.com/WordPress-Singapore/",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
+      }
     ]
     }, {
       "type": "event",
@@ -309,7 +322,8 @@
         "endTimeSuffix": "pm",
         "location": "Bandlab",
         "location2": "12 Jln Kilang Barat",
-        "ticketinfo": "Registration opening soon"
+        "ticket": "Register for free",
+        "ticketlink": "https://www.eventnook.com/event/devfestasiaevents2016/home"
       }, {
         "title": "KopiJS",
         "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",

@@ -19,12 +19,12 @@ $j-margin: vr(0.5);
     justify-content: space-between;
   }
 
-
-  > div {
+  > * {
     margin: $j-margin;
   }
 
-  > div:first-child {
+  > *:first-child {
+    display: block;
     margin-top: vr(2);
 
     @include bp(med) {
@@ -33,7 +33,7 @@ $j-margin: vr(0.5);
     }
   }
 
-  > div:last-child {
+  > *:last-child {
     @include bp(med) {
       flex-basis: calc(#{percentage(3 / 4)} - #{$j-margin * 2});
     }
