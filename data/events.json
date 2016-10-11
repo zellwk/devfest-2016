@@ -35,7 +35,8 @@
         "endTimeSuffix": "pm",
         "location": "Palo IT Singapore",
         "location2": "26A Circular Road",
-        "ticketinfo": "Registration opening soon"
+        "ticket": "Register for $114",
+        "ticketlink": "https://www.eventbrite.com/e/design-and-develop-a-mobile-app-prototype-in-2-days-devfest-asia-2016-tickets-28495960184"
       },
       {
         "title": "Dev Careers Meetup",
@@ -106,7 +107,8 @@
         "endTimeSuffix": "pm",
         "location": "Palo IT Singapore",
         "location2": "26A Circular Road",
-        "ticketinfo": "Registration opening soon"
+        "ticket": "Register for $114",
+        "ticketlink": "https://www.eventbrite.com/e/design-and-develop-a-mobile-app-prototype-in-2-days-devfest-asia-2016-tickets-28495960184"
       }]
     }, {
       "type": "event",
