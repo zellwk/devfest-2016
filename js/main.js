@@ -3960,7 +3960,7 @@
 		"jobs": [
 			{
 				"type": "company",
-				"employer": "Palo IT Singapore",
+				"employer": "Paypal",
 				"image": "/images/jobs/palo-it.png",
 				"employerlink": "http://sg.palo-it.com",
 				"jobs": [
@@ -3968,6 +3968,24 @@
 						"title": "Full Stack Developer",
 						"description": "Within exciting projects, you will contribute to the creation of innovative solutions and put into practice TDD and XP in an Open Source environment.",
 						"url": "https://palo-it.com/job-full-stack-web-developer/"
+					}
+				]
+			},
+			{
+				"type": "company",
+				"employer": "Palo IT Singapore",
+				"image": "/images/jobs/paypal.png",
+				"employerlink": "https://jobsearch.paypal-corp.com/jobs?categories=Software%20Development&lng=103.85007&lat=1.28967&woe=7&page=1&location=Singapore",
+				"jobs": [
+					{
+						"title": "Payments Architect",
+						"description": "The PayPal Core Payments organization is looking for an exceptional Senior Architect. We are looking for a passionate and skilled architect to design high performance, low latency and scalable Payments systems. Strong technical capability, commitment, common sense, passion for delivering high quality products, intellect, and great people skills are at the top of what we’re looking for.",
+						"url": "https://jobsearch.paypal-corp.com/jobs/204307/Singapore-Payments-Architect?lang=en-US"
+					},
+					{
+						"title": "T24 Software Engineer",
+						"description": "This is a senior software engineer position involving full-time hands-on development. The person is expected to be able to undertake scrum master responsibilities for his/her team, typically 2-6 engineers in size.",
+						"url": "https://jobsearch.paypal-corp.com/jobs/202005/Singapore-T24-Software-Engineer?lang=en-US"
 					}
 				]
 			}
