@@ -53,6 +53,10 @@ $j-margin: vr(0.5);
   margin-top: vr(1);
 }
 
+.Job__title {
+  margin-bottom: vr(0.25);
+}
+
 .Job__title a {
   font-weight: bold;
   text-decoration: none;
@@ -90,6 +94,9 @@ $j-margin: vr(0.5);
   }
 
   img {
+    display: block;
+    width: auto;
+    height: vr(3.5);
     background: white;
     padding: vr(1);
   }
