@@ -21,22 +21,20 @@
       "type": "event",
       "date": "19",
       "day": "Sat",
-      "events": [
-      {
+      "events": [{
         "title": "Zombie Apocalypse Workshop: Building Serverless Microservices",
         "desc": "Fight Zombies and Build Serverless Microservices! <br><br>Scenario: <br>A widespread viral infection transmitted through bites that cause human corpses to reanimate and try to eat other living humans has caused the fall of civilization as we know it. This epidemic (the “Zombie Apocalypse”) has spread through every major metropolitan area around the world.<br><br>In order to fight this battle, we invite you with great urgency to register and attend the AWS Zombie Apocalypse workshop to restore order and rebuild what remains of our great civilization.",
-        "logo": "/images/events/zombie-logo.png",
-        "image": "/images/events/zombie.png",
+        "logo": "/images/events/zombie-logo.jpg",
+        "image": "/images/events/zombie.jpg",
         "imagelink": "/jobs",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "1",
         "endTimeSuffix": ":30pm",
-        "location": "Capital Square, 23 Church Street",
-        "location2": "#10-01",
+        "location": "23 Church Street, Singapore",
+        "location2": "Capital Square, #10-01",
         "ticketinfo": "Registration opening soon"
-      },
-      {
+      }, {
         "title": "Prototype Sprint Workshop Day 1",
         "desc": "Learn how to design and develop a mobile app by building a working prototype in 2-days! A step by step hands-on workshop that combines the best of the Design Thinking and Extreme Programming worlds that will not leave you the same.",
         "logo": "/images/events/palo-it.png",
@@ -49,10 +47,9 @@
         "endTimeSuffix": "pm",
         "location": "Palo IT Singapore",
         "location2": "26A Circular Road",
-        "ticket": "Register for $114",
+        "ticket": "Register for $110",
         "ticketlink": "https://www.eventbrite.com/e/design-and-develop-a-mobile-app-prototype-in-2-days-devfest-asia-2016-tickets-28495960184"
-      },
-      {
+      }, {
         "title": "Dev Careers Meetup",
         "desc": "Learn about the engineering and design talent landscape in Singapore and participate in our legendary 3min speed interviews with some of the coolest employers in town!",
         "image": "/images/events/devcareers.jpg",
@@ -114,22 +111,19 @@
       "type": "event",
       "date": "21",
       "day": "Mon",
-      "events": [
-      {
+      "events": [{
         "title": "The technology behind RedMart’s eCommerce and logistics",
         "desc": "RedMart will host a DevFest.Asia 2016 satellite event, with four 20-30 minute talks on how RedMart uses technology to power its ecommerce and logistics operations. <br><br> Talk 1: Evolution of Infrastructure and Developer Tools at RedMart - a look at DevOps tool chains and processes powering high velocity software delivery pipeline at RedMart. <br><br> Talk 2: A story of fractals, discrete optimisation and tissue paper delivery - a technical overview of our past and current attempts at solving RedMart's variant of the vehicle routing problem (VRP) for last mile delivery.<br><br> Talk 3: Building Realtime Transport Monitoring with Event Sourcing and Akka Persistence - an approach to building an event-based system that provides real-time view of the driver state and preserves all historical events for predictive analytics. <br><br> Talk 4: Creating a Micro Service in One Step - scaling the ability to scale by abstracting away common configuration and boilerplate in our micro services.",
         "image": "/images/events/redmart.png",
-        "imagelink": "https://www.eventbrite.sg/e/the-technology-behind-redmarts-ecommerce-and-logistics-registration-28328261593",
+        "imagelink": "http://devfest2016.redmart.com",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "9",
         "endTimeSuffix": ":30pm",
-        "location": "General Assembly",
-        "location2": "8 Claymore Hill Spacemob",
+        "location": "8 Claymore Hill Spacemob",
         "ticket": "Register for free",
         "ticketlink": "https://www.eventbrite.sg/e/the-technology-behind-redmarts-ecommerce-and-logistics-registration-28328261593"
-      },
-      {
+      }, {
         "title": "Wordpress Singapore Meetup",
         "desc": "The meetup for developers using WordPress!",
         "logo": "/images/events/wordpress-logo.jpg",
@@ -142,8 +136,21 @@
         "location": "TBC",
         "location2": "",
         "ticketinfo": "Registration opening soon"
-      }
-    ]
+      }, {
+        "title": "The Singapore Golden Kitty Awards",
+        "desc": "As the end of 2016 is fast approaching we here at Product Hunt Singapore want to make sure that the very best of these 32 products and people get their due. <br><br> So, for the first time ever, we’re kicking off The Singapore edition of The Golden Kitty Awards!",
+        "logo": "/images/events/golden-kitty-logo.png",
+        "image": "/images/events/golden-kitty.jpg",
+        "imagelink": "https://www.meetup.com/Product-Hunt-Singapore-Meetup-Group/events/234747587/",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "10",
+        "endTimeSuffix": "pm",
+        "location": "70 Pasir Panjang Road",
+        "location2": "Mapletree Business City II #03-01",
+        "ticket": "Register for free",
+        "ticketlink": "https://www.meetup.com/Product-Hunt-Singapore-Meetup-Group/events/234747587/"
+      }]
     }, {
       "type": "event",
       "date": "22",
@@ -203,18 +210,18 @@
         "ticket": "Get your ticket NAOW!!1",
         "ticketlink": "https://www.eventnook.com/event/devfestasia2016/home"
       }, {
-        "title": "CSSConf.Asia After-Party",
-        "desc": "The official CSSConf.Asia 2016 After-Party for conference attendees. Come and mingle, have a drink and make friends.<br><br> Sponsored by <a href='https://www.braintreepayments.com'>Braintree</a>",
+        "title": "CSSConf.Asia code in the dark",
+        "desc": "Test how good your HTML and CSS skills really are: Recreate a website from scratch in front of our entire audience and win amazing prizes! Big thanks to <a href='https://www.braintreepayments.com'>Braintree</a> for supporting us in bringing you this great After-Party event for all our CSSConf.Asia and JSConf.Asia attendees!",
         "wideLogo": "true",
         "logo": "/images/events/braintree-sponsor-2.png",
-        "image": "/images/events/cssconf-after.png",
+        "image": "/images/events/codeinthedark.jpg",
         "imagelink": "https://2016.cssconf.asia",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "12",
         "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location2": "",
+        "location": "Canvas",
+        "location2": "20 Upper Circular Road",
         "ticketinfo": "Only for CSSConf.Asia and JSConf.Asia attendees"
       }, {
         "title": "Talk.js Devfest.Asia Special Edition",
@@ -357,7 +364,7 @@
         "logo": "/images/events/ga-logo.jpg",
         "image": "/images/events/ga.png",
         "imagelink": "https://generalassemb.ly/singapore",
-        "location": "1A Keong Saik Rd"
+        "location": "8 Claymore Hill Spacemob"
       }, {
         "title": "Palo IT",
         "logo": "/images/events/palo-it.png",
@@ -370,7 +377,7 @@
         "logo": "/images/events/braintree-logo-2.png",
         "image": "/images/events/braintree.jpeg",
         "imagelink": "http://sg.palo-it.com",
-        "location": "26A Circular Road"
+        "location": "5 Temasek Boulevard #09-01"
       }, {
         "title": "Bandlab",
         "logo": "/images/events/bandlab-logo.png",
@@ -378,11 +385,17 @@
         "imagelink": "https://www.bandlab.com",
         "location": "12 Jln Kilang Barat"
       }, {
-        "title": "Art Science Museum",
+        "title": "ArtScience Museum",
         "logo": "/images/events/art-science-logo.png",
         "image": "/images/events/art-science.jpeg",
         "imagelink": "http://www.marinabaysands.com/museum.html",
         "location": "10 Bayfront Avenue"
+      }, {
+        "title": "Amazon Web Services",
+        "logo": "/images/events/aws-logo.png",
+        "image": "/images/events/aws.png",
+        "imagelink": "https://aws.amazon.com",
+        "location": "23 Church Street, Singapore"
       }]
     }
   ]
