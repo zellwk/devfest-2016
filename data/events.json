@@ -22,7 +22,7 @@
       "date": "19",
       "day": "Sat",
       "events": [{
-        "title": "Zombie Apocalypse Workshop: Building Serverless Microservices",
+        "title": "AWS Zombie Apocalypse Workshop: Building Serverless Microservices",
         "desc": "Fight Zombies and Build Serverless Microservices! <br><br>Scenario: <br>A widespread viral infection transmitted through bites that cause human corpses to reanimate and try to eat other living humans has caused the fall of civilization as we know it. This epidemic (the “Zombie Apocalypse”) has spread through every major metropolitan area around the world.<br><br>In order to fight this battle, we invite you with great urgency to register and attend the AWS Zombie Apocalypse workshop to restore order and rebuild what remains of our great civilization.",
         "logo": "/images/events/zombie-logo.jpg",
         "image": "/images/events/zombie.jpg",
@@ -67,7 +67,7 @@
 
     {
       "type": "jobs",
-      "title": "Looking for dev talent in the region?",
+      "title": "Looking for great dev positions?",
       "text": " You can list your job opening right here.",
       "button": "Post your great position now",
       "link": "https://jsconfasia.wufoo.com/forms/mawgx6w16px4ur/"
@@ -120,22 +120,9 @@
         "startTimeSuffix": "pm",
         "endTime": "9",
         "endTimeSuffix": ":30pm",
-        "location": "8 Claymore Hill Spacemob",
+        "location": "General Assembly, 8 Claymore Hill at Spacemob",
         "ticket": "Register for free",
         "ticketlink": "https://www.eventbrite.sg/e/the-technology-behind-redmarts-ecommerce-and-logistics-registration-28328261593"
-      }, {
-        "title": "Wordpress Singapore Meetup",
-        "desc": "The meetup for developers using WordPress!",
-        "logo": "/images/events/wordpress-logo.jpg",
-        "image": "/images/events/wordpress.jpg",
-        "imagelink": "http://www.meetup.com/WordPress-Singapore/",
-        "startTime": "7",
-        "startTimeSuffix": "pm",
-        "endTime": "9",
-        "endTimeSuffix": "pm",
-        "location": "TBC",
-        "location2": "",
-        "ticketinfo": "Registration opening soon"
       }, {
         "title": "The Singapore Golden Kitty Awards",
         "desc": "As the end of 2016 is fast approaching we here at Product Hunt Singapore want to make sure that the very best of these 32 products and people get their due. <br><br> So, for the first time ever, we’re kicking off The Singapore edition of The Golden Kitty Awards!",
@@ -188,6 +175,19 @@
         "location2": "High Street Centre, #08-08",
         "ticket": "Register for $75",
         "ticketlink": "http://www.eventnook.com/event/devfestasiaevents2016/home"
+      }, {
+        "title": "Wordpress Singapore Meetup",
+        "desc": "The meetup for developers using WordPress!",
+        "logo": "/images/events/wordpress-logo.jpg",
+        "image": "/images/events/wordpress.jpg",
+        "imagelink": "http://www.meetup.com/WordPress-Singapore/",
+        "startTime": "7",
+        "startTimeSuffix": "pm",
+        "endTime": "9",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticketinfo": "Registration opening soon"
       }]
     },
 
@@ -376,8 +376,8 @@
         "wideLogo": "true",
         "logo": "/images/events/braintree-logo-2.png",
         "image": "/images/events/braintree.jpeg",
-        "imagelink": "http://sg.palo-it.com",
-        "location": "5 Temasek Boulevard #09-01"
+        "imagelink": "https://www.braintreepayments.com/en-sg",
+        "location": "128 Prinsep Street"
       }, {
         "title": "Bandlab",
         "logo": "/images/events/bandlab-logo.png",
