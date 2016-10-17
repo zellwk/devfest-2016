@@ -1124,7 +1124,7 @@
 	  }, []);
 	
 	  var html = tpl.render({
-	    jobs: shuffle(jobs)
+	    jobs: shuffle(jobs).slice(0, 3)
 	  });
 	
 	  jobPlacement.innerHTML = html;
@@ -1179,7 +1179,7 @@
 	output += "\" alt=\"\"></a>\n  <p><strong>";
 	output += runtime.suppressValue(runtime.memberLookup((t_4),"title"), env.opts.autoescape);
 	output += "</strong></p>\n  <p>";
-	output += runtime.suppressValue(runtime.memberLookup((t_4),"description"), env.opts.autoescape);
+	output += runtime.suppressValue(env.getFilter("safe").call(context, runtime.memberLookup((t_4),"description")), env.opts.autoescape);
 	output += "</p>\n</div>\n";
 	;
 	}
@@ -3986,6 +3986,19 @@
 						"title": "T24 Software Engineer",
 						"description": "This is a senior software engineer position involving full-time hands-on development. The person is expected to be able to undertake scrum master responsibilities for his/her team, typically 2-6 engineers in size.",
 						"url": "https://jobsearch.paypal-corp.com/jobs/202005/Singapore-T24-Software-Engineer?lang=en-US"
+					}
+				]
+			},
+			{
+				"type": "company",
+				"employer": "Thoughtworks",
+				"image": "/images/jobs/thoughtworks.png",
+				"employerlink": "https://www.thoughtworks.com/",
+				"jobs": [
+					{
+						"title": "Senior/Lead software developers",
+						"description": "Want to change the world through software and consulting?<br>Want to contribute to ambitious tech projects?<br>Want to work with the world’s best technologists?<br>If this is you, we want to hear from you!",
+						"url": "https://www.thoughtworks.com/jobs/466063"
 					}
 				]
 			}
