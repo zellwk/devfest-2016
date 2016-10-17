@@ -49,7 +49,7 @@ data: ['data/jobs.json']
           {% for j in job.jobs %}
           <div class="Job">
             <div class="Job__title"><a href="{{j.url}}">{{j.title}}</a></div>
-            <p class="Job__description">{{j.description}}</p>
+            <p class="Job__description">{{j.description | safe}}</p>
           </div>
           {% endfor %}
         </div>

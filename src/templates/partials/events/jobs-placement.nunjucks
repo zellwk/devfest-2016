@@ -2,6 +2,6 @@
 <div class="Interrupt-job l-event">
   <a href="{{job.url}}"><img src="{{job.image}}" alt=""></a>
   <p><strong>{{job.title}}</strong></p>
-  <p>{{job.description}}</p>
+  <p>{{job.description | safe}}</p>
 </div>
 {% endfor %}

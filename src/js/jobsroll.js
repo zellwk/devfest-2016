@@ -15,7 +15,7 @@ if (jobPlacement) {
   }, [])
 
   const html = tpl.render({
-  jobs: shuffle(jobs)
+  jobs: shuffle(jobs).slice(0,3)
 })
 
   jobPlacement.innerHTML = html
