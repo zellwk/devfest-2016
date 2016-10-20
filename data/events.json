@@ -26,7 +26,7 @@
         "desc": "Fight Zombies and Build Serverless Microservices! <br><br>Scenario: <br>A widespread viral infection transmitted through bites that cause human corpses to reanimate and try to eat other living humans has caused the fall of civilization as we know it. This epidemic (the “Zombie Apocalypse”) has spread through every major metropolitan area around the world.<br><br>In order to fight this battle, we invite you with great urgency to register and attend the AWS Zombie Apocalypse workshop to restore order and rebuild what remains of our great civilization.",
         "logo": "/images/events/zombie-logo.jpg",
         "image": "/images/events/zombie.jpg",
-        "imagelink": "/jobs",
+        "imagelink": "https://aws.amazon.com/events/zombie-reg-sg-oct-2016",
         "startTime": "9",
         "startTimeSuffix": "am",
         "endTime": "1",
@@ -180,13 +180,14 @@
         "desc": "The meetup for developers using WordPress!",
         "logo": "/images/events/wordpress-logo.jpg",
         "image": "/images/events/wordpress.jpg",
-        "imagelink": "http://www.meetup.com/WordPress-Singapore/",
+        "imagelink": "http://www.meetup.com/WordPress-Singapore/events/234940430/",
         "startTime": "7",
         "startTimeSuffix": "pm",
         "endTime": "9",
         "endTimeSuffix": "pm",
         "location": "General Assembly, 8 Claymore Hill at Spacemob",
-        "ticketinfo": "Registration opening soon"
+        "ticket": "Register for free",
+        "ticketlink": "http://www.meetup.com/WordPress-Singapore/events/234940430/"
       }]
     },
 
