@@ -10,9 +10,8 @@ mv dist/* . && rm -rf dist # might to be changed if you have hidden files
 git add .
 git commit -m "deployed $REV"
 git push --all
-git checkout master
-git stash pop
 git checkout production
 git merge gh-pages
 git push origin production
 git checkout master
+git stash pop
