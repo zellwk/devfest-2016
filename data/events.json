@@ -241,10 +241,9 @@
 
     {
       "type": "interrupt",
-      "title": "More events are coming!",
-      "text": "Do you want to have your own event be part of DevFest.Asia?",
-      "button": "Submit your event here",
-      "link": "https://jsconfasia.wufoo.com/forms/devfestasia-2016-list-my-event/"
+      "title": "Learn more about the Singapore Community",
+      "button": "Browse conferences, meetups and more",
+      "link": "/community"
     },
 
     {
