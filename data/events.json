@@ -78,6 +78,20 @@
       "date": "20",
       "day": "Sun",
       "events": [{
+        "title": "Rails Girls",
+        "desc": "Come along and learn some Ruby on Rails from the Ruby Singapore group!<br><br>We love beginners so do join us if you are curious about web development and would like to find out more about Ruby and Ruby on Rails. As usual, we have a structured workshop session to guide you all along..",
+        "logo": "/images/events/railsgirls-logo.jpg",
+        "image": "/images/events/railsgirls.jpg",
+        "imagelink": "https://www.meetup.com/Singapore-Ruby-Group/events/234908947/",
+        "startTime": "10",
+        "startTimeSuffix": "am",
+        "endTime": "3",
+        "endTimeSuffix": "pm",
+        "location": "TBC",
+        "location2": "",
+        "ticket": "Register for free",
+        "ticketlink": "https://www.meetup.com/Singapore-Ruby-Group/events/234908947/"
+      },{
         "title": "Nodeschool",
         "desc": "NodeSchool is an open source project run by volunteers with two goals: to create high quality programming curriculum and to host community web-tech learning events.",
         "logo": "/images/events/nodeschool-logo.jpg",
