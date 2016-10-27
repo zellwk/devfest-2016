@@ -4009,7 +4009,7 @@
 				"employerlink": "https://redmart.com",
 				"jobs": [
 					{
-						"title": "iOS & Android Engineers",
+						"title": "iOS, Android & Front-end Engineers",
 						"description": "At RedMart, iOS, Android and front-end work together in a small team to deliver a consistent and cross-platform experience. They huddle up early to understand the business goals and contribute to UI/UX design process.",
 						"url": "https://redmart.com/careers"
 					}
