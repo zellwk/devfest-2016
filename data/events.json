@@ -360,6 +360,18 @@
         "ticket": "Register for free",
         "ticketlink": "https://www.eventnook.com/event/devfestasiaevents2016/home"
       }, {
+        "title": "Introduction to Blender: A 3D Workshop by Debbie Ding",
+        "desc": "Blender is a free and open source software for 3D graphics and animation - allowing you to create 3D models, do rigging and skinning, uv unwrapping, particle simulation, fluid simulation, smoke simulation, sculpting, HDR lighting, animation, camera tracking, rendering amongst other things. The functionality of Blender can even be extended with Python scripts. <br><br> In this 3 hour workshop, you'll learn the basics of Blender - the Interface, Shortcuts, Selecting Objects, Transforming Objects, Moving Objects, Adding and Removing Objects, Adding Modifiers, Creating Diffuse/Specular materials, UV Unwrapping, Lighting, Camera Positioning, and how to render with Cycles (Blender's ray-trace based production render engine).<br><br> We will build and light a simple scene in Blender 2.7x, and then use Cycles Render to produce an equirectangular panorama which can be used to produce a 3D scene (three.js) that can be viewed in Google Cardboard, and edited (exiftool) into a Facebook 360-degree photograph.<br><br> This class was designed for people with no prior experience in 3D modelling and Blender.<br><br> Debbie Ding is a visual artist and technologist working between Singapore and London. She received an MA in Design Interactions from Royal College of Art in 2015. Other ongoing exhibitions of her work include \"Shelter\" (2016), a live-sized model of a HDB Household Shelter (commissioned for the Singapore Biennale 2016), and \"The Library of Pulau Saigon\" (2015), a computer-aided exploration of archaeological ambiguities at the site of a former island in the Singapore River (at NUS Museum's exhibition \"Radio Malaya\").<br><br> URL: <a href='http://dbbd.sg'>http://dbbd.sg</a><br><br> Note for Participants:<br><br> Please bring a photograph of a real life scene you would like to recreate in 3D.<br><br> Bring your own laptop and mouse and please download the following to your computer before the workshop:<br><br> Blender - <a href='https://www.blender.org/download/'>https://www.blender.org/download/</a><br> three.js - <a href='https://threejs.org/'>https://threejs.org/</a><br>Exiftool - <a href='http://www.sno.phy.queensu.ca/~phil/exiftool/'>http://www.sno.phy.queensu.ca/~phil/exiftool/</a><br><br> Please make sure you bring a mouse: Blender will be much easier to navigate if you have a mouse with 3 buttons. ",
+        "image": "/images/events/blender.jpeg",
+        "imagelink": "https://www.eventbrite.com/e/fab-presents-introduction-to-blender-a-workshop-by-debbie-ding-tickets-29294489607?aff=DevFest",
+        "startTime": "10",
+        "startTimeSuffix": "am",
+        "endTime": "5",
+        "endTimeSuffix": "pm",
+        "location": "FabCafe Singapore, ArtScience Museum",
+        "ticket": "Register for $80",
+        "ticketlink": "https://www.eventbrite.com/e/fab-presents-introduction-to-blender-a-workshop-by-debbie-ding-tickets-29294489607?aff=DevFest"
+      }, {
         "title": "KopiJS",
         "desc": "A casual and relaxing coffee/brunch hangout among all developers, designers, makers and like-minded people.",
         "logo": "/images/events/kopijs-logo.png",
