@@ -4014,6 +4014,19 @@
 						"url": "https://redmart.com/careers"
 					}
 				]
+			},
+			{
+				"type": "company",
+				"employer": "99.co",
+				"image": "/images/jobs/99.png",
+				"employerlink": "https://www.99.co",
+				"jobs": [
+					{
+						"title": "Frontend Engineer",
+						"description": "You live and breathe in the console. You've wielded all kinds of JS frameworks before but decided to use vanilla Javascript just because you can.",
+						"url": "https://docs.google.com/a/99.co/forms/d/e/1FAIpQLScOmdpVPCqiXa7RYx0MSyie2k43e-izvbHOF-T7JqQETocGgw/viewform"
+					}
+				]
 			}
 		]
 	};
