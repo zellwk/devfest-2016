@@ -433,6 +433,12 @@
         "image": "/images/events/aws.png",
         "imagelink": "https://aws.amazon.com",
         "location": "23 Church Street, Singapore"
+      }, {
+        "title": "Microsoft",
+        "logo": "/images/events/microsoft-logo.png",
+        "image": "/images/events/microsoft.jpg",
+        "imagelink": "https://www.microsoft.com/en-sg/",
+        "location": "1 Marina Blvd, #22-01"
       }]
     }
   ]
